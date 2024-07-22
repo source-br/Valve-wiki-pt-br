@@ -1,0 +1,12 @@
+{{lang|NPC}}
+An [[NPC]] is a '''N'''on-'''P'''layer '''C'''haracter. It is an [[entity]] with some form of AI that may be able to move around the map, attack with weapons, etc., that is not directly controlled by the player. Examples include [[npc_combine_s|Combine soldiers]] in {{hl2|4.1}} and [[hostage_entity|hostages]] in {{css|4.1}}.
+
+NPCs are sometimes referred to as [[monster]]s (especially in {{hl|4.1}}), a terminology inherited from {{quake|4.1}}.
+
+== See also ==
+* [[Creating an NPC]]
+* [[:Category:NPCs|List of NPCs]]
+* [[Bot]]
+
+[[Category:Source]]
+[[Category:NPCs]]

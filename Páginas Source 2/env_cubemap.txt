@@ -1,0 +1,42 @@
+{{tabs|source=1|source2=1|main=source|Env cubemap}} 
+{{this is a|point entity|name=env_cubemap|engine=Source 2|game=SteamVR Home|game1=Half-Life: Alyx}} It is a cubemap environment probe for sampling indirect specular reflection. The reflections are projected to an infinite distance.
+
+{{clr-left}}
+
+
+==Keyvalues==
+
+{{KV|Influence Radius (influenceradius)|float|The radius of influence for this cubemap.}}
+{{KV|Cubemap Texture (cubemaptexture)|string|Name of the cubemap texture.}}
+:{{tip|This is normally assigned by the light baker and does not need to be manually set.}}
+{{KV|Bake Near Z (bakenearz)|float|Near clip plane used for the camera when baking the cube map.}}
+{{KV|Bake Far Z (bakefarz)|float|Far clip plane used for the camera when baking the cube map.}}
+{{KV|Start Disabled (StartDisabled)|boolean|}}
+
+
+{{KV Source 2 LPV and Cubemap}}
+
+{{KV Source 2 Targetname}}
+
+{{KV Source 2 Hierarchy}}
+
+{{KV Source 2 Transform}}
+
+==Inputs==
+{{IO|Enable|Enable this entity.}}
+{{IO|Disable|Disable this entity.}}
+
+
+{{I Source 2 Targetname}}
+
+{{I Source 2 Hierarchy}}
+
+==Outputs==
+{{O Source 2 Targetname}}
+
+==See also==
+*[[env_cubemap_box]]
+*[[SteamVR/Environments/Environment_Tutorial:_Hammer_and_Basic_Lighting#Basic_Lighting|Basic Lighting]]
+*[[SteamVR/Environments/Adding_Lighting|Adding Lighting]]
+
+[[Category:Lighting]]

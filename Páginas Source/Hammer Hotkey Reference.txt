@@ -1,0 +1,383 @@
+{{LanguageBar}}
+
+{{toc-right}}
+=Tools=
+{| class=standard-table
+|{{key|Shift|S}} || [[File:mt-selection.png]] [[Hammer_Selection_Tool|Selection Tool]]
+|-
+|{{key|Shift|G}} || [[File:Hammer_magnify.png]] [[Hammer_Map_Tools_Toolbar#Magnify_Tool_Shift.2BG|Magnify Tool]] 
+|-
+|{{key|Shift|C}} || [[File:mt-camera.png]] [[Hammer_Camera_Tool|Camera Tool]]
+|-
+|{{key|Shift|E}} || [[File:mt-entities.png]] [[Hammer_Entity_Tool|Entity Tool]]
+|-
+|{{key|Shift|B}} || [[File:mt-block.png]] [[Hammer_Block_Tool|Block Tool]]
+|-
+|{{key|Shift|A}} || [[File:Hammer_ToggleTextureApplication.png]] [[Applying_Textures|Texture Application Tool]]
+|-
+|{{key|Shift|T}} || [[File:Hammer_ApplyCurrentTexture.png]] [[Applying_Textures|Apply Current Texture (to selected brushes)]]
+|-
+|{{key|Shift|D}} || [[File:mt-decal.png]] [[Hammer_Decal_Tool|Decal Tool]]
+|-
+|{{key|Shift|O}} || [[File:mt-overlay.png]] [[Hammer_Overlay_Tool|Overlay Tool]]
+|-
+|{{key|Shift|X}} || [[File:mt-clipping.png]] [[Clipping|Clipping Tool]]
+|-
+|{{key|Shift|V}} || [[File:mt-vertex.png]] [[Hammer_Vertex_Tool|Vertex Edit Tool]]
+|}
+
+=File Operations=
+{| class=standard-table
+|{{key|Ctrl|N}} || Create a new file.
+|-
+|{{key|Ctrl|O}} || Open an existing file.
+|-
+|{{key|Ctrl|S}} || Save the current file.
+|-
+||{{key|Alt|B}} || Export again.
+|-
+|{{key|F9}} || Run/Compile Map.
+|-
+||{{key|Ctrl|Shift|S}} || Open Sound Browser.
+|}
+
+==Undo/Redo==
+{| class=standard-table
+|{{key|Ctrl|Z}} || Undo.
+|-
+|{{key|Ctrl|Y}} || Redo.
+|}
+
+==Clipboard/Copy & Paste==
+{| class=standard-table
+|{{key|Ctrl|C}} || Copy selected objects to clipboard (also Ctrl+Insert).
+|-
+|{{key|Ctrl|V}} || Paste objects from clipboard to cursor location (also Shift+Insert).
+|-
+|{{key|Ctrl|Shift|V}} || Paste special.
+|-
+|{{key|Ctrl|X}} || Cut selected objects to clipboard (also Shift+del).
+|}
+
+=Grid=
+{| class=standard-table
+||{{key|[}} || Decrease the size of the grid (also {{key|Alt|A}}).
+|-
+|{{key|]}} || Increase the size of the grid (also {{key|Alt|S}}).
+|-
+|{{key|Shift|R}} || Toggle viewport grid on/off.
+|-
+|{{key|Shift|W}} || Toggle grid snapping on/off.
+|-
+|{{key|P}} || Toggle brush face 3D grid on and off (with mouse cursor in 3D view).
+|-
+|{{key|Ctrl|B}} || Snap selected objects to grid (based on selection bounding box).
+|-
+|{{key|Ctrl|Shift|B}} || Snap selected objects to grid (individually).
+|}
+
+=Grouping=
+{| class=standard-table
+|{{key|Ctrl|G}} || Group selected objects.
+|-
+|{{key|Ctrl|U}} || * Ungroup selected groups.
+|-
+|{{key|Ctrl|R}} || Create prefab with selected objects.
+|-
+|{{key|Ctrl|W}} || Toggle Ignore Groups mode to bypass entity and group selection.
+|-
+|{{key|Ctrl|T}} || Ties selected brushes to entity. If a selected brush is part of an existing entity you will have the option to add the other selected brushes to it.
+|-
+|{{key|Ctrl|Shift|W}} || "Move to world", removes entity status from selected brushes 
+|}
+: * this won't ungroup brushes tied to the same entity
+
+=QuickHiding=
+{| class=standard-table
+|{{key|H}} || QuickHide selected objects.
+|-
+|{{key|Ctrl|H}} || QuickHide unselected objects. (Formerly mapped to "Hollow selected objects".)
+|-
+|{{key|U}} || Unhide all.
+|}
+
+=Viewports=
+{| class=standard-table
+|{{key|Ctrl|A}} || Auto-size 4 views to center.
+|-
+|{{key|Shift|Z}} || Maximize/restore active viewport.
+|-
+| {{key|Up}} {{key|Down}} {{key|Left}} {{key|Right}} || Pan the view
+|-
+|{{key|Ctrl|I}} || Flip selected objects vertically.
+|-
+|{{key|Ctrl|L}} || Flip selected objects horizontally.
+|-
+|{{key|Ctrl|B}} || Snap selected objects to grid (based on selection bounding box).
+|-
+|{{key|Ctrl|Shift|B}} || Snap selected objects to grid (individually).
+|-
+|{{key|Ctrl|Shift|E}} || Center 3D viewport on currently selected objects.
+|-
+| {{key|F2}} ||switch to 2D Top (X/Y) view
+|-
+| {{key|F3}} || switch to 2D Side (X/Z) view
+|-
+| {{key|F4}} || switch to 2D Front (Y/Z) view
+|-
+| {{key|F5}} || switch to 3D textured view
+|-
+| {{key|Shift|F5}} || switch to 3D shaded textured view
+|}
+
+With "arrow key nudge" enabled in the 2d views options menu, you can also utilize:
+{| class=standard-table
+| {{key|Up}} {{key|Down}} {{key|Left}} {{key|Right}} || Nudge the current selection in the current 2D or 3D viewport.
+|-
+|{{key|Shift}}+{{key|Up}} / {{key|Down}} / {{key|Left}} / {{key|Right}} || Clone the current selection and nudge it in the active 2D or 3D viewport.
+|}
+
+=2D Views=
+{| class=standard-table
+|{{key|Tab}} || Switch view types (top/side/front).
+|-
+|NumPad {{key|+}} / {{key|-}} || Zoom in/out (hold Ctrl to synchronize all 2D views).
+|-
+|{{key|MMB}} || Zoom in/out (hold Ctrl to synchronize all 2D views).
+|-
+|{{key|1}} to {{key|9}} || Preset zoom levels.
+|-
+|{{key|Spacebar}} || Hold Spacebar and left mouse button to drag the view position around.
+|-
+|{{key|Alt}} || Disable snap to grid while dragging with the mouse.
+|-
+|{{key|Ctrl|E}} || Center all 2D Views on currently selected objects.
+|}
+
+=3D View=
+{| class=standard-table
+|rowspan="3" | {{key|Spacebar}} (holding)|| Holding the {{key|LMB}} left mouse button allows you to rotate your angle of view in any direction, while the viewing point remains stationary.
+|-
+| Holding the {{key|RMB}} right mouse button will allow you to move left, right, up, and down while keeping the viewing angle constant.
+|-
+| Holding both the left and right mouse buttons allows you to move forward and backward, as well as pan from side to side.
+|-
+|rowspan="2" | {{key|Spacebar|Shift}} || The {{key|LMB}} left mouse button acts the same as above.
+|-
+| The {{key|RMB}} right mouse button allows you to move forward and backward, as well as pan from side to side.
+|-
+|rowspan="2" | * {{key|Up}} {{key|Down}} {{key|Left}} {{key|Right}} || 
+(up/down) rotate angle of view up and down (change pitch)
+|-
+|(left/right) rotate left and right (change yaw)
+|-
+|{{key|MMB}} || Zoom in/out.
+|-
+|{{key|W}} {{key|A}} {{key|S}} {{key|D}} || Move camera.
+|-
+|{{key|Z}} || Toggles mouse look ("noclip") navigation mode.
+|-
+|{{key|P}} || Toggle brush face 3D grid on and off (with mouse cursor in 3D view).
+|-
+|{{key|O}} || Display frames per second and yaw/pitch of camera (with mouse cursor in 3D view).
+|-
+|{{key|I}} || Display bounding boxes for all visible objects.
+|-
+|{{key|X}} or {{key|Ctrl|F9}} || Display selection handles for object resizing/rotation.
+|-
+|{{key|1}} || Decrease far clipping plane.
+|-
+|{{key|2}} || Increase far clipping plane.
+|-
+|{{key|Ctrl|Shift|E}} || Center 3D View on selection.
+|}
+: * with "arrow key nudge" disabled in the "2d views" options menu
+
+=[[File:mt-selection.png]] Selection Tool=
+{| class=standard-table
+|rowspan=4 | {{key|LMB}} || (On an unselected object) Selects the object under the cursor and deselects any previously selected items
+|-
+|(On a selected object) Cycles through resize, rotate, and skew 
+|-
+|(Holding) Cycle through every object beneath the cursor. Good for selecting obscured items without moving your view.
+|-
+|(Click and drag) to select all objects touching the selection box upon releasing the Left mouse (hold Shift when releasing the Left mouse to select objects only entirely within the selection box).
+|-
+|{{key|Ctrl}} || Hold {{key|Ctrl}} and Left-Click to select/deselect multiple objects.
+|-
+|{{key|Alt}} || Disable snap to grid while dragging with the mouse. 
+|-
+|rowspan=2 | {{key|Shift}} || hold {{key|Shift}} when moving an object to create a copy (clone) of that object.
+|-
+|* Hold {{key|Shift}} (or {{key|Alt}}) when rotating to allow rotation unconstrained to 15 degrees intervals
+|-
+|{{key|Shift|Q}} or {{key|Esc}} || Clear current selections.
+|-
+|{{key|PgUp}} || Previous selection in "hit" list.
+|-
+|{{key|PgDn}} || Next selection in "hit" list.
+|-
+|{{key|Ctrl|T}} || Ties selected brushes to entity. If a selected brush is part of an existing entity you will have the option to add the other selected brushes to it.
+|-
+|{{key|Ctrl|Shift|W}} || "Move to world", removes entity status from selected brushes 
+|-
+|{{key|Alt|Enter}} || Open up Object Properties for the currently selected objects.
+|-
+|{{key|Ctrl|Shift|C}} || Carve using selected geometry. (Known to cause vertex issues, use at your own discretion.)
+|}
+: * when "Default to 15 degree rotation" is enabled in the "2D views" options menu
+
+=[[File:mt-camera.png]] Camera Tool=
+{| class=standard-table
+|{{key|Shift}} || Hold {{key|Shift}} and click and drag {{key|LMB}} left mouse button to create a new camera.
+|-
+|{{key|PgUp}} || Cycle to the previous camera position.
+|-
+|{{key|PgDn}} || Cycle to the next camera position.
+|-
+|{{key|Delete}} || Delete the current camera position.
+|-
+|{{key|Ctrl}} || Hold {{key|Ctrl}} and drag a camera or its point of interest to move both together.
+|-
+|{{key|MMB}} || (in 3D/Camera viewport) Move active camera forward or backward along its view axis
+|}
+
+=[[File:mt-block.png]] Block Tool=
+{| class=standard-table
+|{{key|LMB}} || Click and drag left mouse to draw a new brush shape.
+|-
+|{{key|Enter}} || Create object drawn with block/entity tool.
+|-
+|{{key|Esc}} || Delete object drawn with block/entity tool without creating it.
+|-
+|{{key|Alt|Shift|C}} || Insert original prefab.
+|}
+
+=[[File:mt-entities.png]] Entity Tool=
+{| class=standard-table
+|rowspan=2 | {{key|LMB}} || 
+(in 3D view) Click on brush surface to create the current entity on clicked location
+|-
+|(in 2D view) Click to set entities X/Y/Z coordinates, press enter to create entity at current coordinates (or {{key|RMB}} right mouse button on coordinate's center)
+|-
+|{{key|Delete}} || Remove last created entity
+|}
+
+=[[File:Hammer_ToggleTextureApplication.png]] Texture Application Tool=
+{| class=standard-table
+|{{key|Ctrl}} || Hold {{key|Ctrl}} and click to select/deselect multiple faces.
+|-
+|{{key|Shift}} || Hold {{key|Shift}} and click a face to select all faces on the brush.
+|-
+|{{key|Shift|Ctrl}} || Hold {{key|Shift}} and {{key|Ctrl}} when clicking a face to invert the selected faces on a brush with the unselected faces.
+|-
+|{{key|RMB}} || Apply the current material settings to the face that is clicked.
+|-
+|{{key|Shift}}+{{key|RMB}} || Apply the current material settings to all the faces of a brush that is clicked.
+|-
+|{{key|Alt}}+{{key|RMB}} || Apply all the current material settings to the face that is clicked with wrapping/alignment to the previously selected face.
+|-
+|{{key|Alt|Shift}}+{{key|RMB}} || Apply the current material settings to all the faces of the brush that is clicked on with wrapping/alignment to the previously selected face.
+|}
+=Displacement Editing Tool=
+==Select Mode==
+{| class=standard-table
+|{{key|Ctrl|LMB}} || Hold Ctrl and click to select multiple faces.
+|-
+|{{key|Shift}} || Hold Shift and click a face to select all faces on the brush.
+|-
+|{{key|Shift|Ctrl}} || Hold Shift and Ctrl, click a face to add all unselected faces on the brush to the current selection.
+|}
+
+==Paint Geometry Mode==
+{| class=standard-table
+|{{key|LMB}} || Applies selected affect to the encompassed vertex/vertices on selected faces
+|-
+|{{key|RMB}} || Lowers the encompassed vertex/vertices on selected faces when Raise/Lower is selected
+|-
+|{{key|Ctrl|LMB}} || Hold Ctrl and Left-Click to select multiple faces.
+|-
+|{{key|Shift|Ctrl|LMB}} || Hold Shift and Ctrl, Left-Click a face to add all unselected faces on the brush to the current selection.
+|-
+|{{key|Alt|LMB}} || hold Alt and Left-Mouse-Button drag to alter the size of the spatial editing sphere.
+|-
+|{{key|Shift}} || hold Shift and Left-Click a vertex to drag that vertex along the current painting axis.
+|-
+|{{key|Alt|RMB}} || Click any brush or displacement face to make that face’s normal the current painting axis.
+|}
+
+==Paint Alpha mode==
+{| class=standard-table
+|{{key|LMB}} || Applies secondary texture to the encompassed vertex/vertices on selected faces when Raise/Lower is selected
+|-
+|{{key|RMB}} || Applies primary texture the encompassed vertex/vertices on selected faces when Raise/Lower is selected
+|-
+|{{key|Ctrl|LMB}} || Hold Ctrl and click to select multiple faces.
+|-
+|{{key|Shift|Ctrl}} || Hold Shift and Ctrl, click a face to add all faces on the brush to the current selection.
+|}
+
+=[[File:mt-overlay.png]] Overlay Tool=
+{| class=standard-table
+|{{key|Ctrl}} || hold Ctrl and click to select multiple overlays.
+|-
+|{{key|Shift}} || * Hold Shift and then drag an overlay's vertex to snap it to another overlay's vertex.
+|}
+: * Multiple overlays must be selected inside vertex mode for this to work, only one vertex can be snapped at a time. This option is mainly used for connecting line based overlays (spills, road lane markers, etc)
+
+=[[File:mt-clipping.png]] Clipping Tool=
+{| class=standard-table
+|{{key|LMB}}|| Click and drag left mouse to create a new clip plane.
+|-
+|{{key|Shift|LMB}} || Hold Shift and drag with the left mouse button to erase the previous clipping plane and create a new one.
+|-
+|{{key|Enter}} || Perform clip
+|-
+|{{key|Ctrl|LMB}} || hold Ctrl and drag with the left mouse button over a clipping handle to move both handles of the clipping plane at the same time.
+|-
+|{{key|O}} || Toggle the clip distance measurements display on and off (with mouse cursor in 2D view).
+|-
+|{{key|Shift|X}} || Cycle through clip modes.
+|}
+
+=[[File:mt-vertex.png]] Vertex Edit Tool=
+{| class=standard-table
+|{{key|LMB}}|| select vertex/vertices or edges
+|-
+|{{key|Ctrl|LMB}} || add vertex/vertices or edges to selection
+|-
+|{{key|Ctrl|F}} || * Split face (vertex manipulation)
+|-
+|{{key|Alt|E}} || Open Vertex Scaling dialog.
+|-
+|{{key|Enter}} || Close Vertex Scaling dialog and perform scale.
+|-
+|{{key|Shift|V}} || Cycle vertex/edge display modes.
+|}
+: * You must have two edges or vertices selected that are part of the same face.
+
+=Miscellaneous=
+{| class=standard-table
+|{{key|Shift|L}} || Toggle Texture lock.
+|-
+|{{key|Ctrl|M}} || Open Transform dialog.
+|-
+|{{key|Alt|P}} || Open Check for Problems dialog.
+|-
+|{{key|Esc}} || * Clear current selection or abort current tool/mouse operation (drag/drop) and goto the selection tool.
+|-
+|{{key|Ctrl|Shift|G}} || Go to Brush Number dialog.
+|-
+|{{key|Ctrl|Shift|F}} || Open Find Entities dialog.
+|-
+|{{key|Ctrl|Shift|R}} || Open Replace Entities dialog.
+|-
+|{{key|F1}} || Help
+|-
+|{{key|Ctrl|R}} || Create prefab from selected, the origin (0 0 0 X/Y/Z coordinates) will become prefabs center
+|-
+|{{key|Ctrl|Alt|S}} || Open Entity Sprinkle dialog. ({{csgo}},{{GMOD}},{{portal2}})
+|}
+: * Does not work with the Magnify, Texture Application, or Overlay Tools
+
+[[Category:Hammer]]

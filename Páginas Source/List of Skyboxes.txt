@@ -1,0 +1,129 @@
+{{LanguageBar}}
+{{Goldsource topicon}} {{Source topicon}} {{Source 2 topicon}}
+
+This is a list of skies available in {{Source2|4}}, {{src|4}} and {{gldsrc|4}} engine games, along with pictures of each skybox. The {{Ent|light_environment}} settings listed (Ideal Sun Angle, Ideal Brightness, etc) are suggestions based on settings used in official maps; other values may also be appropriate. To test skies in singleplayer without recompiling the map, bring up the console and enter {{Command|sv_skyname|<sky_name>}}. Quicksave the game, load it again and the old skybox should be temporarily replaced with the new one.
+
+{{note|If you are mapping for {{hl2ep2|2}}, you need to add ''_hdr'' to the end of most sky names—if it is not already there—so it does not cause the sky texture to stretch. (So, if your sky name is sky_day01_01, you would make it sky_day01_01_''hdr'').}}
+{{tip|Search "sky" in the texture browser within Hammer to see some of the skyboxes available in the game you are mapping for.}}
+{{tip|Skyboxes listed as "not HDR compatible" can still be used in HDR mode. They will always display fullbright, but can still be affected by blooming from autoexposure.}}
+{{warning|Most of the images on this page only show the skybox sides (left, right, front, back). Skyboxes have much more detail on the top, which may not be accurately reflected on this page; view the skybox in-game or in {{jack|4.1}} ({{gldsrc|1}}), {{hammer++|4.1}} ({{src|1}}) or {{hammer5|4.1}} ({{src2|1}}) to get a better idea of how a sky looks.
+{{note|{{goldsrc}}: {{hammer|4}} only show black void instead of the selected skybox, it appears as a cyan void in {{svencraft|4}}, and support for previewing skybox was added in {{jack|4}}.<br>
+       {{source}}: {{hammer|4}} only show a black void instead of the selected skybox. {{hpp|4}} added support for previewing skybox.}}}}
+
+__TOC__
+== {{Autolang|GoldSrc Engine Games|zh = 金源游戏|ru = Игры на движке GoldSrc}} ==
+=== {{Autolang|Official Games|zh = 官方游戏|ru = Официальные игры|ko = 공식 게임들}} ===
+==== {{hl|1|link = Half-Life Sky List}} ====
+{{cot|1 = Expand Half-Life skyboxes}}
+{{:Half-Life Sky List}}
+{{cob}}
+==== {{hlop4|1|link = Opposing Force Sky List}} ====
+{{cot|1 = Expand Half-Life: Opposing Force skyboxes}}
+{{:Opposing Force Sky List}}
+{{cob}}
+==== {{cs|1|link = Counter-Strike Sky List}} ====
+{{cot|1 = Expand Counter-Strike skyboxes}}
+{{:Counter-Strike Sky List/{{Autolang|en|ru=ru}}}}
+{{cob}}
+==== {{ricochet|1|link = Ricochet Sky List}} ====
+{{cot|1 = Expand Ricochet skyboxes}}
+{{:Ricochet Sky List}}
+{{cob}}
+
+=== {{Autolang|Mods + Third-party games|ru = Модификации и игры от сторонних разработчиков|zh = 同人游戏}} ===
+{{cot|1 = Expand the list of third-party games' skyboxes}}
+==== {{gunman|1|link = Gunman Chronicles Sky List}} ====
+These skyboxes are available to {{gunman|4}}.
+{{todo|Add light values}}
+{{Gunman skylist}}
+{{cob}}
+
+== {{Autolang|Source Engine Games|ru = Игры на движке Source|zh = 起源游戏|ko = 소스엔진 게임들}} ==
+=== {{Autolang|Official Games|ru = Официальные игры|zh = 官方游戏|ko = 공식 게임들}} ===
+==== {{hl2|1|link = Half-Life 2 Sky List}} ====
+{{cot|1 = Expand Half-Life 2 skyboxes}}
+{{:Half-Life 2 Sky List}}
+{{cob}}
+
+==== {{hl2ep1|1|link = Half-Life 2: Episode One Sky List}} ====
+{{cot|1 = Expand Half-Life 2: Episode One skyboxes}}
+{{:Half-Life 2: Episode One Sky List}}
+{{cob}}
+
+==== {{hl2ep2|1|link = Half-Life 2: Episode Two Sky List}} ====
+{{cot|1 = Expand Half-Life 2: Episode Two skyboxes}}
+{{:Half-Life 2: Episode Two Sky List}}
+{{cob}}
+
+==== {{hl2lc|1|link = Half-Life 2: Lost Coast Sky List}} ====
+{{cot|1 = Expand Half-Life 2: Lost Coast skyboxes}}
+{{:Half-Life 2: Lost Coast Sky List}}
+{{cob}}
+
+==== [[Half-Life: Source Sky List|{{#switch:|#default=Half-Life: Source|:zh-cn=半条命：起源}}]] ====
+{{cot|1 = Expand Half-Life: Source skyboxes}}
+{{:Half-Life: Source Sky List}}
+{{cob}}
+
+==== [[Counter-Strike Source Sky List|{{#switch:|#default=Counter-Strike: Source|:zh-cn=反恐精英：起源}}]] ====
+{{cot|1 = Expand Counter-Strike: Source skyboxes}}
+{{:Counter-Strike Source Sky List}}
+{{cob}}
+
+==== [[Day of Defeat: Source Sky List|{{#switch:|#default=Day of Defeat: Source|:zh-cn=胜利之日：起源}}]] ====
+{{cot|1 = Expand Day of Defeat: Source skyboxes}}
+{{:Day of Defeat: Source Sky List}}
+{{cob}}
+
+==== [[Team Fortress 2 Sky List|{{#switch:|#default=Team Fortress 2|:zh-cn=军团要塞2}}]] ====
+{{cot|1 = Expand Team Fortress 2 skyboxes}}
+{{:Team Fortress 2 Sky List}}
+{{cob}}
+
+==== [[Left 4 Dead Sky List|{{#switch:|#default=Left 4 Dead|:zh-cn=求生之路}}]] ====
+{{cot|1 = Expand Left 4 Dead skyboxes}}
+{{:Left 4 Dead Sky List}}
+{{cob}}
+
+==== [[Left 4 Dead 2 Sky List|{{#switch:|#default=Left 4 Dead 2|:zh-cn=求生之路2}}]] ====
+{{cot|1 = Expand Left 4 Dead 2 skyboxes}}
+{{:Left 4 Dead 2 Sky List}}
+{{cob}}
+
+==== [[Alien Swarm Sky List|{{#switch:|#default=Alien Swarm|:zh-cn=异形虫群}}]] ====
+{{cot|1 = Expand Alien Swarm skyboxes}}
+{{:Alien_Swarm_Sky_List/en}}
+{{cob}}
+
+==== [[Portal Sky List|{{#switch:|#default=Portal|:zh-cn=传送门}}]] ====
+{{cot|1 = Expand Portal skyboxes}}
+{{:Portal Sky List}}
+{{cob}}
+
+==== [[Portal 2 Sky List|{{#switch:|#default=Portal 2|:zh-cn=传送门2}}]] ====
+{{cot|1 = Expand Portal 2 skyboxes}}
+{{:Portal 2 Sky List}}
+{{cob}}
+
+==== [[Counter-Strike: Global Offensive Sky List|{{#switch:|#default=Counter-Strike: Global Offensive|:zh-cn=反恐精英：全球攻势}}]] ====
+{{cot|1 = Expand Counter-Strike: Global Offensive skyboxes}}
+{{:Counter-Strike: Global Offensive Sky List}}
+{{cob}}
+
+=== {{Autolang|Mods + Third-party games|ru = Модификации и игры от сторонних разработчиков|zh = 同人游戏}} ===
+See [[List of Skyboxes/Source Engine Mods and Third-Party Games|this subpage]].
+
+
+== {{Autolang|Source 2 Engine Games|zh = 起源 2 游戏}} ==
+=== {{Autolang|Official Games|ru = Официальные игры|zh = 官方游戏|ko = 공식 게임들}} ===
+==== {{cs2|1|link = Counter-Strike 2 Workshop Tools/CS2 Sky List}} ====
+{{cot|1 = Expand Counter-Strike 2 skyboxes}}
+{{:Counter-Strike 2 Workshop Tools/CS2 Sky List}}
+{{cob}}
+
+{{envart}}
+[[Category:Material System]]
+[[Category:Glossary]]
+[[Category:Skybox]]
+[[Category:Level Design]]
+[[Category:Lists]]

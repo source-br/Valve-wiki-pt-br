@@ -1,0 +1,61 @@
+<!-- When this page is updated to {{langsp}} or {{langsp}} instead of {{lang}}, please move {{this is a}} to the base page, as it is automatically translated. -->{{lang}}{{tabs|source=1|source2=1|main=source|Env cubemap}}
+[[File:Cubemap_build_result.jpeg|thumb|right|Um exemplo de cubemap contendo o carro branco como um {{L|prop_static}}, um {{L|env_sprite}} e decals. Observe que o carro azul como {{L|prop_physics}} não e visível no cubemap porque não e estático.]]
+{{this is a|point entity|internal=1|name=env_cubemap|sprite=1}} Ela especifica a localização para o qual um {{L|cubemap}} será gerado quando o comando {{L|buildcubemaps}} for executado no console. [[Material]]s com {{L|$envmap}} usarão o cubemap mais próximo como seu reflexo.
+{{intent}}
+{{note|Cubemaps conterão static props, sprites, decals, (como sangue inimigo e sprays de jogadores) e de alguma forma a textura da lanterna em primeira pessoa<br> Então desligue a sua lanterna se estiver em um mapa escuro, caso contrário, tudo o que você estiver olhando ficará claro no cubemap.}}
+
+
+__TOC__
+
+== Keyvalues ==
+{{KV|Cubemap Size|intn=cubemapsize|choices|A resolição de cada face do cubemap. Lembre-se de que o número real de pixels armazenados será sua seleção vezes seis (ou sete, dependendo da branch da engine), portanto, números altos resultarão em tamanhos de arquivos muito grandes!}}
+[[File:Cubemaps_comparison_new.jpg|thumb|Comparação da qualidade da reflexão.]]
+
+:*0: Default (geralmente 32x32, dependendo do jogo)
+:*1: 1x1
+:*2: 2x2
+:*3: 4x4
+:*4: 8x8
+:*5: 16x16
+:*6: 32x32
+:*7: 64x64
+:*8: 128x128
+:*9: 256x256
+:*10: 512x512 ¹ {{Not in FGD}}
+:*11: 1024x1024 ¹ {{Not in FGD}}
+:*12: 2048x2048 ¹ {{Not in FGD}}
+¹ - Para renderizar cubemaps de resolução superior a 256x256, veja [[Env_cubemap#Higher Resolution Cubemaps|abaixo]].
+
+{{KV|Brush faces|intn=sides|sidelist|Uma substituição opcional para faces individuais de um brush, forçando-as usar este cubemap em vez de um mais próximo a elas. Para selecionar faces, pressione o botão '''Pick''' e clique nelas na visualização 3D. Segure {{key|Ctrl}} para ativar ou desativar uma face.}}
+{{KV|Cubemap Bounds|intn=parallaxobb|targetname|apenas em jogos com={{strata|4}} e {{mapbase|4}} |Opcionalmente, atribui a este cubemap uma bounding box para correção parallax (a entidade brush vinculada a {{L|parallax_obb}}). Isso significa que o reflexo do cubemap se moverá conforme a câmera se move, semelhante a func_reflective_glass.}}
+
+== Cubemaps de Alta Resolução ==
+[[File:4k.jpg|thumb|423px|right|]]
+Desative o Smart Edit e dgite um valor de 10 ou mais. Isso dará a resolução correspondente aos powers de 2 (512x512, 1024x1024 etc).
+{{warning|Em {{csgo}} tentar construir uma cubemap 1024x1024 resultarar em Erro na Engine.}}
+{{note|Contruir cubemaps requer que sua tela seja pelo menos 4 vezes maior em dimensão doque a resolução do cubemap. Se sua tela for menor que isso, use Dynamic Super Resolution (DSR) para construí-las. }}
+{{note|Ter cubemaps de alta resolução pode aumentar significativamente o tamanho do arquivo do mapa. Portanto, use com moderação para coisas como espelhos e superfícies de mármore, se você estiver preocupado com o tamanho do arquivo / tempo de download do client para mapas multijogador, pelo menos.}}
+
+== Colocação ==
+Declarar áreas a serem cobertas pelo cubemaps é simples, basta colocar a entidade de origem do <code>env_cubemap</code> dentro de uma área de um mapa. Quando o mapa é compilado com o {{L|vbsp|VBSP}}, as superfícies geométricas mundiais associam-se automaticamente ao <code>env_cubemap</code> mais próximo e usarão o cubemap gerado a partir dele. As entidades se associam ao <code>env_cubemap</code> mais próximo de sua origem (alternativamente, um cubemap pode ser aplicado a faces específicas de um brush nas propriedades do cubemap); entidades que se movem mudarão dinamicamente qual cubemap elas usam. É importante escolher as posições do <code>env_cubemap</code> adequadamente tanto para questões estéticas quanto de desempenho.
+
+Cubemaps são usados de algumas formas e maneiras específicas, e deve ser colocado de acordo. Alguns cubemaps são usados para reflexões sobre a geometria estática do mundo. Outros são usados com entidades de jogadores, incluindo {{L|NPC|NPCs}}. A colocação de entidades <code>env_cubemap</code> corresponde a cada um desses usos, para garantir o máximo benefício de seu uso, ''visualmente e no desempenho'' Aqui estão algumas heurísticas simples a serem seguidas:
+
+* Se uma cubemap for destinada a NPCs ou ao jogador, o <code>env_cubemap</code> deve ser colada ao nível dos olhos (geralmente a 64 unidades hammer) sobre o chão. Dessa forma, o cubempa representará com mais precisão o mundo da perspectiva do jogador. 
+{{tip|Você pode fazer isso copiando e colando as entidades <code>env_cubemap</code> ao redor do mapa e então usar a função '''Entity Report''' do Hammer para selecionar todas as entidades <code>env_cubemap</code> e então movendo-as 64 unidades para cima usando a ferramenta '''Transform''' com {{key|Ctrl+M}}. }}
+* Se um cubemap for desitnado à geometria estática do mundo, o <code>env_cubemap</code> deve estar a uma distância razoável (como um princípio básico, 16 unidades Hammer) de todas as superfícies brush.
+* Um cubemap diferente deve ser obtido em cada área de contraste visual disinto. Um corredor com luz amarela brilhante precisará de sua própria <code>env_cubemap</code>, especialmente se estiver próximo a uma sala com pouco luz azul. Sem dois entidades <code>env_cubemap</code>, reflexões e realces especulares pareceraão incorretos em entidades e geometria do mundo em uma das áreas.
+* Mudanças de localização, como de cômodo em cômodo, cômodo para exterior e de localização geral com grandes ncessidades de mundaças visuais necessitam de uma entidade <code>env_cubemap</code> com distância igual ambos os locais até o ponto de transição. Por exemplo, 16 unidades de distância da porta de cada cômodo. Dessa forma, a transição do cubemap entre os locais é suave. Isto impedirá que o cubemap de mostrar a localização externa dentro de um cômodo e vice-versa.
+* Cubemaps colocados em uma áreas muito escuras, assim como cubemaps colocados fora da área de jogo podem usar resolução menores. Para começar, os cubemaps escuros mal refletem nada além dos poucos pontos brilhantes. Usar resoluções menores quase não irá fazer qualquer diferença visual.
+
+{{clr}}
+[[File:Env cubemap equidistant example.png|300px|thumb|left|Exemplo de um env_cubemap que é equidistante de duas molduras de porta ao mesmo tempo, com um env_cubemap adequadamente colocado no outro lado de cada moldura de porta.]]
+[[File:Cubemap misplacement symptom.jpg|300px|thumb|none|Exemplo do que cubemaps mal colocados fazem.<br> O trailer e a mira do rifle refletem um cubemap de dentro da casa. O que faz com que as superfícies reflexivas pareçam brilhar à noite.]]
+{{clr}}
+
+== Construindo Cubemaps ==
+Para obter informações gerais específicas sobre a construção de cubemaps, visite a página {{L|Cubemaps#Building cubemaps|Cubemaps}}.
+
+== Veja também ==
+*{{Ent|weapon_cubemap}}
+*{{Ent|parallax_obb}}

@@ -1,0 +1,62 @@
+{{LanguageBar}}
+
+{{Background
+| file = Wireframe gradient.jpg
+| opacity = 0.13
+| gradient-height = 250px
+}}
+
+{{MainPage
+| VDC Welcome		= Welcome to the
+| VDC			= {{SITENAME}}
+| ArticleCountText	= articles documenting the development process.
+| Sign up		= Sign up to become part of the community!
+
+| Welcome = Whether you're building a commercial project or a [[modification]] for {{hl2|1|nt=reg}}, you'll want to [[Special:Userlogin|sign up]] as a [[Valve]] developer today. It's free to join and is open to anyone working with the [[Source|Source engine]] and its [[SDK Installation|software development kit]].
+
+| Valve Technology	= Valve Technology
+
+| HLSDK			= GoldSrc and the Half-Life SDK
+| HLSDK Docs		= Go to the GoldSrc Engine (Half-Life SDK) documentation index
+| HLSDK Desc		= If you want to create a Mod for {{hl|1}} or looking for more {{gldsrc|1}} documentation, click above.
+
+| SDK			= Source and the Source SDK
+| SDK Docs		= Go to the Source Engine documentation index
+| SDK Desc		= If you want to create a Mod for {{hl2|1}} or looking for more {{src|1}} documentation, click above.
+
+| S2SDK			= Source 2 Documentation
+| S2SDK Docs		= Go to the Source 2 Engine documentation index
+| S2SDK Desc		= If you want to port {{src|1}} content to {{src2|1}} or looking for more Source 2 documentation, click above. Otherwise, you can check out the following Source 2 games with Workshop Tools:
+| Dota 2 Tools Docs	= Go to the Dota 2 Workshop Tools documentation index
+| SVR Tools Docs	= Go to the SteamVR Workshop Tools documentation index
+| HLA Tools Docs	= Go to the Half-Life: Alyx Workshop Tools documentation index
+| CS2 Tools Docs	= Go to the Counter-Strike 2 Workshop Tools documentation index
+| Deadlock Tools Docs	= Go to the Deadlock Workshop Tools documentation index
+
+| Engine = The engine under the hood of {{hl2|1}} can make your game a success. Let {{source|1}}™ do the heavy lifting so that your team can focus on building great games.
+| Steam = If you're interested in building a product using [[Source]] or [[Source 2]], talk to us about options for distribution on [[Steam]].
+| ReadMore = Read about Valve Technology
+| ReadMore-Tooltip = Click here to learn more about Valve Technology.
+
+| FMT		 = For Mod Teams
+| FMT Line 1	 = [[Source Engine Features]]
+| FMT Line 2	 = [[Building Mods with Valve Technology|Why choose the Source engine for your mod?]]
+| FMT Line 3	 = Read [[Making a Mod]] - building a team through the shipping process.
+| FMT Line 4	 = Already using the SDK? Check the [[:Category:Source SDK FAQ|Source SDK FAQ]] for some helpful answers.
+| FMT Line 5	 = New to Source coding? Get started with [[:Category:Programming|basic programming articles]].
+| FMT Line 6	 = Read (or add) a tutorial on [[SDK Docs|Source development]], or any part of the content creation process.
+
+| New Wiki	 	= New to the wiki?
+| For Help	 	= For help with using the wiki, see [[Help:Contents]]. For help with navigating the wiki, see [[:Category:Entry pages]] or [[:Category:Valve Developer Community]]. For more information on the community itself, see [[Valve Developer Community:Community portal|Community Portal]].
+| Wiki Contents	 	= Wiki Contents
+| Community Portal	= Community Portal
+
+| Copyright	 = [https://www.valvesoftware.com/en/ Valve Corporation]. All rights reserved. All trademarks are property of their respective owners in the US and other countries. See the [[Valve Developer Community:Terms of Use|Terms of Use]] for details
+
+| About VDC	 = About Valve Developer Community
+| PP		 = Privacy Policy
+| TPLN		 = Third Party Legal Notices
+
+| Tooltip Signup = Click here to log in or create an account on the VDC. If you are already logged in, you can use this to log in as another user.
+}}
+__NOTOC__ __NOEDITSECTION__
