@@ -1,0 +1,686 @@
+
+{{Strings subpage <!-- EDITORS: To keep things clean, it is recommended to sort language codes from A to Z. -->
+| number = 59
+| en = 59
+| cs = 1
+| de = 53
+| es = 53
+| eo = 1
+| fi = 53
+| fr = 1
+| he = 1
+| hr = 59
+| it = 1
+| ja = 1
+| ka = 1
+| ko = 1
+| nl = 1
+| pl = 1
+| pt-br = 1
+| ru = 58
+| sv = 1
+| tr = 1
+| uk = 1
+| vi = 1
+| zh = 51
+| zh-tw = 1
+}}
+__NOTOC__
+
+=== Title ===
+*{{{{PAGENAME}}|VDC}}
+== Group 1 ==
+*'''{{{{PAGENAME}}|Administration}}'''
+*'''{{{{PAGENAME}}|Guidelines}}'''
+*{{{{PAGENAME}}|Policies and Guidelines}}
+*{{{{PAGENAME}}|Style guide}}
+*{{{{PAGENAME}}|Terms of Use}}
+*'''{{{{PAGENAME}}|Images}}'''
+*{{{{PAGENAME}}|Help with images}}
+*{{{{PAGENAME}}|Image use policy}}
+
+*'''{{{{PAGENAME}}|Maintenance}}'''
+*'''{{{{PAGENAME}}|Categories}}'''
+*{{{{PAGENAME}}|Candidates for speedy deletion}}
+*{{{{PAGENAME}}|Cleanup}}
+*{{{{PAGENAME}}|Disambiguation}}
+*{{{{PAGENAME}}|Drafts}}
+*{{{{PAGENAME}}|Essays}}
+*{{{{PAGENAME}}|Merge listings}}
+*{{{{PAGENAME}}|Screenshot requests}}
+*{{{{PAGENAME}}|Split listings}}
+*{{{{PAGENAME}}|Stub listings}}
+*{{{{PAGENAME}}|To-do}}
+*{{{{PAGENAME}}|User maintenance}}
+*{{{{PAGENAME}}|Work in Progress}}
+*'''{{{{PAGENAME}}|Issues}}'''
+''list uses the [[MW:Help:Magic_words#Localisation|<nowiki>{{int}}</nowiki>]] function''
+
+*'''{{{{PAGENAME}}|Templates}}'''
+*{{{{PAGENAME}}|Help with templates}}
+*{{{{PAGENAME}}|Template listings}}
+*{{{{PAGENAME}}|Template documentation pages}}
+*{{{{PAGENAME}}|Template testcase pages}}
+== Group 2 ==
+*'''{{{{PAGENAME}}|Community}}'''
+*'''{{{{PAGENAME}}|Pages}}'''
+*{{{{PAGENAME}}|Community Portal}}
+*{{{{PAGENAME}}|Ongoing discussions}}
+*{{{{PAGENAME}}|Tasks}}
+*{{{{PAGENAME}}|Proposals}}
+*'''{{{{PAGENAME}}|Static}}'''
+*'''{{{{PAGENAME}}|Discussion}}'''
+*{{{{PAGENAME}}|Main discussion page}}
+*{{{{PAGENAME}}|Talk:Main Page}}
+*{{{{PAGENAME}}|Valve Developer Community talk:About}}
+*{{{{PAGENAME}}|New Help Desk}}
+*{{{{PAGENAME}}|Reasons for speedy deletion}}
+*{{{{PAGENAME}}|Valve Developer Community:Administrators' noticeboard}}
+*'''{{{{PAGENAME}}|Ongoing}}'''
+''N/A''
+== Group 3 ==
+*'''{{{{PAGENAME}}|Informational}}'''
+*{{{{PAGENAME}}|About}}
+*{{{{PAGENAME}}|Automation}}
+*{{{{PAGENAME}}|Categories}}
+*{{{{PAGENAME}}|Cleanup}}
+*{{{{PAGENAME}}|Contents}}
+*{{{{PAGENAME}}|Deletion}}
+*{{{{PAGENAME}}|Glossary}}
+*{{{{PAGENAME}}|Linking}}
+*{{{{PAGENAME}}|Stubs}}
+*{{{{PAGENAME}}|Templates}}
+== Group 4 ==
+*'''{{{{PAGENAME}}|Languages}}'''
+*{{{{PAGENAME}}|Pages to be translated}}
+*{{{{PAGENAME}}|Translation guide}}
+*{{{{PAGENAME}}|Translators}}
+*{{{{PAGENAME}}|User languages}}
+*{{{{PAGENAME}}|Translators' noticeboard}}
+
+*{{{{PAGENAME}}|Example}}
+
+<includeonly><onlyinclude>{{#switch:{{{1|}}}
+
+| VDC = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Valve Developer Community
+	| cs = Valve Developer Community
+	| de = Valve Entwickler-Community
+	| es = comunidad de desarrollo de Valve
+	| eo = Valve Evoluigista Komunumo
+	| fi = Valve Kehittäjä Yhteisö
+	| fr = Communauté des Développeurs Valve
+	| he = Valve המפתחים של
+	| hr = Zajednicu Valve razvojnih programera 
+	| it = Community degli Sviluppatori di Valve
+	| ja = バルブ開発者コミュニティ
+	| ko = Valve 개발자 커뮤니티에 오신 것을 환영합니다
+	| nl = Valve Developer Community
+	| pl = Społeczności twórców Valve
+	| pt-br = comunidade de desenvolvedores da Valve
+	| ru = Навигация по сообществу
+	| sv = Valve Developer Community
+	| tr = Valve Geliştiriciler Topluluğu
+	| uk = Valve Developer Community
+	| vi = Cộng đồng phát triển Valve
+	| zh = Valve 开发者社区
+	| zh-tw = Valve 開發者社群
+	}}
+
+
+| Administration = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Administration 
+	| de = Verwaltung
+	| es = Administración 
+	| fi = Ylläpito 
+	| hr = Administracija
+	| ru = Администрирование 
+	| zh = 管理
+	}}
+
+| Guidelines = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Guidelines 
+	| de = Richtlinien
+	| es = Guías 
+	| hr = Smjernice
+	| ru = Руководства
+	| zh = 指导方针| fi = Ohjeet 
+	}}
+
+| Policies and Guidelines = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Policies and Guidelines 
+	| de = Richtlinien und Richtlinien
+	| es = Políticas y directrices 
+	| fi = Käytännöt ja Ohjeet 
+	| hr = Politike i Smjernice
+	| ru = Политика и руководства 
+	| zh = 政策和指导方针
+	}}
+
+| Style guide = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Style guide
+	| de = Gestaltungsrichtlinie
+	| es = Guía de estilo
+	| fi = Tyyli opas 
+	| hr = Stilski vodič 
+	| ru = Руководство по стилю 
+	| zh = 样式指南
+	}}
+
+| Terms of Use = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Terms of Use 
+	| de = Nutzungsbedingungen
+	| es = Términos de uso 
+	| fi = Käyttöehdot 
+	| hr = Uvjeti korištenja
+	| ru = Условия использования 
+	| zh = 使用协议
+	}}
+
+| Images = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Images 
+	| es = Imágenes
+	| de = Bilder
+	| fi = Kuvat 
+	| hr = Slike
+	| ru = Изображения 
+	| zh = 图像
+	}}
+
+| Help with images = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Help with images 
+	| de = Hilfe mit Bildern
+	| es = Ayuda con imágenes
+	| fi = Apua kuvien kanssa 
+	| hr = Pomoć oko slike 
+	| ru = Помощь с изображениями 
+	| zh = 图像帮助
+	}}
+
+| Image use policy = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Image use policy 
+	| de = Bildnutzungsrichtlinie
+	| es = Políicas de uso de imágenes 
+	| fi = Kuvan käyttö käytännöt 
+	| hr = Politika upotrebe slike
+	| ru = Политика использования изображений 
+	| zh = 图像使用策略
+	}}
+
+| Maintenance = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Maintenance
+	| de = Wartung
+	| es = Mantenimiento 
+	| fi = Huolto 
+	| hr = Održavanje
+	| ru = Обслуживание 
+	| zh = 维护
+	}}
+
+| Categories = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Categories 
+	| de = Kategorien
+	| es = Categorías
+	| fi = Kategoorioita
+	| hr = Kategorije
+	| ru = Категории 
+	| zh = 分类 
+	}}
+
+| Candidates for speedy deletion = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Candidates for speedy deletion
+	| de = Kandidaten für eine zügige Löschung
+	| es = Candidatos a eliminación rápida 
+	| fi = Ehdokkaat pikapoistolle 
+	| hr = Kandidati za brzo brisanje
+	| ru = Кандидаты на быстрое удаление 
+	| zh = 快速删除的候选项
+	}} 
+
+| Cleanup = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Cleanup 
+	| de = Aufräumen
+	| es = Limpieza 
+	| fi = Siivous 
+	| hr = Čišćenje
+	| ru = Очистка 
+	| zh = 内容清理
+	}}
+
+| Disambiguation = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Disambiguation
+	| de = Begriffsklärung
+	| es = Desambiguación 
+	| fi = Selventäminen 
+	| hr = Višeznačnost
+	| ru = Устранение неоднозначности 
+	| zh = 消歧义
+	}}
+
+| Drafts = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Drafts 
+	| de = Entwürfe
+	| es = Borradores
+	| fi = Luonnokset 
+	| hr = Nacrti 
+	| ru = Черновики 
+	| zh = 草案
+	}}
+
+| Essays = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Essays 
+	| de = Aufsätze
+	| es = Ensayos 
+	| fi = Esseet 
+	| hr = Eseji
+	| ru = Эссе 
+	| zh = 短文
+	}}
+
+| Merge listings = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Merge listings 
+	| de = Einträge zusammenführen
+	| es = Fusionar listas 
+	| fi = Yhdisettäviä artikkeleja 
+	| hr = Spojiti popise 
+	| ru = Объединение списков 
+	| zh = 合并列表
+	}}
+
+| Screenshot requests = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Screenshot requests 
+	| de = Screenshot-Anfragen
+	| es = Solicitudes de capturas de pantalla 
+	| fi = kuvakaappaus pyyntöjä 
+	| hr = Zahtjevi za snimku zaslona
+	| ru = Запросы на скриншоты 
+	| zh = 截图请求
+	}}
+
+| Split listings = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Split listings 
+	| de = Geteilte Einträge
+	| es = Listas de división 
+	| fi = Lista jaettavia artikkeleita 
+	| hr = Podijeljeni oglasi
+	| ru = Разделение списков 
+	| zh = 分割列表
+	}}
+
+| Stub listings = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Stub listings 
+	| de = Stub-Einträge
+	| es = Listas en progreso
+	| fi = Lyhyet sivut 
+	| hr = Stub oglasi 
+	| ru = Статьи-заглушки 
+	| zh = 小作品列表
+	}}
+
+| To-do = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = To-do 
+	| de = Machen
+	| es = Tareas 
+	| fi = Tehtävä 
+	| hr = napraviti
+	| ru = Список дел 
+	| zh = 待办事项
+	}}
+
+| User maintenance = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = User maintenance 
+	| es = Mantenimiento de usuarios
+	| de = Benutzerwartung
+	| hr = Korisničko održavanje
+	| fi = Käyttäjien ylläpito 
+	| ru = Группы пользователей 
+	| zh = 用户管理
+	}}
+
+| Work in Progress= {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Work in Progress 
+	| de = In Arbeit
+	| es = Trabajo en curso 
+	| fi = Keskeneräisiä 
+	| hr = Radovi u tijeku 
+	| ru = В разработке 
+	| zh = 进行中的编辑
+	}}
+
+| Issues  = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Issues 
+	| de = Probleme
+	| es = Problemas 
+	| fi = Ongelmia 
+	| hr = Problemi
+	| ru = Проблемы 
+	| zh = 问题
+	}}
+
+| Templates  = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Templates
+	| de = Vorlagen
+	| es = Plantillas
+	| fi = Mallineet 
+	| hr = Predložaka 
+	| ru = Шаблоны 
+	| zh = 模板
+	}}
+
+| Help with templates = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Help with templates 
+	| de = Hilfe bei Vorlagen
+	| es = Ayuda con plantillas
+	| fi = Apua mallineiden käyttöön 
+	| hr = Pomoć oko predložaka 
+	| ru = Помощь с шаблонами 
+	| zh = 模板帮助
+	}}
+
+| Template listings = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Template listings 
+	| de = Vorlagenauflistungen
+	| es = Listas de plantillas 
+	| fi = Lista mallineita 
+	| hr = Liste predložaka
+	| ru = Список шаблонов 
+	| zh = 模板列表
+	}}
+
+| Template documentation pages = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Template documentation pages 
+	| de = Vorlagendokumentationsseiten
+	| es = Páginas de documentación de plantillas 
+	| fi = Mallineiden dokumentaatio sivuja 
+	| hr = Dokumentacijske stranice predložaka
+	| ru = Страницы документации шаблонов 
+	| zh = 模板文档页面
+	}}
+
+| Template testcase pages = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Template testcase pages 
+	| de = Vorlagen-Testfallseiten
+	| es = Páginas de prueba de plantillas 
+	| fi = Mallineiden testitapaus sivuja 
+	| hr = Predložak testnih stranica
+	| ru = Страницы тестовых примеров для шаблонов 
+	| zh = 模板测试用例页面
+	}}
+
+| Community = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Community
+	| hr = Zajednica
+	| ru = Сообщество
+	}}
+
+| Pages = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Pages
+	| hr = Stranice
+	| ru = Статьи
+	}}
+
+| Community Portal = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Community Portal
+	| hr = Portal zajednice
+	| ru = Центр Сообщества
+	}}
+
+| Ongoing discussions = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Ongoing discussions
+	| hr = Tekuće rasprave
+	| ru = Актуальные обсуждения
+	}}
+
+| Tasks = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Tasks
+	| hr = Zadaci
+	| ru = Задачи
+	}}
+
+| Proposals = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Proposals
+	| hr = Prijedlozi
+	| ru = Идеи и предложения
+	}}
+
+| Static = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Static 
+	| de = Statisch
+	| es = Estadística 
+	| fi = Staattinen 
+	| hr = statički
+	| ru = Постоянное
+	| zh = 静态
+	}}
+
+| Discussion = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Discussion 
+	| de = Diskussion
+	| es = Discusión 
+	| fi = Keskustelu
+	| hr = Rasprava
+	| ru = Обсуждение
+	}}
+	
+| Main discussion page = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Main discussion page 
+	| de = Hauptdiskussionsseite
+	| es = Página de discusión principal 
+	| fi = Pää keskustelu sivu 
+	| hr = Glavna stranica za raspravu
+	| ru = Общее
+	| zh = 主讨论页 
+	}}
+
+| Talk:Main Page = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Talk:Main Page 
+	| de = Diskussion:Hauptseite
+	| es = Discusión:Página principal 
+	| fi = Keskustelu:Pää sivu 
+	| hr = Razgovor: Glavna stranica
+	| ru = Заглавная страница 
+	| zh = 讨论：主页 
+	}}
+
+| Valve Developer Community talk:About = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Valve Developer Community talk:About 
+	| de = Diskussion Über der Valve Entwickler-Community
+	| es = Discusión de VDC:Acerca de 
+	| fi = Valve Kehittäjä Yhteisö:Tietoja 
+	| hr = Razgovor o VDC
+	| ru = VDC: О нас 
+	| zh = Valve 开发者社区：关于
+	}}
+
+| New Help Desk = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = New Help Desk 
+	| de = Neuer Helpdesk
+	| es = Nueva sección de ayuda
+	| fi = Uuden Avun Tiski 
+	| hr = Novi Help Desk 
+	| ru = Новая служба поддержки 
+	| zh = 新帮助台
+	}}
+
+| Reasons for speedy deletion = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Reasons for speedy deletion 
+	| de = Gründe für eine zügige Löschung
+	| es = Motivos para eliminación rápida 
+	| fi = Syitä pikapoistoon 
+	| hr = Razlozi za brzo brisanje
+	| ru = Причины для быстрого удаления 
+	| zh = 快速删除的原因
+	}}
+
+| Valve Developer Community:Administrators' noticeboard = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Administrators' noticeboard 
+	| de = Tafel für Administratoren
+	| es = Tablón de anuncios de administradores 
+	| fi = Ylläpitäjien ilmoitustaulu 
+	| hr = oglasna ploča za administratore
+	| ru = Объявления администраторов 
+	| zh = 管理员布告栏
+	}}
+
+| Ongoing = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Ongoing 
+	| de = Laufend
+	| es = En curso
+	| fi = Tekemisissä 
+	| hr = U tijeku
+	| ru = Рабочее
+	| zh = 持续进行
+	}}
+
+| Informational = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Informational
+	| de = Informativ
+	| es = Información 
+	| fi = Tiedottava 
+	| hr =  Informativni
+	| ru = Информация 
+	| zh = 相关信息
+	}}
+
+| About = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = About 
+	| de = Über VDC
+	| es = Acerca de 
+	| fi = Tietoja 
+	| hr = O projektu VDC
+	| ru = О нас 
+	| zh = 关于
+	}}
+
+| Automation = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Automation 
+	| de = Automatisierung
+	| es = Automatización 
+	| fi = Automaatio 
+	| hr = Automatizacija 
+	| ru = Автоматизация 
+	| zh = 自动化
+	}}
+
+| Contents  = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Contents 
+	| de = Inhalt
+	| es = Contenidos 
+	| fi = Sisältöjä 
+	| hr = sadržaj
+	| ru = Содержание 
+	| zh = 内容
+	}}
+
+| Deletion = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Deletion 
+	| de = Löschung
+	| es = Eliminación 
+	| fi = Poisto 
+	| hr = Brisanje
+	| ru = Удаление 
+	| zh = 删除
+	}}
+
+| Glossary = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Glossary 
+	| de = Glossar
+	| es = Glosario 
+	| fi = Sanasto 
+	| hr = Glosar
+	| ru = Словарь
+	| zh = 术语
+	}}
+
+| Linking = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Linking 
+	| de = Verlinkung
+	| es = Enlaces 
+	| fi = Linkittäminen 
+	| hr = Povezivanje
+	| ru = Ссылки 
+	| zh = 链接
+	}}
+
+| Stubs = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Stubs <!-- de -->
+	| es = Esbozos 
+	| fi = Lyhyet artikkelit
+	| hr = Zaglavci
+	| ru = Заглушки 
+	| zh = 小作品
+	}}
+
+| Templates = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Templates 
+	| de = Vorlagen
+	| es = Plantillas 
+	| fi = Mallineet 
+	| hr = Predloške
+	| ru = Шаблоны 
+	| zh = 模板
+	}}
+
+| Languages = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Languages 
+	| de = Sprachen
+	| es = Idiomas
+	| fi = Kielet 
+	| hr = Jezike 
+	| ru = Языки 
+	| zh = 语言
+	}}
+
+| Pages to be translated = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Pages to be translated 
+	| de = Zu übersetzende Seiten
+	| es = Páginas a traducir 
+	| fi = Sivuja käännettäväksi 
+	| hr = Stranice koje treba ju prevesti
+	| ru = Страницы, которые необходимо перевести 
+	| zh = 需要翻译的页面
+	}}
+
+| Translation guide = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Translation guide 
+	| de = Übersetzungsführer
+	| es = Guía de traducción 
+	| fi = Kääntämisen opas 
+	| hr = Vodič za prijevod
+	| ru = Справочник по переводу 
+	| zh = 翻译指南
+	}}
+
+| Translators = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Translators 
+	| de = Übersetzer/innen
+	| es = Traductores 
+	| fi = Kääntäjiä 
+	| hr = Prevoditelji
+	| ru = Переводчики 
+	| zh = 译者列表
+	}}
+
+| User languages = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = User languages 
+	| de = Benutzersprachen
+	| es = Idiomas de usuario
+	| fi = Käyttäjä kieliä 
+	| hr = Korisnički jezici 
+	| ru = Языки пользователей 
+	| zh = 用户语言
+	}}
+
+| Translators' noticeboard = {{#switch: {{{lang|{{Intlang}}}}}
+	| #default = Translators' noticeboard
+	| es = Tablón de anuncios de traductores
+	| de = Tafel für Übersetzer
+	| fi = Kääntäjien ilmoitustaulu
+	| hr = Oglasna ploča prevoditelja
+	| ru = Объявления переводчиков
+	| zh = 译者公告板
+	}}
+
+|#default = {{error|Error on string: {{{1}}} !}}
+}} <!-- END OF SWITCH -->
+</onlyinclude></includeonly>
