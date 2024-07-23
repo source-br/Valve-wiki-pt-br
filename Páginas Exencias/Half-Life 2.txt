@@ -1,0 +1,146 @@
+{{LanguageBar}}
+{{hl2 topicon}}{{src topicon}}
+
+{{clr}}
+{{Infobox game
+|title = Half-Life 2
+|image = Software Cover - Half-Life 2.jpg
+|developer = [[Valve Corporation]]
+|publisher = Sierra Entertainment (retail)<br>Valve Corporation
+|series = [[Half-Life series]]
+|releasedates = {{ExpandBox|title=November 16, 2004|'''Windows:'''<br>November 16, 2004<br>'''Xbox:'''<br>November 15, 2005<br>'''Xbox 360:'''<br>October 10, 2007<br>'''PlayStation 3:'''<br>December 11, 2007<br>'''macOS:'''<br>May 26, 2010<br>'''Linux:'''<br>May 9, 2013<br>'''Android'''<br>May 12, 2014<!--expand template-->}}
+|genre = [[WP:First-person shooter|First-person shooter]]
+|mode = [[WP:Single-player video game|Single-player]]
+|platform = [[WP:Windows|Windows]], [[WP:Xbox_(console)|Xbox]], [[WP:Xbox_360|Xbox 360]], [[WP:PlayStation 3|PlayStation 3]], [[WP:Android|Android]] (Nvidia Shield), [[WP:macOS|macOS]], [[WP:Linux|Linux]]
+|engine = {{src|4}} ({{src13sp|1|nt=1}})
+|appid = 220
+|codelang = [[WP:C++|C++]]
+|modsupport = Yes ({{code|custom}} folder and {{code|sourcemods}})
+|sdk = [[Source SDK]]
+|sysreq = <span></span>
+* [[WP:Windows 7|Win 7]] or later
+* 1.7 GHz and/or Dual-core 
+* 1 [[WP:Gigabyte|GB]] [[WP:Random-access memory|RAM]]
+* 6.5 GB disk space
+* NVIDIA GeForce 6xxx series, ATI Radeon X1600, Intel HD Graphics 3000<br>with 128 [[WP:Megabyte|MB]] [[WP:Video random-access memory|VRAM]]
+''New Engine only. For details, [[#System Requirements|see below]]''
+
+
+|distribution = Retail, [[Steam]]
+|website = [https://www.half-life.com/halflife2 Official Website]
+|links = {{Steam store|app/220|Steam page}}<br>{{Moddb|games/half-life-2|page=other|ModDB page}}
+|previousgame = {{hl|2}}
+|nextgame = {{hl2lc|2}}<br>{{hl2ep1|2}} (chronologically)
+}}
+[[File:City17 trainstation.jpg|thumb|''"Welcome. Welcome to City 17. You have chosen, or been chosen, to relocate to one of our finest remaining urban centers."'']]
+<span style="color:white; font-weight:bold">Half-Life 2</span> (abbreviated as '''HL2''') defines a new benchmark in gaming with startling realism and responsiveness. Powered by then-new [[Source]] technology, '''Half-Life 2''' features the most sophisticated in-game characters ever witnessed, advanced AI, stunning graphics and physical gameplay. This was the first game requiring installation of {{steamicon|1}} when it came out back in 2004.
+
+'''Half-Life 2''' is the sequel to the 1998 '''[[Half-Life]]'''. A sequel to '''Half-Life 2''' was released in 2006, titled '''[[Half-Life 2: Episode One]]'''. A virtual reality prequel was released in 2020, titled '''[[Half-Life: Alyx]]'''.
+
+'''Half-Life 2''' was [[Half-Life 2 (Xbox)|later ported]] for the [[WP:Xbox|Xbox]] console in 2005, as well as for the [[WP:Xbox 360|Xbox 360]] and [[WP:PlayStation 3|PlayStation 3]] in 2007, bundled under '''[[The Orange Box]]'''.
+
+The game has considerable number of physics puzzles which aren't that common in games like [[WP:Doom (franchise)|Doom]], [[WP:Call of Duty|Call of Duty]] and [[WP:Halo (franchise)|Halo]]. Even '''Half-Life''' has fewer puzzles.
+
+== Content ==
+* '''Half-Life 2''' maps (<code>hl2</code>)
+* Source shared (<code>hl2</code>)
+* '''Source 2013 Singleplayer''' engine branch
+
+== RTX version ==
+{{Main|Half-Life 2 RTX}}
+A ray-traced version of '''Half-Life 2''' is currently under development by Orbifold Studios, and promoted by [[WP:GeForce|Nvidia]], using Nvidia's RTX Remix tool.
+
+This version aims to remaster the entire game with new RTX lighting, RTX reflections, PBR textures, and a lot more without changing the core gameplay, similar to '''[[Portal RTX]]'''.
+
+== Chapters ==
+{{Chapters}}
+
+== [[NPC|NPCs]] ==
+{{main|:Category:Half-Life 2 NPCs}}
+
+== Credits ==
+{{main|Half-Life 2 Credits}}
+{{Expand|noborder=1|title=Half-Life 2 Credits|{{:Half-Life 2 Credits/nocat}}
+}}
+
+== Limitations/Bugs ==
+*For more '''Half-Life 2''' bugs, see this [https://github.com/ValveSoftware/Source-1-Games/issues?q=is%3Aopen+is%3Aissue+label%3A%22Half-Life+2%22 GitHub] page.
+This section only list various bugs that are commonly encountered.
+=== {{unresolved|bugs}} ===
+The current version of '''Half-Life 2''' in Steam lacks LDR lighting on multiple game levels (starting from {{code|d1_eli_01}} until the end of [[Nova Prospekt]]). This means that if [[HDR]] is disabled (by selecting None or Bloom only in HDR settings), [[mat_fullbright]] will be set to 1, disabling lighting and making everything bright and flat ([https://github.com/ValveSoftware/Source-1-Games/issues/577 relevant GitHub issue]). Because of this, HDR is required to play the game.<br>This issue is not affected in previous version of the game (which use older engines and are compiled in LDR only), and is fixed in '''[[Half-Life 2: Update]]'''.
+
+=== {{resolved|bugs}} ===
+There was a bug with the [[Dropship]]'s gun that was unable to turn, this makes the [[Sandtraps]] chapter much easier.{{Cite|1}} Presents since console release on [[WP:Xbox 360|X360]]/[[WP:Playstation 3|PS3]] (remains unfixed) and since 2010 engine update on PC.<br>Fixed in the current Steam version since 2022's the [[Steam Deck]] update of '''Half-Life 2'''. Some third-party mods may or may not include this fix; [[Fixing the Dropship gun|this page]] details how to fix it in your mod.
+=== Other limitations ===
+{{Important|The macOS (OS X) version of this game does not work on macOS Catalina (version 10.15) or later due to the removal of support for 32-bit-only apps.}}
+As of May 26, 2010, the branch of Source under which Half-Life 2 originally ran on [[Source 2006]] no longer exists on Steam, and subsequently replaced by the updated [[Source 2009]] (which later was upgraded again to [[Source 2013 Singleplayer|Source 2013]]. Some old mods which base themselves directly on the game (as opposed to [[Source SDK Base]]) are unlikely to work any more.<br> This also meant that support for running Half-Life 2 on Windows 9x/ME/2000 have been also dropped.
+
+== Technical notes ==
+* In the 2006 version of the game, being underwater at [[d1_canals_01]], or in some area on that same map can cause performance drop. Fixed since 2010 with the engine update.
+* Although Source [[mod]]s are often described as being "for Half-Life 2", they actually use [[Source SDK Base]]. SDK Base is available to anyone who owns any Valve Source game and provides all of Half-Life 2's content (except [[BSP|maps]] and [[VCD|vcd scenes]]) on a static branch of the engine.
+* The Half-Life 2 Collectors Edition, which ships with the [[Source 2004|2004]] version of the game, does not require Steam to run or update (similar to latest version), which meant that it will run on older systems with Windows 2000 and earlier.
+* The 64-bit Windows version of Half-Life 2, which existed around 2005-2006, is no longer available.
+
+== System Requirements<span id="Sysreq"><!--Used by Sysreq template, clicking on "See system requirements" will send you to this section.--></span> ==
+<!-- May include unofficial info alongside official one, just to make sure the game still perform well on any hardware. Most official system requirements, like CS:GO, might be out of date. -->
+
+<p style="color:white; font-weight:bold">Windows (Old Engine):</p>
+*OS: Windows [[WP:Windows 98|98]] / [[WP:Windows ME|ME]], [[WP:Windows 2000|2000]], [[WP:Windows XP|XP]] or later
+*[[WP:Central processing unit|CPU]]: 1.2 [[WP:Hertz|GHz]] 
+*[[WP:Random-access memory|RAM]]: 256 [[WP:Megabyte|MB]] 
+*Disk space: 4.5 [[WP:Gigabyte|GB]]
+*Nvidia GeForce FX 5700, ATI Radeon 9500 (with 128MB [[WP:Video random-access memory|VRAM]])
+*[[WP:Direct3D|Direct3D]] 9.0 compatible [[WP:Video card|video card]] (with atleast DirectX 7.0 compatibility level or higher)
+
+<p style="color:white; font-weight:bold">Windows (New Engine):</p>
+*OS: Windows [[WP:Windows 7|7]] or later
+*[[WP:Central processing unit|CPU]]:1.7 GHz and/or Dual-core 
+*[[WP:Random-access memory|RAM]]:1GB RAM
+*Disk space: 6.5 GB (15GB+ recommended)
+*GPU: NVIDIA GeForce 6xxx series, ATI Radeon X1600, Intel HD Graphics 3000 (with 128MB [[WP:Video random-access memory|VRAM]])<!-- Old GPUs which HL2 supported at launch, can play the game in DX8, however some maps requires HDR (which is DX9 only), which requires more powerful GPU to handle. -->
+*[[WP:Direct3D|Direct3D]] 9.0 compatible [[WP:Video card|video card]] (with atleast DirectX 8.0 compatibility level or higher)
+*Other: New Engine requires [[HDR]] to be enabled (due to this [https://github.com/ValveSoftware/Source-1-Games/issues/577 issue])
+{{Note|The Steam version is no longer compatible with [[WP:Windows XP|XP]] and [[WP:Windows Vista|Vista]]{{confirm}} since the latest Steam Deck update.<br>User using these OS can downgrade to previous version of the game by using the {{code|previous}} beta branch. But please note that this older branch does not include all the bug fixes that were introduced with Steam Deck update.}}
+
+<p style="color:white; font-weight:bold">OS X:</p>
+*[[WP:OS X|OS X]] 10.5.8, 10.6.3 (up to 10.14.6)
+*CPU: 2.0 GHz and/or Dual-core
+*RAM: 1 GB
+*Storage: 6.5 GB (15GB+ recommended)
+*GPU: NVIDIA GeForce 8xxx series, ATI Radeon X1600, Intel HD Graphics 3000<br>OpenGL 2.1 compatible
+*Audio: OpenAL compatible
+*Other: HDR is required to be enabled (see above)
+{{Note|Mac version are no longer supported after macOS Catalina (10.15), due to this game only have 32-bit binaries. Valve later removed macOS binaries in June 12, 2024.<br>
+User can manually build Intel 64-bit/Apple Silicon version of HL2 by [https://www.applegamingwiki.com/wiki/Half-Life_2#Native following this guide]<!-- not sure if this is legal for it to be mention here as the guide rely on using the modified leaked source engine source code, through user can build HL2 for Apple Sillicon using official (non-leaked) code. -->.}}
+
+<p style="color:white; font-weight:bold">Linux:</p>
+*OS: Ubuntu 12.04, SteamOS 1.0 or later<br>Other Linux distros supported.
+*CPU: 2.0 GHz and/or Dual-core
+*RAM: 1 GB
+*Storage: 6.5 GB (15GB+ recommended)
+*GPU: NVIDIA GeForce 8xxx series, ATI Radeon X1600, Intel HD Graphics 3000<br>OpenGL 2.1 compatible
+*Audio: OpenAL compatible
+*Other: HDR is required to be enabled (see above)
+{{Note|The system requirements for {{hl2|4}} on Linux are unofficial, based off Windows/Mac info, as well as other Source games that support Linux, such as Portal 2.}}
+
+== See also ==
+* [[:Category:Half-Life_2_level_design|Half-Life 2 level design]]
+* [[Half-Life 2: Update]] - a fan-made Steam-released mod aimed at bug-fixing and giving the game a mild visual upgrade.
+* [[Synergy]] - a fan-made Steam-released co-op mod that allows users to play the entire '''Half-Life 2''''s campaign with multiplayer.
+* [[:Category:Source mods]]
+
+== External links ==
+* {{Steam community|app/220|Half-Life 2 on Steam Community}}
+* {{gamebanana|9|GameBanana page}}
+* {{cow|Half-Life 2}} on '''Combine OverWiki'''
+* {{w|Half-Life 2}} on '''Wikipedia'''
+
+{{references|1=
+{{ref2|cite id=1|access-date=June 10, 2024|[[User:kr0tchet|User:leonidakarlach]] (June 10, 2024). {{Yt|page=watch|t-M2ZXHrqd8|t=40|Half-Life 2 - The one Dropship gun bug that ruins the Sandtraps chapter (Now fixed)}}. ''YouTube''.<br>{{Note|The bugs shown on the video are recorded from {{hl2u|4}} (both unpatched and unofficially patched), but these also applies to original version of {{hl2|4}} (since 2007 for consoles, 2010 for PC, was fixed on PC in 2022).}}}}
+}}
+
+{{Half life games|hidecancelled=true|hide3rdparty=true}}
+
+[[Category:Verified Steam Deck games]]
+[[Category:Half-Life 2]]
+[[Category:The Orange Box]]

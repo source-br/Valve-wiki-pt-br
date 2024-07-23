@@ -1,4 +1,5 @@
-<!-- When this page is updated to {{langsp}} or {{langsp}} instead of {{lang}}, please move {{this is a}} to the base page, as it is automatically translated. -->{{lang}}{{tabs|source=1|source2=1|main=source|Env cubemap}}
+{{LanguageBar}}
+{{tabs|source=1|source2=1|main=source|Env cubemap}}
 [[File:Cubemap_build_result.jpeg|thumb|right|Um exemplo de cubemap contendo o carro branco como um {{L|prop_static}}, um {{L|env_sprite}} e decals. Observe que o carro azul como {{L|prop_physics}} não e visível no cubemap porque não e estático.]]
 {{this is a|point entity|internal=1|name=env_cubemap|sprite=1}} Ela especifica a localização para o qual um {{L|cubemap}} será gerado quando o comando {{L|buildcubemaps}} for executado no console. [[Material]]s com {{L|$envmap}} usarão o cubemap mais próximo como seu reflexo.
 {{intent}}
