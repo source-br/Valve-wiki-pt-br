@@ -1,0 +1,73 @@
+{{LanguageBar}}
+{{Source topicon}}
+{{tabs|Ambient generic|goldsrc=1|source=1|main=source}}
+{{this is a|point entity|name=ambient_generic|sprite=1}}
+
+{{CD|CAmbientGeneric|file1=ambientgeneric.cpp}}
+
+This entity plays a sound, either once or on loop and either from a location in the world or globally. Use it to play and control a [[Soundscripts|soundscript]] sound, a raw [[WAV]], [[MP3]], {{p2ce}}[[OGG]], or {{p2ce}}[[FLAC]] sample, or a {{ent|scripted_sentence}}.
+{{clr}}
+==Bugs/Limitations==
+{{tip|This entity can be parented if the <code>parentname</code> keyvalue or <code>SetParent</code> input is used, even though they aren't listed in the FGD.}}
+{{bug|The <code>ambient_generic</code> will not update its position while the sound is playing if it is parented.|offset=1}}
+{{workaround|Use SourceEntityName|offset=2}}
+{{bug|<code>ambient_generic</code>s used to play looping sounds in {{css|2}} must be activated with a {{ent|logic_auto}}, or they will stop playing once the first round starts.}}
+{{bug|Killing this entity while a looped sound is playing will make it play forever for the entire map duration. This also may cause looping sounds to stack up and eventually overflow the sound limit (detailed below), even if they aren't audible.}}
+{{ModernFix|Problems with sounds being unstoppable can be avoided [[Ambient generic: stop and toggle fix|by adding this C++ code to your mod]].|code|offset=1}}
+{{bug|Looping sounds might become attached to certain players when they are not supposed to. E.g., if you are away from a sound, and a player near the sound dies and then spectates you, the sound may become attached to you. The exact consistency/behavior of this bug is still unknown.}}
+{{bug|Too many <code>ambient_generic</code>s playing at once will cause the sound engine to become corrupted globally and potentially cause extreme lag! This occurs if the internal entity sound limit of 64 (32 in {{csgo}}) is hit. Due to another bug, <code>ambient_generic</code>s still "play" when outside the maximum distance, even if not audible to the client.}}
+{{workaround|Use {{ent|env_soundscape}}s (which count towards a different static limit of 64) where possible and forcefully disable any sounds that aren't necessary to play yet. The amount of sounds currently playing can be visualized with the <code>snd_show</code> command.|offset=1}}
+{{bug|Looping sounds using LFO cannot be stopped via the <code>StopSound</code> input.}}
+{{note|The behavior of sound is different for ''mono'' and ''stereo''. Stereo sounds only fade in and out (they are already using surrounding information built into them). Mono sounds are processed by the audio engine to sound like they are coming from a specific position. These behaviors can be overridden by using [[Soundscripts#Sound_Characters|Sound Characters]].}}
+{{warning|Using the Soundscript name of a sound, as opposed to its "raw" audio file, will apply all the soundscript settings.<br> Example: In {{l4d2|2}}, the soundscript of <code>dlc.Generator_start_run_loop</code> is set to play everywhere but at lower volume even if "Play everywhere" is not set. But using its raw sound <code>Generator_start_run_loop.wav</code> works as intended.}}
+
+== Keyvalues ==
+{{KV|Sound Name|intn=message|string|The [[soundscript]] name of, or direct path to, the sound to play. For {{ent|scripted_sentence}}s, type "!" followed by the sentence name. (Example: ''!COMBINE_THROW_GRENADE4''){{note|Playing music without a soundscript is not recommended due to a bug with the Play Everywhere flag.}}{{note|Using any sound characters in a direct path is, in a way, a soundscript.}}}}
+{{KV|Max Audible Distance|intn=radius|float|Maximum distance in [[unit]]s at which the sound plays for a client.{{bug|The sound still actually plays outside the distance.}}{{bug|Sounds may still be audible far outside the distance due to [[DSP]].}}{{note|Volume fades to nothing as the player approaches this distance, which can make it seem as if the sound stops playing too early.}}{{note|Determines the [[Soundscripts#SoundLevel|soundlevel]] for raw sounds. Soundlevel is <code>SNDLVL_70dB</code> at the default value of 1250.}}}}
+{{KV|SourceEntityName|intn=SourceEntityName|targetname|If specified, the sound will play from this entity instead of the <code>ambient_generic</code>. If the target is an NPC capable of lipsynching, and phoneme data is found within the sound, the target will lip-sync to it.{{bug|If the <code>ambient_generic</code> is <code>Kill</code>ed, the sound will play at the origin of the map (at 0,0,0).}}{{bug|The entity must be spawned at map start, or else the sound will play at the location of the <code>ambient_generic</code>.}}{{bug|Using <code>AddOutput</code> to assign the <code>SourceEntityName</code> after the entity spawns does not work.}}{{bug|Multiple <code>ambient_generic</code>s won't stack on the same entity.}}{{note|An <code>ambient_generic</code> will only play from a single entity. If there are multiple entities with the same target name, the sound will only play from the first one it finds.}}}}
+{{KV|Volume|intn=health|int 0-10|How loud to play the sound. 0 is silent and 10 is normal. Default is 10.{{tip|This keyvalue doesn't allow decimals, but the <code>Volume</code> input does.}}{{tip|Sounds may be hard to hear even at full volume. Naming custom sounds according to the [[soundmixer]] can be used to make them naturally louder (or quieter).}}{{bug|The sound does not play at all if the volume is 0.}}}}
+{{KV|Start Volume|intn=volstart|int 0-10}}
+{{KV|Fade in time in seconds|intn=fadeinsecs|int 0-100}}
+{{KV|Fade out time in seconds|intn=fadeoutsecs|int 0-100|How long to spend fading in and out, and what volume to start at. Default is no fading.}}
+{{KV|Pitch|intn=pitch|int 0-255|Pitch, where 1 is low, 100 is normal, and 255 is high.{{bug|Very high or very low values can cause other sounds to be distorted.}}}}
+{{KV|Start pitch|intn=pitchstart|int 0-255}}
+{{KV|Spin up time|intn=spinup|int 0-100}}
+{{KV|Spin down time|intn=spindown|int 0-100|How long to spend spinning pitch up/down at the start/end of playback, and what pitch to start at. Default is no spinning.}}
+{{KV|Dynamic Presets|intn=preset|choices|Various [[DSP]] effects that can be applied.}}
+{{KV|LFO type|intn=lfotype|int|Type of [[LFO|Low Frequency Oscillation]] to employ.
+:0. Off (default)
+:1. Square Wave (alternate between low and high)
+:2. Triangle Wave (crossfade between high and low)
+:3. Random}}
+{{KV|LFO rate|intn=lforate|int 0-1000|How frequently the LFO effect repeats itself.}}
+{{KV|LFO modulation - pitch|intn=lfomodpitch|int 0-100|Affects the sound pitch or [[Wikipedia:vibrato|vibrato]]. Higher numbers change the pitch more; warbling singers use little, police sirens use a lot.}}
+{{KV|LFO modulation - volume|intn=lfomodvol|int 0-100|Affects the volume of the sound, causing it to "pulse." Similar to [[Wikipedia:tremolo|tremolo]]. At a really high rate, this can make the same effect as talking through fan blades.}}
+{{KV|Incremental Spinup Count|intn=cspinup|int|Appears to be a intended to increase pitch in time with <code>ToggleSound</code> inputs. {{bug|Non-functional.}}}}
+{{KV|m_bDontModifyPitchVolOnSpawn|intn=m_bDontModifyPitchVolOnSpawn|Choices|When the 'Start Silent' flag is left unchecked, a SOUNDSCRIPTED ambient_generic will first pull its pitch & volume values from inside the entity itself upon map load/spawn, and NOT from what's dictated in the actual soundscript. This option, when enabled, will prevent this from happening and ensure no discontinuity occurs when toggling the sound off and on again. (Set to Disabled by default)|only=BMS}}
+*0: Disabled
+*1: Enabled
+{{KV Targetname}}
+
+== Inputs ==
+{{IO|Pitch|param=int|Sets the sound pitch, expressed as a range from 1 to 255, where 100 is the sound's original pitch.{{bug|Pitch will play the sound without informing the rest of the entity. This makes looping sounds unstoppable!.}}}}
+{{IO|PlaySound|Starts the sound.}}
+{{IO|StopSound|Stops a looping sound. Does ''not'' stop a non-looping sound; however, a non-looping sound can be stopped by using the Volume input with a value of 0.{{ModernFix|If necessary, you can allow this input to stop a non-looping sound [[Ambient generic: stop and toggle fix|via C++]].|code}}}}
+{{IO|ToggleSound|Toggles a looping sound between playing and stopped. Behaves like <code>PlaySound</code> if the sound doesn't loop.}}
+{{IO|Volume|param=float|Plays the sound at a volume from 0 to 10, where 10 is the loudest.{{bug|Volume will play the sound without informing the rest of the entity. This makes looping sounds unstoppable! It is speculated that the input is supposed to change the volume at which the <code>ambient_generic</code> plays its sound when prompted by other inputs, not play it by itself.}}{{note|Setting the volume to 0 will cause the sound to pause, rather than play silently.}}}}
+{{IO|FadeIn|param=int|Fades the sound up to full volume over a specified number of seconds, with a range from 0 to 100 seconds.{{note|In {{portal2|4}} it is necessary for the sound to get faded out at least once before this input has any effect.}}}}
+{{IO|FadeOut|param=int|Fades the sound to silence over a specified number of seconds, with a range from 0 to 100 seconds.{{bug|Will bring the sound up to full volume (i.e., 10) before beginning to fade it.}}}}
+
+== Flags ==
+{{fl|1|Play everywhere|Sound plays at a constant volume, no matter how far away the listener is from the sound source.{{todo|How does this interact with {{ent|env_microphone}} sound detection?}}}}
+:{{bug|This flag '''is broken at engine level''' for sounds played from [[Soundscripts]]. It will only work when a sound is played with its raw filename.}}
+{{fl|16|Start Silent|The map will start without this sound playing. Enabled by default.{{bug|Looping sounds that do not start silent cannot be controlled!}}}}
+{{fl|32|Is NOT Looped|Changes how the <code>ambient_generic</code> handles stopping and starting playback. It ''won't'' stop a sound that loops from looping, but it is still '''very important''' to set it to the right value. You might not be able to stop and/or start the sound if it isn't!{{bug|Having this option ticked while using a looped sound WILL prevent you from controlling it!}}}}
+{{fl|64|Do NOT Pause when game is Paused|Don't pause sound when game is paused.|only=BMS}}
+
+== See also ==
+* [http://www.gamebanana.com/tuts/5141 Adjust ambient_generic volume higher than 10] (Advanced Mapping Tutorial)
+* {{ent|env_soundscape}} - used to play many ambient/background sounds from a single entity [[soundscape|via a script]].
+* {{ent|music_track}} - used to dynamically play music in {{bms|4}}.
+* [[Looping a Sound]] - which requires modifying the actual <code>.wav</code> file
+* [http://www.slackiller.com/New%20Tuts/sound.html Setting up <code>ambient_generic</code>s in Counter-Strike: Source using] <code>logic_auto</code> - a substitute for creating a proper <code>env_soundscape</code>.
+[[Category:Sound System]]

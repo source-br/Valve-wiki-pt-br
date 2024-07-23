@@ -1,0 +1,74 @@
+{{LanguageBar}}
+{{Hierarchy|gmod}}
+{{Infobox game
+|title = Garry's Mod
+|image = Software Cover - Garry's Mod.jpg
+|developer = [[Facepunch Studios]]
+|publisher = [[Valve|Valve Corporation]]
+|series = 
+|releasedates = <span></span>{{Expand|noborder=1|title=November 29, 2006|'''Windows (GMod 1.0):'''<br>December 24, 2004<br>'''Windows (Steam/GMod 10):'''<br>November 29, 2006<br>'''macOS:'''<br>September 23, 2010<br>'''Linux:'''<br>June 5, 2013<!-- expand template -->}}
+|genre = [[WP:Sandbox game|Sandbox]]
+|mode = {{w|icon=0|Single-player video game|Single-player}},  {{w|icon=0|Multiplayer video game|Multiplayer}}
+|platform = {{win|1}}, {{mac|1}}, {{linux|1}}
+|engine = {{src|4}} (custom {{src13|1}} branch)
+|appid = 4000
+|codelang = [[WP:C++|C++]]
+|modsupport = Yes (Steam Workshop, {{code|addons}} folder)
+|sdk = [[Source SDK]]
+|sysreq = <span></span>
+*  {{w|icon=0|Windows 7|Win 7}} or later
+* 2 {{w|icon=0|Hertz|GHz}} or higher {{w|icon=0|Central processing unit|CPU}}
+* 4 {{w|icon=0|Gigabyte|GB}} RAM
+* 5 GB disk space (20GB+ recommended)
+* 512 MB {{w|icon=0|Video random-access memory|VRAM}} video card
+* Note: Workshop addons will increase storage size.
+* Multithreading or multi-core support requires 64-bit branch, as it was broken by default. Using 64-bit branch may increase game performance.
+|steamdeck = Playable
+|distribution = Website (formerly), Steam
+|website = [https://gmod.facepunch.com/ Official Website]
+|links = {{Steam store|app/4000|Steam page}}<br>{{Steam community|app/4000/workshop/|Steam Workshop page}}
+|previousgame = N/A
+|nextgame = {{sbox|2}}
+}}
+{{gmod|4}} is a sandbox game, created by Garry Newman. It is centered around putting the player in an environment, in which they can do nearly anything that the {{src|1}} engine is capable of. It was heavily inspired by {{jbmod|3}}. Early versions of Garry's Mod, which at the time ran directly on HL2 game files ({{src06|1}}) as opposed to the {{src06|1|nt=0}}, modified several normal {{hl2|1}} weapons to act as different tools (like the 357 Magnum Revolver being able to set the cameras, for instance).
+
+As time went on Garry's Mod was updated even more to resemble {{jbmod|name}}, now running on the SDK Base engine, and later its own fork of {{src13|1}}. Garry's Mod has advanced through 13 major updates, then switched to {{w|Software_as_a_service|software-as-a-service|icon=hide}} model for updates afterward, each with more features than the last. The latest version has a massive host of features, such as easier ragdoll posing, keypads, doors, buttons, dynamite, welding, and just about everything needed to create contraptions as well as comics and videos. 
+
+Garry's Mod has a large addon and mod base and supports {{lua|1}}, which is used by the community to make new weapons, entities, and gamemodes. Gamemodes range in genre from the original sandbox, to roleplay, survival, sports and far beyond. The community also considers the game to be by far the most popular Source mod. It was also the first mod ever distributed through Steam.
+
+== Features ==
+{{gmod|4}} adds support for following features:
+:; 64-bit support
+:: Access more than 4GB of RAM and provides slightly better performance. To enable 64-bit support, select the {{code|x86-64}} beta branch.
+:; Larger map sizes and increased engine limits
+:; Partial [[VTF]] 7.5 support
+:: Textures from games such as {{as|1}}, {{p2|1}}, {{csgo|1}} are now supported in {{gmod|1}}.
+:; [[BSP]] 21 support
+:: Maps from {{l4dbranch|1}} and above can now be loaded in {{gmod|1}}.
+:; Glua
+:: Custom {{lua|1}} implementation, allows modder's to create custom weapons, gamemodes and npc's. 
+:; Nextbot 
+:: The Nextbot AI allows modder's to create Navmesh based NPC's with complex behaviour and interaction's using {{lua|1}}.
+
+== Garry's mod as a development tool ==
+{{gmod|bold}} is useful for Source developers, and can greatly fulfill certain tasks needed to make new mods or add-ons. Tasks such as:
+
+:; A way to place and or move props in MAP_EDIT mode
+
+:; A user-friendly demonstration tool: Chat with other modders and share ideas through text and usage of GMod tools. Devs can use GMod's tools to cooperatively share ideas about mod scenarios with players. GMod can also be used to demonstrate a new map and discuss features without NPCs.
+
+:; Stress-test Source: Use {{gmod|bold}} to test abusive usage of the Source engine, like spawning hordes of zombies, spamming explosive barrels and other intensive things. Will it crash? Will it freeze? Will the network buffer overflow? <br> There is also a beta branch that supports a 64-bit executable (for both the game and the compile tool itself) and Chromium. This will allows Source to better utilizing the hardware's CPU, and allow the game and compile tools to use more than 4GB of RAM.  
+
+:; Quickly test game elements: With the implementation of Lua scripting, you can create new game elements and weapons without using the Source SDK and make the process go a lot faster.
+
+== Links == 
+* [https://gmod.facepunch.com Official website]
+* [https://garry.net/ Garry’s blog]
+* [https://www.facepunch.com Developer's website]
+* {{Moddb|page=other|mods/garrys-mod|'''Outdated''' ModDB Page}} - Free older versions of Garry's Mod (version 9 and below) can be found from there.
+* {{Steam store|app/4000|Garry's Mod on Steam Store}}
+* {{Steam community|app/4000|Garry's Mod on Steam Community}}
+** {{Steam community|app/4000/workshop/|Steam Workshop}}
+* {{Wiki|Garry's_Mod|Garry's Mod on Wikipedia}}
+* [[Getting started in the Hammer editor for Gmod!]]
+* [[List of Garry's Mod console commands and variables|List of Garry's Mod Cvars]]

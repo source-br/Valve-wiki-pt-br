@@ -1,0 +1,70 @@
+{{LanguageBar}}
+{{SoftwareBox
+|title = '''Hammer++'''
+|developer = [[User:ficool2|ficool2]]
+|type = Map Editor
+|website = [https://ficool2.github.io/HammerPlusPlus-Website/index.html Website]
+|download = [https://ficool2.github.io/HammerPlusPlus-Website/download.html Download URL]
+|source = 1
+}}
+{{hammerpp|4}} is a community-made modification of the {{hammer|3.1|nt=1}} for {{source|3.1}} that provides an updated, more stable, feature-rich version of the editor.
+
+Hammer++ currently supports the following branches of the Source engine:
+* {{tf2|4}} (x64 only)
+* {{css|4}} (via {{src13mp}}) <!-- same download URL-->
+* {{hl2|4}} (via {{src13sp}}) <!-- same download URL-->
+* {{dods|4}} (via {{src13mp}}) <!-- same download URL-->
+* {{src13mp|4}}
+* {{src13sp|4}}
+* {{gmod|4}} (x64 only)
+* {{l4d2|4}}
+
+It is also included with {{mcv|4}}, in lieu of vanilla Hammer.
+
+Hammer++ for {{csgo|4}} is no longer supported; Ficool recommends using {{gmod|4|addtext='s}} Hammer++ and porting the {{shader|lightmapped_4wayblend}} shader. Alternatively, use {{mcv|4|addtext='s}} version of Hammer++.
+
+==Other games/mods tested==
+{{Main|Hammer++/Docs/Installation for Other Games}}
+
+{{hammerpp compatibility}}
+
+==Features==
+* Accurate lighting preview
+* Upgraded graphic fidelity
+* Significantly better stability
+* Particle rendering
+* 2D + 3D skybox preview
+* New model browser, particle browser, color editor, and keybinding editor
+* Realtime display of fog and ropes
+* Variety of new tools such as physics simulation, gizmo manipulation, drawing of polygon shapes, and convex brush merging
+* New {{ent|func_instance}} tools
+* Quality of life improvements
+* ... and much more!
+A more detailed feature list can be found on the {{hpp|3.1}} [https://ficool2.github.io/HammerPlusPlus-Website/features.html website] and you can '''[https://ko-fi.com/ficool2 support ficool2 via Ko-fi]'''
+
+==Caveats==
+{{bug|{{clr}}
+* Always uses Windows's high-DPI scaling setting, even when scaling override mode is set to "Application" in {{w|File Explorer|File Explorer's}} compatibility settings for {{file|hammerplusplus|exe}}. This can result in less real estate than {{hammer4|4.1}}, depending on Windows settings.
+}}
+{{warning|{{clr}}
+* Does not support some features from {{hammer4|4.1}}, such as "[[Convert WAD to VMT...]]", or loading GoldSrc [[MAP]] or [[RMF]] files directly.
+* Ignores {{cmd|%notooltexture}}, with no option to disable this change.
+* [[Manifest]]s are not supported, only Instances.
+* Lighting preview ignores {{code|_minlight}}.
+* Since build 8866, "Show alpha" button in texture browser shows the alpha channel as translucency, regardless of if the material actually uses the [[$basetexture]]. This results in inaccurate previews for materials using parameters such as [[$selfillum]] or [[$basealphaenvmapmask]].
+::(Builds 8865 and earlier only showed alpha channel if [[$alphatest]] or [[$translucent]] were present, avoiding this issue).}}
+
+Additional bugs can be found in the [https://github.com/ficool2/HammerPlusPlus-Issue-Tracker official issue tracker], which is no longer maintained.
+
+==See also==
+*[[Hammer++ for Linux]]
+*[[Half-Life Model Viewer++]]
+
+==External links==
+* [https://ficool2.github.io/HammerPlusPlus-Website/index.html Official Hammer++ Website]
+
+{{leveleditors}}
+{{sdktools|0}}
+
+[[Category:Hammer]]
+[[Category:Level Design]]

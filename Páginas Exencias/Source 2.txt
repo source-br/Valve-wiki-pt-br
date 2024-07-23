@@ -1,0 +1,93 @@
+{{LanguageBar}}
+{{Hierarchy}}
+<span style="color:white; font-weight: bold;">{{For|about={{Autolang|the game engine}}
+|{{Autolang|the documentation on Source 2}}
+|[[Source_2/Docs|Source 2 Documentation]]|}}</span>
+
+{{Infobox engine
+|title = Source 2
+|image = Logo-Source_2.png<!-- using unofficial s2 logo for now, Wikipedia meanwhile uses Source 1 logo or does not have the logo. -->
+|imagewidth = 280px
+|imagetooltip = Unofficial logo of the Source 2 engine.
+|image2 = Half-Life_Alyx_-_Screenshot_1.jpg
+|imagetooltip2 = Screenshot of {{hla|1}}, using the {{source2|1}} Engine.
+|developer = [[Valve|Valve Corporation]]
+|releasedates = September 9, 2015<!-- based off Dota 2 Reborn update, first to use S2. -->
+|codelang = [[WP:C++|C++]]
+|sdk = [[SDK Docs|Source 2 Documentation]], game-specific Workshop Tools
+|platform = {{Win|1}}, {{Mac|1}}, {{Linux|1}}, {{android|1}}, {{ios|1}}<!-- only first-party games -->
+|website = 
+|links = 
+|license = [[WP:Proprietary software|Proprietary]]
+|previousengine = {{Src|2}}
+|nextengine = 
+}}
+{{todo|This page is not a stub but could use some more detail.}}
+[[File:Screenshot-CS2-Source 2 engine.png|340px|thumb|In-game screenshot of {{CsgoMap|de_dust2}} in {{Cs2|1}}. It is also the most recent and latest {{src2|name}} game to be released.]]
+[[File:Screenshot - CS2 LC Performance Test map.jpg|340px|thumb|Another in-game screenshot of {{Cs2|1}}, with the community-made map "[https://steamcommunity.com/sharedfiles/filedetails/?id=3181655247 Lost Coast] by CZXA1", showcasing the graphical capabilities of Source 2, such as [[Volumetric lighting]], 8K textures and lightmaps.]]
+[[File:De_nuke - Source vs Source 2 comparison.jpg|340px|thumb|Comparison of {{CsgoMap|de_nuke}} map in {{src|1}} and {{source2|1}}.]]
+
+{{source2|4}} is a 3D video game engine developed by [[Valve]] as a successor to {{src|4}}.
+Introduced in 2015, it is used in {{dota2|1}}, {{svrh|1}}, {{hla|1}}, {{s&box|1}}, {{cs2|1}}, and much more.<!-- once this page is a bit longer, this list should probably be shortened. not while it's still kinda short, though. now it did! -->
+
+Development of Source 2 was planned after the release of {{hl2ep2|1}} and other {{tob|1}} games. In 2010, {{l4d2|1}} was privately ported to the {{Src2|name}} engine as a tech demo, with one of the maps recreated in the Source 2 engine. The engine was later made public with the [[Dota 2 Workshop Tools]] Alpha in August 6th 2014 and formally announced by [[Valve]] in March of 2015 at the [[wikipedia: Game Developers Conference|Game Developers Conference]]. It was then implemented into ''Dota 2'' on June 17th 2015.
+Valve has announced that Source 2 will be released to the public for free, and it will only take money should it be used for commercial products.
+
+The engine is capable of rendering highly complex and well detailed scenes with minimal framerate drops, thanks to its new 64-bit support alongside Vulkan, Direct3D 11, allowing for better multi-core rendering, better graphics and more efficient 3D rendering.
+
+==Features==
+=== Renderer ===
+; Native [[wikipedia: DirectX 11| DirectX 11®]] and [[wikipedia:Vulkan|Vulkan®]] support, with Shader Model 5.0 and later.
+; Support for both forward and deferred rendering pipelines.
+: Deferred rendering allows games to render as much light with little performance impact.
+; [[Screen Space Ambient Occlusion]] support
+; [[Physically Based Rendering]] support
+: PBR render graphics in a way that more accurately models the flow of light in the real world.
+; [[Volumetric lighting]] support.
+; [[WEBM|WebM]]
+: Source 2 uses WebM video, replacing the previous [[BIK|Bink Video format]]. This will allow the cutscenes to take less storage space as WebM provides better compression compared to Bink. WebM is also a open-format compared to Bink video.
+; Volumetric smokes {{only|{{cs2}}}}
+: Smokes are now volumetric objects, that can be pushed by grenades, bullets, and more. It also react to lighting and the smokes fill the spaces naturally.
+=== Physics ===
+; [[Rubikon]]
+: Valve's new in-house physics engine. Includes support for [[Cloth Simulation]].
+=== Sound System ===
+; [https://valvesoftware.github.io/steam-audio/ Steam Audio]
+: Valve's new in-house sound system licensed under Apache 2.0 license, replaces proprietary Miles Audio System. 
+; Improved Steam Audio
+: Sounds have been reworked to better reflect the physical environment, be more distinct, and express more game state. They have also been rebalanced for a more comfortable listening experience.
+; Other audio improvements
+: Improved audio and voice processing.{{clarify}}
+=== Networking ===
+; Sub-tick system {{since|{{Cs2}}}}
+: Tick rate no longer matters for moving, shooting, or throwing.
+=== UI ===
+; [[Panorama]]
+: Valve's new Custom GUI interface that resembles modern web design and authoring (HTML5/CSS/JS). Using .XML and JavaScript files, developers can create dynamic and clean HUDs and menus and even high-quality in-game intractable panels.
+: Scalable across any resolution, compared to [[VGUI]] used in previous Source games (prior to {{l4d|1}}) which would become small if the game is running at higher resolution.
+=== Tools ===
+; Integrated asset management via the [[Asset System]].
+; New engine-integrated authoring tools, rebuilt from the ground up.
+: All compiling tools except VRAD are now merged into one. The map compiling tool are named as [[Resourcecompiler]].
+; {{Hammer5|2}}
+: Completely rebuilt [[Valve Hammer Editor|Hammer]] level editor, featuring modern polygon mesh editing tools.
+; Hardware accelerated ray-tracing for [[VRAD (Source 2)|VRAD]]
+: VRAD3 now requires graphics card with ray-tracing support to preview & bake lighting. This will allow VRAD to quickly calculates lighting data.
+: VRAD3 is supported in all Source 2 games since 2022. Some games such as {{hla|1}} and {{Svrh|1}} still provides previous version (VRAD2) for users who want to compile maps on systems that does not support ray-tracing.
+=== Programming ===
+; 64-bit support
+: Faster game performance, and allowing game to access over 4 GB of RAM. Previously, Source 2 also support 32-bit, which has been dropped with the release of {{dota2|4}} update in 2021 (except {{svrh|4}}).
+
+==Limitations==
+{{warning|Support for 32-bit, OpenGL, DirectX 9 (includes Direct3D 9), XAudio, and macOS versions below 10.14 were removed in 2021 with the {{dota2|1}} update. {{svrh|1}} is not affected. Newer games such as {{hla|1}} and {{cs2|1}} don't support them.<br>Newer games like {{Cs2|1}} will also require a CPU with SSE 4.2 support.}}
+{{warning|Some games like {{cs2|2}} no longer support {{sq|1}}, making things non-trivial to port and with no chance of a proper transition period when both implementations are functional.}}
+
+==Products using Source 2 {{Table tools|Source_2_games}}==
+{{source 2 games}}
+
+==Documentation==
+* [[Source 2/Docs|Source 2 Documentation Index]]
+* [[Source 2 General Discoveries]]
+
+==See also==
+* [[w:Source 2|Source 2 on Wikipedia]][[Category:Game engines]] [[Category:Valve]]
