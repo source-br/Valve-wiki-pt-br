@@ -1,0 +1,102 @@
+{{uselangflags|en=1|de=1|el=1|eo=1|fr=1|hr=1|it=1|pl=1|pt-br=1|ru=1|uk=1|tr=1|vi=1|zh=1|fi=1}}
+__NOEDITSECTION__[[Category:Templates]]
+<div style="background-color:#323232; border:1px solid #7A7A7A; border-radius:4px; padding:.5em 1.2em">
+=== {{Dictionary/common|Preview of the Dictionary subpage}} ===
+	{{Dictionary/software|cs2_tools}}
+	<hr>
+	<!-- hidden until valve released info about the game or announcing that the game will have workshop tools. 
+	{{Dictionary/software|deadlock_tools}}
+	<hr> -->
+	{{Dictionary/software|dota2_tools}}
+	<hr>
+	{{Dictionary/software|hlvr_tools}}
+	<hr>
+	{{Dictionary/software|svrh_tools}}
+</div>
+<onlyinclude>{{#switch:{{{1}}}<!-- IMPORTANT: Remember to keep all language code sorted from A to Z, except English one.-->
+
+| cs2_tools =	{{Autolang
+		| Counter-Strike 2 Workshop Tools
+		| de    = Counter-Strike 2 Werkstattwerkzeuge
+		| el	= Εργαλεία Εργαστηρίου Counter-Strike 2
+		| eo    = Designejaj Iloj de Counter-Strike 2
+		| fi	= Counter-Strike 2 Workshop Työkalut
+		| fr	= Outil Workshop de Counter-Strike 2
+		| hr	= Alati za radionicu Counter-Strike 2
+		| it	= Strumenti del Workshop di Counter-Strike 2
+		| pl	= Narzędzia Warsztatowe Counter-Strike 2
+		| pt-br	= Ferramentas da Oficina do Counter-Strike 2
+		| ru	= Инструментарий Counter-Strike 2
+		| tr	= Counter-Strike 2 Atölye Araçları
+		| uk	= Інструменти майстерні Counter-Strike 2
+		| vi	= Công cụ Workshop cho Counter-Strike 2
+		| zh	= 反恐精英2 创意工坊工具集
+		}}
+
+| deadlock_tools =	{{Autolang
+		| Deadlock Workshop Tools
+		| de    = Deadlock Werkstattwerkzeuge
+		| el	= Εργαλεία Εργαστηρίου Deadlock
+		| eo    = Designejaj Iloj de Deadlock
+		| fi	= Deadlock Workshop Työkalut
+		| fr	= Outil Workshop de Deadlock
+		| hr	= Alati za radionicu Deadlock
+		| it	= Strumenti del Workshop di Deadlock
+		| pl	= Narzędzia Warsztatowe Deadlock
+		| pt-br	= Ferramentas da Oficina do Deadlock
+		| ru	= Инструментарий Deadlock
+		| tr	= Deadlock Atölye Araçları
+		| uk	= Інструменти майстерні Deadlock
+		| vi	= Công cụ Workshop cho Deadlock
+		| zh	= Deadlock 创意工坊工具集
+		}}
+
+| dota2_tools =	{{Autolang
+		| Dota 2 Workshop Tools
+		| de    = Dota 2 Werkstattwerkzeuge
+		| el	= Εργαλεία Εργαστηρίου Dota 2
+		| eo    = Designejaj Iloj de Dota 2
+		| fi	= Dota 2 Workshop Työkalut
+		| fr	= Outil Workshop de Dota 2
+		| hr	= Alati za radionicu Dota 2
+		| it	= Strumenti del Workshop di Dota 2
+		| pl	= Narzędzia Warsztatowe Dota 2
+		| pt-br	= Ferramentas da Oficina do Dota 2
+		| ru	= Инструментарий Dota 2
+		| tr	= Dota 2 Atölye Araçları
+		| uk	= Інструменти майстерні Dota 2
+		| vi	= Công cụ Workshop cho Dota 2
+		| zh	= Dota 2 创意工坊工具集
+		}}
+
+| hlvr_tools =	{{Autolang
+		| Half-Life: Alyx Workshop Tools
+		| de    = Half-Life: Alyx Werkstattwerkzeuge
+		| el	= Εργαλεία Εργαστηρίου Half-Life: Alyx
+		| eo    = Designejaj Iloj de Duonvivo: Aliks
+		| fi	= Half-Life: Alyx Workshop Työkalut
+		| fr	= Outil Workshop de Half-Life: Alyx
+		| hr	= Alati za radionicu Half-Life: Alyx
+		| pl	= Narzędzia Warsztatowe Half-Life: Alyx
+		| pt-br	= Ferramentas da Oficina do Half-Life: Alyx
+		| ru	= Инструментарий Half-Life: Alyx
+		| tr	= Half-Life: Alyx Atölye Araçları
+		| uk	= Інструменти майстерні Half-Life: Alyx
+		| vi	= Công cụ Workshop cho Half-Life: Alyx
+		| zh	= 半衰期：爱莉克斯 创意工坊工具集
+		}}
+
+| svrh_tools =	{{Autolang
+		| SteamVR Workshop Tools
+		| de    = SteamVR Werkstattwerkzeuge
+		| fi	= SteamVR Workshop Työkalut
+		| hr	= Alati za radionicu SteamVR
+		| pt-br	= Ferramentas da Oficina do SteamVR
+		| eo    = Designejaj Iloj de SteamVR
+		| ru	= Инструментарий SteamVR
+		| uk	= Інструменти майстерні SteamVR
+		| vi	= Công cụ Workshop cho SteamVR
+		| zh	= SteamVR 创意工坊工具集
+		}}
+
+}}</onlyinclude>

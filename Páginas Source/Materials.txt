@@ -1,0 +1,12 @@
+{{LanguageBar}}
+{{distinguish|Texture|desc1=the actual images being displayed}}
+{{stub}}
+==Visão geral==
+Materials e o arquivo que a engine usa para saber oque deve mostrar. Um material contem informações sobre qual texturas são para renderizar, como renderizar-las, como tratar as texturas sendo renderizadas, e como elas devem agir. Os Materials são diferentes de texturas, no qual são as imagens que estão sendo mostradas.
+
+Materials são o mesmo conceito em ambos Source e Source 2, no entanto, elas são definidas em arquivos diferentes:
+* {{L|src|Source}} materials são definidos em arquivos {{L|VMT}}.
+* {{L|src2|Source}} materials são definidos em arquivos {{L|VMAT}}.
+{{L|gldsrc|GoldSrc}} "não" faz uso de materials; invez, texturas são usadas diretamente, e então são marcadas por nome em um {{L|WAD}} ou por metadata em um {{L|MDL (GoldSrc)|MDL}} ou {{SPR}}. Informações sobre os "materiais" de uma textura estão armazenados no {{mono|{{L|materials.txt}}}} e em {{L|MAT file}}.
+{{modernConfusion|Essa página e para os conceitos gerais sobre materials. Mais informações sobre materials em engines específicas podem ser encontradas na página da documentação sobre a formatação de materials em engines específicas.}}
+{{ACategory|Glossary}}

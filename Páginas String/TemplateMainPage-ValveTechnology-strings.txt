@@ -1,0 +1,122 @@
+{{Strings subpage
+| number = 4
+| en = 4
+| cs = 4
+| de = 4
+| eo = 4
+| es = 4
+| fi = 4
+| fr = 4
+| hr = 4
+| it = 4
+| ka = 4
+| ko = 4
+| pl = 4
+| pt-br = 4
+| ru = 4
+| sv = 4
+| tr = 4
+| uk = 4
+| vi = 4
+| zh = 4
+| zh-tw = 4
+}}
+* {{{{PAGENAME}}|Engine}}
+* {{{{PAGENAME}}|Steam}}
+* {{{{PAGENAME}}|ReadMore}}
+* {{{{PAGENAME}}|ReadMore-Tooltip}}
+<onlyinclude>{{#switch:{{{1|}}}
+
+| Engine = {{#switch: {{MainPage/Intlang}}
+	| #default = The engine under the hood of {{hl2|1}} can make your game a success. Let {{source|1}}™ do the heavy lifting so that your team can focus on building great games.
+	| cs = Motor pod kapotou {{hl2|1}} může vaší hře pomoci k úspěchu. Nechte na {{source|1}}™ všechnu tu těžkou práci a v klidu se věnujte tvorbě skvělých her.
+	| de = Die Engine, die bei {{hl2|1}} die Fäden zieht, kann auch Ihr Spiel zum Erfolg machen. Lassen Sie {{source|1}}™ die schwere Arbeit verrichten, damit Ihr Team sich auf das Entwickeln von großartigen Spielen konzentrieren kann.
+	| es = El motor que se esconde "bajo el capó" de {{hl2|1}} puede hacer que tu juego sea una obra de arte. Deja que {{source|1}}™ se ocupe del trabajo pesado para que tu equipo pueda trabajar tranquilamente en la creación de un gran juego.
+	| eo = La motoro sub {{hl2|1}} povas sukcesigi vian ludon. Lasu {{source|1}}™ fari la malfacilan laboron do via teamo povas fokusi konstruadi bonegajn ludojn
+	| fi = {{hl2|1|addtext=:sen}} konepellin alla oleva pelimoottori voi tehdä sinun pelistä menestyksen. Anna Sourcen™ tehdä kovat työt niin että sinun tiimisi voi keskittyä mahtavien pelien rakentamiseen.
+	| fr = Le moteur sous le capot de {{hl2|1}} peut faire de votre jeu un succès. Laissez {{source|1}}™ faire le gros travail afin que votre équipe puisse se concentrer sur la construction de grands jeux.
+        | hr = Engine ispod haube {{hl2|1}} može učiniti vašu igru uspješnom. Neka {{source|1}}™ odradi težak posao kako bi se vaš tim mogao usredotočiti na izradu sjajnih igara.
+	| it = Il motore grafico utilizzato per la creazione di {{hl2|1}} può rendere il tuo gioco un successo. Lascia che {{source|1}}™ si occupi del lavoro pesante in modo che il tuo team possa concentrarsi sulla creazione di grandi giochi.
+	| pl = Silnik pod bazą {{hl2|1}} może spowodować, że Twoja gra osiągnie sukces. Pozwól {{source|1}}™ zająć się najtrudniejszymi zadaniami, kiedy Twoja drużyna może skupić się na tworzeniu nowej, genialnej gry!
+	| pt-br = O motor "debaixo do capô" do {{hl2|1}} pode fazer com que seu jogo seja um sucesso. Deixe que a {{source|1}}™ faça o trabalho pesado para que sua equipe possa trabalhar tranquilamente na criação de excelentes jogos.
+	| ru = Игровой движок, который лежит в основе {{hl2|1}}, может сделать вашу игру удачной. Отдайте всю тяжёлую работу движку {{source|1}}™, чтобы ваша команда могла сосредоточиться на разработке замечательных игр.
+	| uk = Рушій, який лежить у корні {{hl2|1}} може зробити вашу гру успішною. Дозвольте {{source|1}}™ виконати важку роботу, щоб ваша команда могла зосередитися на створенні чудових ігор.
+	| sv = Motorn under huven till {{hl2|1}} kan göra en succé av ditt spel. Låt {{source|1}}™ göra det tunga jobbet så ert team kan fokusera på att skapa fantastiska spel.
+	| tr = {{hl2|1}}'nin arkasındaki motor oyununuzu başarıya taşıyacak. Source'un™ ağır yükü üstlenmesine izin verin ve takımınızın tamamen harika oyunlar yapmaya odaklanmasını sağlayın.
+	| vi = Công cụ sử dụng bên trong {{hl2|1}} có thể giúp trò chơi của bạn thành công. Hãy để {{source|1}}™ thực hiện những công việc nặng nhọc để nhóm của bạn có thể tập trung vào việc xây dựng những trò chơi tuyệt vời.
+	| zh = {{hl2|1}}（Half-Life 2） 所用的引擎可以让您旗开得胜，就让起源引擎（{{source|1}}™）帮助您的团队制作精美绝伦的游戏吧。
+	| zh-tw = 戰慄時空2 ({{hl2|1}}) 所使用的引擎可以幫助你邁向成功，把麻煩的事情都交給 {{source|1}}™ ，你只需要專心在自己的遊戲上就好！
+	| ko = 큰 상업적인 성공을 거둔 게임인 Valve의 하프 라이프 2를 개발하는 데 쓰인 Source를 사용하면 복잡한 코딩을 하지 않고 모딩을 할 수 있습니다. 모드, 게임 다자인, 신규 게임 제작 작업에 집중할 수 있도록 도와줍니다.
+	| ka = ძრავას, რომელზეც დაწერილია {{hl2|1}}, შეუძლია მოუტანოს წარმატება თქვენს თამაშს. {{source|1}}™ გააკეთებს ყველაზე რთულ სამუშაოს, თქვენი გუნდი კი ყურადღებას გადაიტანს საუკეთესო თამაშების შექმნაზე.
+}}
+
+| Steam = {{#switch: {{MainPage/Intlang}}
+	| #default = If you're interested in building a product using [[Source]] or [[Source 2]], talk to us about options for distribution on [[Steam]].
+	| cs = Chcete-li vytvářet hry s použitím Source promluvte si s námi o možnostech její distribuce prostřednictvím Steamu.
+	| de = Falls Sie Interesse an einem [[Source]] oder [[Source 2]]-Projekt, sprechen Sie mit uns über Optionen für den Vertrieb auf [[Steam]].
+	| es = Si estás interesado en hacer un producto utilizando [[Source]], habla con nosotros acerca de las opciones de distribución en [[Steam]].
+	| eo = Se vi interesas konstrui produkton per Source, diru al ni pri agordoj por vendo en [[Steam]].
+	| fi = Jos sinä olet kiinnostunut rakentamaan tuotetta [[Source]] tai [[Source 2]]'sella, puhu meille [[Steam|Steamissä]] julkaisemisen vaihtoehdoista.
+	| fr = Si vous êtes intéressés dans la construction d’un jeu utilisant [[Source]]™, parlez nous de votre jeu pour les options de distribution sur Steam.
+        | hr = Ako ste zainteresirani za izradu proizvoda koristeći [[Source]] ili [[Source 2]], razgovarajte s nama o opcijama distribucije na [[Steam]].
+	| it = Se sei interessato nel creare prodotti utilizzando il [[Source Engine]], parla con noi riguardo le opzioni di distribuzione su [[Steam]].
+	| pl = Jeżeli jesteś zainteresowany tworzeniem gier dla Silnika Source, zerknij nasze forum dyskusji na platformie [[Steam]].
+	| pt-br = Se você está interessado em fazer um produto utilizando a Source, fale conosco sobre as opções de distribuição no [[Steam]].
+	| ru = Если вы заинтересованы в разработке на движке [[Source]] или [[Source 2]], свяжитесь с нами, чтобы узнать возможности распространения продукта на платформе [[Steam]].
+	| uk = Якщо Ви зацікавлені в створенні продукту за допомогою [[Source]], поговоріть з нами про варіанти розповсюдження в [[Steam]].
+	| sv = Om du är intresserad av att skapa en produkt användandes utav [[Source]], tala med oss om förslag på distribution genom [[Steam]].
+	| tr = Source oyun motoru'nu kullanarak bir ürün yapmak ile ilgileniyorsanız, [[Steam]]'de yayımlamak için bizimle iletişime geçin.
+	| vi = Nếu bạn quan tâm đến việc xây dựng sản phẩm bằng [[Source]] và [[Source 2]], hãy nói chuyện với chúng tôi về các tùy chọn phát hành trên [[Steam]].
+	| zh = 如果您想用起源引擎开发一款商业项目，您可以与我们联系并将您的项目发布在 [[Steam]] 上。
+	| zh-tw = 如果你對開發 Source 引擎的程式很感興趣，你可以聯繫我們，讓我們幫助你把你的程式放在 [[Steam]] 上。
+	| ko = Source를 이용한 상용 게임을 제작하고 싶다면, Valve의 유통 플랫폼인 [[Steam]]을 사용하세요.
+	| ka = თუ თქვენ ხართ დაინტერესებული შექმნათ პროდუქტი Source-ს გამოყენებით, დაგვიკავშირდით, რათა გაიგოთ მისი გავრცელების შესაძლებლობები Steam პლატფორმაზე.
+}}
+
+| ReadMore = {{#switch: {{MainPage/Intlang}}
+	| #default = Read about Valve Technology
+	| cs = Přečtěte si více o licencování technologií Valve
+	| de = Erfahren Sie mehr über Valve-Technologie
+	| es = Lee más sobre la tecnología de Valve
+	| eo = Legu pri Valve Teknologio
+	| fi = Lue Valve Teknologiasta
+	| fr = En savoir plus sur la technologie Valve
+        | hr = Pročitajte o Valve Tehnologiji
+	| it = Leggi di più sulla tecnologia Valve
+	| pl = Dowiedz się więcej o technologii Valve
+	| pt-br = Leia mais sobre a Tecnologia da Valve
+	| ru = Узнайте больше о технологии Valve
+	| uk = Дізнайтеся більше про технологію Valve
+	| sv = Läs mer om Valves teknologi
+	| tr = Valve Teknolojisi hakkında daha fazla bilgi edinin
+	| vi = Đọc thêm về Công nghệ của Valve
+	| zh = 了解 Valve 技术的更多信息
+	| zh-tw = 了解 Valve 技術的更多資訊
+	| ko = Valve 기술에 대해 더 알아보기
+	| ka = გაიგეთ მეტი Valve ტექნოლოგიების ლიცენზირების შესახებ
+}}
+
+| ReadMore-Tooltip = {{#switch: {{MainPage/Intlang}}
+	| #default = Click here to learn more about Valve Technology.
+	| cs = Klikněte zde pro více informací o Valve technologiích.
+	| de = Klicken Sie hier, um mehr über Valve-Technologie zu erfahren.
+	| es = Haz clic aquí para obtener más información sobre la tecnología de Valve.
+	| eo = Klaku ĉi tie por pli da informo pri Valve Teknologio.
+	| fi = Napauta tästä oppiaksesi lisää Valve Teknologiasta.
+	| fr = Cliquez ici pour en savoir plus sur la technologie Valve.
+        | hr = Kliknite ovdje da saznate više o Valve Tehnologiji.
+	| it = Clicca qui per saperne di più sulle Tecnologie di Valve.
+	| pl = Kliknij tutaj, aby dowiedzieć się więcej o technologii Valve.
+	| pt-br = Clique aqui para saber mais sobre a Tecnologia da Valve.
+	| ru = Щелкните здесь, чтобы узнать больше о технологиях Valve.
+	| uk = Натисніть тут, щоб дізнатися більше про технології Valve.
+	| sv = Klicka här för att lära dig mer om Valves teknologi.
+	| tr = Valve Teknolojisi hakkında daha fazla bilgi için buraya tıklayın.
+	| vi = Nhấp vào đây để tìm hiểu thêm về Công Nghệ của Valve.
+	| zh = 点击这里了解更多关于 Valve 开发许可的信息。
+	| zh-tw = 按一下此處瞭解更多關於 Valve 開發許可的資訊。
+	| ko = Valve 기술에 대해 자세히 알아보려면 여기를 클릭하세요.
+	| ka = დააჭირეთ აქ, რომ გაიგოთ უფრო მეტი Valve ტექნოლოგიების ლიცენზირების შესახებ.
+}}
+
+}}</onlyinclude>

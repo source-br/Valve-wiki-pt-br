@@ -1,12 +1,12 @@
 {{LanguageBar}}
-Um [[NPC]] e um '''N'''on-'''P'''layer '''C'''haracter ou Personagem Não Jogavel. É uma {{L|entity}} com alguma forma de IA que pode ser capaz de se mover pelo mapa, atacar com arma, e etc., que não e controlada diretamente pelo jogador. Exemplos incluem {{L|npc_combine_s|Combine soldiers}} em {{L|Half-Life 2}} e {{L|hostage_entity|hostages}} em {{L|Counter-Strike: Source}}.
+Um '''NPC''' e um '''N'''on-'''P'''layer '''C'''haracter ou Personagem Não Jogavel. É uma {{L|entity}} com alguma forma de IA que pode ser capaz de se mover pelo mapa, atacar com arma, e etc., que não e controlada diretamente pelo jogador. Exemplos incluem {{L|npc_combine_s|Combine soldiers}} em {{L|Half-Life 2}} e {{L|hostage_entity|hostages}} em {{L|Counter-Strike: Source}}.
 
-NPCs às vezes são chamados de {{L|monster}} (especialmente em {{L|Half-Life}} ), uma terminologia herdada de {{L|Quake}}.
+NPCs às vezes são chamados de {{L|monster}}s (especialmente em {{L|Half-Life}} ), uma terminologia herdada de {{L|Quake}}.
 
 == Veja também ==
-* [[Creating an NPC]]
-* [[:Category:NPCs|List of NPCs]]
-* [[Bot]]
+* {{L|Creating an NPC}}
+* {{LCategory|NPCs|List of NPCs}}
+* {{L|Bot}}
 
-[[Category:Source]]
-[[Category:NPCs]]
+{{ACategory|Source}}
+{{ACategory|NPCs}}

@@ -1,4 +1,3 @@
-
 {{Strings subpage <!-- EDITORS: To keep things clean, it is recommended to sort language codes from A to Z. -->
 | number = 59
 | en = 59
@@ -16,7 +15,7 @@
 | ko = 1
 | nl = 1
 | pl = 1
-| pt-br = 1
+| pt-br = 59
 | ru = 58
 | sv = 1
 | tr = 1
@@ -117,7 +116,7 @@ __NOTOC__
 	| ko = Valve 개발자 커뮤니티에 오신 것을 환영합니다
 	| nl = Valve Developer Community
 	| pl = Społeczności twórców Valve
-	| pt-br = comunidade de desenvolvedores da Valve
+	| pt-br = Comunidade de Desenvolvedores da Valve
 	| ru = Навигация по сообществу
 	| sv = Valve Developer Community
 	| tr = Valve Geliştiriciler Topluluğu
@@ -134,6 +133,7 @@ __NOTOC__
 	| es = Administración 
 	| fi = Ylläpito 
 	| hr = Administracija
+	| pt-br = Administração
 	| ru = Администрирование 
 	| zh = 管理
 	}}
@@ -143,8 +143,9 @@ __NOTOC__
 	| de = Richtlinien
 	| es = Guías 
 	| hr = Smjernice
+	| pt-br = Diretrizes
 	| ru = Руководства
-	| zh = 指导方针| fi = Ohjeet 
+	| zh = 指导方针| fi = Ohjeet
 	}}
 
 | Policies and Guidelines = {{#switch: {{{lang|{{Intlang}}}}}
@@ -153,6 +154,7 @@ __NOTOC__
 	| es = Políticas y directrices 
 	| fi = Käytännöt ja Ohjeet 
 	| hr = Politike i Smjernice
+	| pt-br = Políticas e Diretrizes
 	| ru = Политика и руководства 
 	| zh = 政策和指导方针
 	}}
@@ -163,6 +165,7 @@ __NOTOC__
 	| es = Guía de estilo
 	| fi = Tyyli opas 
 	| hr = Stilski vodič 
+	| pt-br = Guia de estilo
 	| ru = Руководство по стилю 
 	| zh = 样式指南
 	}}
@@ -173,6 +176,7 @@ __NOTOC__
 	| es = Términos de uso 
 	| fi = Käyttöehdot 
 	| hr = Uvjeti korištenja
+	| pt-br = Termos de Uso
 	| ru = Условия использования 
 	| zh = 使用协议
 	}}
@@ -183,6 +187,7 @@ __NOTOC__
 	| de = Bilder
 	| fi = Kuvat 
 	| hr = Slike
+	| pt-br = Imagens
 	| ru = Изображения 
 	| zh = 图像
 	}}
@@ -193,6 +198,7 @@ __NOTOC__
 	| es = Ayuda con imágenes
 	| fi = Apua kuvien kanssa 
 	| hr = Pomoć oko slike 
+	| pt-br = Ajuda com imagens
 	| ru = Помощь с изображениями 
 	| zh = 图像帮助
 	}}
@@ -203,6 +209,7 @@ __NOTOC__
 	| es = Políicas de uso de imágenes 
 	| fi = Kuvan käyttö käytännöt 
 	| hr = Politika upotrebe slike
+	| pt-br = Política de uso de imagens
 	| ru = Политика использования изображений 
 	| zh = 图像使用策略
 	}}
@@ -213,6 +220,7 @@ __NOTOC__
 	| es = Mantenimiento 
 	| fi = Huolto 
 	| hr = Održavanje
+	| pt-br = Manutenção
 	| ru = Обслуживание 
 	| zh = 维护
 	}}
@@ -223,6 +231,7 @@ __NOTOC__
 	| es = Categorías
 	| fi = Kategoorioita
 	| hr = Kategorije
+	| pt-br = Categorias
 	| ru = Категории 
 	| zh = 分类 
 	}}
@@ -233,6 +242,7 @@ __NOTOC__
 	| es = Candidatos a eliminación rápida 
 	| fi = Ehdokkaat pikapoistolle 
 	| hr = Kandidati za brzo brisanje
+	| pt-br = Candidatos para remoção rápida
 	| ru = Кандидаты на быстрое удаление 
 	| zh = 快速删除的候选项
 	}} 
@@ -243,6 +253,7 @@ __NOTOC__
 	| es = Limpieza 
 	| fi = Siivous 
 	| hr = Čišćenje
+	| pt-br = Limpeza
 	| ru = Очистка 
 	| zh = 内容清理
 	}}
@@ -253,6 +264,7 @@ __NOTOC__
 	| es = Desambiguación 
 	| fi = Selventäminen 
 	| hr = Višeznačnost
+	| pt-br = Desambiguação
 	| ru = Устранение неоднозначности 
 	| zh = 消歧义
 	}}
@@ -263,6 +275,7 @@ __NOTOC__
 	| es = Borradores
 	| fi = Luonnokset 
 	| hr = Nacrti 
+	| pt-br = Rascunhos
 	| ru = Черновики 
 	| zh = 草案
 	}}
@@ -273,6 +286,7 @@ __NOTOC__
 	| es = Ensayos 
 	| fi = Esseet 
 	| hr = Eseji
+	| pt-br = Ensaios
 	| ru = Эссе 
 	| zh = 短文
 	}}
@@ -283,6 +297,7 @@ __NOTOC__
 	| es = Fusionar listas 
 	| fi = Yhdisettäviä artikkeleja 
 	| hr = Spojiti popise 
+	| pt-br = Listagem de mesclagem
 	| ru = Объединение списков 
 	| zh = 合并列表
 	}}
@@ -293,6 +308,7 @@ __NOTOC__
 	| es = Solicitudes de capturas de pantalla 
 	| fi = kuvakaappaus pyyntöjä 
 	| hr = Zahtjevi za snimku zaslona
+	| pt-br = Solicitação de capturas de tela
 	| ru = Запросы на скриншоты 
 	| zh = 截图请求
 	}}
@@ -302,6 +318,7 @@ __NOTOC__
 	| de = Geteilte Einträge
 	| es = Listas de división 
 	| fi = Lista jaettavia artikkeleita 
+	| pt-br = Listas de divisão 
 	| hr = Podijeljeni oglasi
 	| ru = Разделение списков 
 	| zh = 分割列表
@@ -313,6 +330,7 @@ __NOTOC__
 	| es = Listas en progreso
 	| fi = Lyhyet sivut 
 	| hr = Stub oglasi 
+	| pt-br = Lista de esboços
 	| ru = Статьи-заглушки 
 	| zh = 小作品列表
 	}}
@@ -323,6 +341,7 @@ __NOTOC__
 	| es = Tareas 
 	| fi = Tehtävä 
 	| hr = napraviti
+	| pt-br = Tarefas
 	| ru = Список дел 
 	| zh = 待办事项
 	}}
@@ -333,6 +352,7 @@ __NOTOC__
 	| de = Benutzerwartung
 	| hr = Korisničko održavanje
 	| fi = Käyttäjien ylläpito 
+	| pt-br = Manutenção do usuário 
 	| ru = Группы пользователей 
 	| zh = 用户管理
 	}}
@@ -343,6 +363,7 @@ __NOTOC__
 	| es = Trabajo en curso 
 	| fi = Keskeneräisiä 
 	| hr = Radovi u tijeku 
+	| pt-br = Trabalho em andamento
 	| ru = В разработке 
 	| zh = 进行中的编辑
 	}}
@@ -353,6 +374,7 @@ __NOTOC__
 	| es = Problemas 
 	| fi = Ongelmia 
 	| hr = Problemi
+	| pt-br = Problemas
 	| ru = Проблемы 
 	| zh = 问题
 	}}
@@ -362,7 +384,8 @@ __NOTOC__
 	| de = Vorlagen
 	| es = Plantillas
 	| fi = Mallineet 
-	| hr = Predložaka 
+	| hr = Predložaka  
+	| pt-br = Modelos
 	| ru = Шаблоны 
 	| zh = 模板
 	}}
@@ -373,6 +396,7 @@ __NOTOC__
 	| es = Ayuda con plantillas
 	| fi = Apua mallineiden käyttöön 
 	| hr = Pomoć oko predložaka 
+	| pt-br = Ajuda com modelos
 	| ru = Помощь с шаблонами 
 	| zh = 模板帮助
 	}}
@@ -383,6 +407,7 @@ __NOTOC__
 	| es = Listas de plantillas 
 	| fi = Lista mallineita 
 	| hr = Liste predložaka
+	| pt-br = Listagem de modelos
 	| ru = Список шаблонов 
 	| zh = 模板列表
 	}}
@@ -393,6 +418,7 @@ __NOTOC__
 	| es = Páginas de documentación de plantillas 
 	| fi = Mallineiden dokumentaatio sivuja 
 	| hr = Dokumentacijske stranice predložaka
+	| pt-br = Páginas de documentação de modelos
 	| ru = Страницы документации шаблонов 
 	| zh = 模板文档页面
 	}}
@@ -403,6 +429,7 @@ __NOTOC__
 	| es = Páginas de prueba de plantillas 
 	| fi = Mallineiden testitapaus sivuja 
 	| hr = Predložak testnih stranica
+	| pt-br = Páginas de teste de modelo
 	| ru = Страницы тестовых примеров для шаблонов 
 	| zh = 模板测试用例页面
 	}}
@@ -410,36 +437,42 @@ __NOTOC__
 | Community = {{#switch: {{{lang|{{Intlang}}}}}
 	| #default = Community
 	| hr = Zajednica
+	| pt-br = Comunidade
 	| ru = Сообщество
 	}}
 
 | Pages = {{#switch: {{{lang|{{Intlang}}}}}
 	| #default = Pages
 	| hr = Stranice
+	| pt-br = Páginas
 	| ru = Статьи
 	}}
 
 | Community Portal = {{#switch: {{{lang|{{Intlang}}}}}
 	| #default = Community Portal
 	| hr = Portal zajednice
+	| pt-br = Portal da comunidade 
 	| ru = Центр Сообщества
 	}}
 
 | Ongoing discussions = {{#switch: {{{lang|{{Intlang}}}}}
 	| #default = Ongoing discussions
 	| hr = Tekuće rasprave
+	| pt-br = Discussões em andamento
 	| ru = Актуальные обсуждения
 	}}
 
 | Tasks = {{#switch: {{{lang|{{Intlang}}}}}
 	| #default = Tasks
 	| hr = Zadaci
+	| pt-br = Tarefas
 	| ru = Задачи
 	}}
 
 | Proposals = {{#switch: {{{lang|{{Intlang}}}}}
 	| #default = Proposals
 	| hr = Prijedlozi
+	| pt-br = Propostas
 	| ru = Идеи и предложения
 	}}
 
@@ -449,6 +482,7 @@ __NOTOC__
 	| es = Estadística 
 	| fi = Staattinen 
 	| hr = statički
+	| pt-br = Estatística
 	| ru = Постоянное
 	| zh = 静态
 	}}
@@ -459,6 +493,7 @@ __NOTOC__
 	| es = Discusión 
 	| fi = Keskustelu
 	| hr = Rasprava
+	| pt-br = Discussão
 	| ru = Обсуждение
 	}}
 	
@@ -468,6 +503,7 @@ __NOTOC__
 	| es = Página de discusión principal 
 	| fi = Pää keskustelu sivu 
 	| hr = Glavna stranica za raspravu
+	| pt-br = Página de discussão principal
 	| ru = Общее
 	| zh = 主讨论页 
 	}}
@@ -478,6 +514,7 @@ __NOTOC__
 	| es = Discusión:Página principal 
 	| fi = Keskustelu:Pää sivu 
 	| hr = Razgovor: Glavna stranica
+	| pt-br = Discussão: Página principal 
 	| ru = Заглавная страница 
 	| zh = 讨论：主页 
 	}}
@@ -488,6 +525,7 @@ __NOTOC__
 	| es = Discusión de VDC:Acerca de 
 	| fi = Valve Kehittäjä Yhteisö:Tietoja 
 	| hr = Razgovor o VDC
+	| pt-br = Discussão VDC: sobre
 	| ru = VDC: О нас 
 	| zh = Valve 开发者社区：关于
 	}}
@@ -498,6 +536,7 @@ __NOTOC__
 	| es = Nueva sección de ayuda
 	| fi = Uuden Avun Tiski 
 	| hr = Novi Help Desk 
+	| pt-br = Nova seção de ajuda
 	| ru = Новая служба поддержки 
 	| zh = 新帮助台
 	}}
@@ -508,6 +547,7 @@ __NOTOC__
 	| es = Motivos para eliminación rápida 
 	| fi = Syitä pikapoistoon 
 	| hr = Razlozi za brzo brisanje
+	| pt-br = Motivos para remoção rápida
 	| ru = Причины для быстрого удаления 
 	| zh = 快速删除的原因
 	}}
@@ -518,6 +558,7 @@ __NOTOC__
 	| es = Tablón de anuncios de administradores 
 	| fi = Ylläpitäjien ilmoitustaulu 
 	| hr = oglasna ploča za administratore
+	| pt-br = Quadro de avisos dos administradores
 	| ru = Объявления администраторов 
 	| zh = 管理员布告栏
 	}}
@@ -528,6 +569,7 @@ __NOTOC__
 	| es = En curso
 	| fi = Tekemisissä 
 	| hr = U tijeku
+	| pt-br = Em progresso
 	| ru = Рабочее
 	| zh = 持续进行
 	}}
@@ -538,6 +580,7 @@ __NOTOC__
 	| es = Información 
 	| fi = Tiedottava 
 	| hr =  Informativni
+	| pt-br = Informativo
 	| ru = Информация 
 	| zh = 相关信息
 	}}
@@ -548,6 +591,7 @@ __NOTOC__
 	| es = Acerca de 
 	| fi = Tietoja 
 	| hr = O projektu VDC
+	| pt-br = Sobre
 	| ru = О нас 
 	| zh = 关于
 	}}
@@ -558,6 +602,7 @@ __NOTOC__
 	| es = Automatización 
 	| fi = Automaatio 
 	| hr = Automatizacija 
+	| pt-br = Automação
 	| ru = Автоматизация 
 	| zh = 自动化
 	}}
@@ -568,6 +613,7 @@ __NOTOC__
 	| es = Contenidos 
 	| fi = Sisältöjä 
 	| hr = sadržaj
+	| pt-br = Conteúdos
 	| ru = Содержание 
 	| zh = 内容
 	}}
@@ -578,6 +624,7 @@ __NOTOC__
 	| es = Eliminación 
 	| fi = Poisto 
 	| hr = Brisanje
+	| pt-br = Exclusão 
 	| ru = Удаление 
 	| zh = 删除
 	}}
@@ -588,6 +635,7 @@ __NOTOC__
 	| es = Glosario 
 	| fi = Sanasto 
 	| hr = Glosar
+	| pt-br = Glossário
 	| ru = Словарь
 	| zh = 术语
 	}}
@@ -598,6 +646,7 @@ __NOTOC__
 	| es = Enlaces 
 	| fi = Linkittäminen 
 	| hr = Povezivanje
+	| pt-br = Vinculando
 	| ru = Ссылки 
 	| zh = 链接
 	}}
@@ -607,6 +656,7 @@ __NOTOC__
 	| es = Esbozos 
 	| fi = Lyhyet artikkelit
 	| hr = Zaglavci
+	| pt-br = Esboços
 	| ru = Заглушки 
 	| zh = 小作品
 	}}
@@ -617,6 +667,7 @@ __NOTOC__
 	| es = Plantillas 
 	| fi = Mallineet 
 	| hr = Predloške
+	| pt-br = Modelos
 	| ru = Шаблоны 
 	| zh = 模板
 	}}
@@ -627,6 +678,7 @@ __NOTOC__
 	| es = Idiomas
 	| fi = Kielet 
 	| hr = Jezike 
+	| pt-br = Idiomas
 	| ru = Языки 
 	| zh = 语言
 	}}
@@ -637,6 +689,7 @@ __NOTOC__
 	| es = Páginas a traducir 
 	| fi = Sivuja käännettäväksi 
 	| hr = Stranice koje treba ju prevesti
+	| pt-br = Páginas para serem traduzidas
 	| ru = Страницы, которые необходимо перевести 
 	| zh = 需要翻译的页面
 	}}
@@ -647,6 +700,7 @@ __NOTOC__
 	| es = Guía de traducción 
 	| fi = Kääntämisen opas 
 	| hr = Vodič za prijevod
+	| pt-br = Guia de tradução
 	| ru = Справочник по переводу 
 	| zh = 翻译指南
 	}}
@@ -657,6 +711,7 @@ __NOTOC__
 	| es = Traductores 
 	| fi = Kääntäjiä 
 	| hr = Prevoditelji
+	| pt-br = Tradutores
 	| ru = Переводчики 
 	| zh = 译者列表
 	}}
@@ -667,6 +722,7 @@ __NOTOC__
 	| es = Idiomas de usuario
 	| fi = Käyttäjä kieliä 
 	| hr = Korisnički jezici 
+	| pt-br = Idiomas do usuário
 	| ru = Языки пользователей 
 	| zh = 用户语言
 	}}
@@ -677,6 +733,7 @@ __NOTOC__
 	| de = Tafel für Übersetzer
 	| fi = Kääntäjien ilmoitustaulu
 	| hr = Oglasna ploča prevoditelja
+	| pt-br = Quadro de avisos dos tradutores
 	| ru = Объявления переводчиков
 	| zh = 译者公告板
 	}}

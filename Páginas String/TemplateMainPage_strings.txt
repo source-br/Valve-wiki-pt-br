@@ -1,0 +1,879 @@
+<!-- EDITORS: To keep things clean, it is recommended to sort language codes from A to Z. Also remember to update this aswell.-->
+{{Strings subpage
+| number = 37
+| en = 37
+| cs = 27
+| de = 35
+| el = 14
+| eo = 27
+| es = 13
+| fi = 35
+| fr = 19
+| he = 13
+| hr = 37
+| it = 13
+| ja = 10
+| ka = 12
+| ko = 13
+| nl = 13
+| pl = 12
+| pt-br = 37
+| ru = 35
+| sv = 13
+| tr = 13
+| uk = 28
+| vi = 35
+| zh = 35
+| zh-tw = 13
+}}
+
+<span style="color:white; font-size:1.3em">If You are translating the Main Page, visit [[Template:MainPage/VDC-navbox/strings]] and [[Template:MainPage/ValveTechnology/strings]] for more translations.</span>
+-----
+* {{{{FULLPAGENAME}}|VDC Welcome}}
+* {{{{FULLPAGENAME}}|VDC}}
+* {{{{FULLPAGENAME}}|Message 1}}
+* {{{{FULLPAGENAME}}|Welcome}}
+* {{{{FULLPAGENAME}}|Sign up}}
+* {{{{FULLPAGENAME}}|Valve Technology}}
+* {{{{FULLPAGENAME}}|SDK}}
+* {{{{FULLPAGENAME}}|S2SDK}}
+* {{{{FULLPAGENAME}}|HLSDK}}
+* {{{{FULLPAGENAME}}|HLSDK Docs}}
+* {{{{FULLPAGENAME}}|SDK Docs}}
+* {{{{FULLPAGENAME}}|S2SDK Docs}}
+* {{{{FULLPAGENAME}}|HLSDK Desc}}
+* {{{{FULLPAGENAME}}|SDK Desc}}
+* {{{{FULLPAGENAME}}|S2SDK Desc}}
+* {{{{FULLPAGENAME}}|CS2 Tools Docs}}
+* {{{{FULLPAGENAME}}|Dota 2 Tools Docs}}
+* {{{{FULLPAGENAME}}|HLA Tools Docs}}
+* {{{{FULLPAGENAME}}|SVR Tools Docs}}
+* {{{{FULLPAGENAME}}|Deadlock Tools Docs}} (Not used on the page so far)
+* {{{{FULLPAGENAME}}|FMT}}
+* {{{{FULLPAGENAME}}|FMT Line 1}}
+* {{{{FULLPAGENAME}}|FMT Line 2}}
+* {{{{FULLPAGENAME}}|FMT Line 3}}
+* {{{{FULLPAGENAME}}|FMT Line 4}}
+* {{{{FULLPAGENAME}}|FMT Line 5}}
+* {{{{FULLPAGENAME}}|FMT Line 6}}
+* {{{{FULLPAGENAME}}|New Wiki}}
+* {{{{FULLPAGENAME}}|For Help}}
+* {{{{FULLPAGENAME}}|Wiki Contents}}
+* {{{{FULLPAGENAME}}|Community Portal}}
+* {{{{FULLPAGENAME}}|Tooltip Signup}}
+* {{{{FULLPAGENAME}}|Copyright}}
+* {{{{FULLPAGENAME}}|Legal}}
+* {{{{FULLPAGENAME}}|cs2_tools}}
+* {{{{FULLPAGENAME}}|dota2_tools}}<!-- hidden until valve released info about the game or announcing that the game will have workshop tools. 
+* {{{{FULLPAGENAME}}|deadlock_tools}}
+-->* {{{{FULLPAGENAME}}|hlvr_tools}}
+* {{{{FULLPAGENAME}}|svrh_tools}}
+
+<includeonly><onlyinclude>{{#switch:{{{1|}}}
+
+| VDC Welcome = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> Welcome to the</span>
+	| en = Welcome to the
+	| cs = Vítejte na 
+	| de = Herzlich Willkommen bei der 
+	| el = Καλώς ορίσατε στην
+	| es = Bienvenido a la
+	| eo = Bonvenon al la 
+	| fi = Tervetuloa 
+	| fr = Bienvenue sur le Wiki de la 
+	| he = ברוכים הבאים
+	| hr = Dobro došli u 
+	| it = Benvenuto nella
+	| ja = ィへようこそ
+	| ka = მოგესალმებათ
+	| ko = 에 오신 것을 환영합니다
+	| nl = Welkom op de
+	| pl = Witaj w
+	| pt-br = Bem-vindo(a) à
+	| ru = Добро пожаловать в
+	| sv = Välkommen till
+	| tr = hoş geldiniz
+	| uk = Ласкаво просимо у 
+	| vi = Chào mừng đến với 
+	| zh = 欢迎来到
+	| zh-tw = 歡迎來到
+	}}
+
+| VDC = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> {{SITENAME}}</span>
+	| en = {{SITENAME}}
+	| cs = {{SITENAME}}
+	| de = Valve Entwickler-Community
+	| el = Κοινότητα Προγραμματιστών Valve
+	| es = comunidad de desarrollo de Valve
+	| eo = Valve Evoluigista Komunumo
+	| fi = Valve Kehittäjä Yhteisöön
+	| fr = Communauté des Développeurs Valve
+	| he = Valve המפתחים של
+	| hr = Zajednicu Valve razvojnih programera 
+	| it = Community degli Sviluppatori di Valve
+	| ja = バルブ開発者コミュニティ
+	| ko = Valve 개발자 커뮤니티에 오신 것을 환영합니다
+	| nl = {{SITENAME}}
+	| pl = Społeczności twórców Valve
+	| pt-br = Comunidade de Desenvolvedores da Valve
+	| ru = {{SITENAME}}
+	| sv = {{SITENAME}}
+	| tr = Valve Geliştiriciler Topluluğu
+	| uk = {{SITENAME}}
+	| vi = Cộng đồng phát triển Valve
+	| zh = Valve 开发者社区
+	| zh-tw = Valve 開發者社群
+	}}
+
+| Message 1 = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> This subpage includes a [[Template:MainPage|MainPage template]]. If you want to make changes to the translation, go to the [[Template:MainPage/strings|strings subpage]].</span>
+	| en = This subpage includes a [[Template:MainPage|MainPage template]]. If you want to make changes to the translation, go to the [[Template:MainPage/strings|strings subpage]].
+	| cs = Tato podstránka obsahuje [[Template:MainPage|Anglická podstránka]]. Pokud chcete provést změny v překladu, přejděte na [[Template:MainPage/strings|podstránka řetězců]].
+	| de = Diese Unterseite enthält eine [[Template:MainPage|Englische Unterseite]]. Wenn Sie Änderungen an der Übersetzung vornehmen möchten, gehen Sie zur [[Template:MainPage/strings|Strings-Unterseite]].
+	| eo = Ĉi ĉefa paĝo enhavas [[Template:MainPage|anglan paĝidon]]. Se volas ŝanĝi tiun tradukon vi iru al [[Template:MainPage/strings|ĉena paĝido]].
+	| fi = Tämä alasivu sisältää [[Template:MainPage| englannin kielisen alasivun]]. Jos haluat tehdä muutoksia käännökseen, siirry [[Template:MainPage/strings|merkkijonojen alasivulle]]. 
+	| hr = Ova podstranica uključuje [[Template:MainPage|englesku podstranicu]]. Ako želite promijeniti prijevod, idite na [[Template:MainPage/strings|podstranicu strings]].
+	| pt-br = Esta subpágina inclui um [Template:MainPage|Modelo da página inicial]. Se você quiser fazer alterações na tradução, vá para a subpágina de strings.
+	| ru = Данная подстраница включает в себя [[Template:MainPage|английскую подстраницу]]. Если Вы хотели внести изменения в перевод, перейдите на [[Template:MainPage/strings|подстраницу строк]].
+	| uk = Ця підсторінка містить [[Template:MainPage|підсторінку англійською мовою]]. Якщо Ви хочете внести зміни в переклад, перейдіть на [[Template:MainPage/strings|підсторінку рядків]].
+	| vi = Trang phụ này bao gồm [[Template:MainPage|trang phụ Tiếng Anh]] Nếu bạn muốn thêm các bản dịch, hãy vào [[Template:MainPage/strings|trang phụ chuỗi]].
+	| zh = 该子页面包括一个[[Template:MainPage|英文子页面]]。如果你想对翻译进行修改，请前往[[Template:MainPage/strings|字符串子页面]]。
+	}}
+
+| Welcome = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> Whether you're building a commercial project or a [[modification]] for {{hl2|1|nt=reg}}, you'll want to [[Special:Userlogin|sign up]] as a [[Valve]] developer today. It's free to join and is open to anyone working with the [[Source|Source engine]] and its [[SDK Installation|software development kit]].</span>
+	| en = Whether you're building a commercial project or a [[modification]] for {{hl2|1|nt=reg}}, you'll want to [[Special:Userlogin|sign up]] as a [[Valve]] developer today. It's free to join and is open to anyone working with the [[Source|Source engine]] and its [[SDK Installation|software development kit]].
+	| cs = Oficiálních stránkách firmy [[Valve]] pro vývojářskou komunitu. Ať už připravujete "AAA" herní projekt nebo [[Modification|mod]] pro 
+{{hl2|1|nt=reg}} možná se budete chtít [[Special:Userlogin|zaregistrovat]]. Členství je zdarma a otevřeno všem kteří pracují se [[Source|Source Enginem]] a [[SDK Installation|Source SDK]].
+	| de = Sie können sich noch heute als [[Valve]] Entwickler [[Special:Userlogin|anmelden]], obgleich Sie ein kommerzielles Projekt oder eine [[Modification|Modifikation]] für {{hl2|1|nt=reg}} entwickeln. Die Registrierung ist komplett kostenlos und offen für jeden der mit der [[Source|Source Engine]] und/oder der [[SDK Installation|Source SDK]] arbeitet.
+	| el = Είτε χτίζετε ένα εμπορικό έργο "Triple-A" είτε ένα [[modification|τροποποίηση]] για το {{hl2|1|nt=reg}}, θα θελήσετε να [[Special:Userlogin|εγγραφείτε]] ως προγραμματιστής της Valve σήμερα. Είναι δωρεάν η συμμετοχή και ανοιχτό σε οποιονδήποτε εργάζεται με το [[Source Engine Features|Source engine]] και το [[SDK Installation|κιτ ανάπτυξης λογισμικού]].
+	| es = Si estás desarrollando un proyecto comercial «triple A» o una [[Modification|modificación]] de {{hl2|1|nt=reg}}, te interesará [[Special:Userlogin|registrarte]] como un desarrollador de [[Valve]]. Ingresar es gratuito y cualquier persona que trabaje con [[Source|motor Source]] y [[SDK Installation|Source SDK]] puede hacerlo.
+	| eo = Kiam vi kreas "Triobla-Ao" komercan projekton aŭ [[Modification|ŝanĝon]] por {{hl2|1|nt=reg}}, vi volos [[Special:Userlogin|ensaluti]] hodiaŭ esti ellaboriston de [[Valve]]. Ĝi libere povas membriĝi, kaj bonvenanta al ajn persono laboras kun la [[Source|Source Engine]] kaj la [[SDK Installation|Source SDK]].
+	| fi = Riippumatta siitä että oletko tekemässä kaupallista tuotetta vai [[modification|modifikaatiota]] {{hl2|1|nt=reg}}:selle, niin sinun kannattaa [[Special:Userlogin|ilmoittautua]] [[Valve]] kehittäjäksi tänään. On ilmaista liittyä ja se on kaikille, jotka työskentelevät [[Source|Source pelimoottorin]] tai sen [[SDK Installation|ohjelmistokehityspaketin kanssa]].
+	| fr = Que vous soyez en train de construire un gros projet commercial ou un [[Modification|mod]] pour {{hl2|1|nt=reg}}, vous voudrez sûrement vous [[Special:Userlogin|inscrire]] en tant que développeur [[Valve]] dès aujourd'hui. L'inscription est gratuite, et ouverte à toute personne travaillant avec le [[Source|moteur Source]] et le [[SDK Installation|Source SDK]].
+	| he = .[[SDK Installation|Source SDK]]ועם ה [[Source|Source Engine]]ההרשמה היא חינם לגמרי, ופתוחה עבור כל אחד או אחת שרוצה לעבוד עם מנוע ה .כבר היום [[Valve]] כדאי לך להרשם כמפתח של ,{{hl2|1|nt=reg}} עבור  [[Modification|mod]] או מפתח/ת  "Triple-A" בין אם את/ה מפתח/ת פרויקט מסחרי בגודל של
+	| hr = Bilo da gradite komercijalni projekt ili [[modification|modifikaciju]] za {{hl2|1|nt=reg}}, poželjet ćete se [[Special:Userlogin|prijaviti]] kao [[Valve]] programer danas. Besplatno je pridružiti se i otvoreno je svima koji rade s [[Source|Source engine]] i njegovim [[SDK Installation|software development kit]].
+	| it = Se stai creando un progetto commerciale "Tripla-A" oppure una [[Modification|mod]] per {{hl2|1|nt=reg}}, vorrai [[Special:Userlogin|registrarti]] come uno sviluppatore di [[Valve]]. L'adesione è gratuita, e aperta a tutti quelli che lavorano con il [[Source|Source Engine]] e il [[SDK Installation|Source SDK]].
+	| ja = トリプルA (AAA) タイトルの商業プロジェクトから、{{hl2|1|nt=reg}} の [[Modification|MOD]] 開発プロジェクトまで、今すぐにバルブ開発者コミュニティに[[Special:Userlogin|登録]]しましょう。参加は無料で、[[Source|ソースエンジン]] と [[SDK Installation|ソース SDK]] が使用可能なユーザーなら誰でも歓迎です。
+	| ka = მიუხედავად თქვენი მიზნებისა, იქნება ეს კომერციული პროექტის შექმნა თუ [[Modification|მოდიფიკაციის]] შექმნა {{hl2|1|nt=reg}}-სთვის, თქვენ ალბათ გსურთ რომ [[Special:Userlogin|შემოგვიერთდეთ]] როგორც დეველოპერი. უფასო რეგისტრაცია და სრული ხელმისაწვდომობა ყველასათვის ვინც მუშაობს [[Source|Source ძრავასა]] და [[SDK Installation|Source SDK]]-სთან.
+	| ko = 다수의 게임으로 증명된 최고의 상용 게임 개발을 위한 엔진인 Source를 사용하거나 {{hl2|1|nt=reg}} [[Mod | 모딩]]을 원하다면, 이곳에서 각종 정보를 획득할 수 있습니다. [[Valve]] 개발자 커뮤니티는 [[Source]] 사용을 원하는 누구나 가입할 수 있습니다. 간단한 [[Special:Userlogin|회원가입]]을 통해 Source 개발자, 모드 커뮤니티의 일원이 되세요. 누구든지 무료로 이용할 수 있습니다.
+	| nl = Of je nou een "Triple-A" commercieel project of een [[Modification|mod]] voor {{hl2|1|nt=reg}} maakt, zou je waarschijnlijk willen [[Special:Userlogin|registreren]] als een [[Valve]] ontwikkelaar. Meedoen is gratis en mogelijk voor iedereen die werkt met de [[Source|Source Engine]] en de [[SDK Installation|Source SDK]].
+	| pl = Niezależnie od tego, czy tworzysz produkt komercyjny wysokiej jakości, czy [[Modification|modyfikację]] do {{hl2|1|nt=reg}}, już dziś [[Special:Userlogin|zarejestruj się]] jako twórca [[Valve]]. Rejestracja jest darmowa i otwarta dla każdego twórcy pracującego na [[Source|silniku Source Engine]] i korzystającego z [[SDK Installation|Source SDK]].
+	| pt-br = Se você estiver envolvido em um projeto comercial de alto nível ou fazendo uma [[Modification|modificação]] para o {{hl2|1|nt=reg}}, [[Special:Userlogin|fazer parte]] da comunidade de desenvolvedores é fundamental. A inscrição é gratuita e aberta para qualquer pessoa que esteja trabalhando com a [[Source|engine Source]] e o [[SDK Installation|SDK Source]].
+	| ru = Независимо от того, разрабатываете ли Вы коммерческий проект или [[modification|модификацию]] для {{hl2|1|nt=reg}}, Вам стоит [[Special:Userlogin|зарегистрироваться]] в качестве разработчика [[Valve]] уже сегодня. Регистрация бесплатна и открыта для каждого, кто работает с движком [[Source]] и его [[SDK Installation|набором инструментов]].
+	| sv = [[Valve]]'s officiella utvecklarcommunity. Vare sig du skapar ett femstjärnigt kommersiellt projekt eller en [[Modification|mod]] för {{hl2|1|nt=reg}}, kommer du vilja skriva in dig som en Valveutvecklare på momangen.
+	| tr = İster "AAA" bir reklam projesi yapıyor olun isterseniz {{hl2|1|nt=reg}} için bir [[Modification|mod]] yapıyor olun, bugün bir [[Valve]] geliştiricisi olarak [[Special:Userlogin|kaydolmak]] isteyebilirsiniz. Burası katılması ücretsiz ve [[Source|Source oyun motoru]], [[SDK Installation|Source SDK]] ile çalışan herkese açık bir yerdir.
+	| uk = Незалежно від того, робите ви гру «ААА» класу або [[Modification|мод]] для {{hl2|1|nt=reg}}, ви певно захочете [[Special:Userlogin|приєднатися]] у якості розробника прямо зараз. Це безплатно та доступно для усіх, хто планує працювати з [[Source|Source Engine]] та [[SDK Installation|Source SDK]].
+	| vi = Cho dù bạn đang xây dựng một dự án "AAA" hoặc là [[Modification|mod]] dành cho {{hl2|1|nt=reg}}, bạn sẽ muốn [[Special:Userlogin|đăng ký]] với tư cách là trở thành nhà phát triển [[Valve]] ngay hôm nay. Tham gia miễn phí dành cho bất kỳ ai làm việc với [[Source|Công cụ Source]] và [[SDK Installation|SDK Source]].
+	| zh = 无论你想要制作一款商业游戏，还是一个 {{hl2|1|nt=reg}} 的 [[Modification|MOD]]，你都可以在此网站上找到您需要的信息！你可以免费加入 [[Valve]] 开发者社区，我们向所有使用[[Source|起源引擎]]与[[SDK Installation|起源SDK]]的开发者开放。
+	| zh-tw = 如果你現在正在開發一個令人期待的遊戲，或是一個 {{hl2|1|nt=reg}} 的 [[Modification|模組]]。那麼你應該會想要馬上在這裡 [[Special:Userlogin|註冊]] 一個 [[Valve]] 開發者帳號！放心，加入是免費的，這個社群開放給任何使用 [[Source|Source 引擎]] 以及 [[SDK Installation|Source 開發者套件]] 開發的人員。
+	}}
+
+| Sign up = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> Sign up to become part of the community!</span>
+	| en = Sign up to become part of the community!
+	| cs = Zaregistrujte se a staňte se součástí komunity!
+	| de = Registrieren Sie sich jetzt und werden Sie ein Bestandteil dieser Community!
+	| el = Εγγραφείτε για να γίνετε μέλος της κοινότητας!
+	| es = ¡Regístrate para formar parte de la comunidad!
+	| eo = Ensalutu estiĝi parton de la komunumo!
+	| fi = Liity osaksi yhteisöä!
+	| fr = Inscrivez-vous pour faire partie de la communauté!
+	| he = !הרשם/י עכשיו בכדי להיות חלק מהקהילה
+	| hr = Prijavite se kako biste postali dio zajednice!
+	| it = Registrati per far parte della community!
+	| ja = コミュニティに登録して一員になろう！
+	| ka = გაიარეთ რეგისტრაცია რათა გახდეთ ფორუმის წევრი!
+	| ko = 커뮤니티의 일원이 되어보세요!
+	| nl = Registreer vandaag om deel te nemen aan de community!
+	| pl = Zarejestruj się, by zostać częścią naszej Społeczności!
+	| pt-br = Cadastre-se e faça parte da comunidade!
+	| ru = Зарегистрируйтесь, чтобы стать частью нашего сообщества!
+	| sv = skriv in dig och bli en del av communityn -- det är gratis!
+	| tr = Topluluğun bir parçası olmak için bugün kaydolun!
+	| uk = Зареєструйтеся, щоб стати частиною спільноти!
+	| vi = Đăng ký để trở thành một phần của cộng đồng!
+	| zh = 注册成为社区的一员！
+	| zh-tw = 馬上註冊加入這個社群！
+	}}
+
+| Valve Technology = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> Valve Technology</span>
+	| en = Valve Technology
+	| cs = Technologie společnosti Valve
+	| de = Valve-Technologie
+ 	| el = Τεχνολογία Valve
+	| es = Tecnología de Valve
+	| eo = Valve Teknologio
+	| fi = Valve Teknologia
+	| fr = Technologie Valve
+	| he = Valve הטכנולוגיה של
+	| hr = Valve Tehnologija
+	| ka = Valve ტექნოლოგიები
+	| ko = Valve 기술
+	| nl = Valve Technologie
+	| pt-br = Tecnologia da Valve
+	| ru = Технологии Valve
+	| sv = Valves teknologi
+	| uk = Технології Valve
+	| tr = Valve Teknolojileri
+	| vi = Công nghệ của Valve
+	| zh = Valve 技术
+	| zh-tw = Valve 科技公司
+	}}
+
+| HLSDK = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> GoldSrc and the Half-Life SDK</span>
+	| en = GoldSrc and the Half-Life SDK
+	| de = GoldSrc und das Half-Life SDK
+	| cs = GoldSrc a Half-Life SDK
+	| eo = GoldSrc kaj Half-Life SDK
+	| es = GoldSrc y el Half-Life SDK
+	| fi = GoldSrc ja Half-Life SDK
+	| fr = GoldSrc et le Half-Life SDK
+	| hr = GoldSrc i Half-Life SDK
+	| pt-br = GoldSrc e o SDK Half-Life
+	| ru = GoldSrc и Half-Life SDK
+	| uk = GoldSrc та Half-Life SDK
+	| vi = GoldSrc và Half-Life SDK
+	| zh = 金源引擎 与 半衰期SDK
+	}}
+
+| SDK = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> Source and the Source SDK</span>
+	| en = Source and the Source SDK
+	| cs = Source a Source SDK
+	| el = Source και το Source SDK
+	| de = Source und das Source SDK
+	| es = Source y el Source SDK
+	| eo = Source kaj la Source SDK
+	| fi = Source ja Source SDK
+	| fr = Source et le Source SDK
+	| he = Source SDK-ו Source
+	| hr = Source i Source SDK
+	| it = Il Source Engine e il Source SDK
+	| ka = Source და Source SDK
+	| ko = Source 및 Source SDK
+	| nl = Source en de Source SDK
+	| pl = Silnik Source i Source SDK
+	| pt-br = A engine Source e o SDK Source
+	| ru = Source и Source SDK
+	| sv = Source och Source SDK
+	| tr = Source ve Source SDK
+	| uk = Source та Source SDK
+	| vi = Source và Source SDK
+	| zh = 起源引擎 与 起源SDK
+	| zh-tw = Source 引擎 與 Source 開發者套件
+	}}
+
+| S2SDK = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> Source 2 Documentation</span>
+	| en = Source 2 Documentation
+	| cs = Source 2 dílenské nářadí
+	| de = Source 2 Werkstattwerkzeuge
+	| eo = Designejaj iloj de Source 2
+	| es = Documentación de Source 2
+	| fi = Source 2 Dokumentointi
+	| fr = Documentation de Source 2
+	| hr = Source 2 Dokumentacija
+	| pt-br = Documentação da Source 2
+	| ru = Инструментарий Source 2
+	| uk = Інструменти майстерні Source 2
+	| vi = Source 2 - Tài liệu
+	| zh = 起源2引擎 文档
+	}}
+
+| HLSDK Docs = {{#switch: {{MainPage/Intlang}}
+	| #default = UTRANSLATED
+	| en = Go to the GoldSrc Engine (Half-Life SDK) documentation index
+	| cs = Přejděte do rejstříku dokumentace GoldSrc Enginu (Half-Life SDK)
+	| de = Zum GoldSrc Engine (Half-Life SDK) Dokumentations-Index
+	| eo = Iri priskribon indekson de la GoldSrc Motoro (Duonvivo SDK)
+	| es = Ves al índice de documentación del motor GoldSrc (Half-Life SDK)
+	| fi = Siirry GoldSrc Enginen (Half-Life SDK'n) dokumentaatio hakemistoon
+	| hr = Idite na indeks dokumentacije GoldSrc Engine (Half-Life SDK)
+	| uk = Перейти до документації з GoldSrc Engine (Half-Life SDK)
+	| vi = Truy cập vào mục tài liệu cho công nghệ GoldSrc (Half-Life SDK)
+	| zh = 前往 金源引擎（半衰期SDK） 开发文档主页
+	| pt-br = Ir para o índice de documentação da engine GoldSrc (SDK Half-Life)
+	| ru = Перейти к началу документации по GoldSrc (Half-Life SDK)
+	}}
+
+| SDK Docs = {{#switch: {{MainPage/Intlang}}
+	| #default = UNTRANSLATED
+	| en = Go to the Source Engine documentation index
+	| cs = Přejděte na stránky s dokumentací k Source enginu
+	| de = Zum Source Engine Dokumentations-Index
+	| el = Μεταβείτε στο ευρετήριο τεκμηρίωσης του Source Engine
+	| eo = Iri priskribon indekson de Motoro Source
+	| es = Ves al índice de documentación del motor Source
+	| fi = Siirry Source Enginen documentaatio hakemistoon
+	| hr = Idite na indeks dokumentacije Source Engine
+	| pt-br = Ir para o índice de documentação da  engine Source 
+	| ru = Перейти к началу документации по движку Source
+	| uk = Перейти до документації з Source Engine
+	| vi = Truy cập vào mục tài liệu cho công nghệ Source
+	| zh = 前往 起源引擎 开发文档主页
+	}}
+
+| S2SDK Docs = {{#switch: {{MainPage/Intlang}}
+	| #default = UNTRANSLATED
+	| en = Go to the Source 2 Engine documentation index
+	| cs = Přejděte na stránky s dokumentací k Source 2 enginu
+	| de = Zum Source 2 Engine Dokumentations-Index
+	| eo = Iri priskribon indekson de Motoro Source 2
+	| es = Ves al índice de documentación del motor Source 2
+	| fi = Siirry Source 2 Enginen dokumentaatio hakemistoon
+	| hr = Idite na indeks dokumentacije Source 2 Engine
+	| pt-br = Ir para o índice de documentação da Source 2
+	| ru = Перейти к началу документации по Source 2
+	| uk = Перейти до документації з Source 2 Engine
+	| vi = Truy cập vào mục tài liệu cho công nghệ Source 2
+	| zh = 前往 起源引擎 开发文档主页
+	}}
+
+| HLSDK Desc = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> If you want to create a Mod for {{hl|1}} or looking for more {{gldsrc|1}} documentation, click above.</span>
+	| en = If you want to create a Mod for {{hl|1}} or looking for more {{gldsrc|1}} documentation, click above.
+	| vi = Nếu bạn muốn tạo Mod cho {{hl|1}} hoặc tìm kiếm thêm tài liệu về {{gldsrc|1}}, hãy nhấp vào bên trên.
+	| fi = Etsimässä miten tehdä modifikaatio {{hl|1|addtext=lle}} tai yleistä dokumentaatiota {{gldsrc|1}}sesta? Vieraile sivulla painamalla yllä olevaa nappai tai tekstiä.
+	| hr = Ako želite izraditi Mod za {{hl|1}} ili tražite više {{gldsrc|1}} dokumentacije, kliknite gore.
+	| de = Wenn Sie einen Mod für {{hl|1}} erstellen möchten oder weitere {{gldsrc|1}}-Dokumentation suchen, besuchen Sie die Seite, indem Sie auf die Schaltfläche oder den Text oben klicken.
+	| es = Si quieres crear un Mod para {{hl|1}} o buscas más documentación de {{gldsrc|1}}, haz clic arriba.
+	| pt-br = Se você deseja criar um Mod para {{hl|1}} ou está em busca de mais documentação sobre a {{gldsrc|1}}, clique acima.
+	| ru = Нажмите выше, чтобы узнать подробнее о создании модификаций для {{hl|1}} или о работе с {{gldsrc|1}}.
+	| zh = 想为{{hl|1}}创建一个 Mod？点击上方查看{{gldsrc|1|nt=1}}的文档。
+	}}
+
+| SDK Desc = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> If you want to create a Mod for {{hl2|1}} or looking for more {{src|1}} documentation, click above.</span>
+	| en = If you want to create a Mod for {{hl2|1}} or looking for more {{src|1}} documentation, click above.
+	| cs = Naše znalostní báze technických informací o používání enginu a přibuzných nástrojů je nyní umisťována do komunitní ''wiki'' dokumentace. [[Special:Userlogin|Zaregistrujte se jako vývojář]] a můžete přispívat nebo pokládat otázky.
+	| de = Wenn Sie einen Mod für {{hl2|1}} erstellen möchten oder weitere {{src|1}}-Dokumentation suchen, klicken Sie oben.
+	| el = Η βάση γνώσεων μας για τεχνικές πληροφορίες σχετικά με τη χρήση της μηχανής και όλων των σχετικών εργαλείων δημοσιεύεται σε έναν ισότοπο που βασίζεται στην κοινότητα που ονομάζεται "wiki". [[Special:Userlogin|Εγγραφείτε ως προγραμματιστής]] να συνεισφέρετε.
+	| es = Nuestros conocimientos de información técnica acerca del uso del motor y todas sus herramientas relacionadas está publicado en un sitio que la comunidad lleva a cabo, llamado ''wiki''. [[Special:Userlogin|Regístrate como desarrollador]] para contribuir o comentar tus dudas.
+	| eo = Nia sciara bazo de teknika sciaro pri uzo la motoron kaj ĉiuj rilataj iloj afiŝiĝas en komunume gvidata retejo nomiĝas ''viki''o. [[Special:Userlogin|Estu evoluigisto ensalutu]] kontribui.
+	| fi = Meidän tekninen tieto pelimoottorin ja sen kaikkien työkalujen käytöstä on julkaistu yhteisöä johtavalle sivulle jota kutsutaan ''wikiksi''. [[Special:Userlogin|Liity kehittäjäksi]] auttaaksesi.
+	| fr = Notre base de connaissances techniques sur le moteur Source et tous les outils relatifs sont maintenant disponibles sur un ''wiki'' dirigé par la communauté. [[Special:Userlogin|Inscrivez-vous comme développeur]] pour y contribuer.
+	| he = .''wiki'' מאגר המידע טכני אודות שימוש במנוע וכל הכלים הקשורים אליו מפורסמים באתר אינטרנט שמתוחזק על-ידי הקהילה בשם
+	| hr = Ako želite izraditi mod za {{hl2|1}} ili tražite više {{src|1}} dokumentacije, kliknite gore.
+	| it = La nostra conoscenza sulle informazioni tecniche del Source Engine e di tutti i suoi strumenti, è pubblicata su un sito web guidato dalla community, la ''wiki''. [[Special:Userlogin|Registrati come sviluppatore]] per contribuire.
+	| ka = ჩვენი ცოდნის ბაზა შეიცავს ტექნიკურ ინფორმაციას ძრავისა და მისი ხელსაწყოების გამოყენების შესახებ და განთავსებულია ტექნოლოგიების ბაზაზე ''Wiki''. [[Special:Userlogin|გაიარეთ რეგისტრაცია]] წვლილის შესატანად ან შეკითხვის დასასმელად.
+	| ko = Source 커뮤니티의 기술적 지식 기반 도구 사용에 대한 정보는 해당 커뮤니티에 의해 운영되는 '''위키'''를 이용합니다. [[Special:Userlogin|개발자 등록]]을 하여 커뮤니티에 기여해 보세요.
+	| nl = Onze kennisbank met technische informatie over het gebruik van de engine en alle gerelateerde tools wordt nu bijgehouden op een community-gebaseerde website genoemd een ''wiki''. [[Special:Userlogin|Registreer als een ontwikkelaar]] om bij te dragen of een vraag te stellen.
+	| pl = Nasza wiedza na temat modyfikowania silnika Source i tworzenia własnych implementacji, map, dźwięków, modeli lub tekstur jest zawarta w ''wiki''. [[Special:Userlogin|Zarejestruj się jako twórca]], by podzielić się swoją wiedzą.
+	| pt-br = Nossa base de conhecimento com informações técnicas sobre o uso da engine Source e todas as ferramentas relacionadas estão publicadas em um site colaborativo chamado ''wiki''. [[Special:Userlogin|Cadastre-se como desenvolvedor]] para contribuir.
+	| ru = Нажмите выше, чтобы узнать подробнее о создании модификаций для {{hl2|1}} или о работе с {{src|1}}.
+	| sv = Vår kunskapsdatabas av teknisk information om användning av Sourcemotorn och alla dess relaterade verktyg finns nu på en communitydriven webbsida känd som en ''Wiki''. Skriv in dig som en utvecklare för att bidraga eller för att ställa frågor.
+	| tr = Source oyun motoru ve alakalı araçları hakkındaki tüm teknik bilgimiz ''viki'' adında topluluk tarafından yönetilen bir internet sitesinde paylaşılmaktadır. Katkıda bulunmak için bir geliştirici olarak [[Special:Userlogin|kaydolun]].
+	| uk = Наша база знань із технічною інформацією про використання рушія та всіх пов’язаних інструментів розміщена на керованому спільнотою вебсайті під назвою ''вікі''. [[Special:Userlogin|Зареєструйтеся як розробник]], щоб зробити внесок.
+	| vi = Cơ sở kiến thức của chúng tôi về thông tin kỹ thuật về cách sử dụng công cụ và tất cả các công cụ liên quan được đăng trên một trang web hướng đến cộng đồng có tên là ''wiki''. [[Special:Userlogin|Đăng ký với tư cách nhà phát triển]] để đóng góp.
+	| zh = 想为{{hl2|1}}创建一个 Mod ？点击上方查看关于{{src|1|nt=1}}的文档。
+	}}
+
+| S2SDK Desc = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> If you want to port {{src|1}} content to {{src2|1}} or looking for more Source 2 documentation, click above. Otherwise, you can check out the following Source 2 games with Workshop Tools:</span>
+	| en = If you want to port {{src|1}} content to {{src2|1}} or looking for more Source 2 documentation, click above. Otherwise, you can check out the following Source 2 games with Workshop Tools:
+	| de = Wenn Sie {{src|1}}-Inhalte auf {{src2|1}} portieren möchten oder weitere Source 2-Dokumentation suchen, klicken Sie oben. Andernfalls können Sie sich die folgenden Source 2-Spiele mit Workshop-Tools ansehen:
+	| es = Si quieres trasladar contenido de {{src|1}} a {{src2|}} o buscas más documentación de Source 2, haz clic arriba. Si no, puedes comprobar los siguientes juegos de Source 2 con Workshop Tools:
+	| fi = Etsimässä yleistä dokumentaatiota {{src2|1}}sesta? Vieraile sivulla painamalla yllä olevaa nappai tai tekstiä.<br>Muuten voit tutkia alla olevien {{src2|1}} pelien Workshop Työkaluja:
+	| fr = Vous recherchez de la documentation [[Source 2]] en général ? Visitez la page en cliquant sur le bouton ou le texte ci-dessus.<br>Sinon, vous pouvez consulter les jeux Source 2 suivants avec ses outils d'atelier ci-dessous :
+	| hr = Ako želite prenijeti {{src|1}} sadržaj na {{src2|1}} ili tražite više Source 2 dokumentacije, kliknite gore. Inače, možete provjeriti sljedeće igre Source 2 s Workshop Tools:
+	| pt-br = Se você deseja portar conteúdos da {{src|1}} para a {{src2|1}} ou está em busca de mais documentação sobre a Source 2, clique acima.
+	| ru = Нажмите выше, чтобы узнать подробнее о переносе ресурсов из {{src|1}} в {{src2|1}} или о работе с {{src2|name}}. Помимо этого, ниже описаны игры на {{src2|name}} с поддержкой инструментов Мастерской:
+	| vi = Nều bạn cần chuyển đổi nội dung từ {{src|1}} sang {{src2|1}} hoặc xem thêm tài liệu về Source 2, truy cập trang bằng cách nhấp vào nút hoặc chữ ở trên.<br>Hoặc là, bạn có thể xem một số trò chơi {{src2|name}} cùng với cộng cụ Workshop dưới đây:
+	| zh = 想将{{src|1|nt=1}}的内容移植到{{src2|1|nt=1}}？点击上方查看关于{{src2|1|nt=1}}的文档。<br>当然，你也可以查看具体游戏的创意工坊工具集：
+	| zh-tw = 所有關於使用 [[Source|Source 引擎]] 與開發工具的資訊都可以在這個 ''wiki'' 社群找到。你也可以 [[Special:Userlogin|註冊成為一位開發者]] 來幫忙編輯文件，為這個社群貢獻一些心力。
+	}}
+
+| CS2 Tools Docs = {{#switch: {{MainPage/Intlang}}
+	| #default = UTRANSLATED
+	| en = Go to the Counter-Strike 2 Workshop Tools documentation index
+	| cs = Přejděte do rejstříku dokumentace Counter-Strike 2 Workshop Tools
+	| de = Zum Counter-Strike 2 Workshop Tools Dokumentations-Index
+	| es = Ir al índice de documentación de las Workshop Tools de Counter-Strike 2
+	| eo = Iri priskribon indekson de la designejaj iloj de Counter-Strike 2
+	| fi = Siirry Counter-Strike 2 Workshop Työkalujen hakemistoon
+	| hr = Idite na indeks dokumentacije alata radionice Counter-Strike 2
+	| pt-br = Ir para o índice de ferramentas da oficina do Counter-Strike 2
+	| ru = Перейти к документации по Инструментам мастерской Counter-Strike 2
+	| uk = Перейти до документації по інструментах майстерні Counter-Strike 2
+	| vi = Truy cập vào trang tài liệu về Công cụ Workshop của Counter-Strike 2
+	| zh = 前往 反恐精英2 创意工坊工具集 主页
+	}}
+
+| Deadlock Tools Docs = {{#switch: {{MainPage/Intlang}}
+	| #default = UTRANSLATED
+	| en = Go to the Deadlock Workshop Tools documentation index
+	| cs = Přejděte do rejstříku dokumentace Deadlock Workshop Tools
+	| de = Zum Deadlock Workshop Tools Dokumentations-Index
+	| es = Ir al índice de documentación de las Workshop Tools de Deadlock
+	| eo = Iri priskribon indekson de la designejaj iloj de Deadlock
+	| fi = Siirry Deadlock Workshop Työkalujen hakemistoon
+	| hr = Idite na indeks dokumentacije alata radionice Deadlock
+	| pt-br = Ir para o índice de ferramentas da oficina do Deadlock
+	| ru = Перейти к документации по Инструментам мастерской Deadlock
+	| uk = Перейти до документації по інструментах майстерні Deadlock
+	| vi = Truy cập vào trang tài liệu về Công cụ Workshop của Deadlock
+	| zh = 前往 Deadlock 创意工坊工具集 主页
+	}}
+
+| Dota 2 Tools Docs = {{#switch: {{MainPage/Intlang}}
+	| #default = UTRANSLATED
+	| en = Go to the Dota 2 Workshop Tools documentation index
+	| cs = Přejděte do rejstříku dokumentace Dota 2 Workshop Tools
+	| de = Zum Dota 2 Workshop Tools Dokumentations-Index
+	| es = Ir al índice de documentación de las Workshop Tools de Dota 2
+	| eo = Iri priskribon indekson de la designejaj iloj de Dota 2
+	| fi = Siirry Dota 2 Workshop Työkalujen hakemistoon
+	| hr = Idite na indeks dokumentacije alata radionice Dota 2
+	| pt-br = Ir para o índice de ferramentas da oficina do Dota 2
+	| ru = Перейти к документации по Инструментам мастерской Dota 2
+	| uk = Перейти до документації по інструментах майстерні Dota 2
+	| vi = Truy cập vào trang tài liệu về Công cụ Workshop của Dota 2
+	| zh = 前往 Dota 2 创意工坊工具集 主页
+	}}
+
+| HLA Tools Docs = {{#switch: {{MainPage/Intlang}}
+	| #default = UTRANSLATED
+	| en = Go to the Half-Life: Alyx Workshop Tools documentation index
+	| cs = Přejděte na index dokumentace Half-Life: Alyx Workshop Tools
+	| de = Zum Half-Life: Alyx Workshop Tools Dokumentations-Index
+	| es = Ir al índice de documentación de las Workshop Tools de Half-Life: Alyx
+	| eo = Iri priskribon indekson de la designejaj iloj de Duonvivo: Aliks
+	| fi = Siirry Half-Life: Alyx Workshop Työkalujen hakemistoon
+	| hr = Idite na indeks dokumentacije alata radionice Half-Life: Alyx
+	| pt-br = Ir para o índice de ferramentas da oficina do Half-Life: Alxy
+	| ru = Перейти к документации по Инструментам мастерской Half-Life: Alyx
+	| uk = Перейти до документації по інструментах майстерні Half-Life: Alyx
+	| vi = Truy cập vào trang tài liệu về Công cụ Workshop của Half-Life: Alyx
+	| zh = 前往 半衰期：爱莉克斯 创意工坊工具集 主页
+	}}
+
+| SVR Tools Docs = {{#switch: {{MainPage/Intlang}}
+	| #default = UTRANSLATED
+	| en = Go to the SteamVR Workshop Tools documentation index
+	| cs = Přejděte do rejstříku dokumentace SteamVR Workshop Tools
+	| de = Zum SteamVR Workshop Tools Dokumentations-Index
+	| es = Ir al índice de documentación de 
+	| eo = Iri priskribon indekson de la designejaj iloj de SteamVR
+	| fi = Siirry SteamVR Workshop Työkalujen hakemistoon
+	| hr = Idite na indeks dokumentacije alata radionice SteamVR
+	| pt-br = Ir para o índice de ferramentas da oficina do SteamVR
+	| ru = Перейти к документации по Инструментам мастерской SteamVR
+	| uk = Перейти до документації по інструментах майстерні SteamVR
+	| vi = Truy cập vào trang tài liệu về Công cụ Workshop của SteamVR
+	| zh = 前往 SteamVR 创意工坊工具集 主页
+	}}
+
+| FMT = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> For Mod Teams</span>
+	| en = For Mod Teams
+	| cs = Pro Týmy tvořící MODy
+	| de = Für Mod-Teams
+	| el = Για Ομάδες Mod
+	| es = Para los equipos de mods
+	| eo = Por Ŝanĝistaj Teamoj
+	| fi = Mod tiimeille
+	| fr = Pour les équipes travaillant sur un mod
+	| he = Mod עבור קבוצות שיוצרות
+	| hr = Za Modne Timove
+	| it = Per i Team di Modder
+	| ja = Modチーム向け
+	| ka = მოდიფიკაციის დეველოპერებისათვის
+	| ko = Valve의 Source를 사용할 모딩 팀은
+	| nl = Voor Modding Teams
+	| pl = Dla twórców modyfikacji
+	| pt-br = Para criadores de mods
+	| ru = Для разработчиков модификаций
+	| sv = För modteams
+	| tr = Mod takımları için
+	| uk = Для розробників модифікацій
+	| vi = Dành cho các nhóm Mod
+	| zh = 致MOD作者
+	| zh-tw = 給開發模組的團隊
+	}}
+
+| FMT Line 1 = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> [[Source Engine Features]]</span>
+	| en = [[Source Engine Features]]
+	| de = [[Source Engine Features|Source Engine Merkmale]]
+	| es = [[Source Engine Features|Características del motor Source]]
+	| cs = [[Source Engine Features|Funkce Source Engine]]
+	| eo = [[Source Engine Features|Detaloj de la Motoro Source]]
+	| fi = [[Source Engine Features|Source Enginen Ominaisuuksia]]
+	| fr = [[Source Engine Features|Fonctionnalités du moteur Source]]
+	| hr = [[Source Engine Features|Značajke Source Engine]]
+	| it = [[Source Engine Features|Caratteristiche del motore di origine]]
+	| pt-br = [[Source Engine Features|Funções da engine Source]]
+	| ru = [[Source Engine Features|Особенности движка Source]]
+	| uk = [[Source Engine Features|Особливості Source Engine]]
+	| vi = [[Source Engine Features|Các tính năng trên công nghệ Source]]
+	| zh = [[Source Engine Features|起源引擎的特点]]
+	}}
+
+| FMT Line 2 = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> [[Building Mods with Valve Technology|Why choose the Source engine for your mod?]]</span>
+	| en = [[Building Mods with Valve Technology|Why choose the Source engine for your mod?]]
+	| de = [[Building Mods with Valve Technology|Warum sollten Sie die Source Engine für Ihre Mod wählen?]]
+	| el = [[Building Mods with Valve Technology|Γιατί να επιλέξετε το Source Engine για το mod σας?]]
+	| es = [[Building Mods with Valve Technology|¿Por qué elegir motor Source para crear tu mod?]]
+	| cs = [[Building Mods with Valve Technology|Proč právě pro Váš MOD použít Source engine?]]
+	| eo = [[Building Mods with Valve Technology|Kial elektu la Source Motoron por via ŝanĝo?]]
+	| fi = [[Building Mods with Valve Technology|Miksi valita Source Engine sinun modifikaatioille?]]
+	| fr = [[Building Mods with Valve Technology|Pourquoi choisir le moteur Source pour votre mod ?]]
+	| he = [[Building Mods with Valve Technology|?שלך Modעבור ה Source Engineלמה לבחור ב]]
+	| hr = [[Building Mods with Valve Technology|Zašto odabrati Source Engine za svoj mod?]]
+	| it = [[Building Mods with Valve Technology|Perchè scegliere il Source Engine per la propria mod? (en)]]
+	| ja = [[Building Mods with Valve Technology | MODにSource Engineを選ぶ理由は何ですか？]]
+	| ka = [[Building Mods with Valve Technology|რატომ უნდა აირჩიოთ Source ძრავა თქვენი მოდიფიკაციისათვის?]]
+	| ko = [[Building Mods with Valve Technology|왜 게임 모딩 프로젝트를 위해 Source를 사용해야 할까요?]]
+	| nl = [[Building Mods with Valve Technology|Waarom zou je de Source Engine kiezen voor jouw mod?]]
+	| pl = [[Building Mods with Valve Technology|Dlaczego akurat Source Engine?]]
+	| pt-br = [[Building Mods with Valve Technology|Por que escolher a engine Source?]]
+	| ru = [[Building Mods with Valve Technology|Почему стоит выбрать движок Source для вашей модификации?]]
+	| sv = [[Building Mods with Valve Technology|'''Varför välja Sourcemotorn till din mod?''']]
+	| tr = [[Building Mods with Valve Technology|Modunuzu yapmak için neden Source oyun motoru'nu kullanmalısınız?]]
+	| uk = [[Building Mods with Valve Technology|Чому варто вибрати рушій Source для Вашого мода?]]
+	| vi = [[Building Mods with Valve Technology|Tại sao chọn công nghệ Source cho mod của bạn?]]
+	| zh = [[Building Mods with Valve Technology|为什么要选用起源引擎？]]
+	| zh-tw = [[Building Mods with Valve Technology|為什麼要選擇 Source 引擎？]]
+	}}
+
+| FMT Line 3 = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> Read [[Making a Mod]] - building a team through the shipping process.</span>
+	| en = Read [[Making a Mod]] - building a team through the shipping process.
+	| cs = Přečtěte si [[Making a Mod|Vytváříme Mod]] - od sestavení týmu až po vydání hry.
+	| de = Lesen Sie [[Making a Mod|Erstellung einer Modifikation]] - den Prozess des Aufbaus eines Teams.
+	| el = Διαβάστε [[Making a Mod|Χτίζοντας ένα Mod]] - δημιουργία ομάδας μέσω της διαδικασίας αποστολής.
+	| es = Lee [[Making a Mod|Creando un mod]]: el proceso de construcción de un equipo.
+	| eo = Legu «[[Making a Mod|kreas ludŝanĝon]]» - kiel krei teamon per la venda prilaboro.
+	| fi = Lue [[Making a Mod|Modin tekeminen]] - auttamassa tiimiä julkaisu prosessissa
+	| fr = Lisez la page [[Making a Mod|Créer un mod]] pour bien démarrer.
+	| he = .בונים קבוצה דרך תהליך היצירה - [[Making a Mod|Making a Mod]] קרא/י את
+	| hr = Pročitajte [[Making a Mod|Izrada Mod]] - stvaranje tima kroz proces slanja.
+	| it = Leggi [[Making a Mod|Making a Mod]] - costruire un team tramite il processo di spedizione.
+	| ja = [[Making a Mod|MODの制作]] に目を通す - リリースまでの過程を通じてチームを構築しよう。
+	| ka = წაიკითხეთ ინსტრუქცია [[Making a Mod|მოდიფიკაციის შექმნის შესახებ]].
+	| ko = [[Making a Mod|게임 모딩 작업 준비]]를 한 번 읽어보세요.
+	| nl = Lees [[Making a Mod|Een Mod Maken]] - Van team bouwen tot het 'shipping' proces.
+	| pl = Przeczytaj [[Making a Mod|Tworzenie modyfikacji]] - budowanie zespołu poprzez poszczególne etapy tworzenia.
+	| pt-br = Leia ''[[Making a Mod|Criando uma mod]]'' &mdash; construindo uma equipe durante o processo de desenvolvimento.
+	| ru = Прочтите статью «[[Making a Mod|Создание модификации]]» — рекомендации по успешной работе в команде.
+	| sv = [[Making a Mod|Läs "Making a MOD" - building a team through the shipping process.]]
+	| tr = [[Making a Mod|Mod Yapımı]] sayfasını bir göz atın ve bir takım kurmaya çalışın.
+	| uk = Прочитайте статтю «[[Making a Mod|Створення моду]]» — рекомендації щодо успішної роботи в команді.
+	| vi = Đọc [[Making a Mod|Hướng dẫn tạo Mod]] - xây dựng một nhóm thông qua quá trình phát hành.
+	| zh = 阅读[[Making a Mod|制作一款模组]]，熟悉 MOD 的开发流程。
+	| zh-tw =  你可以透過閱讀「 [[Making a Mod|製作一個模組]] 」，來熟悉開發模組的流程。
+	}}
+
+| FMT Line 4 = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> Already using the SDK? Check the [[:Category:Source SDK FAQ|Source SDK FAQ]] for some helpful answers.</span>
+	| en = Already using the SDK? Check the [[:Category:Source SDK FAQ|Source SDK FAQ]] for some helpful answers.
+	| cs = Používáte již nyní SDK? Podívejte se na [[:Category:Source SDK FAQ|Source SDK - často kladené dotazy]] pro přehled řešení nejčastějších problémů.
+	| de = Sie nutzen bereits das SDK? Unter [[:Category:Source SDK FAQ|Source SDK FAQ]] finden Sie viele hilfreiche Antworten.
+	| el = Χρησιμοποιείτε ήδη το SDK? Ελέγξτε το [[:Category:Source SDK FAQ|Source SDK FAQ]] για μερικές χρήσιμες απαντήσεις.
+	| es = ¿Ya estás usando el SDK? Échale un vistazo a las [[:Category:Source SDK FAQ|Preguntas frecuentas del Source SDK]].
+	| eo = Jam uzas la ludkreilaron «Source»? Rigardu [[:Category:Source SDK FAQ|Source SDK ODD]] por kelkaj helpaj respondoj.
+	| fi = Oletko jo käyttämässä SDK:ta? Katso [[:Category:Source SDK FAQ|Source SDK Usein kysytyt kysymykset]], jotta voi saada avuliaita vastauksia.
+	| fr = Vous utilisez déjà le SDK ? Lisez la [[:Category:Source SDK FAQ|FAQ]] pour trouver des réponses à vos questions.
+	| hr = Već koristite SDK? Provjerite [[:Category:Source SDK FAQ|Često postavljana pitanja o SDK-u]] za neke korisne odgovore.
+	| he = .עבור כמה תשובות מועילות [[:Category:Source SDK FAQ|Source SDK FAQ]] בדקו את  ?SDKכבר משתמשים ב
+	| it = Utilizzi già l'SDK? Controlla le [[:Category:Source SDK FAQ|Source SDK FAQ]] per risposte utili.
+	| ja = すでにSDKを使用していますか? [[:Category:Source SDK FAQ|Source SDK FAQ]] をご参照ください。
+	| ka = უკვე იყენებთ SDK-ს? შეამოწმეთ [[:Category:Source SDK FAQ|Source SDK ხშირად დასმული კითხვები]], სასარგებლო რჩევების სანახავად.
+	| ko = SDK 사용을 이미 시작했나요? [[:Category:Source SDK FAQ|Source SDK 자주 묻는 질문]]을 통해 유용한 답변을 얻을 수 있습니다.
+	| nl = Maak je al gebruik van de SDK? Kijk dan naar de [[:Category:Source SDK FAQ|Source SDK FAQ]] voor meer handige antwoorden.
+	| pl = Już korzystasz z SDK? Zobacz [[:Category:Source SDK FAQ|Source SDK FAQ]], gdzie znajdziesz odpowiedzi na swoje pytania.
+	| pt-br = Já está usando o SDK? Consulte as [[:Category:Source SDK FAQ|perguntas frequentes sobre o SDK Source]].
+	| ru = Уже используете SDK? В категории [[:Category:Source SDK FAQ|ЧАВО Source SDK]], Вы можете найти полезные советы.
+	| sv = [[:Category:Source SDK FAQ|Använder du redan SDK'n? Kolla i FAQ'en för några hjälpsamma svar.]]
+	| tr = Zaten SDK'yi kullanıyor musunuz? İşe yarar bazı cevaplar için [[:Category:Source SDK FAQ|Source SDK SSS'ye]] bakabilirsiniz.
+	| uk = Вже використовуєте SDK? Перегляньте [[:Category:Source SDK FAQ|Source SDK FAQ]], щоб отримати корисні відповіді.
+	| vi = Đã sử dụng các công cụ SDK? Truy cập vào [[:Category:Source SDK FAQ|Câu hỏi thường gặp về Source SDK]] để biết một số câu trả lời hữu ích.
+	| zh = 准备好使用起源SDK了？您可以查阅[[:Category:Source SDK FAQ|起源SDK常见问题]]以获取有用信息。
+	| zh-tw = 已經在用開發套件了？來看看 [[:Category:Source SDK FAQ|Source 開發套件 FAQ]] 之中有沒有你要的解答吧！
+	}}
+
+| FMT Line 5 = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> New to Source coding? Get started with [[:Category:Programming|basic programming articles]].</span>
+	| en = New to Source coding? Get started with [[:Category:Programming|basic programming articles]].
+	| cs = Nevíte jak programovat v Source? Začněte s [[:Category:Programming|články o základním programování]].
+	| de = Neu beim Source SDK? Starten Sie mit [[:Category:Programming|der Basis der Programmierung]].
+	| el = Νέος στην κωδικοποίηση Source; Ξεκινήστε με [[:Category:Programming|βασικά άρθρα προγραμματισμού]].
+	| es = ¿Nuevo programando en Source? Empieza visitando los [[:Category:Programming|artículos de programación básicos]].
+	| eo = Novulo je Source programado? Komencu el [[:Category:Programming|artikoloj lernilaj programaj]]
+	| fi = Uusi Source ohjelmointiin? Aloita [[:Category:Programming|simppeleillä ohjelmointi artikkeleilla]].
+	| fr = Vous débutez la programmation avec Source ? Lisez des [[:Category:Programming|articles de programmation de base]].
+	| he = .[[:Category:Programming|basic programming articles]] התחילו עם ?Source חדשים בתכנות עבור
+	| hr = Novi ste u izvornom kodiranju? Započnite s [[:Category:Programming|osnovnim člancima o programiranju]].
+	| it = Nuovo nella programmazione del Source? Inizia con [[:Category:Programming|articoli di programmazione base]].
+	| ja = ソースコードを書くのは初めてですか？ [[:Category:Programming|基本的なプログラミング記事]]を読んでから始めましょう。
+	| ka = ახალი ხართ Source პროგრამირებაში? დაიწყეთ [[:Category:Programming|საბაზისო პროგრამირების სტატიით]].
+	| ko = 하드 코딩을 통해 새로운 게임 제작을 하려고 하나요? [[:Category:Programming|기초적인 프로그래밍 문서]]를 읽어보세요.
+	| nl = Nieuw met programmeren met Source? Begin met [[:Category:Programming|basis programmeer artikelen]].
+	| pl = Zaczynasz z programowaniem w Source? Zacznij od [[:Category:Programming|podstawowych artykułów na temat programowania]].
+	| pt-br = Novo na programação em Source? Comece com [[:Category:Programming|artigos básicos de programação]].
+	| ru = Новичок в программировании на движке Source? Начните с [[:Category:Programming|категории по программированию]].
+	| sv = [[Your First Entity|Ny när det gäller Sourceprogrammering? Kom igång med "Min Första Entity".]]
+	| tr = Source oyun motoru'nda kod yazmakta yeni misiniz? [[:Category:Programming|Temel programlama makalelerine]] bakarak başlayabilirsiniz.
+	| uk = Ви не знайомі з Source кодом? Розпочніть зі [[:Category:Programming|статей про основи програмування]].
+	| vi = Bạn mới lập trình công nghệ Source? Bắt đầu với [[:Category:Programming|bài lập trình cơ bản]].
+	| zh = 如果您是一名起源引擎编程新手，您可以从[[:Category:Programming|基础编程教程]]开始学习。
+	| zh-tw = 從來沒有寫過 Source 程式？可以先從 [[:Category:Programming|基礎程式設計教學]] 開始。
+	}}
+
+| FMT Line 6 = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> Read (or add) a tutorial on [[SDK Docs|Source development]], or any part of the content creation process.</span>
+	| en = Read (or add) a tutorial on [[SDK Docs|Source development]], or any part of the content creation process.
+	| cs = Čtěte (nebo přidávejte!) návody o [[SDK_Docs|vývoji v Source]] nebo o dalších věcech souvisejících s tvorbou obsahu.
+	| de = Lesen (oder schreiben!) Sie ein Tutorial unter der [[SDK Docs|Source SDK-Dokumentation]], oder einem anderen Teil des Entwicklungsprozesses.
+	| el = Διαβάστε (ή προσθέστε!) ένα σεμινάριο για [[SDK Docs|Ανάπτυξη Source]], ή οποιοδήποτε μέρος της διαδικασίας δημιουργίας περιεχομένου.
+	| es = Lee (¡o añade!) tutoriales sobre el [[SDK Docs|desarrollo en Source]], o cualquier parte del proceso de la creación de contenido.
+	| eo = Legu (aŭ aldonu) lernilon pri ludkreado je Source, aŭ ajn parto de ludkreado.
+	| fi = Lue (tai lisää) tutoriaali [[SDK Docs|Source ohjelmoinnista]], tai muusta osasta tuotantoa.
+	| fr = Consultez (ou ajoutez !) un tutoriel sur le [[SDK Docs|développement avec le moteur Source]], ou n'importe quelle partie du processus de création de contenu.
+	| he = .או בכל חלק של תהליך יצירת התוכן ,[[SDK Docs|Source development]]קראו (או הוסיפו!) מדריך ב
+	| hr = Pročitajte (ili dodajte) vodič o [[SDK Docs|razvoju izvora]] ili bilo kojem dijelu procesa stvaranja sadržaja.
+	| it = Leggi (o aggiungi!) un tutorial sullo [[SDK Docs|sviluppo del Source]], o qualsiasi parte del processo di creazione di contenuti.
+	| ja = [[SDK Docs|ソースの開発]]、または一部のコンテンツ作成過程のチュートリアルを読む。 (または加筆する)
+	| ka = წაიკითხეთ (ან დაამატეთ!) სასწავლებელი სტატიები [[SDK Docs|Source დოკუმენტაციაში]].
+	| ko = [[SDK Docs:ko|Source 관련 문서 모음집]]을 참고하여 부족한 부분은 수정하거나 커뮤니티에 도움이 되는 새로운 문서를 등록해 보세요.
+	| nl = Lees (of maak!) een tutorial over [[SDK Docs|Source Development]], of een ander deel van het content creatie proces.
+	| pl = Przeczytaj (lub napisz własny) samouczek dla [[SDK Docs|silnika Source]] lub jakikolwiek inny pomagający w tworzeniu nowej zawartości.
+	| pt-br = Leia (ou adicione!) um tutorial sobre [[SDK Docs|desenvolvimento em Source]] ou qualquer outra parte do processo de criação de conteúdo.
+	| ru = Прочтите (или добавьте!) обучающие статьи о [[SDK Docs|среде разработки Source]], или в любой другой области по созданию контента.
+	| sv = [[Special:Categories|Läs (eller skriv!) en guide om Sourceutveckling, eller vad som helst i skapande av innehåll.]]
+	| tr = [[SDK Docs|SDK Dokümanları'nı]] ya da herhangi bir içerik oluşturma sayfasını okuyun ya da ekleyin!
+	| uk = Прочитайте (або додайте) навчальний посібник із [[SDK Docs|розробки Source]] або будь-яку частину процесу створення вмісту.
+	| vi = Đọc (hoặc thêm) hướng dẫn về [[SDK Docs|phát triển công cụ Source]] hoặc bất kỳ phần nào của quy trình tạo nội dung.
+	| zh = 阅读（或是添加）有关[[SDK Docs|起源引擎开发]]或者内容创建的教程。
+	| zh-tw = 來讀讀 (或者新增一些文件) [[SDK Docs|Source 開發教學]]，或者其!
+	}}
+
+| New Wiki = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> New to the wiki?</span>
+	| en = New to the wiki?
+	| cs = Jste na wiki noví?
+	| de = Neu im Wiki?
+	| es = ¿Nuevo en la wiki?
+	| fi = Uusi wikiin?
+	| fr = Nouveau sur le wiki?
+	| hr = Novi ste na wiki?
+	| pt-br = Novo na wiki?
+	| ru = Новичок на вики?
+	| uk = Вперше на вікі?
+	| eo = Ĉu novulo en la Vikio
+	| vi = Lần đầu mới vào Wiki ư?
+	| zh = 刚来到维基？
+	}}
+
+| For Help = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> For help with using the wiki, see [[Help:Contents]]. For help with navigating the wiki, see [[:Category:Entry pages]] or [[:Category:Valve Developer Community]]. For more information on the community itself, see [[Valve Developer Community:Community portal|Community Portal]].</span>
+	| en = For help with using the wiki, see [[Help:Contents]]. For help with navigating the wiki, see [[:Category:Entry pages]] or [[:Category:Valve Developer Community]]. For more information on the community itself, see [[Valve Developer Community:Community portal|Community Portal]].
+	| de = Hilfe zur Verwendung des Wikis finden Sie unter [[Help:Contents|Hilfe:Inhalt]]. Hilfe beim Navigieren im Wiki finden Sie unter [[:Category:Entry pages|Category:Einstiegsseiten]] oder [[:Category:Valve Developer Community]].
+	| es = Para obtener ayuda con el uso del wiki, consulta [[Help:Contents]]. Para obtener ayuda para navegar por la wiki, consulta [[:Category:Entry pages]] o [[:Category:Valve Developer Community]]. Para obtener más información sobre la comunidad en sí, consulta [[Valve Developer Community:Community portal|Community Portal]].
+	| eo = Vidu [[Help:Contents|Helpo:Enhavoj]] helpiĝi pri vikio. Por helpo kun irado en vikio, vidu [[:Category:Entry pages|Kategorio:Enirajn paĝojn]] aŭ [[:Category:Valve Developer Community|Kategorio:Ludkreistan Komunumon de Valve]].
+	| fi = Tarvittaessasi apua wikin käytössä, katso [[Help:Contents|Apua: sisältö]]. Jos tarvit apua wikin suunnistamisessa, katso [[:Category:Entry pages|Kategoria: Aloitus sivut]] tai [[:Category:Valve Developer Community|Kategoria: Valve Ohjemoija Yhteisö]].
+	| fr = Pour obtenir de l'aide sur l'utilisation du wiki, voir [[Help:Contents]].
+	| hr = Za pomoć pri korištenju wikija, pogledajte [[Help:Contents|Pomoć: Sadržaj]]. Za pomoć pri navigaciji wikijem, pogledajte [[:Category:Entry pages|Ulazne stranice]] ili [[:Category:Valve Developer Community]]. Za više informacija o samoj zajednici pogledajte [[Valve Developer Community:Community portal|Portal zajednice]].
+	| pt-br = Para obter ajuda com o uso do wiki, consulte [[Help:Contents|Ajuda: Conteúdo]]. Para obter ajuda com a navegação no wiki, consulte [[Category:Entry pages|Categoria: páginas de entrada]] ou [[Category:Valve Developer Community|Categoria: Comunidade de Desenvolvedores da Valve]]. Para obter mais informações sobre a comunidade em si, consulte o [[Valve Developer Community:Community portal|Portal da comunidade]].
+	| ru = Для получения помощи по использованию вики, обратитесь к разделу [[Help:Contents|Справка: Содержание]]. Для получения помощи по навигации по вики, обратитесь к категориям: [[:Category:Entry pages|Страницы-справочники]] или [[:Category:Valve Developer Community|Сообщество разработчиков Valve]].
+	| uk = Щоб отримати довідку щодо користування вікі, перегляньте [[Help:Contents|Довідка: Зміст]]. Щоб отримати допомогу щодо навігації на вікі, перегляньте категорії [[:Category:Entry pages|Сторінки вступу]] або [[:Category:Valve Developer Community|Спільнота розробників Valve]].
+	| vi = Nếu cần trợ giúp về sử dụng wiki này, xem [[Help:Contents|Trợ giúp:Mục lục]]. Nếu cần trợ giúp về định hướng trên wiki này, xem [[:Category:Entry pages|Thể loại:Trang nhập]] hoặc [[:Category:Valve Developer Community|Thể loại: Cộng đồng phát triển Valve]]
+	| zh = 关于使用维基的帮助，见 [[Help:Contents|帮助：内容]]；关于浏览维基的帮助见 [[:Category:Entry pages]] 或 [[:Category:Valve Developer Community]]
+	}}
+
+| Wiki Contents = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> Wiki Contents</span>
+	| en = Wiki Contents
+	| hr = wiki sadržaj
+	| es = Contenido del wiki
+	| pt-br = Conteúdos da wiki
+	}}
+
+| Community Portal = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> Community Portal</span>
+	| en = Community Portal
+	| hr = Portal zajednice
+	| es = Portal de comunidad
+	| pt-br = Portal da comunidade
+	}}
+
+| ArticleCountText = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> articles documenting the development process.</span>
+	| en = articles documenting the development process.
+	| vi = bài viết ghi lại quá trình phát triển.
+	| fi = kehitysprosessia dokumentoivat artikkelit.
+	| de = Artikel, die den Entwicklungsprozess dokumentieren.
+	| es = articulos documentando el proceso de desarollo
+	| hr = članci koji dokumentiraju razvojni proces.
+	| pt-br = artigos que documentam o processo de desenvolvimento.
+	| ru = статей о разработке модов и игр.
+	| zh = 篇记录了开发过程的文章
+	}}
+
+<!-- Used for span title tooltip, for better accessability for some people. -->
+| Tooltip Signup = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> Click here to log in or create an account on the VDC. If you are already logged in, you can use this to log in as another user.</span>
+	| en = Click here to log in or create an account on the VDC. If you are already logged in, you can use this to log in as another user.
+	| de = Klicken Sie hier, um sich anzumelden oder ein Konto beim VDC zu erstellen. Wenn Sie bereits angemeldet sind, können Sie sich hiermit als anderer Benutzer anmelden.
+	| es = Haz click aquí para iniciar sesión o crear una cuenta en el VDC. Si ya has iniciado sesión, puedes utilizar esto para iniciar sesión como otro usuario.
+	| cs = Klikněte zde pro přihlášení nebo vytvoření účtu na VDC. Pokud jste již přihlášeni, můžete se pomocí tohoto přihlásit jako jiný uživatel.
+	| fi = Napauta tästä kirjautuaksesi tai tehdäksesi käyttäjää. Jos olet jo kirjautunut, voit käyttää tätä kirjautumaan toiselle käyttäjälle.
+	| hr = Kliknite ovdje za prijavu ili kreiranje računa na VDC. Ako ste već prijavljeni, možete se koristiti za prijavu kao drugi korisnik.
+	| pt-br =Clique aqui para fazer login ou criar uma conta na CDV. Se você já estiver logado, pode usar isso para fazer login como outro usuário.
+	| ru = Нажмите здесь, чтобы войти или создать учетную запись на VDC. Если Вы уже вошли в систему, Вы можете использовать это, чтобы войти как другой пользователь.
+	| uk = Натисніть тут, щоб увійти або створити обліковий запис на VDC. Якщо Ви вже ввійшли, Ви можете використовувати це, щоб увійти як інший користувач.
+	| vi = Bấm vào đây để đăng nhập hoặc tạo tài khoản trên VDC. Nếu bạn đã đang nhập vào rồi, bạn có thể bấm vào đây để đăng nhập vào tài khoản người dùng khác.
+	| zh = 单击此处登录、创建或切换VDC帐户
+	}}
+
+| Copyright = {{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> [https://www.valvesoftware.com/en/ Valve Corporation]. All rights reserved. All trademarks are property of their respective owners in the US and other countries. See the [[Valve Developer Community:Terms of Use|Terms of Use]] for details</span>
+	| en = [https://www.valvesoftware.com/en/ Valve Corporation]. All rights reserved. All trademarks are property of their respective owners in the US and other countries. See the [[Valve Developer Community:Terms of Use|Terms of Use]] for details
+	| de = [https://www.valvesoftware.com/en/ Valve Corporation]. Alle Rechte vorbehalten. Alle Marken sind Eigentum ihrer jeweiligen Inhaber in den USA und anderen Ländern. Siehe die [[Valve Developer Community:Terms of Use|Nutzungsbedingungen]] für Details
+	| es = [https://www.valvesoftware.com/en/ Valve Corporation]. Todos los derechos reservados. Todas las marcas registradas son propiedad de sus respectivos dueños en el EEUU y otros países. Consulta las [[Valve Developer Community:Terms of Use|Terms of Use]] para más detalles.
+	| fi = [https://www.valvesoftware.com/en/ Valve Korporaatio]. Kaikki oikeudet pidätetään. Kaikki tavaramerkit kuuluvat omistajilleen Yhdysvalloissa ja muissa valtioissa. Katso [[Valve Developer Community:Terms of Use|Käyttöehdot]] lisätietoa tarvittaessa.
+	| hr = [https://www.valvesoftware.com/en/ Valve Corporation]. Sva prava pridržana. Svi zaštitni znakovi vlasništvo su svojih vlasnika u SAD-u i drugim zemljama. Pogledajte [[Valve Developer Community:Terms of Use|Uvjeti korištenja]] za detalje
+	| pt-br = [https://www.valvesoftware.com/pt-br/ Valve Corporation]. Todos os direitos reservados. Todas as marcas registradas são propriedade de seus respectivos donos nos EUA e em outros países. Veja os [[Valve Developer Community:Terms of Use|Termos de Uso]]  para detalhes
+	| ru = [https://www.valvesoftware.com/en/ Корпорация Valve]. Все права защищены. Все торговые марки являются собственностью их соответствующих владельцев в США и других странах. Более подробную информацию смотрите в [[Valve Developer Community:Terms of Use|Условиях использования]]
+	| vi = [https://www.valvesoftware.com/en/ Tập đoàn Valve]. Đã đăng ký Bản quyền. Tất cả các nhãn hiệu đều là tài sản của chủ sở hữu tương ứng ở Hoa Kỳ và các quốc gia khác. Hãy đọc [[Valve Developer Community:Terms of Use|Điều khoản sử dụng]] để biết thêm chi tiết
+	| zh = [https://www.valvesoftware.com/en/ Valve Corporation]。保留所有权利。所有商标均为其在美国和其他国家/地区各自所有者的财产。请参阅[[Valve Developer Community:Terms of Use|使用协议]]了解详细信息
+        }}{{Dictionary/common|.}}
+
+| Legal = [[Valve Developer Community:About|{{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> About Valve Developer Community</span>
+	| en = About Valve Developer Community
+	| de = Über Valve Entwickler-Community
+	| es = Sobre Valve Developer Community
+	| fi = Valve Developer Communitysta
+	| hr = O projektu Valve Developer Community
+	| pt-br = Sobre a Comunidade de Desenvolvedores da Valve
+	| ru = О Сообществе разработчиков
+	| vi = Về Valve Developer Community
+	| zh = 关于 Valve Developer Community
+        }}]] <b>·</b> {{link|target = web|store.steampowered.com/privacy_agreement/|{{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> Privacy Policy</span>
+	| en = Privacy Policy
+	| de = Datenschutzrichtlinie
+	| es = Política de privacidad
+	| fi = Tietosuojakäytäntö
+	| hr = Pravila o privatnosti
+	| pt-br = Política de Privacidade
+	| ru = Политика конфиденциальности
+	| vi = Chính sách bảo mật
+	| zh = 隐私政策
+        }}}} <b>·</b> [[Valve Developer Community:Third Party Legal Notices|{{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> Third Party Legal Notices</span>
+	| en = Third Party Legal Notices
+	| de = Rechtliche Hinweise Dritter
+	| es = Avisos legales de terceros
+	| fi = Kolmannen osapuolen oikeudelliset huomautukset
+	| hr = Pravne Obavijesti Trećih Strana
+	| pt-br = Avisos legais de terceiros
+	| ru = Уведомление сторонних лиц
+	| vi = Thông báo pháp lý của bên thứ ba
+	| zh = 第三方法律声明
+	}}]]
+
+| cs2_tools =	{{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> Counter-Strike 2 Workshop Tools</span>
+	| en = Counter-Strike 2 Workshop Tools
+	| de    = Counter-Strike 2 Werkstattwerkzeuge
+	| es    = Workshop Tools de Counter-Strike 2
+	| el	= Εργαλεία Εργαστηρίου Counter-Strike 2
+	| eo    = Designejaj Iloj de Counter-Strike 2
+	| fi	= Counter-Strike 2 Workshop Työkalut
+	| fr	= Outil Workshop de Counter-Strike 2
+	| hr	= Alati za radionicu Counter-Strike 2
+	| it	= Strumenti del Workshop di Counter-Strike 2
+	| pl	= Narzędzia Warsztatowe Counter-Strike 2
+	| pt-br	= Ferramentas da Oficina do Counter-Strike 2
+	| ru	= Инструментарий Counter-Strike 2
+	| tr	= Counter-Strike 2 Atölye Araçları
+	| uk	= Інструменти майстерні Counter-Strike 2
+	| vi	= Công cụ Workshop cho Counter-Strike 2
+	| zh	= 反恐精英2 创意工坊工具集
+	}}
+
+| deadlock_tools =	{{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> Deadlock Workshop Tools</span>
+	| en = Deadlock Workshop Tools
+	| de    = Deadlock Werkstattwerkzeuge
+	| es    = Workshop Tools de Deadlock
+	| el	= Εργαλεία Εργαστηρίου Deadlock
+	| eo    = Designejaj Iloj de Deadlock
+	| fi	= Deadlock Workshop Työkalut
+	| fr	= Outil Workshop de Deadlock
+	| hr	= Alati za radionicu Deadlock
+	| it	= Strumenti del Workshop di Deadlock
+	| pl	= Narzędzia Warsztatowe Deadlock
+	| pt-br	= Ferramentas da Oficina do Deadlock
+	| ru	= Инструментарий Deadlock
+	| tr	= Deadlock Atölye Araçları
+	| uk	= Інструменти майстерні Deadlock
+	| vi	= Công cụ Workshop cho Deadlock
+	| zh	= Deadlock 创意工坊工具集
+	}}
+
+| dota2_tools =	{{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> Dota 2 Workshop Tools</span>
+	| en = Dota 2 Workshop Tools
+	| de    = Dota 2 Werkstattwerkzeuge
+	| es    = Workshop Tools de Dota 2
+	| el	= Εργαλεία Εργαστηρίου Dota 2
+	| eo    = Designejaj Iloj de Dota 2
+	| fi	= Dota 2 Workshop Työkalut
+	| fr	= Outil Workshop de Dota 2
+	| hr	= Alati za radionicu Dota 2
+	| it	= Strumenti del Workshop di Dota 2
+	| pl	= Narzędzia Warsztatowe Dota 2
+	| pt-br	= Ferramentas da Oficina do Dota 2
+	| ru	= Инструментарий Dota 2
+	| tr	= Dota 2 Atölye Araçları
+	| uk	= Інструменти майстерні Dota 2
+	| vi	= Công cụ Workshop cho Dota 2
+	| zh	= Dota 2 创意工坊工具集
+	}}
+
+| hlvr_tools =	{{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> Half-Life: Alyx Workshop Tools</span>
+	| en = Half-Life: Alyx Workshop Tools
+	| de    = Half-Life: Alyx Werkstattwerkzeuge
+	| es    = Workshop Tools de Half-Life: Alyx
+	| el	= Εργαλεία Εργαστηρίου Half-Life: Alyx
+	| eo    = Designejaj Iloj de Duonvivo: Aliks
+	| fi	= Half-Life: Alyx Workshop Työkalut
+	| fr	= Outil Workshop de Half-Life: Alyx
+	| hr	= Alati za radionicu Half-Life: Alyx
+	| pl	= Narzędzia Warsztatowe Half-Life: Alyx
+	| pt-br	= Ferramentas da Oficina do Half-Life: Alyx
+	| ru	= Инструментарий Half-Life: Alyx
+	| tr	= Half-Life: Alyx Atölye Araçları
+	| uk	= Інструменти майстерні Half-Life: Alyx
+	| vi	= Công cụ Workshop cho Half-Life: Alyx
+	| zh	= 半衰期：爱莉克斯 创意工坊工具集
+	}}
+
+| svrh_tools =	{{#switch: {{MainPage/Intlang}}
+	| #default = <span style{{=}}"color:red"> SteamVR Workshop Tools</span>
+	| en = SteamVR Workshop Tools
+	| de    = SteamVR Werkstattwerkzeuge
+	| es    = Workshop Tools de SteamVR
+	| fi	= SteamVR Workshop Työkalut
+	| hr	= Alati za radionicu SteamVR
+	| pt-br	= Ferramentas da Oficina do SteamVR
+	| eo    = Designejaj Iloj de SteamVR
+	| ru	= Инструментарий SteamVR
+	| uk	= Інструменти майстерні SteamVR
+	| vi	= Công cụ Workshop cho SteamVR
+	| zh	= SteamVR 创意工坊工具集
+	}}
+
+
+|#default = {{error|Unrecognized string used!}}
+
+}}</onlyinclude></includeonly>
