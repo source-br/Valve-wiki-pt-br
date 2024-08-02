@@ -1,5 +1,6 @@
 {{LanguageBar}}
-{{distinguish|Texture|desc1=the actual images being displayed}}
+
+{{distinguish|Texture|desc1=as imagens que estão sendo mostradas}}
 {{stub}}
 ==Visão geral==
 Materials e o arquivo que a engine usa para saber oque deve mostrar. Um material contem informações sobre qual texturas são para renderizar, como renderizar-las, como tratar as texturas sendo renderizadas, e como elas devem agir. Os Materials são diferentes de texturas, no qual são as imagens que estão sendo mostradas.

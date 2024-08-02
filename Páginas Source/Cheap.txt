@@ -1,0 +1,17 @@
+{{LanguageBar}}
+
+Em design de jogos, uma entidade/efeito/função '''"cheap"''' e tudo aquilo que pode ser processada bem rápida em tempo real. Como exemplo, na Source, superfícies feitas de displacement, brushes, e {{L|infodecal|decals}} são todas bem baratas para renderizar.
+
+Varias coisas baratas podem ser renderizadas na tela/simulada no mundo de uma vez, mais elas são "geralmente" de baixa qualidade visual ou de computação. Decals e outras imagens  2D são exemplos de objetos baratos de se renderizar que não (necessariamente) falta qualidade.
+
+O termo também e usando para se referenciar a processos"relativamente" barato, quando mais que um está disponível. Por exemplo, "cheap" {{L|Water_Shader|water}} usa os cubemap em vez de reflexão apropriada.
+
+==Veja também ==
+*{{L|Budget}}
+*{{L|Expensive}}
+*{{L|Free}}
+
+{{ACategory|Glossary}}
+
+
+{{stub}}

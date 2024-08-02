@@ -1,0 +1,25 @@
+{{LanguageBar}}
+
+{{distinguish|Material|desc1=Os arquivos que o jogo lê}}
+Uma "texture" e uma imagem [[Wikipedia:Raster graphics|raster]] bidimensional no contexto de uma engine de jogos. Texturas na Source são armazenadas como {{L|Valve Texture Format}}, e com bem poucas exceções são apenas acessadas através de um {{L|material}} intermediário.
+
+Embora o tipo de textura mais comum seja o {{L|albedo}}, há varias maneiras diferentes  em que imagens raster possam ser usadas em jogos com engines mais modernas. Por exemplo, {{L|bump map|bump maps}},  na qual armazenam uma codificação de profundidade tridimensional e é voltada para  o alinhamento do valor da cor de cada pixel, ou
+{{L|$envmapmask|mascaras especulares}},  no qual determina a intensidade de uma reflexão {{L|$envmap|especular}}.
+
+Texturas diferenciam-se de materiais; texturas são as próprias imagens que o jogo renderiza e ajusta a iluminação com. E o Material  e o que o jogo consegue ver e diz para o jogo oque mostrar.
+
+== Tutoriais ==
+* {{L|Adapting PBR Textures to Source}}
+* {{L|Creating a Material}} (incluindo criação de texturas)
+* {{L|Creating PBR materials}} (selecione suporte de engine de terceiros)
+* {{L|Applying Textures}} (no {{L|Hammer}} )
+* {{L|UV mapping}}
+
+== Veja também ==
+* {{L|Material}}
+* {{L|Valve Texture Format}}
+* {{L|VTFEdit}}, {{L|VTF Shell Extensions}} e {{L|no_vtf}}
+* {{L|Material Download Sites}}
+
+{{ACategory|Glossary}}
+{{ACategory|Material System}}
