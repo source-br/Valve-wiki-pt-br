@@ -21,25 +21,25 @@
 |previousgame = {{cscz|2}}
 |nextgame = {{csgo|2|nt=1}}
 }}
-{{css|4}} is a recreation of {{cs|3.1}} inside the {{src|3.1}} engine, and the third game of the Counter-Strike franchise. Released in October 2004, it was the first Source game to be released, leading {{hl2|2}} by some weeks as a Steam pre-order bonus. It features the Counter-Strike [[bot]], the precursor to {{l4d|2}}'s AI.
+{{css|4}} é uma recriação do {{cs|3.1}} dentro do mecanismo {{src|3.1}} e o terceiro jogo da franquia Counter-Strike. Lançado em outubro de 2004, foi o primeiro jogo da Source a ser lançado, ficando à frente do {{hl2|2}} por algumas semanas como um bônus de pré-venda do Steam. Ele apresenta o Counter-Strike [[bot]], o precursor da IA do {{l4d|2}}.
 
-As opposed to previous ''Counter-Strike'' games, there is no Assassination game mode and no riot shield included. Included are the Hostage and Bombing scenario.
-A [[Counter-Strike: Source Beta|beta version]] developed by [[Hidden Path Entertainment]] (later known for developing {{csgo|4}}) and Valve, ported the game to the [[Orange Box]] engine ({{src09|3.1}}), which was finished and released on Jun 23, 2010 for PC and Mac OS X, replacing the older ({{src06|3.1}} version, also unofficially called v34/1.0.0.34). The game now features 144 (now 147) new achievements, a domination and revenge system, MVP Awards, and a new scoreboard.
+Ao contrário dos jogos anteriores de “Counter-Strike”, não há modo de jogo Assassination nem Riot Shield incluído. Estão incluídos os cenários Hostage (refém) e Bombing (bomba).
+Uma versão [[Counter-Strike: Source Beta|beta]] desenvolvida pela [[Hidden Path Entertainment]] (mais tarde conhecida por desenvolver o {{csgo|4}}) e pela Valve, portou o jogo para o mecanismo [[Orange Box]] ({{src09|3.1}}), que foi finalizado e lançado em 23 de junho de 2010 para PC e Mac OS X, substituindo a versão mais antiga ({{src06|3.1}}, também chamada não oficialmente de v34/1.0.0.34). O jogo agora apresenta 144 (agora 147) novas conquistas, um sistema de dominação e vingança, prêmios MVP e um novo placar.
 
-== Limitations ==
-{{bug|A bug, which hasn't been fixed for over 16-17 years (around 2006) since the reintroduction of Select Class (alternatively, selecting characters), SAS has a weaker weapon throwing due to unconfigured ValveBiped.}}
-Use [https://github.com/ValveSoftware/Source-1-Games/issues?q=is%3Aissue+is%3Aopen+label%3A%22Counter-Strike%3A+Source%22 GitHub] in order to prevent duplicate or outdated bug reports at the wiki.
+== Limitações ==
+{{bug|Um bug que não foi corrigido por mais de 16-17 anos (por volta de 2006) desde a reintrodução do Select Class (ou seja, a seleção de personagens), o SAS tem um arremesso de arma mais fraco devido ao ValveBiped No configurado.}}
+Use [https://github.com/ValveSoftware/Source-1-Games/issues?q=is%3Aissue+is%3Aopen+label%3A%22Counter-Strike%3A+Source%22 GitHub] para evitar relatórios de bugs duplicados ou desatualizados no wiki.
 
-== Official Maps ==
-{{css|1}} has the following official maps included.
+== Mapas Oficiais ==
+{{css|1}} inclui os seguintes mapas oficiais.
 
-Maps with the prefix <code>cs_</code> are '''[[Hostage Rescue]] Scenarios''', maps with the prefix <code>de_</code> are '''[[Bomb Defusal]] Scenarios'''.
+Mapas com o prefixo <code>cs_</code> são '''Cenários do [[Hostage Rescue]]''', mapas com o prefixo <code>de_</code> são '''Cenários do [[Bomb Defusal]]'''.
 {| class="standard-table sortable"
 ! Map Filename
-! Official Map since
+! Mapa Oficial desde
 ! Remake from<br>{{cs|4}}?
-! Available in<br>{{csgo|4|nt=CS:GO}}?
-! Available in<br>{{cs2|4|nt=CS2}}?
+! Disponivel em<br>{{csgo|4|nt=CS:GO}}?
+! Disponivel em<br>{{cs2|4|nt=CS2}}?
 |-
 | cs_assault
 | 2005-06-07
@@ -54,13 +54,13 @@ Maps with the prefix <code>cs_</code> are '''[[Hostage Rescue]] Scenarios''', ma
 | {{No}}
 |-
 | cs_havana
-| 2004-10-07 ''(launch)''
+| 2004-10-07 ''(lançamento)''
 | {{Yes}}
 | {{No}}
 | {{No}}
 |-
 | cs_italy
-| 2004-10-07 ''(launch)''
+| 2004-10-07 ''(lançamento)''
 | {{Yes}}
 | {{Yes|{{CsgoMap|cs_italy|Yes|size=16px|game=csgo}}}}
 | {{Yes|{{CsgoMap|cs_italy|Yes|size=16px}}}}
@@ -72,37 +72,37 @@ Maps with the prefix <code>cs_</code> are '''[[Hostage Rescue]] Scenarios''', ma
 | {{No}}
 |-
 | cs_office
-| 2004-10-07 ''(launch)''
+| 2004-10-07 ''(lançamento)''
 | {{Yes}}
 | {{Yes|{{CsgoMap|cs_office|Yes|size=16px|game=csgo}}}}
 | {{Yes|{{CsgoMap|cs_office|Yes|size=16px}}}}
 |-
 | de_aztec
-| 2004-10-07 ''(launch)''
+| 2004-10-07 ''(lançamento)''
 | {{Yes}}
-| {{N/A|{{CsgoMap|de_aztec|Removed|size=16px|game=csgo}}}}
+| {{N/A|{{CsgoMap|de_aztec|Removido|size=16px|game=csgo}}}}
 | {{No}}
 |-
 | de_cbble
-| 2004-10-07 ''(launch)''
+| 2004-10-07 ''(lançamento)''
 | {{Yes}}
 | {{Yes|{{CsgoMap|de_cbble|Yes|size=16px|game=csgo}}}}
 | {{No}}
 |-
 | de_chateau
-| 2004-10-07 ''(launch)''
+| 2004-10-07 ''(lançamento)''
 | {{Yes}}
 | {{No}}
 | {{No}}
 |-
 | de_dust
-| 2004-10-07 ''(launch)''
+| 2004-10-07 ''(lançamento)''
 | {{Yes}}
-| {{N/A|{{CsgoMap|de_dust|Removed|size=16px|game=csgo}}}}
+| {{N/A|{{CsgoMap|de_dust|Removido|size=16px|game=csgo}}}}
 | {{No}}
 |-
 | de_dust2
-| 2004-10-07 ''(launch)''
+| 2004-10-07 ''(lançamento)''
 | {{Yes}}
 | {{Yes|{{CsgoMap|de_dust2|Yes|size=16px|game=csgo}}}}
 | {{Yes|{{CsgoMap|de_dust2|Yes|size=16px}}}}
@@ -120,7 +120,7 @@ Maps with the prefix <code>cs_</code> are '''[[Hostage Rescue]] Scenarios''', ma
 | {{Yes|{{CsgoMap|de_nuke|Yes|size=16px}}}}
 |-
 | de_piranesi
-| 2004-10-07 ''(launch)''
+| 2004-10-07 ''(lançamento)''
 | {{Yes}}
 | {{No}}
 | {{No}}
@@ -150,16 +150,16 @@ Maps with the prefix <code>cs_</code> are '''[[Hostage Rescue]] Scenarios''', ma
 | {{No}}
 |}
 
-== Content ==
+== Conteúdo ==
 * Counter-Strike: Source (<code>cstrike</code>)
 * Source shared (<code>hl2</code>)
 * {{src13mp|3.1}} engine branch
 
-== Gallery ==
-=== Official screenshots ===
+== Galeria ==
+=== Screenshots Oficiais ===
 <gallery mode=nolines heights=192px widths=307px>
 File:Counter-Strike_Source_-_Screenshot_1.jpg|Train ({{code|de_train}})
-File:Counter-Strike_Source_-_Screenshot_2.jpg|Compound ({{code|cs_compound}}) - Front area
+File:Counter-Strike_Source_-_Screenshot_2.jpg|Compound ({{code|cs_compound}}) - Area da frente
 File:Counter-Strike_Source_-_Screenshot_3.jpg|Compound ({{code|cs_compound}}) - T Spawn
 File:Counter-Strike_Source_-_Screenshot_4.jpg|Assault ({{code|cs_assault}})
 File:Counter-Strike_Source_-_Screenshot_5.jpg|Inferno ({{code|de_inferno}})
@@ -171,11 +171,11 @@ File:Cs-source.JPG
 File:Counter-strike-source-screenshot-de aztec.jpg
 </gallery>
 
-== See also ==
-* {{wiki|Counter-Strike: Source}} - Wikipedia article about CS:S.
-* [[:Category:Counter-Strike: Source]] - for anything related to CS:S.
+== Veja também ==
+* {{wiki|Counter-Strike: Source}} - Artigo do Wikipédia sobre o CS:S.
+* [[:Category:Counter-Strike: Source]] - Tudo relacionado ao CS:S.
 
-== External links ==
-* {{Steam store|app/240|Counter-Strike: Source on Steam}}
-* {{Moddb|page=games|counter-strike-source|ModDB page}}
+== Links externos ==
+* {{Steam store|app/240|Counter-Strike: Source no Steam}}
+* {{Moddb|page=games|counter-strike-source|Página no ModDB}}
 * {{Gamebanana|2|Gamebanana page}}{{Counter strike games}}
