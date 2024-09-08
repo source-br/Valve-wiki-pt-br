@@ -7,61 +7,61 @@
 |download = [https://ficool2.github.io/HammerPlusPlus-Website/download.html Download URL]
 |source = 1
 }}
-{{hammerpp|4}} is a community-made modification of the {{hammer|3.1|nt=1}} for {{source|3.1}} that provides an updated, more stable, feature-rich version of the editor.
+{{hammerpp|4}} é uma modificação feita pela comunidade do {{hammer|3.1|nt=1}} para o {{source|3.1}} que fornece uma versão atualizada, mais estável e rica em recursos do editor.
 
-Hammer++ currently supports the following branches of the Source engine:
-* {{tf2|4}} (x64 only)
+Atualmente, o Hammer++ é compatível com as seguintes ramificações do mecanismo Source:
+* {{tf2|4}} (apenas 64x)
 * {{css|4}} (via {{src13mp}}) <!-- same download URL-->
 * {{hl2|4}} (via {{src13sp}}) <!-- same download URL-->
 * {{dods|4}} (via {{src13mp}}) <!-- same download URL-->
 * {{src13mp|4}}
 * {{src13sp|4}}
-* {{gmod|4}} (x64 only)
+* {{gmod|4}} (apenas 64x)
 * {{l4d2|4}}
 
-It is also included with {{mcv|4}}, in lieu of vanilla Hammer.
+Ele também está incluído no {{mcv|4}}, no lugar do Hammer básico.
 
-Hammer++ for {{csgo|4}} is no longer supported; Ficool recommends using {{gmod|4|addtext='s}} Hammer++ and porting the {{shader|lightmapped_4wayblend}} shader. Alternatively, use {{mcv|4|addtext='s}} version of Hammer++.
+Hammer++ para {{csgo|4}} não é mais suportado; a Ficool recomenda o uso do {{gmod|4|addtext='s}} Hammer++ e a portabilidade do shader {{shader|lightmapped_4wayblend}}. Como alternativa, use a versão {{mcv|4|addtext='s}} do Hammer++.
 
-==Other games/mods tested==
+==Outros jogos/mods testados==
 {{Main|Hammer++/Docs/Installation for Other Games}}
 
 {{hammerpp compatibility}}
 
-==Features==
-* Accurate lighting preview
-* Upgraded graphic fidelity
-* Significantly better stability
-* Particle rendering
-* 2D + 3D skybox preview
-* New model browser, particle browser, color editor, and keybinding editor
-* Realtime display of fog and ropes
-* Variety of new tools such as physics simulation, gizmo manipulation, drawing of polygon shapes, and convex brush merging
-* New {{ent|func_instance}} tools
-* Quality of life improvements
-* ... and much more!
-A more detailed feature list can be found on the {{hpp|3.1}} [https://ficool2.github.io/HammerPlusPlus-Website/features.html website] and you can '''[https://ko-fi.com/ficool2 support ficool2 via Ko-fi]'''
+==Recursos==
+* Visualização precisa da iluminação
+* Fidelidade gráfica aprimorada
+* Estabilidade significativamente melhor
+* Renderização de Particulas
+* Visualização de skybox 2D + 3D
+* Novo navegador de modelos, navegador de partículas, editor de cores e editor de vinculação de teclas
+* Exibição em tempo real de neblina e cordas
+* Variedade de novas ferramentas, como simulação de física, manipulação de gizmo, desenho de formas poligonais e fusão de pincéis convexos
+* Novas ferramentas {{ent|func_instance}}
+* Melhorias na qualidade de vida
+* ... e muito mais!
+Uma lista de recursos mais detalhada pode ser encontrada no site {{hpp|3.1}} [site https://ficool2.github.io/HammerPlusPlus-Website/features.html] e você pode '''[https://ko-fi.com/ficool2 apoiar ficool2 via Ko-fi]'''
 
-==Caveats==
+==Advertências==
 {{bug|{{clr}}
-* Always uses Windows's high-DPI scaling setting, even when scaling override mode is set to "Application" in {{w|File Explorer|File Explorer's}} compatibility settings for {{file|hammerplusplus|exe}}. This can result in less real estate than {{hammer4|4.1}}, depending on Windows settings.
+* Sempre usa a configuração de escala de alto DPI do Windows, mesmo quando o modo de substituição de escala está definido como “Aplicativo” nas configurações de compatibilidade do {{w|File Explorer|File Explorer}} para {{file|hammerplusplus|exe}}. Isso pode resultar em menos espaço do que o {{hammer4|4.1}}, dependendo das configurações do Windows.
 }}
 {{warning|{{clr}}
-* Does not support some features from {{hammer4|4.1}}, such as "[[Convert WAD to VMT...]]", or loading GoldSrc [[MAP]] or [[RMF]] files directly.
-* Ignores {{cmd|%notooltexture}}, with no option to disable this change.
-* [[Manifest]]s are not supported, only Instances.
-* Lighting preview ignores {{code|_minlight}}.
-* Since build 8866, "Show alpha" button in texture browser shows the alpha channel as translucency, regardless of if the material actually uses the [[$basetexture]]. This results in inaccurate previews for materials using parameters such as [[$selfillum]] or [[$basealphaenvmapmask]].
-::(Builds 8865 and earlier only showed alpha channel if [[$alphatest]] or [[$translucent]] were present, avoiding this issue).}}
+* Não oferece suporte a alguns recursos do {{hammer4|4.1}}, como “[[Converter WAD em VMT...]]”, ou carregar arquivos GoldSrc [[MAP]] ou [[RMF]] diretamente.
+* Ignora {{cmd|%notooltexture}}, sem opção para desativar essa alteração.
+* Não há suporte para [[Manifest]], apenas para Instâncias.
+* Lighting Preview ignora {{code|_minlight}}.
+* Desde da build 8866, o botão “Show alpha” no navegador de texturas mostra o canal alpha como translucidez, independentemente do fato de o material realmente usar a [[$basetexture]]. Isso resulta em visualizações imprecisas para materiais que usam parâmetros como [[$selfillum]] ou [[$basealphaenvmapmask]].
+::(As builds 8865 e anteriores só mostravam o canal alpha se [[$alphatest]] ou [[$translucent]] estivessem presentes, evitando esse problema).}}
 
-Additional bugs can be found in the [https://github.com/ficool2/HammerPlusPlus-Issue-Tracker official issue tracker], which is no longer maintained.
+Outros bugs podem ser encontrados no [https://github.com/ficool2/HammerPlusPlus-Issue-Tracker official issue tracker], que não é mais mantido.
 
-==See also==
-*[[Hammer++ for Linux]]
-*[[Half-Life Model Viewer++]]
+==Veja também==
+*[[Hammer++ for Linux|Hammer++ para Linux]]
+*[[Half-Life Model Viewer++|Half-Life Model Viewer++]]
 
-==External links==
-* [https://ficool2.github.io/HammerPlusPlus-Website/index.html Official Hammer++ Website]
+==Links externos==
+* [https://ficool2.github.io/HammerPlusPlus-Website/index.html Website oficial do Hammer++]
 
 {{leveleditors}}
 {{sdktools|0}}
