@@ -1,3 +1,4 @@
+{{translate}}{{wip}}
 {{LanguageBar}}
 {{gldsrc topicon}}
 {{Hierarchy}}
@@ -5,128 +6,165 @@
 |title = GoldSrc
 |image = Hl engine logo.png
 |imagewidth    = 128px
-|imagetooltip = "Powered by the Half-Life engine" logo used on some game boxarts.
+|imagetooltip = "Alimentado pelo motor gráfico do Half-Life" logo usada em algumas boxarts do jogo.
 |image2 = Screenshot-Half-Life_Surface_Tension.png
-|imagetooltip2 = Screenshot in-game of {{hl1|1}}, using the GoldSrc Engine.
+|imagetooltip2 = Screenshot in-game do {{hl1|1}}, usando o motor gráfico GoldSrc.
 |developer = [[Valve|Valve Corporation]]
-|releasedates = November 19, 1998
+|releasedates = Novembro 19, 1998
 |codelang = [[WP:C++|C++]], [[WP:C_(programming language)|C]], [[WP:Assembly language|Assembly language]]
 |sdk = [[Half-Life SDK]]
 |platform = {{Win|1}}, {{Mac|1}}, {{Linux|1}}, {{xbox|1|nt=1}}, {{ps2|1}}<!-- only first-party games -->
 |website = 
-|links = [https://github.com/ValveSoftware/halflife/ GitHub page]<br>(source code & bug reports)<br>{{twhl|Category: Goldsource Tutorials|'''GoldSrc tutorials'''}} on '''TWHL'''
-|license = [[WP:Proprietary software|Proprietary]] (source code available for non-commercial purposes)
+|links = [https://github.com/ValveSoftware/halflife/ pagina Github]<br>(SDK v2.5 codigo fonte e reporte de bugs)<br>[https://github.com/ValveSoftware/halflife/tree/steam_legacy SDK v2.4 no GitHub] ({{code|steam_legacy}} branch) <br>[https://twhl.info/wiki/page/category%3AGoldsource_Tutorials '''GoldSrc tutorials'''] no '''TWHL'''
+|license = [[WP:Proprietary software|Proprietario]] (código fonte disponível para propósitos não-comerciais)
 |previousengine = 
 |nextengine = {{Src|2}}
 }}
 
-{{gldsrc|4}} (also known as {{gldsrc|bold|nt=0}}, and formerly just the {{gldsrc|bold|nt=2}}) is a 3D video game engine created by {{Valve|1}} in 1996. It was the driving force behind many famous games of the late 90s and early 00s, such as {{hl|1}}, {{tfc|1}}, {{cs|1}}, and {{dod|1}}. GoldSrc is a heavily modified version of the {{quake|1}} engine and runs on C++ (with some "C" code). GoldSrc and its level editor, {{hammer3|1|nt=6}}, were released by Valve for public use, making it the source of countless community-made modifications.
+{{gldsrc|4}} (Também conhecida como {{gldsrc|bold|nt=0}}, e formalmente apenas A Engine do Half-life) é um Motor Gráfico criado pela {{L|Valve}} em 1996. Foi o motor gráfico por traz de vários jogos conhecidos do final da década 90 ao começo de 2000, como por exemplo {{L|hl}}, {{L|tfc}}, {{L|Counter-Strike}}, e {{L|Day_of_Defeat}}. GoldSrc é uma versão fortemente modificada do motor original {{L|quake}} que roda em C++(com alguns códigos em "C"). GoldSrc e seu editor de nível, {{hammer3|1|nt=6}}, foram lançados pela Valve para uso publico, fazendo ó a origem de varias modificações feitas pela comunidade valve.
 
-GoldSrc was replaced by its successor, {{src|4.1}}, in 2004, which currently holds first place as the choice engine for Valve modders. Though GoldSrc is past its prime, many gamers and some third-party developers still seek to use it for mods and level design. 
+GoldSrc foi substituída pelo seu sucessor, {{L|Source}}, em 2004, que atualmente segue em primeiro lugar como o motor preferido por modders da valve. Embora GoldSrc já tenha passado do seu auge, muitos jogos e desenvolvedores third-party procuram usa-lo para mods e level design.
 
-The engine is actively being updated and maintained by Valve as of 2023, recently with the {{hl|1}}'s 25th-anniversary updates which increased the engine limits and fixed many bugs.
+O motor está sendo ativamente atualizado e mantido pela Valve desde 2023, recentemente com as atualizações do aniversario de 25 anos do Half-Life, o motor recebeu aumentos no seu limite e foram corrigidos muitos bugs.
 
-[[File:Half-life shadows.jpeg|thumbnail|Screenshot in-game of {{hlbs|1}}, using Rudimentary Shadows.]]
+Espere por mais atualizações de tradução na pagina.
 
-[[File:Cry of Fear Lake.png|thumbnail|Screenshot in-game of {{cof|1}}, which runs on a heavily modified version of GoldSrc.]]
+[[File:Half-life shadows.jpeg|thumbnail|Screenshot in-game de {{hlbs|1}}, usando sombras rudimentares.]]
 
-[[File:Counter-Strike Condition Zero - Screenshot 3.jpg|thumbnail|Screenshot in-game of {{cscz|1}}, using detail textures and higher-definition player models.]]
+[[File:Cry of Fear Lake.png|thumbnail|Screenshot in-game de {{cof|1}}, que roda em uma versão fortemente modificada da GoldSrc.]]
 
-[[File:Counter-Strike_%28Xbox%29_-_Screenshot_3.png|thumbnail|In-game screenshot of {{csXbox|1|nt=2}} on Xbox.]]
+[[File:Counter-Strike Condition Zero - Screenshot 3.jpg|thumbnail|Screenshot in-game de {{cscz|1}}, usando texturas detalhadas e player models de definição-alta.]]
 
-==Features==
-{{todo|expand here or add links}}
-* '''AI flocking''' - [[NPC]]s can group together, seen with Houndeyes
-* '''Skeletal animation''' - allowing for more stable animation of models, compared to the vertex animation in Quake
-* '''Higher poly counts''' - GoldSrc allows for far more detailed models than Quake
-* '''HD models'''
-* '''Scripted sequences''' - Used extensively to tell Half-Life's story
-*[[GoldSrc Bot|Player Bots]] {{only|{{cscz}}{{csXbox}}}},
-* A3D/EAX hardware accelerated audio - improves [[DSP]] sound effects (such as removing echo's buzzing noises), and add surround sounds support (Removed since 2013 SteamPipe update).
-==== Since 2003 Steam update ====
-* '''[[VGUI2]]''' - Valve's custom GUI interface mimics most of the Windows controls.
-* In-game advertisements ({{cs|2}}, removed since SteamPipe) - Introduced in 2007.
-==== Since 2013 SteamPipe Update====
-*'''{{mac|3}} support'''
-*'''{{Linux|3}} support'''
-==== Since 25th Anniversary ====
-* '''Increased engine limits''' - Valve has increased engine limitations, allowing for more entities and detailed maps.
-*'''[[func_vehicle_(GoldSrc)|func_vehicle]] entity''' support from {{cs|4}}
-*'''Native {{Steamdeck|4}} support'''
-* '''[[Steam Input]] support''' - Steam Input support was added, which allows the game to support more controllers and buttons.
+[[File:Counter-Strike_%28Xbox%29_-_Screenshot_3.png|thumbnail|In-game screenshot de {{csXbox|1|nt=2}} no Xbox.]]
 
-=== [[:Category:GoldSrc Programming|Renderer]] ===
-GoldSrc has two in-game renderers [[Software renderer|Software Renderer]] and [[OpenGL]] (previously three as [[Direct3D|Direct3D 7]] support was removed in the 2013 SteamPipe Update) both renderers have differences.
-* '''Colored lighting''' - Quake simply had monotone lighting
-* '''Transparent textures''' - Glass can now be used in maps
-* '''Transparent Water'''
-* '''Water ripple'''
-* '''Water waves''' 
-* '''Dynamic iris simulation''' - adjust screen brightness automatically. A feature similar to Source's [[HDR|HDR Rendering]]. {{csXbox|only}}
-* '''[[Detail textures (GoldSrc)|Detailed textures]] '''{{only|{{cs}}{{hlop4}}{{dod}}{{cscz}}{{czds}}{{csXbox}}}} 
-{{bug|Detail texture rendering has been broken since the 25th Anniversary update.}}
-* '''Texture Filtering''' - First introduced with [https://quake.fandom.com/wiki/GLQuake GLQuake], a version of {{Quake|1}} that runs on OpenGL.
-* '''[[Half-Life High Definition Content|HD models]]''' - Higher polygon and texture quality for in-game models.
-==== Since 2013 SteamPipe Update====
-* '''FBO renderer''' - A new method of rendering the game, which allows MSAA to work with GoldSrc engine. This also allows the game to run on fullscreen in a borderless window, and aspect ratio that are different from your monitors, for example, 4:3 on 16:9, will not be stretched to fill the black bars.
-{{note|You can disable the new FBO renderer using {{code|-nofbo}} command line, note that this will also disable MSAA.}}
-* '''MSAA [[anti-aliasing]]''' - GoldSrc now natively support anti-aliasing, specifically, MSAA 4X, which is enabled by default on most modern hardwares. This will reduce the amount of jagged edges/staircases effect on the geometry.
+==Utilitários==
+{{Pendente|expandir aqui ou adicione links}}
+=== [[:Category:GoldSrc Programming|Renderização]] ===
+GoldSrc tem dois renderizadores in-game [[Software renderer|Software Renderer]] e [[OpenGL]] (anteriormente com três já que suporte ao [[Direct3D|Direct3D 7]] foi removido em 2013 no SteamPipe Update) ambos renderizadores tem diferenças.
+* '''Iluminação colorida''' - Quake simplesmente tinha iluminação monótona
+* '''Texturas transparentes''' - Vidro agora pode ser usado em mapas
+* '''Água transparente'''
+* '''Ondulação da água'''
+* '''Ondas de água''' 
+* '''Simulação dinâmica de íris''' - Ajuste de brilho do monitor automaticamente. Um recurso similar ao da Source [[HDR|HDR Rendering]]. {{csXbox|only}}
+* '''Filtragem de textura''' - Introduzido pela primeira vez com [https://quake.fandom.com/wiki/GLQuake GLQuake], uma versão de {{Quake|1}} que roda no OpenGL.
+** '''Filtragem Anisotrópica''' (16x por padrão) suportado desdo SteamPipe update de 2013.
+* '''animação esquelética''' - permitindo por uma animação mais estável de modelos, comparado ao vertex animation do Quake
+* '''Contagem maior de polígonos''' - GoldSrc permite uma quantia mais detalhada de modelos que Quake
+* '''[[Half-Life Conteúdo de alta definição|HD models]]''' - Qualidade de polígonos e texturas melhores para modelos in-game.
+* '''[[Texturas detalhadas (GoldSrc)|Detailed textures]] '''{{apenas|{{cs}}{{hlop4}}{{dod}}{{cscz}}{{czds}}{{csXbox}}}} 
+{{bug|Renderização de detalhe de texturas esta quebrado desda atualização de aniversario de 25 anos.}}
 
-==== Since 25th Anniversary ====
-* '''Shaders support''' (OpenGL)
-** With shaders support, it also fix the issues with overbright lighting not working under OpenGL.
-* '''Dynamic Shadows'''
-{{note|This feature was originally from {{quake|4|nt=5}}. To enable Dynamic Shadows {{code|r_shadows}} must be set to {{code|1}}}}
-* '''[[Software renderer|Software Renderer]] support on {{Linux|3}}'''
+==== desde 2013 SteamPipe Update====
+* '''Renderização RBO''' - Um novo método de renderização do jogo, que permite o trabalho conjunto entre MSAA e o Motor Grafico GoldSrc. Isto também permite o jogo a rodar em tela-cheia in uma tela sem borda (que faz Alt+Tab mais rápido), e diferente aspectos ratio diferentes para seu monitor, por exemplo, 4:3 em 16:9, não sera esticado para encher as barras pretas.
+{{nota|Você pode desativar a renderização FBO usando a linha de comando {{code|-nofbo}} , note que isto também ira desabilitar o MSAA.}}
+* '''MSAA [[antisserrilhamento]]''' - GoldSrc agora suporta nativamente o antisserrilhamento, especificamente, MSAA 4X, que é habilitado por padrão em hardwares mais modernos. Isso reduzirá a quantidade de efeitos de bordas/escadas irregulares na geometria.
+* Suporte para '''Filtragem anisotrópica''' - Aumenta qualidade visual de texturas em ângulos íngremes para a câmera.. GoldSrc utiliza Filtragem anisotrópica 16x por padrão.
 
-== Versions and forks ==
+==== Desdo Aniversario de 25 Anos ====
+* '''Ecrã panorâmico "Hor+" FOV'''
+** Ao invés de recortar a imagem e reduzir o FOV quando usando Ecrã panorâmico, a imagem sera .
+* '''Suporte de sombras''' (OpenGL)
+** Com suporte a sombras, também concerta o problema com a luz de sobre-brilho não funcionando no OpenGL.
+* '''Sombras dinâmicas'''
+{{note|Este recurso é originalmente do {{quake|4|nt=5}}. Para habilitar Sombras Dinâmica {{code|r_shadows}} deve ser setado em  {{code|1}}}}
+* '''[[Software renderer|Software Renderer]] suporte no {{Linux|3}}'''
+
+=== AI ===
+* '''AI flocking''' - [[NPC]]s podem se juntar em grupos, visto com [[monster_houndeye (GoldSrc)|Houndeyes]].
+* '''Sequencias pre-escritas''' - Usado estensivamente para contar a historia de Half-Life.
+* [[GoldSrc Bot|Player Bots]] - Jogue multplayer offline com bots. {{apenas|{{cscz}}{{csXbox}}}}
+=== Sistema de Sons ===
+* Suporta [[MP3]] (desde 2003), [[WAV]] arquivos de audio, como também audio em CDs.
+* '''Aceleração de audio por hardware (A3D/EAX)''' - Improvisa [[DSP]] efeito sonoros (Removendo ruídos de eco), e adiciona suporte a audio de arredores (Removido desda atualização SteamPipe de 2013).
+** Requer compatibilidade com Sound Blaster (ou compatível com A3D) placas de som (mas pode ser ignorado usando a solução alternativa abaixo).
+** Enquanto suporte a A3D/EAX foi removido na maioria dos jogos GoldSrc desda atualização SteamPipe (mas pode ser restaurado usando {{pcgw|Half-Life#MetaAudio|MetaAudio|icon=hide}}, que requer a desabilitação de {{Vac|1}} para funcionar), existe alguns jogos GoldSrc que ainda suportam A3D/EAX. Porem, começando com Windows Vista ou superior, é requisitado {{PcgwGlossary:Sound_card#DirectSound_hardware_path|an workaround|icon=hide}} para habilitar audio A3D/EAX.
+
+=== UI ===
+* '''[[VGUI2]]''' - Introduzida no update de 2003 (Steam), a interface customizada da valve mimica a maioria dos controles do windows. Isto ira permitir a mudança rápida entre o jogo e o menu, sem mudar a resolução para 800x600, que adiciona delay.
+
+=== Programação e plataformas ===
+* GoldSrc suporta varias plataformas, como o {{Win|3}}, {{mac|3}} e {{Linux|3}}, bem como consoles ({{Ps2|1}}, {{xbox|1}}).
+* todos, ou maior parte do codigo do motor escrito em C/C++ usando Visual Studio 2010, e 2019 (Desdo aniversario de 25 anos) ou superior.
+
+=== Utilitários ===
+* {{hammer3|2}} (anteriormente Worldcraft)
+** WYSIWYG editor de mundo
+** Create [[Brush|world brushes]]
+** Place [[NPC|AI NPCs]]
+** local [[Tool textures (Source)|triggers, clip brushes]], logica, etc.
+** Permite que o designer de nível conecte E/S entre entidades para controlar a IA dentro do jogo
+** {{Note|enquanto é funcional, é recomendado o uso moderno [[Valve_Hammer_Editor_(GoldSrc)#Hammer_alternatives|third-party alternatives]] (como {{jack|1}}) em vez disso.}}
+* {{hlmv|2|nt=1|linkto=gldsrc}}<!-- não tenho certeza se a versão Goldsrc do HLMV deve ser listada aqui, mas a Valve a adquiriu e mais tarde a usa no Source, então mantenha-a aqui por enquanto. -->
+** Visualizador de [[model]] completo
+** Rotacione modelos em qualquer direção
+** Configure hit boxes
+** Ver cascos de física
+** Ver normals 
+** Modos de visualização wireframe, sombreado ou texturizado
+* [[StudioMDL (GoldSrc)|StudioMDL]]
+** Compilador de Modelo
+* [[QCSG]], [[QBSP2]], [[QRAD]], [[VIS]]
+** Utensilios de compilação de mapa (bsp, iluminação e visibilidade)
+** {{Note|É recomendado a utilização de ZHLT, VHLT e utensilios de compilação de mapa derivados ([[HLCSG]], [[HLBSP]], [[HLVIS]], [[HLRAD]]) em vez de, como alguns utensilios estão bugados, espeficamente QRAD que requer {{code|[[light_environment_(GoldSrc)|light_environment]]}} em todo [[PVS]].}}
+
+=== Outros ===
+* Propaganda in-game ({{cs|2}}, removido desdo SteamPipe) - introduzido em 2007.
+==== desdo aniversario de 25 anos ====
+* '''Limite de motor aumentado''' - Valve aumentou as limitações do motor gráfico, permitindo mais entidades e mapas detalhados.
+*'''[[func_vehicle_(GoldSrc)|func_vehicle]] entidade''' suporte do {{cs|4}}
+*''' Suporte nativo ao {{Steamdeck|4}} '''
+* '''[[Steam Input]] Suporte''' - Foi adicionado suporte para Steam Input, o que permite que o jogo suporte mais controles e botões. O menu VGUI pode ser navegado usando o controle.
+
+== Versões e links ==
 {{Cleanup}}
-{{todo|Most of these aren't branches; branches exist concurrently, rather than flat-out replacing old codebases.}}
-{{todo|when were SDK 2.1, 2.2, and 2.3 released?}}
+{{todo|A maioria destes não são alternativas; Alternativas existem simultaneamente, em vez de substituir completamente as antigas bases de código.}}
+{{todo|Quando SDK 2.1, 2.2, e 2.3 foram lançados?}}
 {{stub}}
-{{Branches and Forks}}
+{{Alternativas GoldSrc}}
 
 == Half-Life SDK ==
 {{main|Half-Life SDK}}
-As of August 2013, it is available on {{steamicon|4}} under the "Tools" section. With it comes {{hammer3|4.1|nt=4|linkto=3.x}}, the 3ds Max sources for many cut and retail NPCs as well as player and weapon models, tools for packing textures into [[WAD]]s, and detailed documentation on implementing baseline features such as voice chat into a [[mod]].
+A Partir de Agosto de 2013, está disponível em {{steamicon|4}} abaixo na seção de "Utensílios" . Com ele vem {{hammer3|4.1|nt=4|linkto=3.x}}, as fontes do 3ds Max para muitos cortes e retail(?) de NPCs, bem como modelos de jogadores e armas, utensílios para a compactação de texturas [[WAD]]s, e documentação detalhada em implementação de características como chat de voz em [[mod]].
 
-The full source code for the latest version of the SDK can be found on [https://github.com/ValveSoftware/halflife?files=1 Valve's Github Page].
+O codigo fonte completo para Half-Life SDK (2.5), que contem mudanças da atualização de aniversario de 25 anos do Half-Life, podem ser encontradas na [https://github.com/ValveSoftware/halflife?files=1 pagina do GitHub da Valve]. Codigo fonte para versões anteriores (SDK 2.4) pode ser achado [https://github.com/ValveSoftware/halflife/tree/steam_legacy aqui].
 
-{{note|{{hammer3|4.1|nt=5|linkto=3.x}} is the final GoldSrc-only editor released by Valve and can be downloaded separately, such as through the {{sven|4.1|addtext={{nbsp}}SDK}}.}}
+{{note|{{hammer3|4.1|nt=5|linkto=3.x}} é o ultimo GoldSrc-unico editor lançado pela Valve e pode ser baixado separadamente, como através do {{sven|4.1|addtext={{nbsp}}SDK}}.}}
 {{clr}}
 
-== Products using GoldSrc {{Table tools|Goldsrc_games}}==
+== Produtos usando GoldSrc {{Table tools|Goldsrc_games}}==
 {{gldsrc games}}
-*See [[:Category:GoldSrc games|GoldSrc games category]] for more games, and for articles about the game which uses the GoldSrc engine.
+*Ver [[:Category:GoldSrc games|GoldSrc games category]] para mais jogos, e para artigos sobre o jogo que utiliza o motor gráfico GoldSrc.
 
 == Specifications ==
 {{Engine Limits}}
 
-== Bugs and Limitations ==
-{{update|Half-Life 25th Anniversary Update fixes a lot and breaks other stuff.}}
-Use [https://github.com/ValveSoftware/halflife/issues GitHub] in order to prevent duplicate or outdated bug reports at the wiki.
-{{Bug|only=goldsrc|Various GoldSrc non-standalone mods has been broken with the recent {{hl1|4}} update, as part of its 25th anniversary. Some of these games would crash on startup with Visual C++ error.<br> Other games like {{tfc|4}} was also affected, but appears to work almost perfectly fine aside from HUD scaling fixes were non-functional. And another one such as {{cs|4}}, which has been fixed to support the 25th anniversary update, may have other problems and issues that can crash the game. Additionally, mods that use custom OpenGL renderer (such as {{Paranoia|4}} (non-Xash3D version) and older version of {{cof|4}}, etc...) will be also crashed on startup aswell ([https://github.com/ValveSoftware/halflife/issues/3710 Issues #3710]).{{Workaround|To temporarily fix this, select the beta branch {{code|steam_legacy}} on {{hl1|1}} (and in some games such as {{cs|1}}) by going to Half-Life > Properties... > Betas > select {{code|steam_legacy}}. Once those games has been fixed, you can opt out by set the beta branch to "None".}}}}
-{{Bug|only=goldsrc|Overbright lighting ({{cmd|gl_overbright|1}}) is broken due to an [[OpenGL]] extension used for multi-texturing, which is required for the [[Detail textures (GoldSrc)|detail textures]] used by {{czero|4.1}}, {{dod|4.1}}, and some third-party mods. <br>This make the color less saturated and lighting much less brighter, as well as introduce chromatic aberration on brightly lit lightmaps. <br>The issue was fixed in the 25th anniversary update, which deprecated the {{code|gl_overbright 1}} in favor of {{code|gl_use_shaders 1}}. However, there are [https://github.com/ValveSoftware/halflife/issues/3424 more issues] that was yet to be fixed with the new overbright lighting.<br> This issue can be also found on [[Quake|GLQuake]], but for different reasons. {{workaround|To fix this for the older version of {{hl1|4}} ({{code|steam_legacy}} branch) and most standalone mods, see {{pcgw|Half-Life#OpenGL_overbright_lighting|Overbright lighting}} section in PCGamingWiki's Half-Life page for more information.{{Important|Please note that using DLL-based solutions in {{vac|4.1}}-protected multiplayer servers may result in a false positive ban. Use {{code|[[Command-Line Parameters|-insecure]]}} to disable VAC for local servers. This is not an issue for singleplayer, which is unaffected by VAC. Additionally, GPU driver hacks do not trigger VAC.}}}}
-{{note|Even though the overbright was properly fixed with the 25th anniversary update and with the November 19 hotfix patch, which fixes the brightness issues after enabling overbright, along with another one that [https://github.com/ValveSoftware/halflife/issues/3424#issuecomment-1822924828 fixed the underwater fog bug], models [https://github.com/ValveSoftware/halflife/issues/3424#issuecomment-1823797137 may not be affected] by the overbright lighting.}}
+== Bugs e Limitações ==
+{{update|Half-Life Atualização do 25° Aniversario concerta muito e quebra muito.}}
+Utilize [https://github.com/ValveSoftware/halflife/issues GitHub] em ordem de impedir duplicação ou reportagem de bugs ultrapassados na wiki.
+{{Bug|only=goldsrc|Vários GoldSrc mods não autônomos foram quebrados com a recente {{hl1|4}} atualização, como parte do 25° aniversario. Algum destes jogos iriam travar com erro Visual C++.<br> Outros jogos como {{tfc|4}} foram afetados, para funcionar quase perfeitamente bem, exceto pelas correções de escala do HUD que não funcionavam. E outro como {{cs|4}}, que foi corrigido para suportar a atualização do 25º aniversário, pode ter outros problemas e questões que podem travar o jogo. Adicionalmente, mods que usam renderização OpenGL customizada (por exemplo {{Paranoia|4}} (versão não Xash3D) e versões anteriores como {{cof|4}}, etc...) também travará na inicialização ([https://github.com/ValveSoftware/halflife/issues/3710 Problema #3710]).{{Workaround|Para corrigir isso temporariamente, selecione o branch beta {{code|steam_legacy}} no {{hl1|1}} (e em alguns jogos como {{cs|1}}) indo para Half-Life > Propriedades... > Betas > selecionar {{code|steam_legacy}}. Depois que esses jogos forem corrigidos, você poderá cancelar a exclusão definindo a ramificação beta como "Nenhum/None".}}}}
+{{Bug|only=goldsrc|Iluminação muito brilhante ({{cmd|gl_overbright|1}}) esta quebrado devido a extensão [[OpenGL]] para multitexturização, o que é necessário para o [[Detail textures (GoldSrc)|detail textures]] usado por {{czero|4.1}}, {{dod|4.1}}, e alguns mods de terceiros. <br>Isso torna a cor menos saturada e a iluminação muito menos brilhante, além de introduzir aberração cromática em mapas de luz bem iluminados. <br>O problema foi corrigido na atualização do 25º aniversário, que descontinuou o {{code|gl_overbright 1}} em favor do {{code|gl_use_shaders 1}}. porem, há [https://github.com/ValveSoftware/halflife/issues/3424 mais problemas] que ainda não foi corrigido com a nova iluminação excessivamente brilhante.<br> Este problema também pode ser encontrado no [[Quake|GLQuake]], mas por razoes diferentes. {{workaround|Para corrigir isso para a versão mais antiga do {{hl1|4}} ({{code|steam_legacy}} alternativa) e a maioria dos mods independentes, veja {{pcgw|Half-Life#OpenGL_overbright_lighting|Iluminação muito brilhante}} seção na página Half-Life da PCGamingWiki para mais informações.{{Importante|Observe que o uso de soluções baseadas em DLL em {{vac|4.1}}-servidores multijogador protegidos podem resultar em um banimento falso positivo. Use {{code|[[Command-Line Parameters|-insecure]]}} para desabilitar VAC para servidores locais. Isto não é um problema para o modo singleplayer, que não é afetado pelo VAC. Além disso, hacks de driver de GPU não acionam VAC.}}}}
+{{note|Mesmo que o brilho em excesso tenha sido devidamente corrigido com a atualização do 25º aniversário e com o patch de hotfix de 19 de novembro, que corrige os problemas de brilho após ativar o brilho excessivo, junto com outro que [https://github.com/ValveSoftware/halflife/issues/3424#issuecomment-1822924828 corrigiu o bug da névoa subaquática], modelos [https://github.com/ValveSoftware/halflife/issues/3424#issuecomment-1823797137 pode não ser afetado] pela iluminação excessivamente brilhante.}}
 }}
-{{Bug|only=goldsrc|On some systems running {{win7|4|nt=3}} or later, the engine may suffer from extremely low frame rates during gameplay, especially on Intel iGPUs. {{workaround|<ul><li>Set the game ({{file|hl|exe}}) to "'''High Priority'''" in [https://techcommunity.microsoft.com/t5/windows-11/how-to-run-task-manager-on-windows-11-6-ways/m-p/2701239 Task Manager].<li>{{pcgw|Half-Life#OpenGL_overbright_lighting|Disable multitexturing}}.}}}}
-{{Bug|only=goldsrc|Creative EAX and Aureal A3D Audio are no longer supported since [[SteamPipe]] update in 2013. This also removes support for surround sound, and drastically impacts how certain [[DSP]] effects sound (such as buzzing noises on DSP's Weirdo 1-3). [https://github.com/ValveSoftware/halflife/issues/38 A feature request about restoring EAX/A3D sound can be found at GitHub] (issue #38).{{workaround|Use MetaAudio; see the {{pcgw|Half-Life#Audio|Audio}} section on PCGamingWiki's Half-Life page for more information.{{Important|Please note that using MetaAudio in {{vac|4.1}}-protected multiplayer servers may result in a false positive ban. Use {{code|[[Command-Line Parameters|-insecure]]}} to disable VAC for local servers. This is not an issue for singleplayer, which is unaffected by VAC.}}}}}}
-{{Bug|only=goldsrc|Running any GoldSrc game other than {{hl|4}} over around 100-120FPS or higher can cause issues with movable objects (and prior to [https://steamcommunity.com/games/70/announcements/detail/1586880891220596672 October 8, 2019 update], NPC turn rate), being slower or faster. Player movements in {{cs|4}}, {{cscz|4}} and {{czds|4}}, after jumping, will be much slower than normal for few seconds. {{Note|NPC turn rate bug will remains existed on most older, non-standalone mods (which was made on a older version of GoldSrc/HL SDK) when loaded on current version of HL1 (or other GoldSrc games) that have this bug fixed unless the dlls file ({{code|hl.dll}} and {{code|client.dll}}) on the mod folder itself was renamed. But keep in mind that this method may breaks some mods and cause it to crash, or made several new additions such as new weapons, new NPCs, etc... from the mod stops working.}}}}
-{{modernImportant|<!--not a bug-->[[OpenGL]] mode is somewhat different from [[software mode]]. Furthermore, the wave effect on water does not work with software renderer. See [https://www.youtube.com/watch?v&#61;9jwDqjFaL4c patbytes's "Half-Life - A Look at Water" on YouTube]. Issue [https://github.com/ValveSoftware/halflife/issues/2165 2165].}}
+{{Bug|only=goldsrc|Em alguns sistemas operacionais rodando {{win7|4|nt=3}} ou posterior, o motor gráfico pode sofrer taxas de quadros extremamente baixas durante o jogo, especialmente em iGPUs Intel. {{workaround|<ul><li>Defina o jogo ({{file|hl|exe}}) para "'''Alta Prioridade'''" no [https://techcommunity.microsoft.com/t5/windows-11/how-to-run-task-manager-on-windows-11-6-ways/m-p/2701239 Task Manager].<li>{{pcgw|Half-Life#OpenGL_overbright_lighting|Disable multitexturing}}.}}}}
+{{Bug|only=goldsrc|Creative EAX e Aureal A3D Audio não são mais suportados desdo [[SteamPipe]] update de 2013. Isso também remove o suporte para som ambiente e afeta drasticamente o som de certos efeitos [[DSP]] (como ruídos de zumbido no Weirdo 1-3 do DSP). [https://github.com/ValveSoftware/halflife/issues/38 Uma solicitação de recurso sobre restauração de som EAX/A3D pode ser encontrada no GitHub] (issue #38).{{workaround|Usar MetaÁudio; veja o {{pcgw|Half-Life#Audio|Audio}} seção na página Half-Life da PCGamingWiki para mais informações.{{Importante|Observe que o uso do MetaAudio em {{vac|4.1}}-servidores multijogador protegidos podem resultar em um banimento falso positivo. Use {{code|[[Command-Line Parameters|-insecure]]}} para desativar o VAC para servidores locais. Isto não é um problema para o modo singleplayer, que não é afetado pelo VAC.}}}}}}
+{{Bug|only=goldsrc|Executando qualquer jogo GoldSrc diferente de {{hl|4}} acima de 100-120FPS ou superior pode causar problemas com objetos móveis (e antes de [https://steamcommunity.com/games/70/announcements/detail/1586880891220596672 Atualização de 8 de outubro de 2019], taxa de giro do NPC), sendo mais lento ou mais rápido. Movimentos do jogador em {{cs|4}}, {{cscz|4}} e {{czds|4}}, apos pular, irão ser mais lentos que normalmente. {{Note|NPC O bug da taxa de giro permanecerá existindo na maioria dos mods não independentes mais antigos (que foram feitos em uma versão mais antiga do GoldSrc/HL SDK) quando carregados na versão atual do HL1 (ou outros jogos GoldSrc) que têm esse bug corrigido, a menos que o arquivo dlls ({{code|hl.dll}} e {{code|client.dll}}) na própria pasta mod foi renomeado. Mas tenha em mente que este método pode quebrar alguns mods e fazer com que ele trave, ou fazer várias novas adições, como novas armas, novos NPCs, etc... o mod para de funcionar.}}}}
+{{modernImportant|<!--Não é um bug-->[[OpenGL]] modo é de alguma forma diferente do [[software mode]]. Além disso, o efeito das ondas na água não funciona com o renderizador de software. veja [https://www.youtube.com/watch?v&#61;9jwDqjFaL4c patbytes's "Half-Life - A Look at Water" no YouTube]. Problema [https://github.com/ValveSoftware/halflife/issues/2165 2165].}}
 
-== Trivia ==
-* The term "GoldSrc" comes from development of the [[Source]] engine. A few months before the release of {{hl1|1}}, the Half-Life engine's source code was split into two branches: {{mono|Src}} and {{mono|GoldSrc}}. The {{mono|GoldSrc}} branch was the [[Wikipedia:Gold master|gold master]] version of the codebase, and would be used for the proper release of the game. The {{mono|Src}} branch, comparatively, would be continually iterated upon, adding and changing features for use in [[Half-Life 2|the sequel]], with the term "Source Engine" eventually being picked up by marketing.{{ref|1}}
+== Curiosidades ==
+* 
+O termo "GoldSrc" vem do desenvolvimento do motor [[Source]]. Alguns meses antes do lançamento de {{hl1|1}}, o código-fonte do mecanismo Half-Life foi dividido em dois ramos: {{mono|Src}} e {{mono|GoldSrc}}. O branch {{mono|GoldSrc}} era a versão [[Wikipedia:Gold master|gold master]] da base de código e seria usado para o lançamento adequado do jogo. O ramo {{mono|Src}}, comparativamente, seria continuamente iterado, adicionando e alterando recursos para uso em [[Half-Life 2|a sequência]], com o termo "Source Engine" eventualmente sendo adotado pelo marketing .{{ref|1}}
 
-== See also ==
-* For information about converting GoldSrc content to the Source engine, see [[Porting GoldSrc content (maps, models, etc.) to Source]]
-* [[w:GoldSrc|GoldSrc]] on Wikipedia
-* [[Half-Life SDK|GoldSrc SDK (Half-Life SDK) Documentation]]
-* [[GoldSrc SteamPipe Directories]]
+== Veja também ==
+* Para obter informações sobre como converter conteúdo GoldSrc para o mecanismo Source, consulte [[Portando conteúdo GoldSrc (mapas, modelos, etc.) para Source]]
+* [[w:GoldSrc|GoldSrc]] no Wikipedia
+* [[Half-Life SDK|GoldSrc SDK (Half-Life SDK) Documentação]]
+* [[Diretórios GoldSrc SteamPipe]]
 
-== External links ==
-* [https://github.com/ValveSoftware/halflife/ Source code + GitHub Issues] - bug reports and the GoldSrc source code can be found here.
+== Links Externos ==
+* [https://github.com/ValveSoftware/halflife/ Codigo fonte + problemas GitGub] - reportagem de bugs e o codigo fonte do GoldSrc pode ser encontrado Aqui.
 
-== References ==
+== Referencias ==
 # [https://developer.valvesoftware.com/w/index.php?title=User_talk:Erik_Johnson&oldid=10088#GoldSource User talk:Erik Johnson] (Revision as of 12:53, 1 September 2005)
 # [https://store.steampowered.com/news/app/70/view/6941797379568863069 Half-Life 25th Anniversary Update]
 # [[Talk:Cry of Fear#PARANOIA -> Cry of Fear|Relation between Paranoia & COF]]{{Gs-branch-navbox}}
