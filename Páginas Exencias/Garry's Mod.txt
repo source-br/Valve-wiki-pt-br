@@ -30,45 +30,45 @@
 |previousgame = N/A
 |nextgame = {{sbox|2}}
 }}
-{{gmod|4}} is a sandbox game, created by Garry Newman. It is centered around putting the player in an environment, in which they can do nearly anything that the {{src|1}} engine is capable of. It was heavily inspired by {{jbmod|3}}. Early versions of Garry's Mod, which at the time ran directly on HL2 game files ({{src06|1}}) as opposed to the {{src06|1|nt=0}}, modified several normal {{hl2|1}} weapons to act as different tools (like the 357 Magnum Revolver being able to set the cameras, for instance).
+{{gmod|4}} é um jogo sandbox criado por Garry Newman. Ele se concentra em colocar o jogador em um ambiente no qual ele pode fazer quase tudo o que o mecanismo {{src|1}} é capaz de fazer. Ele foi fortemente inspirado pelo {{jbmod|3}}. As primeiras versões do Garry's Mod, que na época eram executadas diretamente nos arquivos de jogo do HL2 ({{src06|1}}) em oposição ao {{src06|1|nt=0}}, modificavam várias armas normais do {{hl2|1}} para atuarem como ferramentas diferentes (como o revólver 357 Magnum, que podia ajustar as câmeras, por exemplo).
 
-As time went on Garry's Mod was updated even more to resemble {{jbmod|name}}, now running on the SDK Base engine, and later its own fork of {{src13|1}}. Garry's Mod has advanced through 13 major updates, then switched to {{w|Software_as_a_service|software-as-a-service|icon=hide}} model for updates afterward, each with more features than the last. The latest version has a massive host of features, such as easier ragdoll posing, keypads, doors, buttons, dynamite, welding, and just about everything needed to create contraptions as well as comics and videos. 
+Com o passar do tempo, o Garry's Mod foi atualizado ainda mais para se assemelhar ao {{jbmod|name}}, agora executado no mecanismo SDK Base e, posteriormente, em sua própria bifurcação do {{src13|1}}. O Garry's Mod passou por 13 atualizações principais e depois mudou para o modelo {{w|Software_as_a_service|software-as-a-service|icon=hide}} para atualizações posteriores, cada uma com mais recursos que a anterior. A versão mais recente tem um grande número de recursos, como poses de ragdolls mais fáceis, teclados, portas, botões, dinamite, solda e praticamente tudo o que é necessário para criar engenhocas, bem como quadrinhos e vídeos. 
 
-Garry's Mod has a large addon and mod base and supports {{lua|1}}, which is used by the community to make new weapons, entities, and gamemodes. Gamemodes range in genre from the original sandbox, to roleplay, survival, sports and far beyond. The community also considers the game to be by far the most popular Source mod. It was also the first mod ever distributed through Steam.
+O Garry's Mod tem uma grande base de addons e mods e suporta {{lua|1}}, que é usada pela comunidade para criar novas armas, entidades e modos de jogo. Os modos de jogo variam em gênero, desde o sandbox original até RPG, sobrevivência, esportes e muito mais. A comunidade também considera que o jogo é, de longe, o mod Source mais popular. Ele também foi o primeiro mod distribuído pelo Steam.
 
-== Features ==
-{{gmod|4}} adds support for following features:
-:; 64-bit support
-:: Access more than 4GB of RAM and provides slightly better performance. To enable 64-bit support, select the {{code|x86-64}} beta branch.
-:; Larger map sizes and increased engine limits
-:; Partial [[VTF]] 7.5 support
-:: Textures from games such as {{as|1}}, {{p2|1}}, {{csgo|1}} are now supported in {{gmod|1}}.
-:; [[BSP]] 21 support
-:: Maps from {{l4dbranch|1}} and above can now be loaded in {{gmod|1}}.
+== Recursos ==
+{{gmod|4}} adiciona suporte aos seguintes recursos:
+:; Suporte para 64-bits
+:: Acesso a mais de 4 GB de RAM e oferece desempenho ligeiramente melhor. Para ativar o suporte a 64 bits, selecione a ramificação beta {{code|x86-64}}.
+:; Tamanhos maiores de mapas e limites maiores do motor
+:; Suporte parcial ao [[VTF]] 7.5
+:: As texturas de jogos como {{as|1}}, {{p2|1}}, {{csgo|1}} agora são compatíveis com o {{gmod|1}}.
+:; Suporte ao [[BSP]] 21
+:: Os mapas de {{l4dbranch|1}} e superiores agora podem ser carregados em {{gmod|1}}.
 :; Glua
-:: Custom {{lua|1}} implementation, allows modder's to create custom weapons, gamemodes and npc's. 
+:: Implementação {{lua|1}} personalizada, permite que os modders criem armas, modos de jogo e npcs personalizados. 
 :; Nextbot 
-:: The Nextbot AI allows modder's to create Navmesh based NPC's with complex behaviour and interaction's using {{lua|1}}.
+:: A IA Nextbot permite que os modders criem NPCs baseados em Navmesh com comportamento e interação complexos usando {{lua|1}}.
 
-== Garry's mod as a development tool ==
-{{gmod|bold}} is useful for Source developers, and can greatly fulfill certain tasks needed to make new mods or add-ons. Tasks such as:
+== Garry's mod como uma ferramenta de desenvolvimento ==
+{{gmod|bold}} é útil para os desenvolvedores do Source e pode realizar muitas tarefas necessárias para criar novos mods ou complementos. Tarefas como:
 
-:; A way to place and or move props in MAP_EDIT mode
+:; Uma maneira de colocar e/ou mover adereços no modo MAP_EDIT
 
-:; A user-friendly demonstration tool: Chat with other modders and share ideas through text and usage of GMod tools. Devs can use GMod's tools to cooperatively share ideas about mod scenarios with players. GMod can also be used to demonstrate a new map and discuss features without NPCs.
+:; Uma ferramenta de demonstração fácil de usar: Converse com outros modders e compartilhe ideias por meio de texto e uso das ferramentas do GMod. Os desenvolvedores podem usar as ferramentas do GMod para compartilhar ideias de forma cooperativa sobre cenários de modificação com os jogadores. O GMod também pode ser usado para demonstrar um novo mapa e discutir recursos sem NPCs. 
 
-:; Stress-test Source: Use {{gmod|bold}} to test abusive usage of the Source engine, like spawning hordes of zombies, spamming explosive barrels and other intensive things. Will it crash? Will it freeze? Will the network buffer overflow? <br> There is also a beta branch that supports a 64-bit executable (for both the game and the compile tool itself) and Chromium. This will allows Source to better utilizing the hardware's CPU, and allow the game and compile tools to use more than 4GB of RAM.  
+:; Stress-test Source: Use {{gmod|bold}} para testar o uso abusivo do mecanismo Source, como a geração de hordas de zumbis, o envio de barris explosivos e outras coisas intensivas. Ele vai fechar? Vai congelar? O buffer de rede vai estourar? <br> Há também uma ramificação beta que oferece suporte a um executável de 64 bits (tanto para o jogo quanto para a própria ferramenta de compilação) e ao Chromium. Isso permitirá que o Source utilize melhor a CPU do hardware e que o jogo e as ferramentas de compilação usem mais de 4 GB de RAM.  
 
-:; Quickly test game elements: With the implementation of Lua scripting, you can create new game elements and weapons without using the Source SDK and make the process go a lot faster.
+:; Teste rapidamente os elementos do jogo: Com a implementação de scripts Lua, você pode criar novos elementos de jogo e armas sem usar o SDK de origem e tornar o processo muito mais rápido.
 
 == Links == 
-* [https://gmod.facepunch.com Official website]
-* [https://garry.net/ Garry’s blog]
-* [https://www.facepunch.com Developer's website]
-* {{Moddb|page=other|mods/garrys-mod|'''Outdated''' ModDB Page}} - Free older versions of Garry's Mod (version 9 and below) can be found from there.
-* {{Steam store|app/4000|Garry's Mod on Steam Store}}
-* {{Steam community|app/4000|Garry's Mod on Steam Community}}
-** {{Steam community|app/4000/workshop/|Steam Workshop}}
-* {{Wiki|Garry's_Mod|Garry's Mod on Wikipedia}}
-* [[Getting started in the Hammer editor for Gmod!]]
-* [[List of Garry's Mod console commands and variables|List of Garry's Mod Cvars]]
+* [https://gmod.facepunch.com Website oficial]
+* [https://garry.net/ Blog do Garry]
+* [https://www.facepunch.com Website do Desenvolvedor]
+* {{Moddb|page=other|mods/garrys-mod|'''Desatualizado''' Pagina do ModDB}} - Versões antigas e gratuitas do Garry's Mod (versão 9 e anteriores) podem ser encontradas lá.
+* {{Steam store|app/4000|Garry's Mod na loja da Steam}}
+* {{Steam community|app/4000|Garry's Mod na Comunidade Steam}}
+** {{Steam community|app/4000/workshop/|Workshop da Steam}}
+* {{Wiki|Garry's_Mod|Garry's Mod na Wikipedia}}
+* [[Getting started in the Hammer editor for Gmod!|Primeiros passos no editor Hammer para Gmod!]]
+* [[List of Garry's Mod console commands and variables|Lista de Cvars do Garry's Mod]]
