@@ -68,3 +68,4 @@ Outros bugs podem ser encontrados no [https://github.com/ficool2/HammerPlusPlus-
 
 [[Category:Hammer]]
 [[Category:Level Design]]
+.

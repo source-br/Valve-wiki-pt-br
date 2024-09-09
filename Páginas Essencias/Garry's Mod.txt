@@ -72,3 +72,4 @@ O Garry's Mod tem uma grande base de addons e mods e suporta {{lua|1}}, que é u
 * {{Wiki|Garry's_Mod|Garry's Mod na Wikipedia}}
 * [[Getting started in the Hammer editor for Gmod!|Primeiros passos no editor Hammer para Gmod!]]
 * [[List of Garry's Mod console commands and variables|Lista de Cvars do Garry's Mod]]
+.
