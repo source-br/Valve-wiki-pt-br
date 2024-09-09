@@ -1,0 +1,15 @@
+{{LanguageBar}}
+
+Em design de jogos, uma entidade/efeito/função '''Free''' é um no qual não causa nenhum impacto no desempenho de performasse do tempo de execução.
+
+Isto é apenas o caso quando uma operação seria executada de qualquer maneira; onde invés de "adicionar" informação, suas ações "trocam" aquelas no qual já existem. O melhor exemplo disto na Source são {{L|Lighting|lights}} estáticas, sem nome e {{L|Skybox_(2D)|2D skyboxes}}.
+
+==Veja também ==
+*{{L|Budget}}
+*{{L|Cheap}}
+*{{L|Expensive}}
+
+{{ACategory|Glossary}}
+
+
+{{stub}}

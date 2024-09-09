@@ -1,0 +1,84 @@
+{{LanguageBar}}
+[[File:Skybox_Template.jpg|256 px|right]]
+
+{{subpage|[[Skybox Basics]]}}
+{{for|Para informações sobre Skyboxes na {{L|gldsrc|4}}, veja {{L|Skybox (GoldSrc)}}}}
+A '''Skybox 2D''' de mapa da {{L|source|4}} e uma imagem de fundo estática 360º que e apenas renderizada usando as texturas tool da skybox. Esta imagem e composta de seis {{L|VMT|materials}} que são renderizadas como o interior de um cube infinitamente largo que cerca o mapa.
+
+Diferente da {{L|3D Skybox}}, que falta profundidade geometrica, consistindo de apenas texturas sem usar a entidade {{L|ent|sky_camera}} para exibir qualquer geometria 3D.
+__TOC__
+== Adicionando um céu para o mapa ==
+{| style=float:right
+| [[File:Toolsskybox.png|thumb|<tt>toolsskybox</tt> para skyboxes 2D e 3D]]
+| [[File:Toolsskybox2d.gif|thumb|<tt>toolsskybox2d</tt> para skyboxes 2D]]
+|}
+Simplesmente aplique a textura em um {{L|world brush}} (não um {{L|brush entity}}) com o '''<code>{{L|tool textures#skybox|tools/toolsskybox}}</code>''' ou (caso Você esteja mapeando para a {{L|Orange box}}) o material'''<code{{L|tool textures#skybox2d|tools/toolsskybox2d}}</code>'''.
+
+Em jogo, o skybox sera visivel ''atraves'' de toda superficie em que <code>toolsskybox</code> e aplicada.
+
+Brushes com <code>toolsskybox</code> ''não'' precisam ter formato de cubo.
+
+{{note|Em {{L|HL2}} o skybox padrão tem as divisões visiveis. Isto não e sua culpa. Veja a proxima seção para saber como mudar a padrão.}}
+{{note|O ideal e que a sua skybox deva "enrolar" envolta de seu mapa, de certa forma que tenha zero espaço entre a area jogavel e a skybox em si, por mais que não seja necessario de ter a skybox "abralaçando" as bordas do mapa para adiquirir tempos de compilamento rasoaveis. Veja {{L|Skybox Optimization}} para mais detalhes.}}
+{{warning|Você deve evitar de criar uma skybox desenhando um grande cube oco com a textura de Skybox em volta do seu mapa. Isto pode aumentar o tempo de compilamento do VVIS..}}
+
+== Mudando o skybox sendo mostrado ==
+[[File:Sky_change.png|right|200px]]
+A skybox de mapa pode ser definida na aba {{L|worldspawn|Map Properties}} no Hammer. Com o mapa correto aberto, siga estas etapas:
+# Va para {{L|Hammer Map Menu|Map menu}}
+# Escolha '''Map Properties...''' na lista suspensa
+# Na janela Object Properties, selecione a area '''Skybox Texture Name'''.
+# Troque o valor com o nome da skybox que você deseja exibir. Veja {{L|Sky List}} para uma lista completa de skyboxes disponiveis por jogo. Para usar um ceu custumizado, veja abaixo.
+
+
+Em jogo, o atual skybox pode ser mudado usando o console com a variavel <span id=sv_skyname></span> {{code|sv_skyname <skyname>}}.
+{{clr}}
+
+== Iluminação de Skybox ==
+{{:Skybox lighting}}
+
+== Criando uma Textura Skybox 2D Customizada ==
+
+# Prepare seus arquivos de imagem. Você não necessariamente precisa de seis imagens, ja que você pode usar a mesma imagem para multiplos lados, por exemblo, uma para o topo, um para o fundo  and one for all four sides.
+# [[Creating a Material|Convert them to VTF.]] Make sure that you enable "Clamp S" and "Clamp T" flags or you'll see seams when running with lower texture detail.
+# Create the following six [[VMT]] text files in the directory {{path|\materials\skybox\}}. Note that character case does not matter.
+#* {{mono|<skyname>BK.vmt}}
+#* {{mono|<skyname>DN.vmt}}
+#* {{mono|<skyname>FT.vmt}}
+#* {{mono|<skyname>LF.vmt}}
+#* {{mono|<skyname>RT.vmt}}
+#* {{mono|<skyname>UP.vmt}}
+Use the following template for each:
+{{CodeBlock|
+[[sky (Source 1 shader)|sky]]
+{
+[[$basetexture]] <VTF>
+[[$hdrcompressedtexture]] <VTF> // If HDR image is compressed
+[[$hdrbasetexture]] <VTF> // If HDR image is uncompressed, or if skybox is SDR-only
+[[$nofog]] 1
+[[$nomip]] 1
+[[$ignorez]] 1
+}
+}}
+Now, in [[Hammer]], go to ''Map'' > ''Map Properties'' > ''Skybox Texture Name'' and type in {{mono|<skyname>}}, without any side tags.
+
+== Creating a Skybox with XBlah's Modding Tool ==
+LDR Skyboxes can be created straight from image files with the {{Xblahmt|4}} using an intuitive interface, that creates all the required vtfs and vmts. All you have to do is select each cubemap face, preview it, and save. It has a built in 3D previewer to check if the skybox is seamless, and supports the regular square skyboxes and the clamped ones.
+
+This can be accessed within the tool through '''Materials > Skybox Editor'''.
+
+[[File:XBLAH's Modding Tool - Materials - Skybox Editor.png|500px|Clean Mod]]
+
+== See also ==
+* [[light_environment]], [[env_sun]] and [[shadow_control]] entities define the skybox lighting settings, which are emitted from the toolsskybox texture into the map.
+*[[Skybox Optimization]] - A tutorial on how to optimize brushwork skybox.
+*[[Sky List]] - A list of skybox textures (with the values that Valve used)
+* [[Sky Writer]] - A tool to render 3ds Max scenes directly into Source as HDR skies
+{{envart}}
+
+[[Category:Material System]]
+[[Category:Glossary]]
+[[Category:Skybox]]
+
+
+{{stub}}
