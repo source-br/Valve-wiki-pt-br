@@ -1,0 +1,132 @@
+{{translate}}{{wip}}
+{{LanguageBar |title = Comunidade de Desenvolvedores da Valve: Linguagens Alternativas}}
+{{Subpage|[[Help:Contents]]}}
+{{shortcut|VDC:AL}} 
+{{toc-right|width=20%}}
+{{cleanup|anything unclear}}
+
+Esta página é uma referência sobre a existência de idiomas alternativos aqui na Comunidade de Desenvolvedores da Valve. Traduzir a página que você deseja deve ser simples se você for fluente em um idioma. Este artigo não se aprofunda na tradução de artigos.
+
+Para obter informações sobre como adicionar um novo idioma, consulte [[#Language_Checklist|a checklist de liguagens ↓]].
+
+== Traduzir páginas ==
+
+=== Em [[mw:help:namespace|namespaces]] (principal), Categoria, Comunidade de desenvolvedores da Valve e Ajuda ===
+Todas as páginas traduzidas usam {{T|LanguageBar}} para vincular páginas em outro idioma e são independentes. 
+{{note|Algumas páginas ainda têm o antigo {{T|lang}} ou {{T|langsp}}, mas esses modelos foram editados para colocar o LanguageBar e estão aguardando serem reescritos para o LanguageBar}}.
+
+Para obter informações sobre os requisitos para títulos em páginas traduzidas, consulte [[#Titles|os títulos ↓]].
+
+Aqui estão as etapas para traduzir uma página em inglês para outros idiomas:
+
+# Copie o conteúdo da página em inglês. Se não houver uma {{T|LanguageBar}}, você deverá adicionar uma no início da página.
+# Siga os requisitos dos títulos para entrar na página de criação da página do idioma correspondente.
+# Comece a traduzir. Convenções:
+## The links on the translated page within this website need to use template {{T|L}}. For example, {{Code|<nowiki>[[ExampleLink]]</nowiki>}} will become {{Code|<nowiki>{{L|ExampleLink}}</nowiki>}}. If the link has alternative name, then follow this format: {{Code|<nowiki>{{L|<link name>|<alternative name>}}</nowiki>}}. So you can use altname for translating links. {{Code|<nowiki>{{L|Cubemaps|反射贴图}}</nowiki>}} is an example, which is used in Chinese. External links don't need.
+## The categories on the page also need to use {{T|ACategory}}. The method is the same as above. For example, {{Code|<nowiki>[[Category:Entities]]</nowiki>}} will become {{Code|<nowiki>{{ACategory|Entities}}</nowiki>}}. <br>If the category is a link instead of that adding the page to itself, use {{T|LCategory}} (i.e. {{Code|<nowiki>[[:Category:Entities]]</nowiki>}} → {{Code|<nowiki>{{LCategory|Entities}}</nowiki>}}). These 2 templates also support altname like that in {{T|L}}.
+## Templates itself remain unchanged because the language and text inherent in the template are automatically translated. But you need to translate the value of the parameter used in the template. For example, the notes written by {{T|Note}} won't be translated and you should translate them.
+# After finishing translating, save your contributions.
+
+==== Changing links ====
+* {{Code|<nowiki>[[info_target]]</nowiki>}} → {{Code|<nowiki>{{</nowiki>[[Template:L|L]]<nowiki>|info_target|optional altname}}</nowiki>}}
+* {{Code|<nowiki>[[Valve Developer Community:Tasks]]</nowiki>}} → {{Code|<nowiki>{{</nowiki>[[Template:LProject|LProject]]<nowiki>|Tasks|optional altname}}</nowiki>}}
+* {{Code|<nowiki>[[Help:Contents]]</nowiki>}} → {{Code|<nowiki>{{</nowiki>[[Template:LHelp|LHelp]]<nowiki>|Contents|optional altname}}</nowiki>}}
+* {{Code|<nowiki>[[:Category:Level Design]]</nowiki>}} → {{Code|<nowiki>{{</nowiki>[[Template:LCategory|LCategory]]<nowiki>|Level Design|optional altname}}</nowiki>}}
+also Special: links using {{T|LSpecial}} which will take the translation available from the wiki interface. See its documentation for more info
+* {{Code|<nowiki>[[Special:RandomRootpage]]</nowiki>}} → {{Code|<nowiki>{{LSpecial|RandomRootpage}}</nowiki>}}
+
+Following regex can be used in {{npp|1}} to automatize this process (make sure 'Match case' is not ticked)
+<pre>
+Find:
+\[\[(?!#)(?:(?<c>:Category:(?<cl>.*?))|(?<a>Category:(?<al>.*?))|(?<h>:?Help:(?<hl>.*?))|(?<v>:?(?:Project|Valve[ _]Developer[ _]Community):(?<vl>.*?))|(?<s>:?Special:(?<sl>.*?))|(?<m>:?(?!File([ _]talk)?:|Image([ _]talk)?:|Media:|Template([ _]talk)?:|MediaWiki([ _]talk)?:|Talk:|Category[ _]talk:|Project[ _]talk:|Valve[ _]Developer[ _]Community[ _]talk:|Help[ _]talk:|User([ _]talk)?:|c:|commons:|Dictionary:|Google:|GoogleGroups:|IMDB:|M:|Meta:|Metawikipedia:|MW:|SdkBug:|SourceForge:|Steampowered:|W:|Wiki:|WikiBooks:|Wikipedia:|Wikiquote:|Wiktionary:|WP:)(?<ml>.*?)))\]\]
+
+Replace:
+(?{c}{{LCategory|$+{cl}}}:(?{a}{{ACategory|$+{al}}}:(?{h}{{LHelp|$+{hl}}}:(?{v}{{LProject|$+{vl}}}:(?{s}{{LSpecial|$+{sl}}}:(?{m}{{L|$+{ml}}}:))))))
+</pre>
+
+=== {{LMainPage}} <!-- is this relevant info ? --> ===
+The translation on the main page is handled differently using interface language to determine what language to show up in and uses its own unique templates made specifically for it. To translate it edit page {{Code|<language shortcut>/Main Page}}. To make a link to Main Page there is {{T|LMainPage}}.
+
+=== Other namespaces ===
+==== Relevant templates ====
+Relevant language templates (see their doc pages for more info):
+* {{T|language}} - returns language shortcut
+* {{tl2|Uselangflags}} - makes language bar at right side of the page that is changing user's interface language instead of having links to other pages
+
+==== Template namespace ====
+Most templates are set up to be universal and change their language based on where they are being transcluded. This is done most of the time using {{T|language}}.
+
+Usually there is a string subpage created for translations of templates
+* [[Template:Delete/strings|example of string subpage]]
+
+
+Different method used for notices [[:Category:Dictionary/Notices]] 
+
+==== The rest ====
+It would be very rare to need translations in other namespaces and generally it would be done based on user's interface language or in case of User namespaces it could be whatever the user decides to set up there.
+* [[:File:Wireframe_gradient.jpg|example of translated page in File namespace that changes based on interface language]]
+
+
+{{todo|more info}}
+
+== Titles ==
+It is important that all page names contain only [[Wikipedia:ASCII|ASCII]] characters; otherwise, the pages aren't handled correctly by the database. 
+
+:{{tl|LanguageBar}} is a template that will create a series of flags that can switch to the page of the corresponding language. It has adopted the new translation standard. <br>Normally, the titles of most of the translated pages follow this format: {{Code|<language name>/<Page name>}}, which the language name must be abbreviation, and the page name is the same as the English page. An example is [[Zh/Main Page]], which is the translations of Main Page in Chinese. <br>If the page does not belong to {{Code|main}} [[mw:Help:Namespaces|namespace]] (such as {{Code|Category}}), then the format is similar to those pages which are {{Code|main}} namespaces: {{Code|<namespace>:<lang name>/<page name>}}, such as [[Valve Developer Community:Zh/Alternative Languages]]. <br>Actually, the language name prefix determines the language of each page. Templates will determine what language they should use according to the prefix. 
+{{Important|Do not add language name prefix for English pages! English pages do not need their language name to be the prefixs of their names.}}
+{{Important|Do not use this method on templates. Templates do not need extra pages for translating. Instead, translations for templates are combined into the template page itself or some templates use a special string subpage for translating the template.}}
+
+=== Change the Title ===
+There are a number of ways to change how a page title will appear to readers without affecting the URL.
+* {{tl|LanguageBar}}: To translate the title, specify the value of {{param|title}} to what you translated. 
+* {{tl|This is a}} which are used on entity articles, material shader articles, console command/variable articles, etc. and will set a title to specified {{param|name}}
+*<code><nowiki>{{DISPLAYTITLE:</nowiki>''title''<nowiki>}}</nowiki></code> - This is not a template, rather a [[mw:Help:Magic_words|magic word]] to change the page title to whatever you want. All the templates listed use this internally. This should only be used in rare scenarios where all other methods are not viable
+
+== Language Checklist ==
+Every language on the wiki should have:
+
+* Translations for the following pages in the left sidebar:
+** [[Main Page]]
+** [[SDK Docs]]
+** [[Help:Contents]]
+** [[:Category:Source SDK FAQ]]
+** [[:Category:Level Design FAQ]]
+
+* Following template translations:
+** [[:Category:Dictionary/Notices]]
+** [[Template:Software/strings]]
+** {{T|This is a}}
+
+* Optionally
+** you can add translations of other language names to {{tl2|language name}}
+** A [[Valve Developer Community:Translation Dictionary|dictionary of common/technical terms and their translations]].
+
+After these are met following can be done
+* Adding icon of a flag representative of the language [[File:Flag-en.png|16px]] (most if not all already exist)
+* Proper addition to {{tl|link=LanguageBar}}
+* An addition to {{tl2|uselangflags}}
+
+{{todo|More?}}
+
+== Abandoned translations ==
+Translations with very few pages, not meeting most of the language checklist and not edited by user speaking such language in a long time.
+<categorytree>Abandoned translation</categorytree>
+
+== Final Notes ==
+This guide is not definitive, but it makes things much simpler when everyone follows one method of translating content, so everything in the wiki stays consistent throughout languages.
+
+Please fully translate pages. A page partially in another language is simply not helpful for readers who only know one language.
+
+If a page has received an important update, all translations of the page (or just the desired ones) can be quickly marked with {{T|Updatetranslation}} by pressing the white flag (needs better icon) in the language bar and following further instructions there.
+
+== See also ==
+* [[:Category:To_be_translated]]
+* [[:Category:Translation]]
+* {{tl|[[template:Translate|Translate]]}}
+* {{T|LanguageBar}}
+* {{T|Language}}
+* {{T|L}}
+
+
+[[Category:Languages]] 
+[[Category:Wiki]]
