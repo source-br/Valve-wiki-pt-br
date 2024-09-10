@@ -1,0 +1,79 @@
+{{LanguageBar}}
+{{subpage|[[Skybox Basics]]}}
+Adding a ''3D skybox'' can be a powerful addition to the visual treatment of a level. The 3D skybox is an extra area constructed by the level designer that is outside the bounds of the gameplay portion of the map. When the map is loaded, Source enlarges the objects in the 3D skybox area and places them outside the boundaries of the current level, between the [[skybox]] and the player. This is used to give the appearance of a much wider world out side of your level, without being too expensive on the budget due to the (by default) 1:16 scale. 3D skyboxes are non-interactive – the player and other entities cannot move into the 3D skybox space.
+
+3D skybox geometry can be indistinguishable from normal level geometry. Seamless transitions from normal level geometry and 3D skybox are very possible, and are used in many of the maps for official Source games such as [[Counter-Strike: Source]].
+
+{{bug|In {{Portal|4.1}}, ''3D skyboxes do not render properly when observed through portals.'' - [[:Image:3dSkyboxProb.png|see here]].|only=portal}}
+{{modernImportant|A 3D skybox is not a replacement for a [[2D skybox]]. Instead, a 3D skybox should be considered a "skyroom", which is always drawn behind regular level geometry, and of which the regular (2D) skybox is always drawn behind.}}
+{{note|{{clr}}
+* In {{l4d|4.1}}, the default scaling is 1:32, NOT 1:16 (But 1:16 works properly!)
+* To avoid lighting problems, do not use [[light]] (or any other lights without the Env_ prefix) in the skybox
+:{{why|What sort of problems? You can have a separate [[light_environment]] in the skyroom and it will work fine.}}
+* In {{Portal2|4.1}} some skybox geometry won't be visible unless you set the cvar <code>r_skybox_draw_last</code> to <code>0</code>.}}
+
+==Benefits==
+Standard skyboxes are simple 2D images, mapped onto a cube so they surround the level. 3D skyboxes are full 3D geometry, and properly parallax as the player moves through the level. Since they are rendered in real time, they scale with the video card resolution and also support real-time shader effects not possible in 2D skyboxes.
+
+The main benefit of using a 3D skybox is that it allows the level designer to make the map look much larger than is possible with the standard world geometry. The largest map that can be made without a 3D skybox is 32768 units on each side. Using a 3D skybox, the map can be extended to 16 times that amount.
+
+Maps of this size are possible because 3D skyboxes are created in the Hammer editor at 1/16 the scale of standard maps. At run time, the engine scales them back up to match the scale of the rest of the map. Not only does this save space in the editor views, it also is much less expensive to compile and render.
+
+Due to their scale, 3D skyboxes have much lower lightmap and texture resolution. This makes 3D skybox geometry less expensive performance-wise than standard world geometry.
+
+3D skyboxes can be used to overcome draw distance limitations, if a low-detail skybox identical to the main map is created. A mod team wanting to do this would have to develop code to ease the transition between map versions.
+
+===Basic characteristics===
+3D Skyboxes have the following characteristics:
+* Are constructed (by default) in 1/16 scale in the Hammer editor and then rendered at 16 times size in the engine to match the world geometry.
+* Support materials with shader effects such as normal mapping, water, environment mapping, proxies, etc.
+* Are non-interactive – players and other world entities cannot enter 3D skyboxes. The 3D skybox is just a visual extension of the map extents.
+* Can be constructed with brushes, displacements, static and dynamic props, lights, brush entities, and point entities (such as {{ent|env_sprite}}).
+* Any models that are placed in the 3D skybox must be authored at 1/16 scale. Standard models ([[Prop_Types_Overview|props]]) are not scaled properly for 3D skybox. Special 1/16 scale versions must be used. For {{hl2|4.1}}, these props can be found in the <code>models/props_skybox</code> directory.
+* Should not contain {{ent|info_player_start}}, NPCs or monsters.
+* Have lower lightmap and texture resolution because of the scale at which they are created.
+* Must have their own lighting sources, although a {{ent|light_environment}} in the non-skybox section will also be used for the 3D skybox lighting.
+* Use the {{ent|sky_camera}} entity to control how they line up with the non-skybox world geometry.
+* 3D skyboxes have their own fog parameters, adjustable in the {{ent|sky_camera}} entity.
+* Geometry in the 3D skybox is not occluded or culled like the rest of the level geometry. Adding lots of detailed brush geometry or models to the 3D skybox, especially with translucent materials, can severely affect performance.
+* A map must have a {{ent|light_environment}} in it, otherwise models in the 3d skybox will be lit incorrectly. A <code>light_environment</code> in the non-skybox part of the map negates the need for one in the 3D skybox.
+
+==Construction of 3D skyboxes==
+* A note about the {{ent|sky_camera}} entity: point entities do not scale down.
+
+The most efficient way of creating a 3D skybox that matches or "lines up" with the your current map is to use some of the geometry in the main part of the level. Follow these steps after you've created your main level geometry:
+
+# Add a {{ent|sky_camera}} entity at the world origin (coordinates 0, 0, 0), the center of the map grid. The {{ent|sky_camera}} is a reference point used by the renderer to align the 3D skybox with the main part of the map. In other words, it acts as a marker telling the renderer how the 3D skybox's origin and the world's origin relate to one another. You can think of this process as being similar to selecting all the 3D skybox geometry and then aligning the {{ent|sky_camera}} entity in that selection with the world's origin '''(0,0,0)'''. The geometry is ''translated'' back to that position in the world. This is the same concept used when the skybox is rendered in the engine.
+# Select some distinct parts of the level that you can use a guideline for scale and position in the 3D skybox. Common elements to select for this purpose would be some of the larger structures, as well as the walls, cliffs, hills, etc. that define the edges of the map. Make sure you also have the {{ent|sky_camera}} you created selected as well. {{note|It is important '''not''' to select any model entities, only brushes. Models cannot be used as reference geometry, because {{ent|prop_static}} cannot be scaled down in the Hammer editor {{in|{{csgobranch}}{{strata}}|prefix=''except''}}.}}
+# Choose '''Copy''' from the '''Edit''' menu, or hit CTRL-C.
+# Choose '''Paste Special''' from the '''Edit''' menu. Set the '''Number of copies to paste''' to '''1''', and all other values to '''0'''. Hit '''OK'''. This makes a duplicate of the geometry you had selected.
+# Turn on '''Scaling Texture Lock''' in the toolbar, if it is not already on. Its icon resembles <tl>. This will shrink the textures along with the geometry.
+# Leaving geometry selected, choose '''Transform''' from the '''Tools''' menu. Select the radio button next to '''Scale'''. Type in a value of '''.0625 for X, Y and Z.''' This is the decimal equivalent to 1/16 – the scale of the 3D skybox. Click '''OK'''. {{note|If you want textures on the geometry to scale accordingly, make sure you have scaling texture lock enabled.}}
+# You now have a 1/16 scale version of your reference geometry. Now drag (move) it to another part of the map where you wish build your 3D skybox. It doesn't matter where it is as long as it's not touching any part of the main level geometry area.
+# Delete the {{ent|sky_camera}} entity from the normal world map area you started from. ''Important'': only the {{ent|sky_camera}} entity in the 3D skybox should remain in the map. In L4D2 (and possibly other Source games), forgetting this step (having multiple sky_cameras in your map), will result in every Navigation area being blocked.
+# Build your 3D skybox geometry around the reference geometry, using it as a guide. You can build skybox geometry that meets the reference geometry seamlessly. You can use brush and displacement geometry. Models can also be placed, but since the 3D skybox is at 1/16 scale, any models must also be at 1/16 scale. The model <code>hl2\models\props_skybox\coast01.mdl</code> is a sample model in 1/16 scale. Try positioning the 3D view camera near the height of the player. This will give you a good idea of how the 3D skybox will look when it's rendered in the engine.
+# Add a hollow cube of brushes around your reference geometry and assign the <code>tools\toolsskybox</code> material to it. The standard 2D cubic skybox will appear on these surfaces. The 3D skybox area must be sealed with these brushes.
+# When you're done, delete or hide all of the reference geometry '''except''' for the {{ent|sky_camera}} entity. You may find that it work best to add the reference geometry to its own visgroup so that it can be toggled on and off or re-placed. Just make sure you turn it off before you save and compile the level, or it will be compiled into the 3D skybox.
+# If you have brushes inside your 3D skybox other than the reference geometry, make all of these brushes {{ent|func_detail}} brushes. {{Note|The only exception to this is displacements. For obvious reasons, do not tie displacements to an entity.}}
+# Your original map still needs the <code>tools\toolsskybox</code> material wherever you want to see the sky, however it will now show the 3D skybox as well as the 2D skybox (which is what it did previously).
+# If you want a part of your map to only show the 2D skybox and not the 3D skybox geometry, use the tools\toolsskybox2d texture, which only draws the 2D skybox. There are no restrictions for this texture and it can be used together the normal skybox texture without problems. This feature is useful when you have I.E. a window and you only want to see the sky from it, like if you are in a very tall building.
+
+==Testing==
+If you properly sealed your 3D skybox and your map does not have a [[leak]], you can now compile the map and check out your new 3D skybox in the engine.
+
+== Examples ==
+* See <code>sdk_content\hl2\mapsrc\sdk_3d_skybox.vmf</code> for an example of a 3D skybox.
+* [http://www.steamreview.org/external/vdc/3dskybox/3dskybox_drawdistextend.zip An example of extending draw distances with 3D skyboxes] (commented)
+* [https://web.archive.org/web/20191224085102/http://www.type3studios.com/downloads/tutorials/SdkNutsTutorials/akg_3Dskybox01.zip 3D Skybox Video Tutorial]
+* [https://web.archive.org/web/20191224085103/https://www.type3studios.com/downloads/tutorials/SdkNutsTutorials/wiseEscape.zip HL2 sample VMF for 3D Skybox water/world]
+
+== Making 3D Skybox in 3ds Max ==
+You can also create your 3D Skybox in a much simpler way than the traditional Hammer method if you build your level inside [[3ds Max]] with [[Wall Worm Model Tools]]. Wall Worm lets you build your 3D Skybox at the scale of the map and avoids the need to shrink down the skybox.
+
+To do this, simply "tag" the skybox geometry with the Tag functions in the Anvil tools that come with Wall Worm. 
+
+[http://dev.wallworm.com/document/114/exporting_a_level_from_3ds_max_into_source.html See a demonstration and download a sample scene here.]
+
+== See also ==
+* [[Creating custom terrain with Worldmachine]]{{envart}}
+[[Category:Level Design]][[Category:Tutorials]][[Category:Skybox]][[Category:Source]]
