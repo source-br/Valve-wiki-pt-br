@@ -1,0 +1,48 @@
+{{LanguageBar}}
+{{strata topicon}}
+[[File:Strata Logo.png|thumb|right|The Strata Source logo]]
+{{strata|4}} (more informally known as {{strata|3|nt=0}}, and formerly known as the {{strata|3|nt=3}}) is a third-party {{Source|4}} engine branch using licensed code. It is a modified version of the {{csgobranch|2}} that combines the features of both [[CS:GO]] and the {{p2branch|2}}, along with many improvements that bring Source close to modern standards. This engine branch was first released publicly with the launch of {{portalrev|2}}, and is still in active development.
+
+==Features==
+[[File:Portal Revolution - Screenshot 4.jpg|300px|thumb|right|Example from [[Portal: Revolution]] showing the intricate environments capable with Strata Source]]
+Feature list from the [https://stratasource.github.io/Wiki/ Strata Source Wiki]<br/> 
+New since the {{csgobranch|1}}:
+; Native [[wikipedia:Direct3D#Direct3D 11|Direct3D 11]] renderer
+: Replaces Direct3D 9 renderer, and adds some new features that previous version of Direct3D doesn't have.
+; [[Vulkan]] renderer on Linux, using DXVK to convert DX11 calls to Vulkan
+; 64-bit executable
+: Game runs on 64-bit on all platforms; 32-bit and Mac OS support has been dropped. 64-bit allows better performance and allows the game to access more than 4GB of RAM.
+; [[Physically Based Rendering|PBR]] shaders
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Introduces a new {{Shader Name|PBR (Strata shader)|alt=PBR}} shader that attempts to create realistic reactions to light
+; Ported {{portal2branch|1}} features
+: Including but not limited to [[linked portal door|World Portals]] and [[weapon portalgun|Portal gun]]
+; Backwards compatibility with BSP v19-21, as well as BSP v25 support
+; Backwards compatibility with {{src13|4}} (and older) branch models
+: The model format found in games such as {{hl2}}{{tf2}}{{portal}}{{css}}{{dods}} is now supported.
+; [[WEBM]] video support, replacing older [[BIK|Bink]] videos
+: Increased framerate, lower file sizes, and easier to author
+; New v7.6 [[VTF]] version
+: Adds support for the higher-quality ATI1N, ATI2N, BC6H, and BC7 texture compression formats, as well as lossless {{w|deflate}} compression on top of existing image format, for reduced size. Better support for 4K textures{{how}}.
+; Many improvements to Linux support
+; Fully cross-platform engine tools and utils
+; Steam Audio
+; Many improvements to the {{Hammer|2}} level editor, named {{hammerqt|2}}
+; Many code quality improvements (Refactors, cleanup, and C++20)
+; [https://sentry.io/welcome/ Sentry] crash report integration
+
+==Availability==
+{{see also|[[:Category:Strata Source engine branch games]]}}
+The following titles run on the {{strata|2}} branch:
+* {{p2ce|4}}
+* {{momentum|4}}
+* {{portalrev|4}} (Uses older version of {{p2ce|3.1|nt=1}} as a base)
+
+The source code for this branch is '''not''' available, however, authoring tools exist for each game, located in {{path|/bin/win64/}}.
+
+==See also==
+*[https://wiki.stratasource.org/shared/ Strata Source's Wiki]
+*{{Mapbase|4}}, a mod for {{Src13sp|3.1}} with similar goals
+*{{asd|4}}
+*{{strataHammer|4}}
+{{branch-navbox}}
+[[Category:Third-Party Engine Branches]]

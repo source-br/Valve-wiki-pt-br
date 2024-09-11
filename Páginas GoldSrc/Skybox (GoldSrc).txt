@@ -1,0 +1,97 @@
+{{gldsrc topicon}}{{back|Half-Life SDK/Textures}}{{cleanup}}
+[[File:Sky desert GoldSrc.png|thumb|256px|right|The default desert skybox]]
+Skyboxes in {{gldsrc|4}} are simple "cubemap" textures that display in the background behind the level.
+{{bug|Skyboxes are always filtered in OpenGL mode with {{code|GL_LINEAR}}, regardless of {{code|GL_TEXTUREMODE}} setting ([https://github.com/ValveSoftware/halflife/issues/2606 relevant issue on GitHub])}}
+{{todo|Mention and explain using an [[MDL (GoldSrc)|MDL]] "skybox" for simulated 512x512 (or even 1024x1024!) skies outside of {{Sven}}.}}
+
+== Adding sky to a map ==
+Simply texture a [[world brush]] (not a [[brush entity]]) with the [[tool textures (GoldSrc)|{{code|sky}}]] texture.
+
+In-game, the skybox will be seen ''through'' each surface that {{code|sky}} is applied to. 
+
+{{code|sky}} brushes do ''not'' need to be box-shaped.
+
+{{note|Ideally, your skybox should somewhat "wrap" around your map such that there is only a very small/zero amount of space between the play-space and the skybox itself, though it's usually not necessary to have the skybox "hugging" the bounds of the map to achieve reasonable compile times. Leaving some visible space between the playable space and the skybox can improve gameplay and world believableness.}}
+{{warning|You should avoid making a skybox by drawing a big hollowed out cube with the {{code|sky}} texture around your map. This can drastically increase VIS compile times.}}
+{{bug|[[VHLT]] expects the first three characters of any {{code|sky}} tool texture to be all lowercase and will not compile skies correctly if the tool texture does not fit these criteria.}}
+{{modernImportant|The skybox is always drawn ''behind'' all other visible geometry! Don't put any geometry behind a {{mono|sky}} brush if it is part of the same [[PVS]]{{clarify}}.}}
+
+== Changing the displayed skybox ==
+[[File:Sky_change_JACK.png|thumb|right|350px|Changing a map's skybox in {{jack|4}}]]
+
+By default, no skybox is defined, so GoldSrc defaults to the {{code|desert}} skybox. You can change it by setting the skybox name in Hammer's Map Properties dialog. With the correct map opened, follow these steps:
+# Go to the [[Hammer Map Menu|Map menu]] 
+# Choose '''Map Properties...''' from the drop down list
+# In the Object Properties window, select the '''enviroment map (cl_skyname)''' field.
+# Enter the name of the skybox you wish to display. If using a supported [[FGD]], {{jack|4.1}} will show a drop down list of skyboxes available to the current game configuration.
+{{note|If a skybox name includes an underscore before the suffix, include that as well.}}
+{{clr}}
+
+== Creating a Custom 2D Skybox Texture ==
+Skybox textures in GoldSrc MUST be 256x256 {{svencoop|in|addtext-front=''except''}}, and they follow the same naming convention as {{quake2|2}} and {{src|2}}, as so:
+ <skyname>BK
+ <skyname>DN
+ <skyname>FT
+ <skyname>LF
+ <skyname>RT
+ <skyname>UP
+Both TGA and BMP images are supported, but TGA is recommended for quality and compatibility reasons.<br>
+Software mode defaults to BMP skyboxes, and reads the TGA version if a BMP version is not present.<br>
+OpenGL mode defaults to TGA skyboxes. It will attempt to use the BMP version if a TGA version is not present, but not all modern GPUs support this.<br>
+Skybox textures must be encoded using the following settings
+{| class="wikitable"
+|-
+! Format 
+| TGA || BMP
+|-
+! Resolution
+| 256 x 256 || 256 x 256
+|-
+! Color depth 
+| 24-bit (true color) || 8-bit (256 colors, no fewer)
+|-
+! Compression 
+| Uncompressed or RLE compression || Uncompressed
+|-
+! Additional settings
+| Image origin: Bottom-Left || Compatibility: No color space information
+|}
+Skybox textures must be put in {{path|<moddir>\gfx\env\}}, or a subfolder thereof.
+
+{{tip|{{svencoop|only}} Sven Co-op supports 512x512 and 1024x1024 skybox textures, in addition to 256x256.}}
+{{warning|Avoid leaving an alpha channel in the skybox textures; this can result in the sky faces appearing upside-down!{{note|This will affect ports of skyboxes from the 2023 {{quake2|2}} remaster, which almost all would otherwise be compatible.}} }}
+<gallery mode=nolines widths=256px heights=160px>
+Gimp tga export.png‎‎|{{Gimp|4.1}} export settings for TGA skyboxes; RLE compression is optional
+Gimp bmp export.png‎‎|{{Gimp|4.1}} export settings for BMP skyboxes (optional in Steam release)
+</gallery>
+
+== Creating a skybox for GoldSrc, using [[Source]] ==
+It is possible to create an area of a {{src|4.1}} map into a Skybox to be used in {{gldsrc|4.1}}. Here's an simple example:
+# Create a large outdoor area with some displacement maps and treelines, and fog to hide the edges. Let's call it {{mono|'''carrotjuice'''}}.
+# Load the carrotjuice map ingame and turn cheats on ({{cmd|sv_cheats|1}}).
+# Activate {{cmd|noclip}} mode by simply opening the console and enter {{mono|'''noclip'''}} and hit Enter.
+# Fly to the center of where you want the skybox. Use {{cmd|setpos}} if a specific coordinate is desired.
+# Open up the console and type {{cmd|mat_envmaptgasize|256}}, hit {{key|Enter}}.
+# Now type {{cmd|envmap}} and press Enter. Now, 6 TGA files are now created and saved into a folder named {{mono|'''cubemap_screenshots'''}} in your Source game's mod folder ( i.e. for {{portal2|2}}: {{path|Steam\steamapps\common\Portal 2\portal2\cubemap_screenshots}}).
+Since the mapname was {{mono|'''carrotjuice'''}}, the name of the 6 TGA files are as following:
+
+:{{file|carrotjuicert|tga}} ''(Right)''
+:{{file|carrotjuiceft|tga}} ''(Front)''
+:{{file|carrotjuicelf|tga}} ''(Left)''
+:{{file|carrotjuicebk|tga}} ''(Back)''
+:{{file|carrotjuiceup|tga}} ''(Up)''
+:{{file|carrotjuicedn|tga}} ''(Down)''
+
+You can now copy or move these to your mod's {{path|gfx\env}} folder, to use it as skybox in a level.
+
+{{note|If the cubemap screenshots include the hud (such as in {{l4d2}}), {{cmd|bind}} {{cmd|envmap}} to a key instead of using it from the console.}}
+
+== See also ==
+* [[Skybox (2D)]]
+
+== External links ==
+* [http://the303.org/tutorials/gold_texture_p8.htm Custom Skies tutorial by The303]
+
+[[Category:GoldSrc]]
+[[Category:GoldSrc Textures]]
+[[Category:Skybox]]

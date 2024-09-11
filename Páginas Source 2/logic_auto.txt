@@ -1,0 +1,28 @@
+{{tabsBar|main=s2|base=Logic_auto}}
+{{this is a|point entity|name=logic_auto|engine=Source 2}} It fires [[Inputs and Outputs#Outputs|output]]s immediately after a map loads, unlike most other [[Entity|entities]] that wait for input first. It can be set to check a [[env_global|global state]] before firing, which allows you to fire events based on what took place in a previous map.
+{{CD|CLogicAuto|file1=logicauto.cpp}}
+{{warning|Attempting to directly access or modify the [[player]] may cause Access Violation errors, because the outputs are fired before the player has spawned. Adding a slight time delay may overcome this.}}
+
+{{note|In {{cs2|4}} when a map loads and when the round is reset (including resets for warmup and resets in any other [[CS:GO Game Modes|game mode]]), this entity fires the 3 outputs <code>OnNewGame</code>/<code>OnBackgroundMap</code> (exactly one of these, see below), <code>OnMapSpawn</code> and <code>OnMultiNewMap</code> in this order.}}
+
+==Keyvalues==
+{{KV|Global State to Read|intn=globalstate|choices|If set, this specifies a global state to check before firing. Outputs are only fired if this global state exists and if it is turned on. {{note|Valve's [[FGD]]s always include the {{hl2|4}} global states here, but any value can be entered. See {{ent|env_global}} for a list of default global states in each game.}}}}
+
+==Flags==
+{{def|num=1|Remove on fire}} Whether the <code>logic_auto</code> is deleted after firing. Delayed outputs will still work, however.
+
+==Inputs==
+{{I BaseEntity (Source 2)}}
+
+==Outputs==
+{{IO|OnMapSpawn|Fired when the map is loaded for any reason.}}
+{{IO|OnNewGame|Fired when the map is loaded to start a new game.}}
+{{IO|OnLoadGame|Fired when the map is loaded from a saved game.}}
+{{IO|OnMapTransition|Fired when the map is loaded due to a level transition.}}
+{{IO|OnBackgroundMap|Fired when the map is loaded as a background to the main menu.}}
+{{IO|OnMultiNewMap|Fired only in multiplayer, when a new map is loaded.}}
+{{IO|OnMultiNewRound|Fired only in multiplayer, when a new round is started. Only fired in multiplayer games that use round-based gameplay.}}
+{{IO|OnDemoMapSpawn|Fired when the map is loaded in Demo Mode.}}
+{{IO|OnVREnabled|Fired when the map is loaded with a VR HMD active.}}
+{{IO|OnVRNotEnabled|Fired when the map is loaded without a VR HMD active.}}
+{{O BaseEntity|s2=1}}

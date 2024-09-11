@@ -1,0 +1,98 @@
+{{LanguageBar}}
+
+[[File:Brickwall021a normalcompare.jpg|thumb|200px|O [[albedo]] de um material (esquerda) comparado ao seu bump map.]]
+
+[[File:Example of bump mapping.jpg|thumb|200px|O material acima dentro do jogo.]]
+
+Texturas chamadas '''Bump Maps''', ou '''Normal Maps''' são usadas para simular detalhes tridimensional em uma superfície bidimensional manipulando a como a iluminação.
+
+{{note|Props estáticos usando bump maps não podem ter iluminação per-vertex, exceto em {{L|csgo}} e {{L|Strata Source}}. {{L|$lightmap}} também e incompatível com {{L|$bumpmap}}.}}
+{{note|Bump maps não podem ser usadas como texturas decal, exceto em {{L|csgo}} e {{L|Strata Source}}. Em ordem para que esses funcionem corretamente, a superfície que eles são aplicadas devem também conter uma bumpmap.}}
+
+== Formatação ==
+Cada pixel em uma bump map contem as coordenadas (x, y, z) que definem o {{L|vector}} {{L|normal}}izado.
+
+Por causa disso cada canal de cor em uma bump map tem um proposito:
+; Red
+: Voltado para a horizontal (eixo X).
+:* 0 = esquerda
+:* 128 = para a frente, ou encarando o espectador
+:* 255 = direita
+; Green
+: Voltado para a vertical (eixo Y).
+:* 0 = cima
+:* 128 = para a frente, ou encarando o espectador
+:* 255 = baixo
+; Blue
+: Altura (eixo Z).
+:* 0 = voltado para 'dentro' da textura, longe do observador. Este é um valor 'ruim'. Qualquer coisa abaixo de 128 significa que a superfície deve estar voltada para longe do jogador, o que não é possível.
+:* 128 = profundidade máxima capaz de receber luz dinâmica. É uma má ideia ir há baixo disto.
+:* 255 = voltado para fora da textura em direção ao observador.
+
+{{note|Uma bump map plana deve ser [128, 128, 255]. <code>dev/flat_normal</code> e uma textura bump map presente em todos os jogos.}}
+
+Os três canais representam um vector normalizado para cada pixel que representa a direção que cada pixel estar virada no espaço 3D. Isto permite que a engine gere sombras e destaques em uma superfície bidimensional, ou dar um modelo 3D mais detalhe.
+Uma bump map e grandemente inútil para superfícies bem planas, tipo superfícies suaves como concreto ou metal, mais as vezes ate concreto suave tem profundidade o suficiente para fazer uma valer a pena, especialmente se usada em conjunto com um {{L|cubemap}}.
+
+[[file:normalmap.gif]]
+
+== Criação ==
+Uma bump map deve ser renderizada em um espaço Tangente e fazer uso das direções do vector X+ Y- Z+.
+
+{{note|Há basicamente apenas duas regras para normal maps: {{L|DirectX}} e {{L|OpenGL}}. A interpretação deles de canais verde são opostas. {{L|Source}} usa o primeiro, enquanto {{L|Source 2}} usa o segundo. Assim, os canais verde talvez tenham de ser invertido dependendo do programa que usado para cria-la. }}
+
+=== Programas ===
+[[File:Test_bump.jpg|thumb|600px|Exemplo de Bump maps criadas por diversos programas.]]
+
+Vários programas podem automatizar a criação de bump maps, seja por analise de imagens ou usando geometria 3D que o usuário crie.
+;2D
+:{{L|Normal Map Creation in Photoshop or Paint Shop Pro|Photoshop ou Paint Shop Pro}}
+:[http://www.youtube.com/watch?v=WsFe-E-33IQ Substance Designer]
+:{{L|Normal Map Creation in The GIMP|O GIMP}}
+:[http://www.youtube.com/watch?v=xDZDWvTUz-c nDo]
+:[http://filterforge.com/filters/8774.html Filter Forge]
+:{{L|XBLAH's Modding Tool}}
+:[https://charles.hollemeersch.net/njob/ nJob]
+;3D
+:{{L|Normal Map Creation in XSI|XSI}}
+:{{L|Normal Map Creation in ZBrush|ZBrush}}
+:{{L|Normal Map Creation in Lightwave|Lightwave}}
+:{{L|Normal Map Creation in 3ds Max|3ds Max}}
+:{{L|Normal Map Creation in Maya|Maya}}
+:{{L|Normal Map Creation in Blender|Blender}}
+:{{L|Materialize}}
+:[http://www.nvidia.com/object/melody_home.html NVIDIA Melody]
+:[http://planetpixelemporium.com/tutorialpages/normal2.html Cinema 4D]
+:{{L|NormalMapper}}
+:[http://xnormal.net/ xNormal]
+;Outros
+:[https://cpetry.github.io/NormalMap-Online/ NormalMap Online]: Um website para a geração de normal maps online.
+:[https://sourceforge.net/projects/ssbumpgenerator/ SSBump Generator 5.3]: Apesar do nome, ele também pode ser usado para gerar bumpmaps, não apenas {{L|$ssbump|self-shadowing bump maps}}.
+:[http://store.steampowered.com/app/325910/ Substance B2M3]: Anteriormente conhecido como BitMap2Material.
+:[https://sites.google.com/site/ccdsurgeon/download/ InsaneBump]: Feito para ser especialmente uma alternativa gratuita para o agora substituído programa "CrazyBump" (pode acabar alertando o antivírus devido à incompatibilidade)
+
+=== Conversão ===
+
+==== No {{L|VTFEdit}} ====
+Quando convertendo sua textura:
+# Escolha o formato de sua imagem. Formatos descomprimidos como BGR888 são de alta qualidade quando comparada com formatos comprimidos como DXT1, mas tenha cuidado com o tamanho do arquivo.
+# Cheque a caixa "Normal map" na lista de flags da textura após a importação ser concluída. Está cerca de 1/5 do caminho para baixo na lista.
+
+{{tip|VTFEdit pode gerar bump maps automaticamente. Veja o canto inferior direito da tela de importação.}}
+
+==== Em {{L|Vtex (Source 1)|Vtex}} ====
+# Salve suas normal maps como {{L|TGA}}. De a elas um nome que acabe em ''_normal''. O ''_normal'' no final do nome ira afetar como o {{L|Vtex (Source 1)|Vtex}} converte-as. Para uma parede de tijolo como exemplo, nos nomearíamos o arquivo como <code>brickwall_normal.tga</code>.
+# Adicione <code>nocompress 1</code> e <code>normal 1</code> para o <texture filename>.txt na mesma pasta que sua textura, então compile-a.
+
+=== Implementação ===
+Veja {{L|ent|$bumpmap}}.
+
+== Veja também==
+*{{L|ent|$ssbump}}: criação e uso do novo bump maps self-shadowing da Valve.
+*[http://planetpixelemporium.com/tutorialpages/normal.html Um artigo antigo que explica muito bem normal mapping]
+*[http://wiki.polycount.com/wiki/Normal_map Página wiki do Polycount sobre normal maps]
+*{{L|Creating a Material}}
+
+{{ACategory|Material System}}
+{{ACategory|Glossary}}
+{{ACategory|Tutorials}}

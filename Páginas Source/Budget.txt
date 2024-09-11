@@ -2,16 +2,16 @@
 
 Em design de jogos, o '''budget''' e a quantidade de tempo disponível para o processamento de cada frame.
 
-*300 (ou 400 em novas versões de {{L|csgo|2|nt=1}}) [[Wikipedia:Frame rate#Frame_rates_in_video_games|frames por segundo]] (FPS) e o máximo na {{L|source|1}} engine por padrão, por mais que atraves dele o desempenho por ser ilimitado usando o comando {{L|code|fps_max}} no console. Indo alem de ~1000 FPS em qualquer jogo Source, pode causar problemas com o tempo e {{L|tickrate}}. O memsmo se aplica a {{L|gldsrc|1}} quando acima de ~100 FPS (acima de 72FPS em versões pre-SteamPipe e versão Retail/WON), quebrando o movimento de rotação dos NPC e objetos moveis.
+*300 (ou 400 em novas versões de {{L|csgo}}) [[Wikipedia:Frame rate#Frame_rates_in_video_games|frames por segundo]] (FPS) e o máximo na {{L|source}} engine por padrão, por mais que atraves dele o desempenho por ser ilimitado usando o comando {{code|fps_max}} no console. Indo alem de ~1000 FPS em qualquer jogo Source, pode causar problemas com o tempo e {{L|tickrate}}. O memsmo se aplica a {{L|GoldSrc}} quando acima de ~100 FPS (acima de 72FPS em versões pre-SteamPipe e versão Retail/WON), quebrando o movimento de rotação dos NPC e objetos moveis.
 *Há 60 FPS, o valor optimo e recomendado, cade frame deve ser renderizado há '''16.6 millisegundos''' ou menos.
 *Há 30 FPS, o menor valor aceitavel, o budget permite ate '''33.3 millisegundos''' por frames.
 
 {{tip|Na maioria das vezes, é o processamento gráfico que ocupa a maior parte do budget. A IA e as regras do jogo não têm desculpa para se tornarem {{L|expensive}} dentro de um único frame, e os cálculos da {{L|physics}} podem ser mantidos sob controle limitando o número de objetos interagindo a todo momento.}}
 
-Em termos praticos, é impossível atingir uma taxa de quadros definida na plataforma PC, já que o hardware pode variar muito e afetar o desempenho em todos os tipos de áreas diferentes, então não se preocupe muito com os números acima. Sua melhor aposta como um moodder e garantir que o jogo rode com um bom desempenho com as configurações gráficas no medio em hardware modestos, e então permitir que seus jogardores alterem as configurações gráficas para de acordo com as capacidades de seus sistemas.
+Em termos práticos, é impossível atingir uma taxa de quadros definida na plataforma PC, já que o hardware pode variar muito e afetar o desempenho em todos os tipos de áreas diferentes, então não se preocupe muito com os números acima. Sua melhor aposta como um moodder e garantir que o jogo rode com um bom desempenho com as configurações gráficas no medio em hardware modestos, e então permitir que seus jogardores alterem as configurações gráficas para de acordo com as capacidades de seus sistemas.
 
 == Monitorando o seu  Budget ==
-O comando do console para monitorar desempenho da ferramenta integrada da Source e {{ent|showbudget}}.
+O comando do console para monitorar desempenho da ferramenta integrada da Source e {{L|ent|showbudget}}.
 
 == Veja também ==
 *{{L|Cheap}}

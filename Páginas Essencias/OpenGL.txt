@@ -1,0 +1,70 @@
+{{cleanup|grammar}}
+{{todo|Write about custom OpenGL renderer in {{xash|4}}/{{paranoia|4}}/{{cof|4}} and etc. (possibly also {{csneo|4}}?)}}
+'''OpenGL''' is a cross-platform 3D graphics API, which is used by the hardware renderers of {{gldsrc|1}} and {{idtech2|1}}, as well as one {{src2|1}} game ({{dota2|1}}). It is also used on {{Src|1}} engine, for systems that doesn't support [[Direct3D]] ({{mac|1}} and {{linux|1}}), and for [[GLView]].
+
+OpenGL was later superseded by [[Vulkan]], released in 2016. OpenGL was discontinued in 2017, having reached version 4.6.
+
+=={{idtech2|name}} (GLQuake)==
+{{todo|{{quake2|4}} has additional stuff that goldsrc uses}}
+{{idtech2|4}} (GLQuake) uses [[OpenGL]] version 1.0.
+[[File:GLQuake 1.png|thumbnail|Screenshot in-game of {{Quake|4}} GLQuake, using OpenGL.]]
+====Features====
+*'''Experimental Reflections'''
+*'''Translucent Water'''
+*'''Dynamic Shadows''' 
+{{note|To enables Dynamic Shadows {{code|r_shadows}} must be set to {{code|1}}}}
+*'''Texture Filtering'''
+*'''32-bit color'''
+
+==GoldSrc==
+{{gldsrc|4}} uses [[OpenGL]] version 1.0 which is same version as using the {{idtech2|4}} (GLQuake).
+{{Confirm|According to PCGW, it mentions that HL uses OpenGL 2.1 (with latest version). Confirm if Mac or Linux version use any other version of OpenGL such as 2.1 or 1.x like Windows.}}
+[[File:Half-life opengl.png|thumbnail|Screenshot in-game of {{hl1|4}}, using OpenGL.]]
+====Features====
+* '''Colored lighting''' - Quake simply had monotone lighting
+* '''Translucent and transparent textures''' - Glass can now be used in maps
+* '''Water waves'''
+*'''Texture Filtering''' - like [https://quake.fandom.com/wiki/GLQuake GLQuake]
+* '''[[Detail textures (GoldSrc)|Detail textures]]''' (since 2004)<!-- DoD 1.2 and CZero -->
+* '''Dynamic Shadows''' ({{cmd|r_shadows}}; removed in 2003 Steam update, but re-added in 25th Anniversary update)
+=====Since 2013 SteamPipe Update=====
+* '''FBO renderer''' - A new method of rendering the game, which allows MSAA to work with GoldSrc engine. This also allows the game to run on fullscreen in a borderless window.
+* '''MSAA [[anti-aliasing]]''' - GoldSrc now natively performs 4x MSAA, reducing the amount of jagged edges/staircase effect on the geometry. This is automatically enabled when using the FBO renderer, unless the {{code|-nomsaa}} [[command-line option]] is used.
+
+===Svengine===
+{{Svengine|1}} uses OpenGL 1.x with some 3.x features.
+
+==Source==
+In {{src|4}}, [[OpenGL]] uses [[ToGL]] to convert [[DirectX Versions|DirectX]] shaders to [[OpenGL]] for {{mac|3}} and {{Linux|3}} and uses OpenGL version 2.1 which is similar to Direct3D 9.0b.
+===[[DirectX Versions|Dxlevel 92]]===
+[[DirectX Versions|Dxlevel 92]] is Source's [[OpenGL]] equivalent to [[DirectX Versions|DirectX 9 Shader Model 2]] (DX9.0b)
+
+====Features====
+* [[$lightwarptexture|Lightwarp]] support
+* [[HDR|High dynamic range rendering]] (enabled by default)
+* Refractions with the use of a bump-map
+* High-quality reflective water (used frequently)
+* Softer edge dynamic shadows
+* Normal-mapped lighting on models
+* Improved-quality specular effects
+* [[$phong|Phong]] shading
+* [[Color Correction]]
+* Motion Blur
+
+==Source 2==
+{{Dota2|4}} is the only Source 2 game which supports OpenGL. It uses OpenGL version 2.1.
+
+OpenGL support for Dota 2 was dropped with the November 15th, 2021 update for Windows, and later Mac/Linux, with the optional OpenGL DLC for Windows completely emptied.
+
+==See also==
+* [[Direct3D]]
+* [[Vulkan]]
+* [[Software renderer]]
+
+== External links ==
+* {{w|OpenGL}}
+* {{w|Quake (video_game)#GLQuake|GLQuake}} on Wikipedia
+* [https://quake.fandom.com/wiki/GLQuake GLQuake] on Quake Fandom wiki
+
+[[Category:Glossary]]
+[[Category:Graphics API]]
