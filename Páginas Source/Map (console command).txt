@@ -1,0 +1,25 @@
+{{for|about=the console command|the place in a game|[[Map (level design)]]|the file format|[[MAP file format]]}}
+{{this is a|console command|name=map|notitlechange=1}} It loads the specified map and starts a game on it.
+{{warning|For multiplayer games, this command will kick everyone from your server before changing the map, or does a ''hard change'', so to speak. If you want to soft change your map from console use the {{ent|changelevel}} command.}}
+
+==Usage==
+{{pre|map <mapname> [gamemode]}}
+
+The .[[BSP|bsp]] extension must be omitted. The game can access both maps in mounted [[VPK]]s and in the <code>maps\</code> folder. Maps that are in a subdirectory of <code>maps\</code> need to have the folder name included in the console command.
+
+{{ModernExample|<code>map de_dust2 deathmatch</code>}}
+{{tip|{{csgo}} The optional <code>gamemode</code> parameter can be <code>deathmatch, casual, competitive, armsrace, coopstrike ...</code>, see [[CS:GO Game Modes]].<br>{{todo|A similar list exists for {{l4d2}}.}} }}
+
+==Similar Commands==
+{| class=wikitable
+! ConCommand !! Description
+|-
+| <code>map_background</code>
+| Analogous to <code>map</code> but loads a map as a background for the main menu. The player will not be able to move normally, but they can still use the console to move, attack, etc. This was introduced and used in {{hl2|4}} and its series but it does no longer work properly in newer games. Works in {{tf2|4}} and {{portal|4}}
+|-
+| <code>map_commentary</code>
+| Analogous to <code>map</code> but also enables [[commentary mode]], introduced in {{hl2lc|4}} and {{src06|4}}.
+|-
+| <code>maps&nbsp;<substring></code>
+| Lists all the maps the game has access to that contain a certain character sequence. Use <code>*</code> to list all maps.
+|}

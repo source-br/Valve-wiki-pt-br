@@ -1,0 +1,8 @@
+{{LanguageBar}}
+
+* Um '''normal''' é um valor {{L|float}} entre 0 e 1 que geralmente representa uma porcentagem.
+* Um '''{{L|vector}} normalizado''' é aquele com comprimento de 1.
+* Uma {{w|Normal (geometria)|'''vertex normal'''}} define a "frente" desse vértice, determinando, entre outras coisas, quanta iluminação ele recebe de um determinado ângulo.
+* '''[https://en.wikipedia.org/wiki/Normal_mapping Normal mapping]''' é uma técnica na qual as normais dos vértices são modificadas por-{{L|texel}} por uma textura especial, criando a impressão de profundidade extra.
+
+{{ACategory|Glossary}}

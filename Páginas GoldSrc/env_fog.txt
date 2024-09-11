@@ -1,0 +1,14 @@
+{{tabsBar|main=env_fog}}
+{{CD|CClientFog|goldsrc=1|base=CBaseEntity|nolink=1|file1=[https://github.com/ValveSoftware/halflife/blob/master/dmc/dlls/cbase.h cbase.h]<br>[https://github.com/ValveSoftware/halflife/blob/master/dmc/dlls/triggers.cpp triggers.cpp]}}
+{{this is a|point entity|name=env_fog|engine=GoldSrc|game=Counter-Strike|game1=Counter-Strike: Condition Zero|game2=Condition Zero Deleted Scenes|game3=Deathmatch Classic}} This entity is used to cover the map in fog. Most Counter-Strike FGDs do not come with this entity listed, it has to be manually added in the FGD to be used in Hammer.
+
+== Key values ==
+{{KV|Fog Color (R G B)|intn=rendercolor|color255|This property allows you to set the color of the fog using an "R G B" value. For example, for blue fog you could use "0 0 255".}}
+{{KV|Start distance|intn=startdist|int| This value defines how far away from the player the fog will start. At this range, the fog is completely transparent.|only={{dmc}} }}
+{{KV|End distance|intn=enddist|int|This value defines how far away from the player the fog will end. At this point, the fog becomes 100% opaque.|only={{dmc}} }}
+{{KV|Start distance|intn=fogStartDistance|int|Distance where the fog begins to appear.|only={{cs}}, {{cscz}} & {{czds}} }}
+{{KV|Stop distance|intn=fogStopDistance|int|Distance where the fog ends to appear.|only={{cs}}, {{cscz}} & {{czds}} }}
+{{KV|Fog density|intn=density|int|Density of the fog.|only={{cs}}, {{cscz}} & {{czds}} }}
+
+== Flags ==
+{{fl|1|Fog Affects Skybox|only={{cs}}, {{cscz}} & {{czds}} }}

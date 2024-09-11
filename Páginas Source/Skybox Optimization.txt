@@ -1,0 +1,114 @@
+[[Category:Level Design]]
+[[Category:Tutorials]]
+[[Category:Skybox]]
+{{subpage|[[Skybox Basics]]}}
+[[File:Layoututh.jpg|thumb|right|250px|The example layout of a small map that is discussed in this article.]]
+
+This article discusses the different methods of how skybox brushes can be placed on a map, as well as their advantages and disadvantages. For this purpose, an example of a map is given on which all methods are applied. Roof brushes are hidden for tutorial purposes.
+{{clr|left}}
+
+== Overview ==
+
+{| style="border:1px solid #666"
+|- style="background-color:#444"
+!colspan=2| Method
+! Description
+! Advantages
+! Disadvantages
+
+|-
+! ''Box ("Diaper") Method''
+| [[File:Improperskyboxexample.gif|140px]]
+| Create a huge hollow skybox block that contains the entire level
+|style=background-color:rgba(0,255,0,0.1)|
+* Very easy to create
+|style=background-color:rgba(255,0,0,0.1)|
+* Unnecessarily long compile time, unnecessarily bad performance
+* Using [[Hammer Cordon Usage|cordon]]s is easier, while accomplishing the same thing
+
+|- style=background-color:rgba(255,255,255,0.05)
+! ''Tight Skybox''
+| [[File:Properskyboxexample.gif|140px]]
+| Create skybox walls and ceilings room by room without creating unintended walkable areas
+|style=background-color:rgba(0,255,0,0.1)|
+* Reasonable compile time and performance
+|style=background-color:rgba(255,0,0,0.1)|
+* Creation is work, [[leak]]s are more likely to appear
+* Tall structures in other sections may disappear even though they should be visible
+
+|-
+! ''Dynamic approach''
+| [[File:Towerop1.jpg|140px]]
+| Like ''Tight Skybox'' but not ''that'' tight, leaving the different sections of the map connected above the playable area
+|style=background-color:rgba(0,255,0,0.1)|
+* Reasonable compile time and performance
+* Can account for tall structures to stay visible from different sections
+* Better immersion: bullets, grenades, and physics props won't collide with skybox as if it were a wall
+|style=background-color:rgba(255,0,0,0.1)|
+* Creation is work, leaks are more likely to appear
+|}
+
+Some more benefits of creating a proper map-optimizing skybox can include:
+*Easier use of [[areaportal]]s
+*Easier organisation of {{ent|env_soundscape}} triggers
+*Rendering of larger numbers of [[Prop detail|detail]] props on displacements
+
+{{Tip|Tall structures that should stay visible across multiple sections of the level (e.g. a crane) can be moved to a [[3D Skybox]]. If necessary, the structure can instead be duplicated.}}
+{{Note|In {{cs}}{{czero}}{{css}}{{csgo}}, you may want arbitrarily thrown grenades to never touch the skybox. To accomplish this, the ceiling of the skybox should be at least [[Counter-Strike: Global Offensive/Mapper's Reference#Grenades|1500 units higher]] than the highest place that a player can throw grenades from. Additionally, skybox walls cannot extend the level's walls if no grenade should hit them.}}
+
+== Box Method ==
+
+Most inexperienced mappers tend to create a large box around their level and texture it with the <code>tools/toolsskybox</code> texture, then carve it outwards to create a literal 'sky'''box''''. Most mappers do this because they are not experienced with how a skybox works and its effects, or could do this simply because they do not want any leaks in their map. This is sometimes referred to as a "diaper" skybox.
+
+Either way, this ''"Box Method"'' is not the way you should form your skybox, as it can cause more issues than it solves.
+To demonstrate why, a small map will be created for the purpose of this article. It's a simple layout: a few paths with three large areas and walls separating them all. This isn't the most complicated map but it serves to illustrate the point nonetheless. Also, notice how the ground throughout the level is made from displacements sewn together. This is quite common, and you will see how this affects the skybox and map optimization in a moment. With the ''"Box Method"'' applied, the map would appear like the image below.
+
+[[File:Improperskyboxexample.gif]]<br/>
+
+The displacements are fading in and out for a reason; to demonstrate that they are not actually taken into account by [[VVIS]]. Displacements do not block visibility and VVIS will not calculate visleafs that stop at the surface of displacements; the visleafs will go straight through them. If you had a wall made of displacements, your computer would still render all the models, players and geometry behind them. Only the world geometry - in this case the walls/brushes - will block visibility and create the visleafs that control the items to be rendered.
+
+{{Tip|When your map's outer borders are still in development, it is more beneficial to use the [[Hammer_Cordon_Usage|cordon tools]] until you've reached a stage of map development where you want to start setting up your final skybox and optimizing your map. Cordons function the same way as the box method, but are cleaner to use.}}
+{{Note|You may notice that the origin of the map lies inside the level.<br>In {{src}}, this is a bad practice, as VVIS will automatically cut visleafs along the axis of the origin. Instead, this should be moved into one of the 4 quadrants of the x/y axis.<br>In {{gldsrc}}, however, this advice can and should be ignored, as the map canvas is significantly smaller, and brushes placed too close to the edge of the map often will compile incorrectly, especially if small.}}
+
+== Tight Skybox ==
+
+An example of a properly created skybox is as follows:
+
+[[File:Properskyboxexample.gif]]
+
+The skybox now conforms with the outline of the level, and the nodraw texture is used in all areas underneath the walls and floor, instead of the <code>tools/toolsskybox</code> texture. This reduces the amount of calculations needed (lowering your compile times significantly) because the skybox doesn't contain all that empty space generated by the previous method. The nodraw texture is used because we don't need to create light beneath the level, and we don't want rendering errors that will occur when light hits the displacements from below.
+
+All these methods make for noticeable changes to the compile:
+
+[[File:Vviscompare.gif|left]]
+
+''Portal Clusters:'' '''73''' »» '''16'''
+
+''Numportals:'' '''201''' »» '''19'''
+
+''Total Clusters Visible:'' '''3981''' »» '''134'''
+
+''Average Clusters Visible:'' '''54''' »» '''8'''
+
+''Average Clusters Audible:'' '''73''' »» '''13'''
+
+''VisDataSize:'' '''2048''' »» '''196'''
+{{clr}}
+For such a small map, these differences are already enormous, and will dramatically increase the performance of the map in-game, especially if the map was larger.
+
+== When Not To Build Sections ==
+Conforming the skybox to the paths of your level shouldn't be done all the time, but only where appropriate. There are a few cases where you should leave gaps to see through, so you can view the next section of the map, for example.
+
+A tall orange 'tower' has been placed in the middle area of the map, as can be seen below. However, if the skybox remains as it is then that tower will appear/disappear when people walk around due to the construction of the skybox. Trimming down the skybox in places is required to make sure that the tower is visible from all angles that the player is able to see it from.
+
+By removing and trimming walls so that the tower can be seen from any angle, and by using the nodraw texture between the walls in the center, we end up with a result similar to this:
+
+[[File:Towerop1.jpg]]
+
+One can also try to limit the area in which the tower will be rendered. Simply raise the height of some walls, so that when the player is near a wall and the tower is behind it, the tower cannot be seen due to the wall's height:
+
+[[File:Towerop2.jpg]]
+
+== See also ==
+[[Optimization_(level_design)|Category:Optimization (Level Design)]]
+[[Level_Design_FAQ|Category:Level_Design_FAQ]]

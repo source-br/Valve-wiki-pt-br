@@ -1,0 +1,93 @@
+{{LanguageBar}}
+{{Source topicon}}
+
+{{toc-right}}
+
+'''Inputs''' and '''Outputs''' (collectively "I/O") are the means by which [[Entity|entities]] communicate between each other in [[:Category:Level Design|maps]]. Entities have two methods for communication: sending an "output" to another entity, or receiving an "input" from another entity. For example, one entity may send an output when it is killed to another entity's input which causes it to change color. That same output could also be used to trigger another entity's spawning input. The outputs are matched to the inputs via a "connection", which controls what extra data is relayed to the receiver, how much of a delay there is before the output is received, and whether the output should be allowed to be sent again later. Outputs can be linked to any input and vice versa. This allows complex and powerful interactions between entities.
+
+Consider a [[logic_timer]] entity. It might be configured to "fire" its <code>OnTimer</code> output when it hits its time limit, which "triggers" (or "calls") the <code>ShowSprite</code> input of an [[env_sprite]]. When the timer hits its limit, the sprite appears. By using the connection properties, you could also cause the output to be triggered after a two second delay, or to trigger once but never again.
+
+== Inputs ==
+
+'''Inputs''' are commands that cause an entity to change what it is doing. They are "triggered" (or "called") by outputs - they cannot be manipulated directly.
+
+You can view a list of input events that an entity is receiving in the Inputs tab of the [[Hammer Object Properties Dialog|object properties dialog]]. Clicking the "mark" button will take you to the entity that the input is being received from.
+
+# [[use]]
+
+== Outputs ==
+
+[[File:Outputs-new.png|thumb|Hammer's "Object Properties" dialog]]
+
+'''Outputs''' are events that fire when an entity's state changes. For example, a [[logic_timer|timer]] will have an output for reaching its end, a [[func_button|button]] an output for being pressed, and a [[prop_door_rotating|door]] an output for coming to a close.
+
+Output events are created in the Outputs tab of the [[Hammer Object Properties Dialog|object properties dialog]]. This interface provides a list of the outputs already emitting from the entity, configuration fields for the one(s) currently selected, and buttons for creating new and deleting old. Finally, the button in the bottom left labelled "mark" will take you to the target entity of the current output.
+
+The output configuration fields are:
+
+; Output name
+: What event causes the output to fire. For example, a [[trigger_multiple]] entity can fire an '''OnTrigger''' output when a player steps into it.
+; Target entity
+: The [[targetname]] or [[classname]] of the entity that will receive input. Accepts the * character as a search wildcard.
+:* A bold name means that the targetname points to multiple entities
+:* A red name means that the targetname doesn't point to anything {{bug|Valid classname and wildcard values and [[Targetname#Keywords|special targetnames]] will also appear red. Don't worry: the engine will recognise them!|only=}}
+; Input name
+: The input on the target entity that will be triggered. This too will be context sensitive. For example, if sending an output to a Door entity, some of the available inputs will be "Close" or "Open".
+; Parameters
+: You can pass data to the target entity with parameters. A parameter might be anything: how loud to play [[ambient_generic|a sound]], the [[targetname]] of another entity, or perhaps [[color255|a color]]. It all depends on what the input accepts. If it doesn't accept anything, this field will be greyed out.
+: Some outputs, like [[math_counter]]'s <code>OutValue</code>, generate parameters themselves. To use a generated parameter, just leave the field reading <code><none></code>. {{note|If the output value is a [[targetname]], remember that it may not be unique!}}
+; Time delay
+: The number of seconds to wait after the output event occurs before firing.
+; Fire once only
+: The output will be deleted after it fires if this is checked.
+
+== Setting up a simple trigger ==
+This is an example of how to make a simple trigger using inputs and outputs, so a sound is played when the player enters a specific area.
+
+Open up a map and add an [[ambient_generic]] (in the Name field, type in "<code>ambient_1</code>"). Go into its '''Object Properties''' and choose a sound file for it to play, and on the '''Flags''' tab make it set to "'''Start Silent'''". Select the "<code>tools/toolstrigger</code>" texture and create a cube brush with this texture. Right-click on this brush and using the "[[Brush entity|Tie to Entity]]" command, make it into a [[trigger_once]] entity. Go to the '''Outputs''' tab and click the '''Add...''' button.
+
+Set "My output named" to "<code>OnStartTouch</code>". This causes the output (and thus the trigger) to occur when the player starts touching this brush in the game. 
+
+Set "Targets entities named" to "<code>ambient_1</code>" using the pull-down arrow. This makes the trigger output target the <code>ambient_generic</code> you placed earlier.
+
+Set "Via this input" to "<code>PlaySound</code>". This chooses the <code>PlaySound</code> action from the target <code>ambient_generic</code>'s list of actions, which of course causes its sound to start playing.
+
+Click the '''Apply''' button to save your changes to the trigger, and close it. Now we have the trigger set up so that as soon as the player touches it, it sends a command to the <code>ambient_generic</code> which makes it start playing its sound.
+
+If you open up the properties for the <code>ambient_generic</code>, you can see how the '''Output''' from the trigger has automatically been converted to an '''Input''' for the <code>ambient_generic</code>.
+
+If you want to compile and test your new trigger, make sure you have all the basics (player start, lighting, etc) and have assigned a sound effect to the <code>ambient_generic</code>.
+
+== Debugging ==
+
+Source provides various debugging tools for when an I/O chain is not working as expected.
+
+Foremost among them is the object properties dialog itself. Invalid inputs outputs are highlighted red in the entity's input or output list; the I/O icons at the bottom of the dialoge also change accordingly. Invalid outputs also show up in [[Hammer Check For Problems Dialog|Check For Problems]] ({{key|Alt+P}}). It's a good idea check for problems before every compile.
+
+{{bug|Valid classname and [[Targetname|wildcard values]] will be flagged as errors. Don't worry: the engine will recognise them!|only=}}
+
+Away from Hammer, there are a number of [[Developer console|console]] commands and variables that will help you spot errors while your map is running:
+
+; <code>developer <0-2></code>
+: [[Developer|Developer mode]] reports all entity I/O to the console, and unless you're playing on a [[dedicated server]] that enables [[sv_cheats|cheats]] (which is needed for all of the commands below). If you are in <code>developer 2</code>, you will also get the last eight lines of the console displayed at the top of your screen.
+; <code>ent_messages_draw <[[bool]]></code>
+: This displays the same information as developer mode, except that instead of appearing in the console it's drawn in the 3D world at the location of the entities in question.
+; <code>ent_fire <[[targetname]] or [[classname]]> <input> <parameter></code>
+: This ''extremely'' useful command allows you to manually fire inputs on any entity at any time. If you want to unlock a door ahead of time, you would type <code>ent_fire my_door unlock</code>, followed if you're feeling lazy by <code>ent_fire my_door open</code>.
+: Like the "output target" field in Hammer, <code>ent_fire</code> supports classnames and wildcards. If you want to <code>ent_fire npc_* ignite</code>, you can! {{tip|<code>ent_fire</code> is where the special <code>[[!picker]]</code> targetname comes in. Use it to target whatever is under your crosshair.}}
+; <code>ent_pause</code>
+: This command pauses all entities in the map except the player; submit it again to unpause. It is designed for use with <code>ent_step</code>.
+; <code>ent_step <number of steps></code>
+: When used with <code>ent_pause</code>, this command makes entities perform a specified number of I/O steps before pausing again (default is 1).
+
+== See also ==
+
+* [[Data Descriptions]] - Some information on how inputs and outputs function internally can be found here.
+* [[Entity creation]]
+* [[List of entities]]
+* [[Targetname]]
+* [[User Inputs and Outputs]]
+* [[AddOutput]]
+* [[Entity parameters inputs outputs]] - List of entities parameters, Inputs and Outputs (Advanced stuff)
+[[Category:IO System]]
+[[Category:Level Design]]

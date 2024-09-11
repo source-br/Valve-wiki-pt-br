@@ -1,0 +1,94 @@
+{{LanguageBar}}{{Source 2 topicon}}
+{{TabsBar|main=gs2|base=Valve Hammer Editor}}
+
+{{SoftwareBox
+<!-- Basic info -->
+| title     = Hammer 5.x
+| image      = Hammercs2.png
+| imagetooltip = Screenshot of Hammer 5.x.
+
+<!-- Details -->
+| developer = Valve Corporation
+| initial_release = September 9, 2015<br><font style="font-size:10px;">([[Dota 2]])</font>
+| stable_release = Actively developed
+| written_in = 
+| type = Map Editor
+| distribution = [[Source_2/Docs|Source 2 Workshop Tools]]
+| website = 
+| download = 
+| version = 
+
+<!-- Operating system(s)-->
+| windows = 
+| android = 
+| macos = 
+| linux = 
+
+<!-- Target engine(s) - hidden -->
+| gldsrc = 
+| source = 
+| source2 = 
+
+}}
+{{src2 topicon}}
+<span style="font-weight:bold; color:white">Hammer</span> (version <span style="font-weight:bold; color:white">5.x</span>), sometimes informally called '''Hammer 2''', is [[Valve]]'s in-house level editor for {{source2|1.bold}} games. Compared to its predecessor, '''[[Hammer|Hammer 4.x]]''' (on [[Source]]), the user interface has been redesigned using {{w|icon=0|Qt}} and the workflow can differ a lot from the old, [[BSP]]-oriented process. In many ways, it is closer to that of modern modelling suites commonly used in the industry. 
+
+'''Hammer 5.x''' is available in Workshop Tools DLC for games that support it, namely {{hla|1.bold}}, {{cs2|1.bold}}, {{dota2|1.bold}}, etc.
+
+=== Overview ===
+{{main|Source_2/Docs/Level_Design/Hammer_Overview}}
+
+=== Documentation ===
+{{main|Source_2/Docs/Level_Design}}
+
+=== Version history ===
+{| class="standard-table mw-collapsible mw-collapsed"
+|- style="position:sticky; top:0; z-index:10"
+! style="background:#666666; text-align:center; width:5em" | Version
+! style="background:#666666; text-align:center; width:10em" | Game
+! style="background:#666666; text-align:center; width:10em" | Release date
+! style="background:#666666; text-align:center" | Features
+|-
+| 5.0, (build 9743)
+| {{dota2|1.bold}}
+| September 2015?
+| Initial release of Source 2 Hammer for Dota 2. {{todo|Add more information.}}
+|-
+| 5.0 (build 8838)
+| {{svrh|1.bold}}
+| 2017
+| {{todo|Add more information.}}
+|-
+| 5.0, (unknown build)
+| {{hla|1.bold}}
+| May 16, 2020‎ 
+| {{todo|Add more information.}}
+|-
+| 5.0, (unknown build)
+| {{sbox|1.bold}}
+| July 26, 2022
+|
+*Added Asset Browser <br>{{todo|Add more information.}}
+|-
+| 5.0, (build 9832)
+| {{cs2|1.bold}}
+| June 7, 2023
+| Initial release of Source 2 Hammer for '''CS2'''.{{confirm}}
+*Added Workshop Item Tools and Workshop Manager <br>{{todo|Add more information.}}
+|-
+| 5.0, (build 9960)
+| '''Counter-Strike 2'''
+| March 22, 2024
+| Latest version for '''CS2'''.
+|}
+
+{{leveleditors}}
+{{sdktools/source2}}
+
+[[Category:Glossary]]	
+[[Category:Valve tools]]	
+[[Category:Official Tools]]	
+[[Category:Official Source 2 Tools]]
+[[Category:Hammer]]	
+[[Category:Level Design]]	
+[[Category:Tools]]

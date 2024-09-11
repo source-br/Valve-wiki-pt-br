@@ -1,0 +1,39 @@
+<!-- When this page is updated to {{langsp}} or {{langsp}} instead of {{lang}}, please move {{this is a}} to the base page, as it is automatically translated. -->{{lang}}
+{{CD|CSkyCamera|file1=SkyCamera.cpp}}
+{{this is a|point entity|name=sky_camera|sprite=1}} It is used to mark the position of the map's origin inside the [[3D Skybox]]. As your position changes relative to the maps origin it will be scaled and applied relative to the <code>sky_camera</code>.
+
+When the map is compiled, the areas containing <code>sky_camera</code>(s) are skipped during vis calculations. This can be overridden by <code>-forceskyvis</code> on [[VBSP]].
+
+By default, only one <code>sky_camera</code> may be active at a time and it cannot move.
+{{tip|
+* In games with [[VScript]], you can control 3D skyboxes and their properties (including fog) per-player using netprops. This includes making them move. Example script can be found [https://tf2maps.net/downloads/change-sky_camera-script.15872/ here]
+* In games without VScript, this [https://tf2maps.net/threads/multiple-3d-skyboxes.35829 workaround] can be used instead for multiple or moving skyboxes.
+* Duplicate your main [[env_fog_controller]] and then turn that into a <code>sky_camera</code> so that the fog settings will be carried over.}}
+{{note|fog values on <code>sky_camera</code> cannot be changed through inputs (unlike {{ent|env_fog_controller}}) and the max density keyvalue is missing from the FGD by default.}}
+{{ModernCodenote|There is some leftover code for multiple <code>sky_camera</code> entities which can be restored in mods. Half-Life 2: Downfall has restored this feature and the work involved is open-source. Downfall's repository can be found [https://github.com/DownFall-Team/DownFall here]. {{Game link|Mapbase}} uses the aforementioned Downfall code and also adds native support for moving (and rotating) skyboxes. Mapbase's repository can be found [https://github.com/mapbase-source/source-sdk-2013 here].}}
+{{warning|If the unmodified version of this entity gets removed in the game, then the game will crash. {{todo|Test the modified code for the same issue.}}}}
+{{PreservedEnt|sky_camera}}
+
+== Keyvalues ==
+{{KV|Name|string|intn=targetname|The [[targetname]] that other entities refer to this entity by.|nofgd=1}}
+{{KV|3D Skybox scale|integer|intn=scale|This number determines how large objects in your skybox will seem relative to the map.<br>For example, at a skybox scale of 16, an object 1 unit high in the skybox will seem to be 16 units high to player.}}
+{{KV|Fog Enable|boolean|intn=fogenable|Enable Fog in the Skybox by Default}}
+{{KV|Fog Blend|boolean|intn=fogblend|This will enable blending between two fog colors, based on the direction the player is looking. If the player's viewpoint is equal to the ''fogdir'' vector, the fog will be drawn with the secondary color; if facing in the complete opposite direction, the fog will be drawn with the primary color. <br/> This can be used to approximate the aesthetic effect of diffuse light filtering through the fog, but since the fog effect color is changed for the entire rendered scene, it is best to keep the two colors relatively close to make the blending less obvious. <br/> For example, sunlight with a yaw of 45 degrees and a pitch of -45 degrees could be enhanced using a '''fogdir''' of '-1 -1 1', a '''fogcolor''' of '120 110 100' and a '''fogcolor2''' of '80 70 60'.}}
+{{KV|Use Angles for Fog Dir|boolean|intn=use_angles|}}
+{{KV|Primary Fog Color|color255|intn=fogcolor|The Primary Color of the Fog in the Skybox}}
+{{KV|Secondary Fog Color|color255|intn=fogcolor2|The Secondary Color of the Fog in the Skybox that will be blended to}}
+{{KV|Primary Fog Dir|string|intn=fogdir|A vector (given by three space-separated numbers X Y Z) which points from the secondary fog color '''fogcolor2''' towards the primary fog color '''fogcolor'''.}}
+{{KV|Fog Start|string|intn=fogstart|How far from the point-of-view the fog should start. Generally, this should be the same setting as your env_fog_controller.}}
+{{KV|Fog End|string|intn=fogend|How far from the point-of-view the view should be completely fogged. Generally, this should be the same setting as your env_fog_controller.}}
+{{KV|Fog Max Density|float|intn=fogmaxdensity|Fog Max Density [0..1].|nofgd=1}}
+{{KV|Clip 3D sky near plane to world far plane|intn=clip_3D_skybox_near_to_world_far|boolean|only={{l4d2}}}}
+{{KV|3D sky near plane offset|intn=clip_3D_skybox_near_to_world_far_offset|float|only={{l4d2}}|Offset for the near clip plane for the 3D sky in world units.  This is only used if the above field is true.  Negative values to pull closer, etc.}}
+
+== Inputs ==
+{{IO|ActivateSkybox|Activates targeted sky_camera and disables rest.|since=L4D2|nofgd=1}} {{warning|Should your skyboxes have models or brushwork capable of throwing shadows, '''all shadows of all props from all skyboxes''' will compile shadows onto your map. Even when the skybox is switched, the shadows on your map will remain.}}
+
+== See also ==
+* [[3D Skybox]]
+* [[Skybox Basics]] - an overview article on skybox creation.
+
+[[Category:Skybox]]

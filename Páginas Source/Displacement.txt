@@ -1,0 +1,192 @@
+{{LanguageBar}}
+ 
+<!-- Note to some editors who got confused: This language subpage is not created by Valve but rather by a user using exploits with otherlang2 template, which would allow adding new translations using MultiPage template. Unfortunately, this also meant that this page can now be edited, which some vandals and spammers (including that infamous User:HammerEditor), can take advantage of.-->
+<!-- {{Note|For any discussions about Displacement, please [[Talk:DisplacementEditable|visit this page]] instead if you want to discuss anything about it. The current discussion page is currently locked.<br> To edit this page, use the other "edit" button located next to the language flags instead.}} Temporarily added as the Discussion page at the time was locked. It has been unlocked now. -->
+[[File:hammer_displacements1.jpg|thumb|right|A simple displacement surface]]
+
+'''Displacements''' are quadrilateral (4-sided) [[brush]] surfaces that have been converted to a mesh of triangular polygons which can be freely distorted and sculpted into various shapes. Displacements in the {{src|4}} engine are typically used to create terrain such as hills, valleys, trenches, slopes, etc, but can sometimes be used as flat surfaces to blend between two or more textures.
+
+{{todo|Add info about models vs displacements? }}
+{{Bug|
+* Power of 4 displacements can cause crashes if colliding with physics objects (except in {{GMOD}}). 
+* In {{insurgency}}{{doi}}, if "Batch displacement rendering" is checked in Hammer's general options, manipulating displacements in any way could cause {{hammer|3.1}} to crash without reason.
+* Displacements can be badly lightmapped (totally black), there are several reasons for that: 
+**A bad landing area in a room which you use for {{ent|sky_camera}} {{example|You have a mix of displacements and brush boxes, it can cause your main gameplay area with displacements to turn to black, select only one type and check it for errors!}} 
+** Only displacement edges, caused by undeleted faces from the back side of your displacement brush {{Fix|Select the whole displacement brush and deselect only the face which will be seen to the player, then click ''displacement->destroy''.}} 
+** You compiled your map with {{vrad|3.1}} fast (not normal or final)
+* Sometimes complex displacements are flickering no matter what you do. {{Fix|You can split them into several parts and remove the part outside or deep inside brush geometry.}} {{Fix|Select a glitching one, use "Move selected to entity" and then "to World" and save of course, this helps, especially when the map was built with a different hammer version. Always check that you sewed them properly and you have no gaps between them.
+}}}} 
+
+:{{Todo|Check if other games using CSGO's similar branch (such as {{portal2}}) do not suffer the crashing Bug.}}
+<includeonly>__TOC__</includeonly>
+== Benefits ==
+* They are rendered in batches, making it very [[cheap]]: per polygon face actually cheaper than standard brush geometry!
+* They can be altered using the [[Hammer Face Edit Disps#Paint Geometry|Paint Geometry tool]] to sculpt a wide variety of shapes, well beyond what can be created with brushes. 
+* An alpha channel for can be painted per-vertex to blend between two textures on the displacement. This can be used to create transitions between dirt and rock, for example.
+* Can be automatically populated with [[detail props]].
+
+== Limitations == 
+
+* They must always be four-sided (see [[#Triangular displacements|below]] for a messy workaround).
+* They must always be static, and never attached to an entity, meaning you cannot set displacements as [[brush entities]], such as [[func_breakable]], [[func_detail]], or [[func_brush]]. Doing so will usually result in an error message from [[VBSP]] before halting the compile process.
+* They do not block visibility and do not seal the map from [[leak]]s.
+* A single map is limited to a total of 2048 displacements in {{src13}} games. In {{insurgency}} this limit is at 4096. In {{GMOD}} this limit is at 16384. In {{csgo}} this limit is at 32768. 
+* The bigger the displacement is, [[displacement luxel density|the less you will be able to lower the lightmap under a certain value]].
+* Power of 4 displacements are not compressed under the normal compile tools (patched compile tools overcome this), and are prone to physics bugs and crashes.
+
+== Other characteristics ==
+
+* There are three levels of resolution (higher resolution means more tris), but ultimately the maximum visual detail is determined by the size of the displacement. Cut one up if more detail is needed.
+* Direct light is blocked on both sides, but bounced light is not blocked by the invisible backface.
+* A single brush can host as many displacements as it has faces (the brush itself is not compiled).
+
+== Construction ==
+
+Displacements are created by using one of the faces on a brush solid as a ''base face''. Once the displacement surface has been created, the brush face used as the base face is ''discarded when the map is compiled''. Additionally, if a brush solid contains ''any'' displacement surfaces, all of the non-displacement sides are discarded when the map is compiled and run in the engine. In other words, once you convert a brush solid to include displacements, the brush solid is no longer a solid object and is removed when you run the map.
+
+The following images illustrate this characteristic:
+<div style="display:flex">
+[[File:hammer_displacements2.jpg|frame|left|The Base brush face before a displacement is added.]]
+[[File:hammer_displacements3.jpg|frame|left|The sides of the brush shown here will not be rendered.]]{{clr}}
+</div>
+== Basic displacement creation ==
+
+[[File:hammer_displacements4.jpg|frame|right|Displacements with different density levels.]]
+
+How to create and paint a displacement surface:
+
+# Create a brush with the [[Hammer Block Tool|Block Tool]] that will be used as the base for the created displacement surface.
+# Click the Texture Application tool to bring up the '''Face Edit''' dialog, and select the [[Hammer_Face_Edit_Disps|Displacement]] tab.
+# In the 3D view, left-click on a brush face to select it. {{key|Ctrl}}-click to add or remove faces from the current selection.
+# Click [[Hammer_Face_Edit_Disps#Paint_Geometry|Create]] in the Displacement tab. Enter a value from 2 to 4 for the displacement density and click '''OK'''. {{warning|Power 4 displacements are usually advised against since they might cause errors. Power 4 displacements might work better in newer engine versions.}} {{Note|You can change a displacement's power later in the "attributes" section, but be warned that the higher detail from the displacement being its power is permanently lost when lowering the power.}}
+# Select the '''Paint Geometry''' tool on the '''Displacement''' tab. The [[Hammer_Face_Edit_Disps#Paint_Geometry|Paint Geometry]] panel will open.
+# In the 3D View, Left-click on a displacement to raise a section, and right-click to lower it. Use the '''Radius''' slider in the '''Paint Geometry''' panel to control the size of the painting sphere.
+
+See [[Hammer_Face_Edit_Disps#Paint_Geometry|Paint Geometry]] for more information on displacement painting.{{clr}}
+
+== Displacement options ==
+
+[[File:hammer_displacements5.jpg|thumb|300px|left|Brushes can have multiple sides with displacements on them.]]
+[[File:hammer_displacementmaskicon.jpg]]&nbsp;
+Use the '''Displacement Mask''' button on the [[Hammer_Map_Operations_Toolbar|Map Operations]] toolbar to toggle the display and selection of the non-displacement sides of brush.
+
+You can also have more than one displacement surface for each brush, like the image on the left. As long as a brush side has 4 edges, you can make a displacement surface out of it.
+
+See [[Hammer_Face_Edit_Disps|Face Edit, Displacements]] for a description of all the ways you can paint the geometry on a displacement.{{clr}}
+
+== Sewing displacements ==
+
+The '''Sew''' button on the '''Displacement''' tab can be used to connect the edges of two or more selected displacement surfaces. To sew two or more displacements, select the displacement faces that should be sewn together and press the '''Sew''' button.
+
+You can sew displacement surfaces in any of the following circumstances:
+
+* Any two displacements whose ''base face'' brush surfaces share a common edge with coincident endpoints.
+* A displacement surface to a non-displacement brush face, if the base face of the two share a common edge with coincident endpoints.
+* A displacement surface to another displacement surface where a shared edge is ''exactly'' half the width of the other (called a ''T-junction'').
+
+You can sew displacements with different resolution settings — the vertices of the higher resolution displacement will be moved to match the vertices of the lower resolution displacement.
+
+Examples of circumstances where the '''Sew''' command can be used:
+<div style="display:flex">
+[[File:hammer_displacements6.jpg|thumb|300px|left|Adjacent displacements with base faces that share an edge.]] [[File:hammer_displacements7.jpg|thumb|300px|left|Displacements with different resolutions.]]{{clr}}
+[[File:hammer_displacements8.jpg|thumb|300px|left|Displacement with a base face that shares an edge with a brush.]] [[File:hammer_displacements9.jpg|thumb|300px|left|Displacements that share an edge at the exact midpoint.]]{{clr}}
+</div>
+Surfaces ''cannot'' be sewn together if the base faces of the displacements do not share a common edge:
+
+[[File:hammer_displacements10.jpg|frame|left|Surfaces that don't share a common edge cannot be connected.]]{{clr}}
+
+Surfaces also cannot be sewn together if they don't share a common "'''Elev'''"ation attribute, which is found along side the '''Power''' and '''Scale''' attributes.
+
+== Subdividing displacements ==
+The '''Subdivide''' button on the '''Displacement''' tab can be used to smooth two or more selected displacement surfaces in relation to their position. To subdivide two or more displacements, select the displacement faces that should be subdivided and press the '''Subdivide''' button. If the subdivision is not successful, you'll see areas where displacement faces appear Buggy and out of place.
+{{tip|The higher the '''Power''' attribute is, the smoother the displacements will be. However higher '''Power''' is heavier for game engine and therefore using high '''Power''' for small displacements is not recommended.}}
+<div style="display:flex">
+[[File:Hammer_displacements19.jpg|thumb|380px|left|A series of interconnected brushes ready to be created into displacements.]]{{clr}}
+[[File:Hammer_displacements20.jpg|thumb|380px|left|The tunnel after displacements are created.]]{{clr}}
+[[File:Hammer_displacements21.jpg|thumb|380px|left|What occurs when subdivision occurs among the selected displacements.]]{{clr}}
+[[File:Hammer_displacements22.jpg|thumb|380px|left|A finished product with some touch-ups using the Paint Alpha tool]]{{clr}}
+</div>
+== Other methods of altering displacement geometry ==
+Besides the displacement painting tools, some of the standard brush manipulation tools work on displacement surfaces. It works well to control the contours of the displacement with the paint tools, and do larger manipulations with the following tools.
+
+=== Transformations ===
+[[File:Hammer_select.png‎]]&nbsp;
+Displacements can be freely moved, scaled, rotated and sheared with the [[Hammer Selection Tool|Selection Tool]], just like standard brushes. The transformation is done to the base brush face, and the displacement follows.
+
+=== Clipping ===
+[[File:Hammer_ClippingTool.png]]&nbsp;
+The [[Hammer Clipping Tool|Clip Tool]] can also be used to clip displacement surfaces. This can be used to trim off unneeded sections of the displacement surface, or to divide a displacement into two pieces without changing its shape.
+
+{{ModernImportant|The result of a clip operation '''must''' be a quadrilateral (containing exactly four edges) to be a valid displacement.}}
+
+The following example shows how the Clip Tool can be used to trim a displacement surface:
+<div style="display:flex">
+[[File:hammer_displacements11.jpg|thumb|300px|left|Displacement surface before clipping operation.]]
+[[File:hammer_displacements12.jpg|thumb|300px|left|Using the clip tool to draw a clip line in the 2D view previews the result.]]
+[[File:hammer_displacements13.jpg|thumb|300px|left|The result of the clip operation.]]{{clr}}
+</div>
+=== Vertex manipulation (Technique) ===
+[[File:Hammer_VertexTool.png]]&nbsp;
+The [[Hammer Vertex Tool|Vertex Tool]] can also be used to clip displacement surfaces. Vertex editing works well to shift the corners of the displacement to meet important edges, or to raise whole section of terrain without having to paint it by hand when creating hills or elevated surfaces.
+
+There are some important restrictions when vertex editing displacements:
+* Vertex editing is done on the base face, not the displacement itself.
+* Collapsing or adding vertices is not allowed, and will destroy displacements attached to the base faces; the end result must be a quadrilateral.
+* The end result of the vertex editing must be a planar surface. Making a non-planar surface will destroy attached displacements.
+
+The following example shows how the '''Vertex Tool''' can be used to raise a section of displacements:
+<div style="display:flex">
+[[File:hammer_displacements14.jpg|thumb|300px|left|A set of four displacement surfaces, selected to do a vertex editing.]]
+[[File:hammer_displacements15.jpg|thumb|300px|left|Entering Vertex Edit mode shows the vertices of the base brush faces.]]{{clr}}
+[[File:hammer_displacements16.jpg|thumb|300px|left|Selecting a set of end vertices and raising them together.]]
+[[File:hammer_displacements17.jpg|thumb|300px|left|The result of the vertex editing operation.]]{{clr}}
+</div>
+=== Creating holes in displacements ===
+Sometimes you need to create a hole or gap in displacement surfaces for various reasons. See [[Creating Holes in Displacements]] for information on how to create holes in displacement geometry.
+
+=== Blended displacement materials (vertex alpha painting) ===
+[[File:hammer_displacements18.jpg|thumb|right|280px|The green box is the center of the Paint Alpha paint brush.]]
+The '''Paint Alpha''' tools allow you to blend between two different textures on a displacement surface by painting the alpha values of each vertex. The alpha value dictates data about the transparency of the two textures assigned to the surface. This can be used to create transitions in the texturing, like grass to dirt, sand to rock, etc. To do vertex alpha material blending, special blend materials are made specifically for this purpose that contain the necessary shader. Only these materials can be used for blending. If one of the standard (non-blended) materials are used, the '''Paint Alpha''' tools will have no visible effect.
+
+To add a blended material to a displacement surface and paint the vertex alpha data to blend the textures:
+
+# Choose the '''Texture Application Tool''' to open the [[Hammer_Face_Edit_Dialog|Face Edit]] dialog box.
+# Left-Click in the '''3D View''' to select a displacement face you wish to add a blend material to.
+# Click the '''Browse''' button on the '''Material''' tab of the '''Face Edit''' dialog box.
+# When the [[Hammer Texture Browser|Texture Browser]] appears, type <code>blend</code> into the '''filter ''' field at the bottom of the '''Texture Browser'''.
+# Double-left-click to select one of the blended materials and close the '''Texture Browser'''.
+# Click the '''Apply''' button on the '''Face Edit''' dialog to apply the material to the displacement surface.
+# Click the [[Hammer_Face_Edit_Disps|Displacement]] tab on the '''Face Edit''' dialog.
+# Click the Paint Alpha button on the '''Displacement''' tab to open the [[Hammer_Face_Edit_Disps#Paint_Alpha|Paint Alpha]] tools.
+# Click the '''Value''' slider field, and type a value between 30-100 as a starting point. Make sure that '''Raise/Lower''' is selected under '''Effect'''. Lower numbers in the Value field paint the vertex alpha data at a slower pace, higher numbers paint the data faster.
+# Left-click on one of the vertices of the displacement in the '''3D View''' to add vertex alpha data. Right-click on the displacement to remove data.
+
+See [[Hammer_Face_Edit_Disps#Paint_Alpha|Paint Alpha]] for more information on the alpha painting tools.
+{{clr}}
+
+== Triangular displacements ==
+[[File:Triangluar displacement.png|thumb|384px|A messy solution for a messy situation.]]
+Sometimes it is necessary to have a displacement surface which has only three sides. Since displacements can only be created from quads, this requires creating a triangle out of three separate quads, as displayed to the right.
+{{modernImportant|'''Use sparingly!''' It can be possible, in many situations, to get away with a fourth vertex on the "hypotenuse" that is ''just barely'' jutted out enough for the displacement face to be 4-sided with no coplanar sides.}}
+{{tip|Since the triangular displacement surface is made out of three displacement meshes instead of one, it has a higher vertex density; consider using power-of-two displacements in this situation.}}
+{{cls}}
+
+== Displacement editing shortcuts ==
+; Alt+right click
+: When the axis in paint geometry is set to face normal, will set the axis to the direction perpendicular to the face you clicked on.
+; Shift
+: Ignores the distance setting, allowing sections to be dragged freely.
+; Right click
+: Reverses the direction of the paint geometry tool.
+
+== See also ==
+* [[Hammer_Face_Edit_Disps|Face Editing, Displacements]]
+* [[Creating Holes in Displacements]]
+
+== External links ==
+* [http://www.interlopers.net/tutorials/16891 Practical Cliffs (interlopers.net)]
+* [http://dev.wallworm.com/topic/44/displacements.html Wall Worm Displacement Tools] - Creating displacements inside 3ds Max
+* [https://www.mapcore.org/articles/development/displacement-vs-func_detail-a-comparative-fps-study-r73/ Displacement vs func_detail: A comparative FPS study] - analysis comparing displacements and {{ent|func_detail}}<!-- For editors, please use the other "edit" button instead. -->
+{{envart}}
+[[Category:Glossary]]
+[[Category:Displacements]]

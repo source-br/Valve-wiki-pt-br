@@ -1,0 +1,335 @@
+{{LanguageBar|title=Valve Hammer Editor (Source)}}{{Source topicon}}
+{{Tabs|Valve Hammer Editor|main=source|goldsrc=1|source=1|source2=1}}
+{{todo|Rewrite the translated version of this article}}
+
+{{SoftwareBox
+<!-- Basic info -->
+| title     = Hammer 4.0x
+| image      = Hammer_splash.png
+| imagetooltip = A tela inicial do Hammer Editor, que aparece quando é iniciado. (versão 4.0x, {{src|1}}).
+| image2      = Hammer_screen.jpg
+| imagetooltip2 = Imagem do Hammer 4.0x, com o mapa {{code|d1_trainstation_01}} carregado.
+
+<!-- Details -->
+| developer = Valve Corporation
+| initial_release = 05 de Novembro, 2004<br><font style="font-size:10px;">(4.0)</font>
+| stable_release = Ativamente atualizado <font style="font-size:10px;">(4.1)</font> <!-- O VHE em Source continua a receber atualizações sobre a maioria dos jogos Source. -->
+| written_in = 
+| type = Map Editor
+| distribution = [[Source SDK]]
+| website = 
+| download = 
+| version = 
+
+<!-- Operating system(s)-->
+| windows = 
+| android = 
+| macos = 
+| linux = 
+
+<!-- Target engine(s) - hidden -->
+| gldsrc = 
+| source = 
+| source2 = 
+
+}}
+<span style="font-weight:bold; color:white">Hammer</span> (versão <span style="font-weight:bold; color:white">4.0x</span>), É o editor de mapas interno da {{L|Valve}} para os títulos {{src|1}}, incluído no Source SDK. É uma evolução do {{L|Valve Hammer Editor_(GoldSrc)|Hammer 3.x0}} a partir da engine {{L|GoldSrc}}. Muitos dos seus conceitos centrais, caraterísticas e elementos de interface ainda correspondem aos da versão 3.0x, assim como a teoria de mapeamento subjacente: construir mapas {{L|Leak|selados}} com {{L|Brush|brushes}} e compilá-los em mapas {{L|BSP}}. 
+
+Embora tenha sido melhorado em muitos aspectos, o seu núcleo ainda está ligado a uma arquitetura de software antiga, e, sendo um produto do seu tempo, tem muitas vezes dificuldades em conceber níveis modernos e altamente detalhados.
+
+Apesar disso, {{hl2|1.bold}} e todos os outros títulos Source foram construídos com ele. A sua relativa facilidade de entrada e a curva de aprendizagem gradual atraem os modders até aos dias de hoje. Esta versão do Hammer também continua a receber atualizações até aos dias de hoje.
+ 
+{{Important|Há várias atualizações feitas pela comunidade para o Hammer (infelizmente, nenhuma é de código aberto, pois o código-fonte do Hammer nunca foi oficialmente liberado, apenas vazado ou disponível para licenciados que o mantiveram fechado).<br>Elas não são essenciais para a criação de mapas Source, mas incluem correções de bugs, QoL e recursos estendidos. '''Eles são [[#Extensões|listadas mais abaixo ↓]]'''.}}
+
+== Instalando e iniciando ==
+
+Versões mais antigas do Hammer (para {{src09|1}} e anteriores) são enviadas em seus respectivos pacotes do {{L|Source SDK}} , e devem ser lançadas através do depreciado Launcher do Source SDK.
+
+Desde a atualização do {{L|SteamPipe}} e o lançamento do {{src13|1}}, O Hammer é frequentemente pré-instalado automaticamente com os jogos, e está disponível na pasta {{path|<nowiki>/bin/</nowiki>}} de um jogo em particular ({{path|<nowiki>Half-Life 2/bin</nowiki>}}, {{path|<nowiki>Portal/bin</nowiki>}}, etc). No entanto, em alguns casos, jogos entre {{l4d|1.bold}}, {{p2|1.bold}}, etc., ou alguns jogos Source de terceiros, suas '''Ferramentas de Autoria''' precisam ser instaladas e iniciadas para acessar o '''Hammer'''.
+
+Algumas dessas sub-versões são intercambiáveis, como entre HL2, {{L|Episode 1|ambos}} dos seus {{L|Episode 2|Episódios}}, Portal, {{css|1.bold}} e {{src13|1.bold}}. Outros, como os de Portal 2 e {{csgo|1.bold}}, têm certas caraterísticas exclusivas (integração com a {{w|icon=0|Maya}} para P2, ferramenta [[Sprinkle]] para CS:GO) e podem não ser totalmente compatíveis com outros títulos. Além disso, os ficheiros VMF criados em ramificações mais recentes do Hammer (como o {{as|1}}) podem falhar no Hammer feito para ramificações mais antigas (como o {{src13|1}}) quando carregados, a não ser que tenham sido convertidos ou usando a {{L|#Community fixes|versões feitas pela comunidade}} do Hammer.
+
+Para obter mais informações sobre a configuração do Hammer para Source, consulte {{L|Your First Map | Seu primeiro mapa}}, {{L|Getting Started | Primeiros passos}} e seus artigos seguintes. 
+
+Veja também {{ACategory|Hammer}} para mais links para a documentação do Hammer.
+
+== Recursos e ferramentas ==
+
+Em comparação com o Hammer 3.0x, os novos recursos mais notáveis incluem {{L|Displacement}}, sistema {{L|I/O}} e o uso do próprio sistema de materiais do Source para renderizar texturas e modelos. Versões posteriores expandiram a interface do usuário, adicionando o navegador de partículas (desde ASW), navegador de modelos melhorado, {{L|Instance|instâncias}} e outras ferramentas extras.
+
+{{seealso|{{ACategoryLHammer Toolbars}}}}
+
+== Extensões ==
+
+* {{hammer++|2}} atualiza o Hammer com ferramentas adicionais e fluxo de trabalho modernizado, visualização de iluminação em tempo real no editor, física no editor e muito mais.
+* {{TeamSpen's Hammer Addons|2}} é um conjunto de aprimoramentos do {{L|FGD}}, recursos do editor e scripts para trabalhar com o Hammer, que não modificam diretamente o editor.
+* {{slamminsrc|2}} aborda problemas de desempenho e bugs, adiciona opções e recursos convenientes e vem com compiladores estendidos: '''{{L|Slammin' Source Map Tools|Slammin' Compile Tools}}'''';
+
+== Recursos de desenvolvedor ==
+
+* {{L|evel Design Video Tutorials}} - uma grande coleção de vídeos sobre técnicas e truques de mapeamento em vários títulos da Source.
+* {{L|Mapping Sites}} e {{L|General Sites}} - listagem de fóruns e recursos em vários idiomas.
+* {{L|Map Archive Sites}} - para download de mapas existentes (principalmente para o '''Half-Life 2''').
+* Veja {{ACategory|Level Design}} para toda a documentação sobre o assunto.
+
+== Problemas comuns ==
+
+{{seealso|{{L|Compile Errors}}}}
+
+=== Sem grade (viewports pretos) ===
+
+Primeiro, verifique se a grade está ativada. A tecla de atalho {{Key|Shift|R}} controla, portanto, experimente.
+
+Se isso não ajudou, verifique a formatação do {{path|gameinfo|txt}} de seu mod.
+
+Ele precisa incluir uma chave chamada {{code|SteamAppId}}, e o número após ela precisa corresponder ao {{L|Steam Application ID}} do jogo base que você usará para iniciar o mod.
+
+Esse problema também pode ser causado pelo uso de uma versão do Hammer diferente da versão destinada ao jogo. Para se manter seguro, certifique-se de iniciar o {{path|hammer|exe}} a partir da pasta {{path|<nowiki>/bin/</nowiki>}} do jogo base do seu mod ou usar as Ferramentas de criação para iniciá-lo, se estiver modificando '''Portal 2''', '''Left 4 Dead''' ou '''Left 4 Dead 2''' ou '''Counter-Strike: Global Offensive''.
+
+=== Baixo desempenho ===
+
+A falha se deve ao legado do Hammer e ao código sem manutenção. Ele terá dificuldades para exibir muitos objetos detalhados e desenhar níveis em grandes distâncias; isso é visível até mesmo com os própios níveis do '''Half-Life 2''''''. Para piorar a situação, a existência de um grande número de objetos visíveis - “independentemente” do que sejam ou de quão pouco poliméricos sejam - prejudicará o desempenho e os tempos de entrada e fará com que tudo, como selecionar, editar configurações ou mover objetos, demore mais. O '''Hammer++''' e o '''Slammin' Hammer''' corrigem algumas dessas armadilhas de desempenho.
+
+{{bug|Algumas placas AMD têm um bug de longa data com a ferramenta de seleção no Hammer, o que faz com que as seleções tenham uma grande penalidade de desempenho e até mesmo demorem vários segundos. Isso é atenuado em grande parte no '''Hammer++'''.}}
+
+Para contornar esse problema, mantenha a distância de renderização do modelo e dos detalhes na guia Visualização 3D das configurações, na parte inferior.
+{{Tip|As teclas de atalho {{Key|1}} e {{Key|2}} movem o plano de recorte da visualização 3D para frente e para trás - você pode usá-las para ajustá-lo rapidamente e, assim, diminuir a carga de renderização no editor}}.
+
+Certifique-se de não ter ativado acidentalmente o '''Radius Culling''' pressionando {{Key|C}}. Essa tecla de atalho fácil de pressionar pode causar uma enorme perda de desempenho e, para piorar a situação, fazer com que o nível “não compile” até que seja desativado.
+
+O status '''Radius Culling''' é indicado por um “R” vermelho circulado na barra de ferramentas [[Hammer Map Operations Toolbar|Map Operations]]. '''Certifique-se de que ele esteja despressurizado''', a menos que você realmente pretenda usá-lo.
+{{Note|Dependendo da versão do Hammer, o botão e o próprio recurso podem não estar presentes. Mais antigo - o pré-[[Steampipe]] - Hammer não o tinham, enquanto o '''Slammin''' Hammer'' e o '''Hammer++'' o removeram.}}
+
+=== Congelamento durante a compilação ===
+Antes do Hammer em {{l4dbranch|1}} e posterior, que abre uma janela CMD separada, o Hammer tem sua própria janela de compilação, que pode congelar todo o programa durante a compilação.
+
+Para contornar isso e ver o progresso da compilação, os usuários podem usar {{npp|1}}, abrir o arquivo de registro (exemplo: {{code|d1_trainstation_01.log}}) e ir para Exibir > Monitoramento (tail -f) (isso impedirá que o Notepad++ edite o arquivo até que o “Monitoramento” seja desativado). Como alternativa, os usuários podem usar o '''Hammer++''', que também abre uma janela CMD separada ao compilar mapas.
+
+== Histórico de versão ==
+{| class="standard-table mw-collapsible mw-collapsed"
+|- style="position:sticky; top:0; z-index:10"
+! style="background:#666666; text-align:center; width:5em" | Versão
+! style="background:#666666; text-align:center; width:15em" | Jogo/Ramificação
+! style="background:#666666; text-align:center; width:10em" | Data de lançamento
+! style="background:#666666; text-align:center" | Recursos
+|-
+| 4.0
+| Todos os jogos da{{src04|1.bold}}
+| 5 de Novembro, 2004
+| Lançamento inicial do Hammer no Source SDK.
+
+'''Atualizações:'''
+* '''Source Engine materials system'''. Os materiais criados com o sistema avançado de texturização baseado em sombreamento do Source Engine são renderizados corretamente no Hammer Editor. 
+* '''Displacement surfaces'''. Uma nova classe de geometria de malha que pode ser esculpida em diferentes formas e conectada entre si para criar terrenos e outras superfícies complexas.
+* '''Input and Outputs entity system'''. As entidades usam um novo método para acionar e se conectar umas às outras, oferecendo um nível mais alto de flexibilidade e controle do que nunca. 
+* '''Hierarchical VisGroups'''. Os objetos agora podem estar em vários VisGroups, e os VisGroups podem ser organizados de forma hierárquica para facilitar a seleção e a organização.
+* '''Entity Helpers'''. Novos controles de interface do usuário que tornam a edição de parâmetros em entidades como holofotes e portas mais fácil e clara.
+* '''Per-face Lightmap controls'''. A densidade do mapa de luz pode ser controlada por face para maior controle sobre o equilíbrio da qualidade visual e do desempenho de renderização. 
+* '''Sound Browser'''. Navegador integrado para ouvir uma prévia dos sons disponíveis para os designers de níveis.
+* '''Non-modal Entity Report and Check for Problems dialogs'''. As caixas de diálogo agora são não modais, permitindo alterações nos controles de nível e de câmera ao mesmo tempo em que usam as informações nas caixas de diálogo.
+* '''Smoothing Groups'''. Controle por face da suavização baseada em iluminação. 
+* '''Find and Replace'''. Funções de pesquisa e substituição de texto em qualquer nome de entidade, parâmetro, entrada ou saída.
+* '''Selection Mode toolbar'''. Uma nova barra de ferramentas para controlar o impacto de grupos e entidades sobre as ferramentas de seleção. 
+* '''Overlays'''. Um novo tipo de entidade de textura, semelhante aos decalques, mas com um controle muito maior sobre como ela é aplicada às superfícies.
+|-
+| 4.0 (build 2959)
+| {{Src04|1.bold}}
+| 22 de Novembro, 2004 {{confirm}}
+| [https://github.com/Source-SDK-Archives/source-sdk-2004 Versão atualizada] da Source SDK 2004.
+|-
+|4.1
+| {{hl2lc|1.bold}}, Todos os jogos da{{src06|1.bold}} e adiante<!-- O HDR foi introduzido pela primeira vez no HL2 Lost Coast, que provavelmente foi executado em uma versão especial do Source 2004 ou em uma versão beta de 2006 quando foi lançado em 2005.-->
+|22 de Novembro, 2005
+|
+'''Atualizações:'''
+* '''HDR tools support'''. Os níveis de High Dynamic Range podem ser compilados e executados a partir do Hammer.
+* '''VGUI Model Browser'''. Navegador de modelos totalmente novo com controle de árvore completo e visualização 3D em tempo real da geometria do modelo, renderizado com o sistema de materiais Source.
+* '''Enhanced 2D and 3D Views'''. As visualizações 2D e 3D agora são renderizadas com um sistema de materiais de origem unificado, permitindo feedback em tempo real das transformações em todas as viewports simultaneamente e uma renderização muito mais rápida das viewports. 
+* '''2D model and displacement Rendering'''. Modelos de propulsão e renderização de geometria de deslocamento em viewports 2D.
+* '''Enhanced Auto Visgroups'''. Um número maior de categorias de Visgroups, além de uma interface aprimorada, torna os Visgroups mais eficientes.
+* '''Autosave feature'''. Cria backups automáticos e numerados de mapas, com opções para quando e onde os backups são criados.
+* '''Paste Special enhancements'''. Oferece opções para renomear objetos quando colados para evitar colisões de nomes com a correção automática de I/O de entidades.
+|-
+|4.1
+| {{src07|1.bold}}
+| 10 de Outubro, 2007
+|
+'''Atualizações:'''
+* '''Inspecting Leaves in Hammer'''. Agora você pode ver as [[visleaves]] usando a opção Carregar arquivo de portal no Hammer, em vez de usar o aplicativo {{code|glview}}.
+{{todo|Adiciona mais atualizações e alterações no Source 2007 Hammer.}}
+* '''Resizable Object Properties window'''. A janela Propriedades do objeto agora pode ser redimensionada e, por padrão, ela é maior e mais larga.
+|-
+|4.1 (build desconhecida)
+| {{l4d|1.bold}}
+| 25 de Junho, 2009
+| Lançamento inicial do {{l4dtools|1.bold}} do Hammer.
+'''Atualizações:'''
+* '''CMD compiling progress window'''. Ao compilar mapas, o Hammer abrirá uma janela CMD separada em vez de usar o próprio Hammer, evitando que ele congele todo o programa.
+|-
+|4.1 (build 4037)
+| {{src06|bold}}
+| Entre 2009 - 2010
+| Última versão do antigo mecanismo do Hammer.
+{{todo|Changes?}}
+|-
+|4.1 (build desconhecida)
+| {{l4d2|1.bold}}
+| Enrte 17 de Novembro, 2009 e 26 de Dezembro, 2009
+| Lançamento inicial do Hammer do {{l4d2tools|1.bold}}.<br>{{{Question|Quando o L4D2 tools foi realmente lançado?}}
+|-
+|4.1 (build 4715)
+| {{src07|bold}}
+| Entre 2010
+| Última versão do Hammer para Source 2007.
+{{todo|Changes?}}
+|-
+|4.1 (Lançamento de build desconhecido)<!-- Preencher somente a compilação da primeira versão do SDK. -->
+| {{as|1.bold}}
+|19 de Julho, 2010
+| Os arquivos [[Valve Map Format]] (.vmf) criados com essa versão são incompatíveis com a versão anterior do Hammer sem algumas modificações e soluções alternativas (como o uso do '''Left 4 Dead Authoring Tools'''/'''[[L4D2 Authoring Tools|Left 4 Dead 2 Authoring Tools]]''' ou a edição de arquivos VMF).
+'''Atualizações:'''
+* Foi adicionada uma maneira de exportar os pincéis selecionados para o Maya. 
+|-
+|4.1 (build desconhecida)
+| {{p2|1.bold}}
+|6 de Maio, 2011
+| Lançamento inicial do {{p2tools|1.bold}}'s Hammer. {{confirm}}
+|-
+|4.1 (build desconhecida)
+| '''Portal 2'''
+|12 de Maio, 2011
+| 
+'''Correções:'''
+* Correção de determinadas teclas que estavam sendo ignoradas pelo Hammer ao navegar pelos modelos
+|-
+|4.1 (build desconhecida)
+| '''Portal 2'''
+|17 de Maio, 2011
+| 
+'''Correções:'''
+* Corrigida a falha que poderia ocorrer quando pincéis malformados eram salvos em um mapa e depois reabertos no Hammer.
+* O Hammer agora salvará corretamente os mapas após detectar e corrigir pincéis malformados. Corrige o erro “Permissão negada” que alguns usuários estavam enfrentando.
+* Removida a opção “Lighting Preview”, pois ela não é suportada no momento.
+|-
+|4.1 (build desconhecida)
+| '''Portal 2'''
+|20 de Maio, 2011
+| 
+'''Correções:'''
+* Correção do fato de o Hammer deixar de responder após iniciar um mapa
+|-
+|4.1 (build desconhecida)
+| '''Portal 2'''
+|26 de Maio, 2011 para 21 de Maio, 2012
+| Desconhecido
+|-
+|4.1 (build 5439)
+| {{src09|bold}} ({{hl2|1}}, {{portal|1}})
+| Entre 2011 - 2012 {{confirm}}
+| Última versão do Hammer for Source 2009.
+{{todo|Changes?}}
+|-
+|4.1 (build 5476)
+| {{p3|1.bold}}
+| Build dated 2011 - 2012 {{confirm}}<br>13 de Dezembro, 2013 (leak)
+| Vazado Portal III SDK
+{{todo|Changes?}}
+|-
+|4.1 (BETA, build desconhecida)
+| {{csgo|1.bold}}
+|5 de Maio, 2012 (ou antes) {{confirm}}
+| Lançamento inicial do Hammer do {{csgotools|1.bold}}
+|-
+|4.1 (lançamento de build desconhecida)
+| {{csgo|bold}}
+|21 de Agosto, 2012
+| Versão de lançamento do Hammer do {{csgotools|1.bold}}
+|-
+|4.1 (build 5845)
+| {{srcmp|bold}} ({{css|1}}, {{tf2|1}}, etc.)
+| Final de 2012 {{confirm}}
+| Última versão do Hammer para Source MP.
+{{todo|Changes?}}
+|-
+|4.1 (build 8678)
+| '''Alien Swarm'''
+|24 de Setembro, 2020
+| Versão mais recente do '''Alien Swarm'''.
+|-
+|4.1 (build 9008)
+| {{src13|1.bold}}
+| 2 de Julho, 2021
+| Versão mais recente para {{dods|1.bold}}, {{hl2dm|1.bold}} e {{src13mp|1.bold|nt=0}}.
+|-
+|4.1 (build 9092)
+| {{tf2|1.bold}}
+| 16 de Setembro, 2021
+| Desconhecido.
+|-
+|4.1 (build 9109)
+| '''Team Fortress 2'''
+| 5 de Outubro, 2021
+| Desconhecido.
+|-
+|4.1 (build 9122)
+| {{csgo|1.bold}}
+| 29 de Outubro, 2023 {{confirm}}<!-- dates based off this "https://docs.google.com/spreadsheets/d/1ldzhd6vxd-03le5ymesUeG-hLWmxLpH79ajayeYDUNs/edit" spreadsheet, needs confirm through -->
+| Versão mais recente{{confirm}} para {{csgo|3.1}}.
+|-
+|4.1 (build 9464)
+| '''Team Fortress 2'''
+| 26 de Setembro, 2022
+| Desconhecido.
+|-
+|4.1 (build 9520)
+| {{hl2|1.bold}}
+| 17 de Novembro, 2023
+| Versão mais recente para {{src13|1.bold}} {{hl2|only}}.
+|-
+|4.1 (build 9540)
+| '''Team Fortress 2'''
+| 8 de Dezembro, 2022
+| Desconhecido.
+|-
+|4.1 (build 10038)
+| '''Team Fortress 2'''
+| 18 de Abril, 2024
+| Adicionada uma versão dedicada de 64 bits.
+|-
+|4.1 (build 10042)
+| '''Team Fortress 2'''
+| 22 de Abril, 2024
+| Versão mais recente para {{tf2|4}}.
+|}
+{{todo|Atualizações adicionais, como instâncias em '''Left 4 Dead''' e padrões de spray de modelo em {{csgo|1.bold}}? Além disso, o martelo de '''Portal 2''' tem uma opção para ativar a “Camera DotA”.}}
+
+==== {{src}} FGDs ====
+<!--alphabetical order-->
+{{note|A maioria dos jogos vem com seu próprio FGD.}}
+* {{hls|1.bold}} ([[Half-Life_Source.fgd|FGD]])
+* {{hl2|1.bold}} ([[Half_Life_2.fgd|FGD]])
+* {{csgo|1.bold}} ([[Counter_Strike_Global_Offensive.fgd|FGD]])
+
+{{cls}}
+
+== Veja também ==
+* [[Hammer Feature Requests | Solicitações de recursos do Hammer]]{{deprecated}}
+* [[Brush]]
+* [[Entity | Entidade]]
+* [[FGD]]
+* [[RMF]], [[VMF]], e [[MAP]]
+
+== Links externos ==
+* [https://valvedev.info/archives/theforge/ Site oficial (arquivado)]
+* [https://gamebanana.com/tools/5026 Instale Hammer 3.4 do Gamebanana] 
+
+{{leveleditors}}
+{{sdktools}}
+
+[[Category:Glossary]]	
+[[Category:Valve tools]]	
+[[Category:Official Tools]]	
+[[Category:Official Source Tools]]
+[[Category:Hammer]]	
+[[Category:Level Design]]	
+[[Category:Tools]]

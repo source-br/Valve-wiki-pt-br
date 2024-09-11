@@ -1,0 +1,72 @@
+{{LanguageBar}}
+{{tabsBar|main=Env_fog}}
+{{CD|CFogController|file1=fogcontroller.cpp}}
+{{this is a|point entity|name=env_fog_controller|sprite=fog_controller.png}}
+This entity determines the properties of aerial fog for the whole map.
+
+{{tip|In multiplayer games, fog may be changed per-client by sending the {{ent|player}} entity (probably best accessed through {{ent|!activator}}) a <code>SetFogController</code> input. (Also applies to single player sessions, like in {{Portal2}})}}
+
+In {{l4ds}}, multiple <code>env_fog_controller</code>s may be used in conjunction with {{ent|fog_volume}}s to create different fog effects where needed. In addition, an <code>env_fog_controller</code> can be set as the ''Master'' fog controller under flags, in cases where a <code>fog_volume</code> is not tied to any specific <code>env_fog_controller</code>, or if no <code>fog_volume</code> is used in a region.
+
+{{PreservedEnt|env_fog_controller}}
+
+
+Adding fog to a map can cause/require changes to the [[lighting]] for realism. Light is scattered and absorbed as it passes through fog. The denser the fog, the greater the effect:
+*[[Falloff]] - (or attenuation) is the rate at which light intensity decreases over distance. Falloff distance decreases as fog gets thicker.
+*[[Lighting#Tyndall effects|Tyndall effects]] - can be seen when the fog particles reflect light toward the viewer. Halos and light beams become more visible as fog gets thicker.
+*Diffused Lighting - the boundary-line between light and shadow becomes more blurred (diffuse) as fog gets thicker. See [[Lightmap#Lightmap Scale|Lightmap Scale]] and {{ent|shadow_control}}'s "distance" parameter.
+
+Older Source games (all {{src04}}-{{src13}} games) render fog as a plane a certain distance away from the camera. This method is bad, as rotating the camera will strengthen or weaken the apparent amount of fog in a particular spot, even though the viewer hasn't moved at all. In Left 4 Dead{{confirm}} onward, this is fixed by implementing a new radial method which is independent from the viewing angle.
+
+{{note|The [[3D Skybox]] fog levels set by the {{ent|sky_camera}} parameters should correspond to your <code>env_fog_controller</code> settings.}}
+
+==Flags==
+{{fl|1|Master|If multiple <code>env_fog_controller</code>s are active, this one will always take priority. There must be at least one {{ent|fog_volume}} in the map to work!}}
+
+==Keyvalues==
+{{KV|Fog Enable |intn=fogenable|boolean|Make fog start active.}}
+{{KV|Fog Start |intn=fogstart|float|How far away from the viewer the fog should start.}}
+{{KV|Fog End |intn=fogend|float|How far away from the viewer the fog reaches '''Fog Max Density'''.}}
+{{KV|Fog Max Density |intn=fogmaxdensity|float|Maximum density the fog may reach. Expressed as a decimal percent, so for 45% put 0.45.}}
+{{KV|Far Z Clip Plane|intn=farz|integer|Anything beyond this distance in world units will not be rendered. This should be higher than '''Fog End'''. If this is used, '''Fog Max Density''' should be set to <code>1</code> otherwise the [[void]] may be visible. 
+:{{note|This value is used as vis radius by [[VVIS]]}}}}
+{{KV|Primary Fog Color |intn=fogcolor|color255|Primary Fog Color.}}
+{{KV|Secondary Fog Color |intn=fogcolor2|color255|Secondary Fog Color. If '''Fog Blend''' is disabled, this color will never appear.}}
+{{KV|Fog Blend |intn=fogblend|boolean|Enables color blending between '''Primary Fog Color''' and '''Secondary Fog Color'''. When the viewer looks in the '''Primary Fog Direction''', fog will appear as the ''Primary'' color. When looking away from the specified direction, fog appears as the ''Secondary'' color. If the camera is not pointed directly at or away from the direction, a blend of the two colors will result. Sunlight with a '''Yaw''' of 45 degrees and a '''Pitch''' of -45 degrees could be enhanced using a '''Primary Fog Direction''' of "-1 -1 1", a '''Primary Fog Color''' of "120 110 100" and a '''Secondary Fog Color''' of "80 70 60".}}
+{{KV|Primary Fog Direction |intn=fogdir|vector|A vector (given by three space-separated numbers X Y Z) which the viewer camera is checked against to figure out the blend between the primary and secondary fog colors.}}
+{{KV|Use Angles for Fog Dir |intn=use_angles|boolean|Use '''Pitch Yaw Roll''' for the '''Fog Blend''' direction instead of '''Primary Fog Direction'''. There isn't much use for this unless you want the direction to rotate.}}
+{{KV|Interpolate time |intn=foglerptime|float|Fade time for the <code>StartFogTransition</code> input.}}
+{{KV|HDR Color Scale|intn=HDRColorScale|since=L4D|float|Multiplier for fog color when in [[HDR]] mode.}}
+{{KV|Zoom Fog Scale|intn=ZoomFogScale|since=CSGO|float|Scalar for fog start and end distances when the player is looking through a gun's scope (e.g. AWP).}}
+
+==Inputs==
+{{IO|TurnOn|Turns the fog on.}}
+{{IO|TurnOff|Turns the fog off.}}
+{{IO|SetStartDist|param=float|Sets the '''Fog Start''' distance.}}
+{{IO|SetEndDist|param=float|Sets the '''Fog End''' distance.}}
+{{IO|SetColor|param=color255|Sets the '''Primary Fog Color'''.}}
+{{IO|SetColorSecondary|param=color255|Sets the '''Secondary Fog Color'''.}}
+{{IO|SetFarZ|param=integer|Sets the '''Far Z Clip Plane''' distance.}}
+{{IO|SetMaxDensity|param=float|Sets the '''Fog Max Density'''.|nofgd=1}}
+:{{note|This input may not be in most FGD files but works in {{css}}. Does it work in others games ? {{confirm}} }}
+{{IO|SetAngles|param=angles|Sets the angles to use for the '''Primary Fog Direction'''.}}
+{{IO|Set2DSkyboxFogFactor|param=float|since=l4d2|Set the current amount of fog to blend into the 2D skybox. Expressed as a decimal percent, so for 45% put 0.45. {{l4d2}} only.}}
+{{IO|SetZoomFogScale|param=float|since=CSGO|Sets the '''Zoom Fog Scale'''.}}
+{{IO|SetColorLerpTo|param=color255|since=EP1|Stores a value for '''Primary Fog Color''' that is set once the <code>StartFogTransition</code> input fires.}}
+{{IO|SetColorSecondaryLerpTo|param=color255|since=EP1|Stores a value for '''Secondary Fog Color''' that is set once the <code>StartFogTransition</code> input fires.}}
+{{IO|SetStartDistLerpTo|param=float|since=EP1|Stores a value for '''Fog Start''' that is set once the <code>StartFogTransition</code> input fires.}}
+{{IO|SetEndDistLerpTo|param=float|since=EP1|Stores a value for '''Fog End''' that is set once the <code>StartFogTransition</code> input fires.}}
+{{IO|SetMaxDensityLerpTo|param=float|since=L4D|Stores a value for '''Fog Max Density''' that is set once the <code>StartFogTransition</code> input fires. }}
+:{{note|This one does ''not'' have any non-"LerpTo" counterpart. {{confirm}} '''Is this still true ?''' See <code>SetMaxDensity</code> input. }}
+{{IO|Set2DSkyboxFogFactorLerpTo|param=float|since=l4d2|Set the current amount of fog to blend into the 2D skybox. Expressed as a decimal percent, so for 45% put 0.45. This will only change once the <code>StartFogTransition</code> input fires. {{l4d2}} only.}}
+{{IO|StartFogTransition|since=EP1|When fired, the fog fades to any new values sent through the "<code>LerpTo</code>" inputs. Fade time is determined by the '''Interpolate time''' keyvalue.}}
+
+:{{bug|Does not work correctly in some games. The fog will transition to nothing and then abruptly change to the new values at the end of the interpolation time in {{l4d2}}{{csgo}}.}}
+:{{Todo|What other games have this bug? (Works perfectly in {{ep2}} for example)}}
+{{IO|ActivateAllPlayers|only={{P2CE}}|Turns this fog on for all connected players}}
+
+==See also==
+*{{ent|fog_volume}}
+*[[Fog tutorial]]
+*[[Fog Basics]]
+*[[Dust, Fog, & Smoke]]

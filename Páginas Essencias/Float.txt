@@ -1,0 +1,11 @@
+{{LanguageBar}}
+
+Um <code>float</code> (por extenso, "valor de ponto flutuante") é um número que contém uma expansão decimal diferente de zero (por exemplo, 3,5123). Isso é o oposto de um ''inteiro'', que armazena números com uma expansão decimal zero (por exemplo, 3).
+
+== Veja também ==
+*{{L|Integer}}
+
+{{ACategory|variables}}
+
+
+{{stub}}

@@ -1,0 +1,593 @@
+{{LanguageBar}}{{Goldsrc topicon}}
+{{TabsBar|main=gs2|base=Valve Hammer Editor}}
+{{SoftwareBox
+<!-- Basic info -->
+| title     = Valve Hammer Editor
+| image      = Hammer35.png
+| imagetooltip = Screenshot of Hammer 3.x, with {{code|c1a0}} map.
+
+<!-- Details -->
+| developer = [[Valve Corporation]]
+| initial_release = December 3, 1996<br><font style="font-size:10px;">(1.0, as Worldcraft)</font>
+| stable_release = March 31, 2002 <font style="font-size:10px;">(3.4)</font><br>April 18, 2003 <font style="font-size:10px;">(3.5, not included with HLSDK)</font>
+| written_in = 
+| type = Map Editor
+| distribution = [[Half-Life SDK]]
+| website = 
+| download =
+| version =
+
+<!-- Operating system(s)-->
+| windows = 
+| android = 
+| macos = 
+| linux = 
+
+<!-- Target engine(s) - hidden -->
+| gldsrc = 
+| source = 
+| source2 = 
+
+}}
+<span style="font-weight:bold; color:white">Valve Hammer Editor</span>, more informally known as '''Hammer''', and previously '''Worldcraft''', is [[Valve]]'s in-house level editor for {{gldsrc|1.bold}} games. The included version, '''3.4''', is included on [[Half-Life SDK]].
+{{ModernImportant|While it's functional, Hammer hasn't been updated since the early 2000s. '''Consider the [[#Hammer alternatives|list of modern alternatives]] that support GoldSrc.'''}}
+
+=== Downloading and using VHE ===
+{{seealso|[[:Category:GoldSrc Level Design|the index of articles pertaining to GoldSrc level design.]]}}
+VHE can be '''downloaded''' in [[Steam]] with <u>Half-Life SDK</u> (located in the '''Library''' among '''Tools'''; or [steam://install/254430/ click here] to install it directly from Steam). However, the included version of Hammer, '''3.4''', isn't the latest, and lacks important features such as model previews.
+
+A more updated '''Hammer 3.5''' can be downloaded [https://twhl.info/wiki/embed/Valve_Hammer_Editor_3.5 from TWHL], from [https://valvedev.info/tools/worldcraft/hammer3_5.zip VDU], from [https://www.moddb.com/downloads/valve-hammer-editor-35 ModDB] and in other community places.
+
+'''For setting it up''', see [[Configuring Hammer for Half-Life]]. That tutorial is effectively the same for other GoldSrc games.
+
+Alternatively, see the {{twhl|Tutorial: Setup Guide: Hammer}} on TWHL wiki.
+
+For '''creating your first map''', see TWHL's {{twhl|Tutorial: In the Beginning Part 1 }} and further. The local tutorial on VDC is pending construction.
+
+=== Features ===
+Goldsrc level design, and by extension, '''Hammer''' relies on building [[Leak|enclosed]] levels with [[brush]] geometry, populating them with entities, and compiling them. To that end, '''Hammer''' enables you to:
+* Create geometry of virtually any complexity by combining [[Block Tool|Primitives]];
+* Choose and [[Applying Materials|apply textures]] to those primitives' faces via the Material Browser and the Texture tool, deciding their alignment, scale and rotation;
+* Place base and game-specific [[:Category:Half-Life Entities|Entities]] - defined in the [[FGD]] - with the help of the [[Entity Tool]], and converting brushes into [[Brush entity|Solid Entities]];
+* Set up events, [[Triggers_(GoldSrc)|triggers]], [[Scripted sequence (GoldSrc)|scripted sequences]], paths and other types of map logic by editing the settings of each entity;
+* Create and load [[Prefab_(GoldSrc)|Prefabs]];
+* Use compile tools (which you can replace with any compatible ones of your choosing) to turn your map into a game-ready [[BSP (GoldSrc)|BSP]].
+
+=== Hammer alternatives ===
+Modern alternatives for working with GoldSrc levels include:
+* {{jack|2.bold}} (formerly Jackhammer) - many improvements, new features and QoL; also supports idTech titles;
+* {{trenchbroom|2.bold}} - primarily an idTech (Quake games engine) editor with recent added support for GoldSrc; open-source;
+* {{nrc|2.bold}} - also primarily a Quake-games editor with full support for GoldSrc; open source;
+* {{quark|2.bold}} - multi-purpose tool and level editor, supports GoldSrc and Source 1; open source;
+
+Historical (mostly not actively developed) alternatives include:
+* {{sledge|2.bold}} - open source;
+* [https://valvedev.info/tools/bsp/ '''BSP''' (editor)] - an older tool created by Valve's Yahn Bernier and maintained by the community. It was also the tool several of Valve designers used to work on Half-Life, until Worldcraft was purchased and BSP was phased out.
+
+=== Developer resources ===
+* '''{{twhl}}''' - a large collection of GoldSrc tutorials with a community forum and Discord server. 
+* [https://valvedev.info/ '''Valve Developer Union'''] (VDU) - a collection of archived tutorials for GoldSrc modding.
+* [https://www.the303.org/ The 303's] tutorials and resources.
+* [http://www.slackiller.com/tommy14/tutorials.htm Tommy of Escondido's] Mapping Help tutorials.
+* [[:Category:GoldSrc FGDs|List of GoldSrc FGD]] files.
+
+=== Versions History ===
+{{Note|The earlier versions of Worldcraft are mostly a historical curiosity. You'd have to jump through a few hoops to get them to work, and they'll be lacking features. You're almost guaranteed to never need to use them!}}
+* Worldcraft versions 1.x support Quake I, i. e. idTech 2 engine. Version 1.6 additionally supports Quake II and Hexen II.
+* Worldcraft versions 2.x mark Half-Life oriented, Valve-released versions, and ditch IdTech 2 support. 2.0 released with Half-Life and was on its retail disc.
+* Worldcraft versions 3.3 and 3.4 were released by Valve. 3.5 was in the works and released as beta, but never ''officially'' released by Valve, and was not included on [[Half-Life SDK]].
+Various versions can be downloaded from [https://valvearchive.com/archive/Other%20Files/Hammer%20Editor%20Archive/Worldcraft%20Versions/ Valve Archive].
+
+==== Legacy versions ====
+The full version history of Beta & 1.x:
+{| class="standard-table mw-collapsible mw-collapsed"
+|- style="position:sticky; top:0"
+! style="background:#666666; text-align:center; width:5em" | Version
+! style="background:#666666; text-align:center; width:10em" | Release date
+! style="background:#666666; text-align:center" | Features
+|-
+| Beta 0.920
+| September 20, 1996
+| '''Fixes:'''
+Fixed a lot of Direct3D crashing bugs. I hope this helps some people. Unfortunately, it won't help people with Matrox cards.
+* Worldcraft no longer creates "duplicate brush planes", which QBSP would often complain about.
+* "Select All" and the box selection would select objects that were not visible. Fixed.
+* Shearing the selection was all wrong. Fixed.
+* The 500 solid limit is removed.
+* Entity keyvalues were removed if Smartedit didn't know about them - this wasn't part of the original design, but uh - someone slipped the code in there. Or something. Anyway, that's fixed.
+* Fixed pasting & object creation. New objects are now created in the current 2D view (of course), and are centered in the next most recently used view.
+
+'''New functions:'''
+* Added FULL textured preview. The textures in this preview are properly aligned, properly rotated and properly scaled. A huge thank you goes to Alex Moon (odin@mdn.com) for giving me the Direct3D code to calculate the texture coordinates based on Quake information.
+* Added new edit mode: "Apply textures mode." Click the funny looking pencil-block icon on the left to activate it. When you're in this mode, all you can do is select faces in the 3D view and edit their textures and offset/rotation/scaling information.
+   
+(Sidetrack: I am adding a "Vertex/face manipulation mode." Watch for it in the immediate future!)
+
+How to use this:
+- Click on a face to select/deselect it.
+- Hold down {{Key|CTRL}} to select multiple faces.
+- Hold down {{Key|SHIFT}} to select/deselect all of a solid's faces. SHIFT must be combined with {{Key|CTRL}} to select multiple solids' faces.
+
+When you enter the mode, a dialog box is displayed that contains info about the currently selected faces. Modify the info and hit APPLY to make it permanent. Hit REVERT to restore the original information. While you're in this mode, you can still use the other tools - magnify, camera, etc. However, you MUST select the pointer tool to select more faces. Also, You can use Edit|Clear Selection to deselect all faces.
+
+* Hold down SHIFT to make the right mouse button move forward/backward in the 3D view with the camera tool.
+* Added support for multiple texture files. Configure this using Tools|Options. NOTE: If you use more than one texture file, you MUST use a version of QBSP that supports multiple texture files.
+* Added "Hide Items" menu selection. This toggles the display of items: Monsters, Guns, & so on.
+* Added a spike/cone primitive.
+* Added the ability to select the number of faces to create on a cylinder/spike.
+* Added the ability to add solids to an existing solidentity. Select the solids you want to add and the entity you want to add them to, select 'toEntity', and Worldcraft will ask you if you want to combine the solids & the existing entity or create a new entity.
+* Added mouse scroll feature for the 2D views. Hold down {{Key|SPACE}} and left-click-drag to drag the view around. It doesn't track perfectly yet, but it will.. oh, it will.
+* The Texture Browser now initially selects the texture that is selected on the Texture Bar.
+* Added preset zooms - the 1 thru 9 keys now zoom out->in.
+* Added the ability to save only the visible parts of a MAP. This is very useful for cutting down on QBSP/LIGHT time. Select File|Export to Quake MAP, and click on "Save Visible Objects Only."
+* The size of the selected objects is now displayed on the status bar.
+* Added gamma-correction keys. {{Key|CTRL|Home}} makes textures brighter, and {{Key|CTRL|End}} makes textures darker. You can also change this setting with  Tools|Options.
+* Added color to the game definition file. Now, different objects appear different colors.
+* Upped face limit to 120. Also reduced memory requirements for Solids: In the previous version, 16 faces were allocated for each solid regardless of how many were actually used. The new version allocates faces as necessary in blocks of six: this means big memory savings, at a small performance price.
+|-
+| Beta 1.007
+| October 7th, 1996
+|'''Fixes:'''
+* Fixed disappearing dialog box text
+* Installation program now uses a standard method to read the Win95/NT4 Start Menu Directory. Previous version had problems with NT4 and international versions of 95.
+* Installation program will now create directories of any depth, such as: 
+<code>d:\program files\worldcraft</code>, even if <code>d:\program files\ does not exist</code>.
+* Texture brightness can now be brighter.
+* Fixed inability to re-enable 3D views once they'd been disabled.
+* Restructured menus a bit - in particular, the "View" menu now contains the Map View 2d/3d commands.
+* You can now move the mouse into a view to move the keyboard focus to that view.
+* Single-entity selections are no longer resizable - you can just move them.
+* Alignment tools were reversed sometimes.. fixed.
+* Fixed problems loading commented MAP files.. again. Improved file error handling.
+* The carve function now uses the appropriate texture for new faces.
+* Export to Quake MAP and Run MAP in Quake crashed if the map was not already saved.
+* Fixed some object coloring problems.
+* Face texture scale values were not always properly saved, because Worldcraft neglected to save the fractional portion of a floating point value: 1.5 would be saved as 1, for example, and 0.5 as 0. Oops!
+* Some custom texture files did not load properly.. fixed.
+* !!! Fixed "Carve" bug that caused leaks !!!
+
+'''New functions:'''
+* Added "2d views" tab to configuration dialog. New options: No Scrollbars, Crosshair Cursor, 15 degree default rotation.
+* Added 'map info' function to display the number of solids, entities and faces in the map.
+* Added function to center all 2D views on the currently selected objects. Use View|Center on Selection, or {{Key|Ctrl|N}}.
+* Added more functionality to the Run Map dialog. You can now specify LIGHT -extra, QBSP -onlyents, and "Save Visible Objects Only."
+* Added "make hollow" tool. This turns each selected solid into a group of solids that forms a hollow object. For example, you can create a cube, select Tools|Make Hollow (or press {{Key|CTRL|H}}), and Worldcraft will create a series of solids that form a hollow cube. You can do this with any  shaped object: blocks, cylinders, spikes, or whatever. Worldcraft will ask you to specify the width of the walls.
+* Customized QBSP included with Worldcraft. Supports up to 64 solid faces, and will work with multiple texture files. No need to download anythin' else.
+|-
+| Beta 1.022
+| October 22, 1996
+|
+|-
+| Beta 1.030
+| October 30, 1996
+| '''Fixes:'''
+* Problems with QBSP and paths with spaces (such as "program files", ironically!) are fixed. This caused crashes within QBSP, so the Run Map feature didn't work.
+* Problems with some crappy 3D cards (no offense!) worked-around. If you have a Matrox Millenium, a Stealth 3D, or another crappy 3D card(again, no offense! :) use Tools|Options|3D views and select "No Hardware Acceleration." Don't load any maps before you do this.
+* Textured display on pasted objects was all wrong in some cases. Fixed.
+* I find it hard to believe I never caught this before.. but the closing line for every polygon in the 2D view was not being drawn. Huh???
+* Carving with "Filter by Groups" made the results of a carve disappear. Fixed.
+
+'''New functions:'''
+* Added "Paste Special" feature. This is pretty handy - it allows you to specify the number of copies to paste, and an accumulative offset/ rotation vector to modify each pasted object.
+* Added "Draw Vertices" option in the 2d views configuration tab. Use Tools|Options to configure Worldcraft!
+* Made small solid handling much better: it's easier to move/modify tiny (4x4x4, for example) solids.
+* Improved visual response when modifying objects: cursor changes to reflect the handle the cursor over in move/scale and shear modes.
+* Now using a proper method to get the Quake/Maps directory in Tools|Options|General. 
+* Added spin button controls to the texture application toolbar. Clicking these updates the textures right away - there's no goin' back! (Until I implement Undo .. what a nasty feature that is.)
+* Important: The file ([[MAP]]/[[RMF]]) is now ALWAYS saved when you select "run map."
+|-
+| Beta 1.031
+| October 30, 1996
+|
+On December 9th Ben Morris announce plans for Unreal support.
+
+'''Fixes:'''
+* Fix for qbsp.exe that would crash light.exe (rad.exe)
+|-
+| ???
+| November 23, 1996
+|
+* A beta of the help file is released.
+|-
+| 1.0
+| December 3, 1996
+|
+The full version of Worldcraft was released, the price for the full version was $34.95. Worldcraft was initially distributed by {{Wiki|ACDSystems}}. Registered users would receive updates via mail on CD's. Some CDs were not shipped before January 6, 1997.
+
+'''New functions:'''
+* Added multiple, unlimited Undo/Redo! Configure the levels of Undo you want to save in Tools|Options. Remember - the higher you go, the more memory this feature will take up. (It is quite a hog in some cases.)
+* Added more color difference to objects (monsters, etc), and added some missing attributes to some objects.
+* {{Key|Alt|A}} and {{Key|Alt|S}} also change the grid size.. people with non-english keyboards/Win95 installs couldn't use [ and ] (which still work for those who can use them.)
+* Added better multi-pick feature. The 3D view works the same way as before - hold down the left button to cycle thru the "hit" objects. 
+The new feature is the use of the , and . keys to cycle backwards and forwards in the Hit List. This also works with 2D views - the left button adds all the "hit" objects to the Hit List, and you can use the PGUP and PGDN keys to cycle thru the objects. Again, hold down {{Key|CTRL}} * before* you click to keep the current selection.
+* Added combobox to the Angle field in the Object Properties dialog that contains "Up" (angle -1) and "Down" (angle -2).. just a convenience.
+* The Paste Special dialog now saves the info through sessions.
+* Added the ability to hollow "outwards." If you enter a negative number in the wall width field of the Hollow dialog, the resultant room will be that width larger than the original solid.
+* Carving one object no longer groups that object.
+* Added a window that displays the output of QBSP, LIGHT and VIS before Quake is run. It's ugly right now, but it works! The program text appears in chunks, but the programs aren't actually much slower than they normally are (maybe 99% of normal speed.) Will be improved.
+* Added a Clear Flags button to the Flags tab of the Object Properties dialog.
+* Added "temporary invisibility" feature. Select some objects, and use View|Hide Selected Objects to remove them from view. This is totally independant of the Filter Control and VisGroups. To re-display ALL the hidden objects, use View|Show Hidden Objects.
+* Added a Map Error Checker. The errors it checks for are currently:
+- no player 1 start
+- solid has mixed face contents.
+- object whose 'target' value has no matching 'targetname' in another object Use Map|Check for Problems or Alt+P to access it.
+* Added "show connections" feature to the View menu. When ON, the 2D views display lines from targets to their triggers. 
+* The "round face limit" of cylinders and spikes is now 32.
+* Compiling under DirectX3 now. Might fix up some problems.
+* Added Threewave Capture the Flag entities. They are: item_flag_team1, item_flag_team2, info_player_team1, info_player_team2 To use these items, you must install the Threewave CTF patch. Get it from http://quake.threewave.com/
+* Added flip (mirror) command. This is relative to the last active 2D view. Use Tools|Flip|Horizontal/Vertical. Hotkeys - Horizontal: {{Key|CTRL|L}}. Vertical: {{Key|CTRL|I}}.
+
+'''Fixes:'''
+* Fixed problems with loading MAPs - loading once and then loading again produced an error that wasn't really there.
+* Fixed a crash-on-exit bug specific to the last version.
+* No more MaxTextures problem.. the limit is now 8192 textures.
+* If there was an error with the syntax in QUAKE.FGD, Worldcraft would say "There is an error", but fail to report the error message. This has been fixed.
+* The toEntity feature would display point-entity classes in the object properties dialog. This has been fixed: now, only solid-entity classes are displayed (as is proper.)
+* Using Paste Special's rotate feature with group/entity objects really did not work. Fixed.
+* FINALLY got the edit field in the Object Properties dialog box to look right.
+* Dragging an object past the scroll borders of a map really screwed up the display. Fixed.
+* Invisible objects are no longer carved.
+* AUGH. RMF files did not save the information I carefully cultured for faces in 10/22 that prevents leaks (cutnodeportal errors).. this is fixed. How annoying.
+* Fixed misalignment problems with 90/180/270/360 degree rotations.
+|-
+| 1.0a
+| December 5, 1996
+|
+'''Fixes:'''
+* IMPORTANT: Selection hit List cycle keys changed to PGUP and PGDN.
+* You can now use the . and DEL keys in the face properties bar (that is, you can enter decimal values.)
+* Old-style Cut/Copy/Paste shortcuts work again, as does the popup mouse menu.
+* Couple little UI-caused crashes fixed.
+* The "go" button in the Map Check dialog didn't "go" to duplicate plane errors. Fixed.
+* Setup program didn't install VIS and LIGHT.. oops.
+|-
+| 1.0b
+| February 15, 1997
+|
+|-
+| 1.1
+| January 27, 1997
+|'''Fixes:'''
+* The .PTS file is now copied to the maps directory, instead of the Quake directory (which was incorrect.)
+* The Remove button in the VisGroups editor works now.
+* Pressing {{Key|Ctrl|Z}} too many times would introduce instabilities, and Worldcraft would often crash. Fixed.
+* More UI things changed and some other crashes fixed.
+* Fixed a bug with the selection box that disallowed resizing.
+
+'''New functions:'''
+* Added White On Black color scheme for the 2D windows. Use Tools|Options|2D views to select it.
+* Added highlighted gridlines every 10 grid units.
+* Sped up 2D drawing.
+* Added option to reverse mouse Y axis in the 3d views - just like a flight sim.
+* Added default grid size option in Tools|Options|2D views.
+|-
+| 1.1a
+| February 20, 1997
+| '''Fixes:'''
+* Broke Visgroups in 1.1 - fixed.
+* Paste Special accepted only positive numbers using the keyboard - fixed.
+* Problems with the 3D view being updated after manipulating solidentities fixed (improperly textured objects, duplicate objects in the 3D view only, etc.) This also caused big memory leaks, which are now fixed.
+* More errors in quake.fgd fixed.
+* Point-entities (player starts, etc) are now snapped to the grid at their centerpoints if you move one at a time.
+
+'''New functions:'''
+* You can now move objects by click-and-dragging them in one step.
+* You can COPY objects while moving them by holding down SHIFT before you release the left mouse button.
+* New feature - Snap Marked Objects To Grid - use the TOOLS menu or {{Key|CTRL|B}}. This feature does not modify the size of the objects or their relative positions.
+|-
+| 1.2
+| February 25, 1997
+|
+On July 14, 1997, Valve hires Ben Morris and acquires Worldcraft. They did so with the intent to use it for the development of Half-Life and later release it with Half-Life.
+|-
+| 1.3
+|
+|
+* Added Vertex manipulation
+|-
+| 1.5
+| September 5, 1997
+| '''New functions:'''
+* Vertex Manipulation: Vertex manipulation allows you to move each point on a solid independently of the other points. You can even modify multiple points on multiple solids at the same time! To use vertex manipulation, select the vertex tool from the toolbar. Before you can modify a solid's points, you have to select the solid into morph mode by clicking on it in the 2D (center handle only) or 3D views. You can select multiple objects by holding down {{Key|CTRL}} before you select it. To select a vertex and move it, click the left mouse button over it. To select multiple vertices, hold down {{Key|CTRL}} and click. You can use a selection box as well - just drag out a box, size it to the vertices you want to select, and press ENTER.
+
+* Display Mode: You can select to display only edge handles, only vertex handles, or both kinds of handle by pressing Shift+V or clicking on the vertex tool icon repeatedly.
+
+* Face Splitting (Registered Only): You can split a face into two by selecting just TWO edges or two vertices and pressing {{Key|CTRL|F}}. You can't select an edge and a vertex to split.
+
+* Clip plane: The clipping plane allows you to cut an object (or objects) along a 2D plane. To use it, select the objects you want to clip. Then press Shift+X or select the clip tool from the toolbar. Left-click in the 2D view you want to use to clip and drag out the line you want to cut with. Release the left button. A preview of the "clipped result" is drawn with thick lines in the 2D views. You can move the line around by holding {{Key|CTRL}} and dragging it. This moves both points instead of just one. Hold down SHIFT and click-drag to start over in a new view.
+	
+* Clip Mode: You can change the clip mode by pressing Shift+X or clicking on the clip tool repeatedly. There are three modes:  Clip Left, Clip Right, and Split. The first two modes just toggle which side of the original object is kept - left or right - and the third mode splits the original object into two objects. Remember that you can clip multiple objects at once - just select multiple objects before you go into clip mode.
+
+* Texture locking: When texture lock mode is ON, moving solids around keeps their texture alignment intact. Rotating objects doesn't keep their alignment - yet. To toggle texture lock, press Shift+L or select "Texture Lock" from the TOOLS menu.
+
+* Redone Visgroups: Visgroups are now actually usable. They work very differently from before - the "Hide Objects" button on the toolbar creates a new visgroup, puts the selected objects in that visgroup, and hides it. The group is named "N objects", where N is the number of objects that were hidden. Conversely, "Hide Unselected Objects" puts all the objects that are not selected into a new visgroup and hides it. Objects can now only be part of ONE visgroup. This new method takes a little bit of getting used to - it makes Visgroups a temporary method of organizing hidden objects instead of a long-term strategy since the groups are so frequently broken up and destroyed. To toggle the display of an existing visgroup, click just to the left of its name in the filter control. The hand icon will appear or disappear to show if the group is visible or not. You must click APPLY for the changes to take effect. The "Show All Groups" button displays all the Visgroups. The new Filter Control allows you to do several group operationswith the mouse:
+- you can combine a group with another group by click-dragging it over the destination;
+- you can delete a group by dragging it out of the listbox
+- you can rename a group by selecting it and then clicking it again in the listbox.
+
+* Texture browser features: The texture browser has some new features. The name filter allows you to specify multiple search phrases, separated by spaces. For example, "floor 1" will display all the textures that have the words "floor" and "1" in them. The filter list is now saved in a pull-down box, so you can quickly recall previous filters. The MARK button marks all the solids that use the currently selected texture. The REPLACE button brings up the texture replace dialog and fills in the "Search" field with the currently selected texture.
+
+* Select by handles: The 2D and 3D Wireframe views now display an X in the middle of every object to ease selection. This is especially useful in 3D Wireframe mode, where it was difficult before to tell which object was going to be selected (since you can see through them all!) You can toggle 2D selection ONLY by center handles by clicking "Select By Handles" on the toolbar (this option is also available in the Tools|Options|2D Views dialog.)
+
+* Multiple cameras: You can now create multiple persistent cameras. Hold down Shift and left-click-drag to create a new camera in a 2D view. If there are objects selected, the camera will be placed on the center of the objects in the third axis (the "depth" axis of the 2D view you create the camera in.) More changes:
+- the active camera (drawn with a red line) moves in 2D when the 3D position changes.
+- press DEL to delete the active camera.
+- press PGUP and PGDN to cycle through the existing cameras.
+
+* New Map Check features: Map Check will now check for several more errors. In addition, there's a "FIX ALL" button that fixes all the errors of the currently-highlighted kind. The new checks are:
+- unrecognised texture - a texture on a face that's not found in any of the currently loaded WAD files. FIXing this error replaces the texture with the currently selected texture.
+- invalid brush - a brush that's been mangled by vertex manipulation or other strange phenomena. FIXing this error causes Worldcraft to closely approximate the invalid shape with a valid one. The results might not be desirable all the time.
+
+'''Other Small Features:'''
+* Transformation previews in 2D: When you select a bunch of objects and rotate/scale/shear/move them, a preview is shown in the 2D views instead of just a simple box.  This makes it easier to line things up when you're transforming a bunch of stuff.
+
+* Transform dialog: Press {{Key|CTRL|M}} or select Tools|Transform to bring up a transformation dialog, where you can transform the selected objects precisely by entering a rotation, scale, or movement value.
+
+* Auto select: This is a toggleable state. When it's ON, dragging a selection box in a 2D view automatically selects everything in the box when the left button is released, so you don't have to resize it in the other 2D views to get what you want.
+
+* Move 2d views with 3D camera: This is an option in Tools|Options|2D Viewsa
+
+* New texture application features: In texture application mode, there are some new features. The HIDE MASK button removes the red highlight of selected faces temporarily, so you can see what you're aligning better. The Right Mouse Button always APPLIES the currently selected texture to the face you click on, and SHIFT+RMB applies the texture to the entire brush.
+	
+'''Tiny features:'''
+* 'D' and 'C' now zoom in the 2d views
+- {{Key|CTRL|E}} behavior:
+- centers on selection
+- centers on map (if no selection)
+- centers on selected vertices (if in vertex mode)
+
+* Important Bug Fixes:
+- fixed the 1-off scaling problem
+- fixed texture browser ugliness in NT
+- pasting objects snaps to grid
+- fixed the 45 degree texturing problem
+- toolbar doesn't flash anymore
+- copying a command sequence in the expert run map feature used to crash.
+- lines are much crisper in the 2D views - no jaggies on 45 degree lines, for example.
+- shearing objects now snaps to grid.
+|-
+| 1.5a
+| September 24, 1997
+|'''New functions:'''
+* added a purge button to the filter control that deletes all unused VisGroups.
+
+'''Fixes:'''
+* "Clear Selection" was incorrectly being put into the undo stack in most cases. fixed.
+* Changed face painting behavior: if you select a tool besides Select, Magnify, or Camera while you're in face painting mode, FP mode will be deactivated.
+* Map Checker was far too strict about finding points off a plane. Fixed.
+* Inserting a prefab while objects were selected screwed up the 2d display. Fixed.
+* file save actually goes to the map directory now. 
+* deleting all cameras then using pgup/pgdn crashed. fixed.
+* selecting object(s), editing their properties, then deselecting all objects by clicking on blank space in 2d views did not save the changes you made. fixed.
+* copy/pasting an object required you to reselect that object to edit its properties. fixed.
+* fixed some face splitting problems.
+|-
+| 1.5b
+| October 9, 1997
+|'''New functions:'''
+* New icons and splash screen, courtesy of Walter |2| Costinak (2@2design.org). These are great! 
+* One vertex will snap to grid when you use the arrows to shift it, if it was not already on the grid.
+* The Alt+P map checker now detects solid entities with no solids attached to them. This happens rarely, but it's a pain to fix.
+* There's now an option to replace textures on hidden brushes.
+* There's now an option in the 2D Views tab to draw objects with the color of the group they belong to in the 2D views.
+* You can now combine multiple solid entities into a single entity with the toEntity command. You couldn't, before.
+* Copy/Paste entity properties buttons were added in the Object Properties dialog box. Select an entity, hit COPY, and all its attributes are saved. Select another entity, hit PASTE, and those attributes are copied over. Pretty cool.
+* When you move stuff in the 2D views, the original object remains in place once more. Added arrows for texture scaling in the Texture Application Bar.
+
+'''Fixes:'''
+* {{Key|CTRL|A}} stopped working to center the four views. Fixed.
+* Undoing texturing with the APPLY button in Texture Application mode didn't work. Fixed.
+* Undo didn't update the 3D preview properly (this bug was only in the last release.) Fixed.
+* The clip plane now uses the texture on existing faces of the brush you're clipping when it adds a face to a brush. It used to add whatever texture you currently had selected, which was a pain if that texture was water or slime or whatever.
+* The clip plane didn't work on grouped objects/solid entities. Fixed.
+* Sometimes visgroups would be created with a very very dark color. Fixed.
+* Snap to grid indicator was flipped sometimes. Fixed.
+* "Goto" in the entity report no longer closes the report window.
+* Moving brushes with the arrow keys wasn't recorded in Undo. Fixed.
+* Adding an object to the prefab library crashed Worldcraft. Fixed.
+|-
+| 1.6
+| March 6, 1998
+| Announced December 18, 1997. Released March 6, 1998. At the same time Ben Morris announced that he has left Valve Software.
+
+'''New features:'''
+* Added support for Quake II and Hexen II. FGD's for Quake, Quake 2, Hexen2, and Quake 2 CTF. 
+* Added the Game Configurations tab. Support for loading multiple .wal and .pak files. Browse textures per container. Edit the Quake 2 surface attributes. 
+* "Check for Problems" added. 
+* Colored picker for light entities. 
+* View path files in 2D views. 
+* Expert Compiler options. The Build Programs tab.
+|-
+| 1.6a
+| August 25, 1998
+|
+A Shareware version was released with the 1998 September issue of {{Wiki|PC Accelerator Magazine}}.
+|-
+| 1.6b
+| 
+|
+|-
+|}
+
+The FGDs for 1.x:
+* [[quake.fgd]]
+** [[Quake Team Fortress.fgd]]
+** [[hexen2.fgd]]
+* [[quake2.fgd]]
+** [[q2ctf.fgd]] (Quake II ThreeWave Capture the Flag)
+** [[D-Day: Normandy.fgd]]
+
+==== Current versions ====
+The full version history of 2.x and 3.x:
+{| class="standard-table mw-collapsible mw-collapsed"
+|- style="position:sticky; top:0"
+! style="background:#666666; text-align:center; width:5em" | Version
+! style="background:#666666; text-align:center; width:10em" | Release date
+! style="background:#666666; text-align:center" | Features
+|-
+| 2.0
+| November 19, 1998
+| Version 2.0 of Worldcraft was released with the release of Half-Life, and only worked with Half-Life. 
+Worldcraft 2.0 represents the largest jump in feature enhancements and additions to date. Below are a list of the new things along with links to more information about them. There are a few new features on the toolbars.
+
+Map Tools: 
+* The Decal tool allows you to take advantage of Half-life's decal feature, which allows you to lay an image ontop of a texture.
+* The Path tool lets you easily and quickly create paths for objects and monsters to follow.
+* The Vertex tool has been enhanced; it now allows you to merge vertices by dragging one ontop of another.
+
+Map Operations: 
+* The Ignore Groups button allows you to edit an object independent of whatever group it might be a part of. This is useful if you want to edit a single piece of a multi-brush entity, or if you'd rather not ungroup a set of structural brushes to work on a single part of it.
+* The Cordoning tools allow you to cordon off an area of your map and do quick test compiling without having to wait for the whole level to compile.
+
+Msp Views:
+* A set of buttons control the loading and saving of independant window configurations. Independant window configurations allow you to customize the views of worldcraft to your liking.
+
+The Texture Application mode (Face Properties dialog) has been enhanced with several new features. A smooth groups feature allows you to specify an angle at which [[QRAD]] will consider an object "rounded" and will smooth the lighting accordingly. Any angles at or under the value specified will be smoothed. The material feature shows what material type the currently selected texture is. Material type will effect sounds made directly on the surface of a brush with that texture (footsteps, bullet ricochets, etc). Last, the {{quake2|3.1}} surface parameters are available to you, letting you control things like surface lighting and detail brushes.
+
+There are several new options available to you through the menus as well.
+* (File) export to dxf - this allows you to export a 3D scene to 3DS format to create a scripted sequence
+* (Map) entity report - this can be used to manage your entities and do quick searches for specific entities, providing an easy alternative to searching through your map manually.
+* (Map) load/unload pointfile - this lets you load a leak file generated by the compile tools directly into Worldcraft. A thick red line will lead you directly to the source of the leak.
+* (View) hide paths - this acts much like the hide items command. It will hide any path made with the Path map tool.
+* (Tools) options - the options dialogs have almost all been modified in some way. As well, there are two new dialogs - game configurations and build programs.
+
+• general
+
+• 2D views
+
+• 3D views
+
+• textures
+
+• game configurations
+
+• build programs
+
+The game configurations dialog contains all the information for setuping up multiple game configurations. This lets you specify what entity set and map format to use, as well as palette and default entity information.
+
+The build programs dialog allows you to specify which compile tools to use with which game configuration. As well, all values entered here are easily referenced in the expert compile dialog by a series of static variables ($game_exe, $bsp_exe, etc).
+
+The compile tools included for Half-life are somewhat different than previous games, but operate in a very similiar manner. The tools are as follows:
+
+You should say that qcsg analyzes all the geometry, textures, and entities in your map. qbsp2 divides that map up into visible areas, and then vis determines more rigorously which polygons are visible and which ones aren't.
+
+You can invent a word "visable", meaning "a level which can be vised" as opposed to "visible", "that which can be seen"
+
+You should explain that ahead of time so people don't think it's a typo
+
+* QCSG analyzes all the geometry, textures, and entities in your map.
+* QBSP2 divides that map up into visable areas.
+* VIS determines more rigorously which polygons are visible and which ones aren't.
+* QRAD performs all the lighting calculations. This can easily take as long as VIS, depending on the complexity of the lighting calculations it must perform.
+
+|-
+| 2.1
+| April 09, 1999
+| Version 2.1 of Worldcraft was released for free, but only worked with Half-Life. 
+
+'''Updates:'''
+* Fixed crash when selecting large entities (the TFC entities for example) after placing them in the map.
+* Moved registry keys to be independent of Worldcraft 1.6, so now 2.1 can coexist with 1.6.
+
+'''New Features:'''
+* Added a new mouselook navigation system. Press 'z' to toggle it on/off. ASDW keys work like in Half-Life. This system can be disabled from the 3D options page and everything should work the old way.
+* Streamlined memory allocation to be more economical.
+* Added an autoupdate utility so that Worldcraft can be updated over the internet.
+* The old lights.rad has been renamed valve.rad. The new lights.rad contains only one entry (for +0~WHITE). If you want the old lights.rad file, copy valve.rad over light.rad.
+* Fixed a crash when an entity in the game data file had a type "flags" or "choices" variable and another variable of the same name but with a different type. The only way to test this would be to add this error to the FGD file.
+|-
+| 3.3
+| June 8, 2000
+| 
+'''Highlights:'''
+The editor has been given a facelift, with a completely rewritten OpenGL renderer for the 3D views. This enables the addition of engine rendering code for previews of such things as sprites and glow effects. Texturing, normally the most time-consuming aspect of mapmaking, has also been streamlined. And, a number of other productivity-enhancing features have taken the most common hitches out of mapmaking.
+* OpenGL 3D Renderer. The real-time renderer is much faster, more robust, and allows for animating visuals in the 3D view.
+* Texture Locking. Texture alignment is now preserved through rotation, scaling, and flipping, allowing for the hassle-free construction of odd-angled geometry.
+* Powerful Texture Application Features. Automatic texture continuity is guaranteed when lifting and applying from one face to another. Textures can be fit across one face or multiple faces, or aligned to the left, right, top, bottom, and center of faces with a single button click. Textures can be projected onto faces from an arbitrary viewpoint, useful for texturing cliff faces or other irregular geometry. In addition, texture axes are now displayed in the 3D view.
+* Sprite Preview. Sprites are now automatically previewed in the 3D view, along with animation. Frame rate and scale key values are correctly reflected in the preview, eliminating the need to compile and run the map in the game engine when placing sprites.
+
+'''Features:'''
+Aside from the above highlights, there have been a number of smaller changes as well.
+* Go To Brush Number. Brushes can now be found by entity / brush number for fast tracking down of compiler errors.
+* Iconic Entities. Any point entity can be set to render as a sprite icon in the 3D view through a specification in the FGD file, making it easy to distinguish between different entities in the 3D view.
+* 3D Preview of Tools. The brush creation, clipper, cordon bounds, and selection tools all render in the 3D view in real time, taking the guesswork out of previously painstaking operations.
+* Colored Solid Entities. Solid entities can now be given a render color in the FGD file, for easier identification in the 2D or 3D views.
+* 3D Grid. A new 3D grid allows for easy visualization of brush sizes in the 3D view.
+* Missing Texture Replacement. Added a Replace button to the texture bar, making it easy to replace textures when they are missing from the WAD file.
+* Texture Usage Report. Statistics on unique textures, total texture memory, and WADs used in are reported in the Map Information dialog
+* Enhanced Camera Controls. Real-time keyboard sampling gives smooth camera movement in the 3D view. Holding down both mouse buttons now enables dollying the camera forward and back. The mouse wheel now zooms both the 2D and 3D views.
+* Point and Click Entity Placement. Point entities can now be placed directly in the 3D view just by pointing and clicking.
+* Entity Key Browse Button. Added a browse button to the Entity Properties dialog for typo-free setting of sprite, sound, and model keys.
+* Clipper Measurements. Sizes of clipped brushes can be displayed in the 2D view while clipping. This is useful for clipping brushes to a particular size, or for matching with a specific texture.
+* .rmf ([[Rich Map Format]]) is added as the default save format. This allows for saving vis groups and arbitrary brush shapes.
+|-
+| 3.4
+| March 31, 2002
+|
+An updated version of Valve's level editing tool is now available for download. This release includes new functionality and several fixes. It also introduces a new name for the product, Hammer.
+
+'''Changes include:'''
+* Splitter view layout is now preserved from session to session.
+* Dialog bars now pop to the top when the mouse cursor floats over them.
+* No longer renders the 3D views when the editor is not the active application. (This will fix most people's problems with running Hammer and Half-Life at the same time causing the editor to freeze)
+* Added Copy to Clipboard button to the process window.
+* Sped up time to bring up the Face Properties dialog when many brushes are selected.
+* Sped up 2D view scrolling.
+* Added timed selection of objects by depth in the 3D view when the left mouse button is held down. '''(ERROR: This functionality was in the old worldcraft version 1.6, and possibly before!)''' 
+
+'''Fixes:'''
+* Fixed a random spinlock when rendering sprites.
+* Fixed texture rendering problems with sprites, etc.
+* Fixed freeze when starting map with sprites visible.
+* Fixed a crash in the path tool.
+* Fixed problem with texture shifts being reset when importing old MAP files.
+* Fixed black brushes caused by clipping.
+* Fixed a lockup when scaling certain brushes.
+* Fixed infinite lines in 3D view in vertex mode.
+* Fixed clipping causing duplicate solids.
+* Fixed decal repositioning.
+* Fixed camera angle view bug.
+* Fixed problem with running compile tools from paths with spaces.
+|-
+| 3.5
+| April 18, 2003
+|
+A beta version of Hammer 3.5 was released. This was the last version for GoldSrc engine. This version was released as just the main executable and required Hammer 3.4 to be installed to work.
+
+'''New features:'''
+* Supports Half-Life .mdl models in 3d view. 
+* View path files in 3D view. 
+* Pitch and Roll compass added, but not working.
+
+'''Changes:'''
+* Improved texture application tool.
+* Improved advanced compile mode dialog UI.
+* Select viewport background color.
+|-
+|}
+
+FGDs
+* '''Half-Life''' ([[Half-Life.fgd|FGD]])
+** {{hlop4|1.bold}} ([[hl_op4.fgd|FGD]])
+** {{hlbs|1.bold}} ([[hl_bs.fgd|FGD]])
+* {{cs|1.bold}} and {{cscz|1.bold}} ([[Counter-Strike.fgd|FGD]])
+** {{czds|1.bold}} ([[Condition_Zero_Deleted_Scenes.fgd|FGD]])
+* {{dod|1.bold}} ([[Day of Defeat.fgd|FGD]])
+* {{dmc|1.bold}} ([[Deathmatch Classic.fgd|FGD]])
+* {{ricochet|1.bold}} ([[Ricochet.fgd|FGD]])
+* {{tfc|1.bold}} ([[Team Fortress Classic.fgd|FGD]])
+
+=== External links ===
+* [https://valvedev.info/tools/worldcraft/ Overview of Worldcraft] on Valve Developer Union
+* [https://www.moddb.com/downloads/valve-hammer-editor-352 VHE 3.5.3] on ModDB - the ''very'' latest version of VHE.
+
+{{leveleditors}}
+{{goldsrc sdktools}}
+
+[[Category:Glossary]]	
+[[Category:Valve tools]]	
+[[Category:Official Tools]]	
+[[Category:Official GoldSrc Tools]]
+[[Category:Hammer]]	
+[[Category:Level Design]]	
+[[Category:Tools]]
