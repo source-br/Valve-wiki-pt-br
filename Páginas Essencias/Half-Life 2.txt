@@ -33,110 +33,110 @@
 |nextgame = {{hl2lc|2}}<br>{{hl2ep1|2}} (chronologically)
 }}
 [[File:City17 trainstation.jpg|thumb|''"Welcome. Welcome to City 17. You have chosen, or been chosen, to relocate to one of our finest remaining urban centers."'']]
-<span style="color:white; font-weight:bold">Half-Life 2</span> (abbreviated as '''HL2''') defines a new benchmark in gaming with startling realism and responsiveness. Powered by then-new [[Source]] technology, '''Half-Life 2''' features the most sophisticated in-game characters ever witnessed, advanced AI, stunning graphics and physical gameplay. This was the first game requiring installation of {{steamicon|1}} when it came out back in 2004.
+<span style="color:white; font-weight:bold">Half-Life 2</span> (abreviado como '''HL2''') define uma nova referência em jogos com realismo e capacidade de resposta surpreendentes. Com a então nova tecnologia [[Source]], o '''Half-Life 2''' apresenta os personagens mais sofisticados já vistos no jogo, IA avançada, gráficos impressionantes e jogabilidade física. Esse foi o primeiro jogo que exigiu a instalação do {{steamicon|1}} quando foi lançado em 2004.
 
-'''Half-Life 2''' is the sequel to the 1998 '''[[Half-Life]]'''. A sequel to '''Half-Life 2''' was released in 2006, titled '''[[Half-Life 2: Episode One]]'''. A virtual reality prequel was released in 2020, titled '''[[Half-Life: Alyx]]'''.
+'''Half-Life 2''' é a sequência do jogo '''[[Half-Life]]''' de 1998. Uma sequência de '''Half-Life 2''' foi lançada em 2006, intitulada '''[[Half-Life 2: Episode One]]'''. Um prequel de realidade virtual foi lançado em 2020, intitulado '''[[Half-Life: Alyx]]'''.
 
-'''Half-Life 2''' was [[Half-Life 2 (Xbox)|later ported]] for the [[WP:Xbox|Xbox]] console in 2005, as well as for the [[WP:Xbox 360|Xbox 360]] and [[WP:PlayStation 3|PlayStation 3]] in 2007, bundled under '''[[The Orange Box]]'''.
+'''Half-Life 2''' foi [[Half-Life 2 (Xbox)|portado posteriormente]] para o console [[WP:Xbox|Xbox]] em 2005, bem como para o [[WP:Xbox 360|Xbox 360]] e [[WP:PlayStation 3|PlayStation 3]] em 2007, empacotado sob o título '''[[The Orange Box]]'''.
 
-The game has considerable number of physics puzzles which aren't that common in games like [[WP:Doom (franchise)|Doom]], [[WP:Call of Duty|Call of Duty]] and [[WP:Halo (franchise)|Halo]]. Even '''Half-Life''' has fewer puzzles.
+O jogo tem um número considerável de quebra-cabeças de física que não são comuns em jogos como [[WP:Doom (franchise)|Doom]], [[WP:Call of Duty|Call of Duty]] e [[WP:Halo (franchise)|Halo]]. Até mesmo o '''Half-Life''' tem menos quebra-cabeças.
 
-== Content ==
-* '''Half-Life 2''' maps (<code>hl2</code>)
+== Conteúdos ==
+* Mapas do '''Half-Life 2''' (<code>hl2</code>)
 * Source shared (<code>hl2</code>)
 * '''Source 2013 Singleplayer''' engine branch
 
-== RTX version ==
+== Versão RTX ==
 {{Main|Half-Life 2 RTX}}
-A ray-traced version of '''Half-Life 2''' is currently under development by Orbifold Studios, and promoted by [[WP:GeForce|Nvidia]], using Nvidia's RTX Remix tool.
+Uma versão ray-traced de '''Half-Life 2''' está sendo desenvolvida atualmente pela Orbifold Studios e promovida pela [[WP:GeForce|Nvidia]], usando a ferramenta RTX Remix da Nvidia.
 
-This version aims to remaster the entire game with new RTX lighting, RTX reflections, PBR textures, and a lot more without changing the core gameplay, similar to '''[[Portal RTX]]'''.
+Essa versão tem como objetivo remasterizar todo o jogo com nova iluminação RTX, reflexos RTX, texturas PBR e muito mais, sem alterar a jogabilidade principal, semelhante ao '''[[Portal RTX]]'''.
 
-== Chapters ==
+== Capítulos ==
 {{Chapters}}
 
 == [[NPC|NPCs]] ==
 {{main|:Category:Half-Life 2 NPCs}}
 
-== Credits ==
+== Créditos ==
 {{main|Half-Life 2 Credits}}
-{{Expand|noborder=1|title=Half-Life 2 Credits|{{:Half-Life 2 Credits/nocat}}
+{{Expand|noborder=1|title=Créditos de Half-Life 2|{{:Half-Life 2 Credits/nocat}}
 }}
 
-== Limitations/Bugs ==
-*For more '''Half-Life 2''' bugs, see this [https://github.com/ValveSoftware/Source-1-Games/issues?q=is%3Aopen+is%3Aissue+label%3A%22Half-Life+2%22 GitHub] page.
-This section only list various bugs that are commonly encountered.
-=== {{unresolved|bugs}} ===
-The current version of '''Half-Life 2''' in Steam lacks LDR lighting on multiple game levels (starting from {{code|d1_eli_01}} until the end of [[Nova Prospekt]]). This means that if [[HDR]] is disabled (by selecting None or Bloom only in HDR settings), [[mat_fullbright]] will be set to 1, disabling lighting and making everything bright and flat ([https://github.com/ValveSoftware/Source-1-Games/issues/577 relevant GitHub issue]). Because of this, HDR is required to play the game.<br>This issue is not affected in previous version of the game (which use older engines and are compiled in LDR only), and is fixed in '''[[Half-Life 2: Update]]'''.
+== Limitações/Bugs ==
+*Para mais bugs do '''Half-Life 2''', veja isso [https://github.com/ValveSoftware/Source-1-Games/issues?q=is%3Aopen+is%3Aissue+label%3A%22Half-Life+2%22 página do GitHub] .
+Esta seção lista apenas vários bugs que são comumente encontrados.
+=== {{unresolved|bugs (Bugs não arrumados)}} ===
+A versão atual do '''Half-Life 2''' no Steam não possui iluminação LDR em vários níveis do jogo (começando em {{code|d1_eli_01}} até o final de [[Nova Prospekt]]). Isso significa que, se o HDR for desativado (selecionando None ou Bloom only nas configurações de HDR), o mat_fullbright será definido como 1, desativando a iluminação e tornando tudo brilhante e plano ([https://github.com/ValveSoftware/Source-1-Games/issues/577 erro relevante no GitHub]). Por esse motivo, você precisa de HDR para jogar. <br>Esse problema não é afetado na versão anterior do jogo (que usa mecanismos mais antigos e é compilada somente em LDR) e foi corrigido em '''[[Half-Life 2: Update]]'''.
 
-=== {{resolved|bugs}} ===
-There was a bug with the [[Dropship]]'s gun that was unable to turn, this makes the [[Sandtraps]] chapter much easier.{{Cite|1}} Presents since console release on [[WP:Xbox 360|X360]]/[[WP:Playstation 3|PS3]] (remains unfixed) and since 2010 engine update on PC.<br>Fixed in the current Steam version since 2022's the [[Steam Deck]] update of '''Half-Life 2'''. Some third-party mods may or may not include this fix; [[Fixing the Dropship gun|this page]] details how to fix it in your mod.
-=== Other limitations ===
-{{Important|The macOS (OS X) version of this game does not work on macOS Catalina (version 10.15) or later due to the removal of support for 32-bit-only apps.}}
-As of May 26, 2010, the branch of Source under which Half-Life 2 originally ran on [[Source 2006]] no longer exists on Steam, and subsequently replaced by the updated [[Source 2009]] (which later was upgraded again to [[Source 2013 Singleplayer|Source 2013]]. Some old mods which base themselves directly on the game (as opposed to [[Source SDK Base]]) are unlikely to work any more.<br> This also meant that support for running Half-Life 2 on Windows 9x/ME/2000 have been also dropped.
+=== {{resolved|bugs (Bugs resolvidos)}} ===
+Havia um bug com a arma do [[Dropship]] que não conseguia girar, o que torna o capítulo [[Sandtraps]] muito mais fácil.{{Cite|1}} Presente desde o lançamento do console no [[WP:Xbox 360|X360]]/[[WP:Playstation 3|PS3]] (permanece sem correção) e desde a atualização do mecanismo de 2010 no PC.<br>Corrigido na versão atual do Steam desde 2022, a atualização do [[Steam Deck]] do '''Half-Life 2'''. Alguns mods de terceiros podem ou não incluir essa correção; [[Fixing the Dropship gun|essa página]] detalha como corrigi-la em seu mod.
+=== Outras limitações ===
+{{Important|A versão para macOS (OS X) deste jogo não funciona no macOS Catalina (versão 10.15) ou posterior devido à remoção do suporte a aplicativos de 32 bits.}}
+A partir de 26 de maio de 2010, a ramificação do Source sob a qual o Half-Life 2 foi originalmente executado no [[Source 2006]] não existe mais no Steam, e foi posteriormente substituída pelo [[Source 2009]] atualizado (que mais tarde foi atualizado novamente para [[Source 2013 Singleplayer|Source 2013]]). Alguns mods antigos que se baseiam diretamente no jogo (em oposição ao [[Source SDK Base]]) provavelmente não funcionarão mais.<br> Isso também significa que o suporte para a execução do Half-Life 2 no Windows 9x/ME/2000 também foi abandonado.
 
-== Technical notes ==
-* In the 2006 version of the game, being underwater at [[d1_canals_01]], or in some area on that same map can cause performance drop. Fixed since 2010 with the engine update.
-* Although Source [[mod]]s are often described as being "for Half-Life 2", they actually use [[Source SDK Base]]. SDK Base is available to anyone who owns any Valve Source game and provides all of Half-Life 2's content (except [[BSP|maps]] and [[VCD|vcd scenes]]) on a static branch of the engine.
-* The Half-Life 2 Collectors Edition, which ships with the [[Source 2004|2004]] version of the game, does not require Steam to run or update (similar to latest version), which meant that it will run on older systems with Windows 2000 and earlier.
-* The 64-bit Windows version of Half-Life 2, which existed around 2005-2006, is no longer available.
+== Observações técnicas ==
+* Na versão 2006 do jogo, estar embaixo d'água em [[d1_canals_01]] ou em alguma área do mesmo mapa pode causar queda de desempenho. Corrigido desde 2010 com a atualização da engine.
+* Embora os [[mod]]s de código-fonte sejam frequentemente descritos como sendo “para o Half-Life 2”, na verdade eles usam o [[Source SDK Base]]. O SDK Base está disponível para qualquer pessoa que possua um jogo da Valve Source e fornece todo o conteúdo do Half-Life 2 (exceto [[BSP|mapas]] e [[VCD|cenas de VCD]]) em uma ramificação estática da engine.
+* O Half-Life 2 Collectors Edition, que vem com a versão [[Source 2004|2004]] do jogo, não exige que o Steam seja executado ou atualizado (semelhante à versão mais recente), o que significa que ele será executado em sistemas mais antigos com Windows 2000 e anteriores.
+* A versão de 64 bits do Half-Life 2 para Windows, que existia por volta de 2005-2006, não está mais disponível.
 
-== System Requirements<span id="Sysreq"><!--Used by Sysreq template, clicking on "See system requirements" will send you to this section.--></span> ==
+== Requisitos do sistema<span id="Sysreq"><!--Used by Sysreq template, clicking on "See system requirements" will send you to this section.--></span> ==
 <!-- May include unofficial info alongside official one, just to make sure the game still perform well on any hardware. Most official system requirements, like CS:GO, might be out of date. -->
 
-<p style="color:white; font-weight:bold">Windows (Old Engine):</p>
-*OS: Windows [[WP:Windows 98|98]] / [[WP:Windows ME|ME]], [[WP:Windows 2000|2000]], [[WP:Windows XP|XP]] or later
+<p style="color:white; font-weight:bold">Windows (Engine antiga):</p>
+*OS: Windows [[WP:Windows 98|98]] / [[WP:Windows ME|ME]], [[WP:Windows 2000|2000]], [[WP:Windows XP|XP]] ou anterior
 *[[WP:Central processing unit|CPU]]: 1.2 [[WP:Hertz|GHz]] 
 *[[WP:Random-access memory|RAM]]: 256 [[WP:Megabyte|MB]] 
-*Disk space: 4.5 [[WP:Gigabyte|GB]]
-*Nvidia GeForce FX 5700, ATI Radeon 9500 (with 128MB [[WP:Video random-access memory|VRAM]])
-*[[WP:Direct3D|Direct3D]] 9.0 compatible [[WP:Video card|video card]] (with atleast DirectX 7.0 compatibility level or higher)
+*Espaço no Disco: 4.5 [[WP:Gigabyte|GB]]
+*Nvidia GeForce FX 5700, ATI Radeon 9500 (com 128MB [[WP:Video random-access memory|VRAM]])
+*[[WP:Direct3D|Direct3D]] 9.0 compatible [[WP:Video card|video card]] (com pelo menos o nível de compatibilidade DirectX 7.0 ou superior)
 
-<p style="color:white; font-weight:bold">Windows (New Engine):</p>
-*OS: Windows [[WP:Windows 7|7]] or later
+<p style="color:white; font-weight:bold">Windows (Engine nova):</p>
+*OS: Windows [[WP:Windows 7|7]] ou anterior
 *[[WP:Central processing unit|CPU]]:1.7 GHz and/or Dual-core 
 *[[WP:Random-access memory|RAM]]:1GB RAM
-*Disk space: 6.5 GB (15GB+ recommended)
-*GPU: NVIDIA GeForce 6xxx series, ATI Radeon X1600, Intel HD Graphics 3000 (with 128MB [[WP:Video random-access memory|VRAM]])<!-- Old GPUs which HL2 supported at launch, can play the game in DX8, however some maps requires HDR (which is DX9 only), which requires more powerful GPU to handle. -->
-*[[WP:Direct3D|Direct3D]] 9.0 compatible [[WP:Video card|video card]] (with atleast DirectX 8.0 compatibility level or higher)
-*Other: New Engine requires [[HDR]] to be enabled (due to this [https://github.com/ValveSoftware/Source-1-Games/issues/577 issue])
-{{Note|The Steam version is no longer compatible with [[WP:Windows XP|XP]] and [[WP:Windows Vista|Vista]]{{confirm}} since the latest Steam Deck update.<br>User using these OS can downgrade to previous version of the game by using the {{code|previous}} beta branch. But please note that this older branch does not include all the bug fixes that were introduced with Steam Deck update.}}
+*Espaço no Disco: 6.5 GB (Recomendado 15GB+)
+*GPU: NVIDIA GeForce 6xxx series, ATI Radeon X1600, Intel HD Graphics 3000 (com 128MB [[WP:Video random-access memory|VRAM]])<!-- As GPUs antigas, compatíveis com o HL2 no lançamento, podem jogar o jogo em DX8, mas alguns mapas exigem HDR (que é somente DX9), o que requer uma GPU mais potente para lidar com isso. -->
+*[[WP:Direct3D|Direct3D]] 9.0 compatible [[WP:Video card|video card]] (com pelo menos o nível de compatibilidade DirectX 8.0 ou superior)
+*Outro: O novo mecanismo exige que o [[HDR]] seja ativado (devido a este [https://github.com/ValveSoftware/Source-1-Games/issues/577 erro])
+{{Note|A versão Steam não é mais compatível com [[WP:Windows XP|XP]] e [[WP:Windows Vista|Vista]]{{confirm}} desde a última atualização do Steam Deck.<br>Os usuários que usam esses sistemas operacionais podem fazer o downgrade para a versão anterior do jogo usando a ramificação beta {{code|previous}}. Mas observe que essa ramificação mais antiga não inclui todas as correções de bugs que foram introduzidas com a atualização do Steam Deck.}}
 
 <p style="color:white; font-weight:bold">OS X:</p>
 *[[WP:OS X|OS X]] 10.5.8, 10.6.3 (up to 10.14.6)
 *CPU: 2.0 GHz and/or Dual-core
 *RAM: 1 GB
-*Storage: 6.5 GB (15GB+ recommended)
+*Espaço: 6.5 GB (15GB+ recommended)
 *GPU: NVIDIA GeForce 8xxx series, ATI Radeon X1600, Intel HD Graphics 3000<br>OpenGL 2.1 compatible
 *Audio: OpenAL compatible
-*Other: HDR is required to be enabled (see above)
-{{Note|Mac version are no longer supported after macOS Catalina (10.15), due to this game only have 32-bit binaries. Valve later removed macOS binaries in June 12, 2024.<br>
-User can manually build Intel 64-bit/Apple Silicon version of HL2 by [https://www.applegamingwiki.com/wiki/Half-Life_2#Native following this guide]<!-- not sure if this is legal for it to be mention here as the guide rely on using the modified leaked source engine source code, through user can build HL2 for Apple Sillicon using official (non-leaked) code. -->.}}
+*Outro: É necessário que o HDR esteja ativado (veja acima)
+{{Note|A versão para Mac não é mais suportada após o macOS Catalina (10.15), pois esse jogo só tem binários de 32 bits. Mais tarde, a Valve removeu os binários do macOS em 12 de junho de 2024.<br>
+O usuário pode compilar manualmente a versão Intel 64-bit/Apple Silicon do HL2 pelo [https://www.applegamingwiki.com/wiki/Half-Life_2#Native seguindo este guia]<!-- não tenho certeza se isso é legal para ser mencionado aqui, pois o guia se baseia no uso do código-fonte modificado do mecanismo de origem vazado, através do qual o usuário pode compilar o HL2 para Apple Sillicon usando o código oficial (não vazado). -->.}}
 
 <p style="color:white; font-weight:bold">Linux:</p>
 *OS: Ubuntu 12.04, SteamOS 1.0 or later<br>Other Linux distros supported.
 *CPU: 2.0 GHz and/or Dual-core
 *RAM: 1 GB
-*Storage: 6.5 GB (15GB+ recommended)
+*Espaço: 6.5 GB (15GB+ recomendado)
 *GPU: NVIDIA GeForce 8xxx series, ATI Radeon X1600, Intel HD Graphics 3000<br>OpenGL 2.1 compatible
 *Audio: OpenAL compatible
-*Other: HDR is required to be enabled (see above)
-{{Note|The system requirements for {{hl2|4}} on Linux are unofficial, based off Windows/Mac info, as well as other Source games that support Linux, such as Portal 2.}}
+*Outro: É necessário que o HDR esteja ativado (veja acima)
+{{Note|Os requisitos de sistema para {{hl2|4}} no Linux não são oficiais, com base nas informações do Windows/Mac, bem como em outros jogos da Source compatíveis com o Linux, como Portal 2.}}
 
-== See also ==
-* [[:Category:Half-Life_2_level_design|Half-Life 2 level design]]
-* [[Half-Life 2: Update]] - a fan-made Steam-released mod aimed at bug-fixing and giving the game a mild visual upgrade.
-* [[Synergy]] - a fan-made Steam-released co-op mod that allows users to play the entire '''Half-Life 2''''s campaign with multiplayer.
+== Veja também ==
+* [[:Category:Half-Life_2_level_design|Half-Life 2 design de leveis]]
+* [[Half-Life 2: Update]] - um mod lançado no Steam, feito por fãs, com o objetivo de corrigir bugs e dar ao jogo uma leve atualização visual.
+* [[Synergy]] - um mod cooperativo lançado no Steam, feito por fãs, que permite aos usuários jogar toda a campanha de '''Half-Life 2''' com o modo multijogador.
 * [[:Category:Source mods]]
 
-== External links ==
-* {{Steam community|app/220|Half-Life 2 on Steam Community}}
-* {{gamebanana|9|GameBanana page}}
-* {{cow|Half-Life 2}} on '''Combine OverWiki'''
-* {{w|Half-Life 2}} on '''Wikipedia'''
+== Links externos ==
+* {{Steam community|app/220|Half-Life 2 na Comunidade Steam}}
+* {{gamebanana|9|Páginda da GameBanana}}
+* {{cow|Half-Life 2}} em '''Combine OverWiki'''
+* {{w|Half-Life 2}} em '''Wikipedia'''
 
 {{references|1=
-{{ref2|cite id=1|access-date=June 10, 2024|[[User:kr0tchet|User:leonidakarlach]] (June 10, 2024). {{Yt|page=watch|t-M2ZXHrqd8|t=40|Half-Life 2 - The one Dropship gun bug that ruins the Sandtraps chapter (Now fixed)}}. ''YouTube''.<br>{{Note|The bugs shown on the video are recorded from {{hl2u|4}} (both unpatched and unofficially patched), but these also applies to original version of {{hl2|4}} (since 2007 for consoles, 2010 for PC, was fixed on PC in 2022).}}}}
+{{ref2|cite id=1|access-date=10 de Junho, 2024|[[User:kr0tchet|Usuário:leonidakarlach]] (10 de junho de 2024). {{Yt|page=watch|t-M2ZXHrqd8|t=40|Half-Life 2 - O único bug da arma Dropship que arruína o capítulo Sandtraps (agora corrigido)}}. ''YouTube''.<br> {{Note|Os erros mostrados no vídeo foram registrados em {{hl2u|4}} (não corrigidos e não oficialmente corrigidos), mas também se aplicam à versão original do {{hl2|4}} (desde 2007 para consoles, 2010 para PC, foi corrigida para PC em 2022).}}}}
 }}
 
 {{Half life games|hidecancelled=true|hide3rdparty=true}}
