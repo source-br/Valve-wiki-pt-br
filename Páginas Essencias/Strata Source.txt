@@ -1,47 +1,47 @@
 {{LanguageBar}}
 {{strata topicon}}
-[[File:Strata Logo.png|thumb|right|The Strata Source logo]]
-{{strata|4}} (more informally known as {{strata|3|nt=0}}, and formerly known as the {{strata|3|nt=3}}) is a third-party {{Source|4}} engine branch using licensed code. It is a modified version of the {{csgobranch|2}} that combines the features of both [[CS:GO]] and the {{p2branch|2}}, along with many improvements that bring Source close to modern standards. This engine branch was first released publicly with the launch of {{portalrev|2}}, and is still in active development.
+[[File:Strata Logo.png|thumb|right|A logo da Strata Source]]
+{{strata|4}} (mais informalmente conhecido como {{strata|3|nt=0}}, e anteriormente conhecido como {{strata|3|nt=3}}) é uma ramificação do mecanismo {{Source|4}} de terceiros que usa código licenciado. É uma versão modificada do {{csgobranch|2}} que combina os recursos do [[CS:GO]] e do {{p2branch|2}}, juntamente com muitas melhorias que aproximam o Source dos padrões modernos. Essa ramificação da engine foi lançada publicamente pela primeira vez com o lançamento do {{portalrev|2}} e ainda está em desenvolvimento ativo.
 
-==Features==
-[[File:Portal Revolution - Screenshot 4.jpg|300px|thumb|right|Example from [[Portal: Revolution]] showing the intricate environments capable with Strata Source]]
-Feature list from the [https://stratasource.github.io/Wiki/ Strata Source Wiki]<br/> 
-New since the {{csgobranch|1}}:
-; Native [[wikipedia:Direct3D#Direct3D 11|Direct3D 11]] renderer
-: Replaces Direct3D 9 renderer, and adds some new features that previous version of Direct3D doesn't have.
-; [[Vulkan]] renderer on Linux, using DXVK to convert DX11 calls to Vulkan
-; 64-bit executable
-: Game runs on 64-bit on all platforms; 32-bit and Mac OS support has been dropped. 64-bit allows better performance and allows the game to access more than 4GB of RAM.
-; [[Physically Based Rendering|PBR]] shaders
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Introduces a new {{Shader Name|PBR (Strata shader)|alt=PBR}} shader that attempts to create realistic reactions to light
-; Ported {{portal2branch|1}} features
-: Including but not limited to [[linked portal door|World Portals]] and [[weapon portalgun|Portal gun]]
-; Backwards compatibility with BSP v19-21, as well as BSP v25 support
-; Backwards compatibility with {{src13|4}} (and older) branch models
-: The model format found in games such as {{hl2}}{{tf2}}{{portal}}{{css}}{{dods}} is now supported.
-; [[WEBM]] video support, replacing older [[BIK|Bink]] videos
-: Increased framerate, lower file sizes, and easier to author
-; New v7.6 [[VTF]] version
-: Adds support for the higher-quality ATI1N, ATI2N, BC6H, and BC7 texture compression formats, as well as lossless {{w|deflate}} compression on top of existing image format, for reduced size. Better support for 4K textures{{how}}.
-; Many improvements to Linux support
-; Fully cross-platform engine tools and utils
-; Steam Audio
-; Many improvements to the {{Hammer|2}} level editor, named {{hammerqt|2}}
-; Many code quality improvements (Refactors, cleanup, and C++20)
-; [https://sentry.io/welcome/ Sentry] crash report integration
+==Funcionalidades==
+[[File:Portal Revolution - Screenshot 4.jpg|300px|thumb|right|Exemplo de [[Portal: Revolution]] mostrando os ambientes complexos que você pode criar com o Strata Source]]
+Lista de recursos da [https://stratasource.github.io/Wiki/ Strata Source Wiki]<br/>
+Novo desde a {{csgobranch|1}}:
+; Renderizador nativo [[wikipedia:Direct3D#Direct3D 11|Direct3D 11]]
+: Substitui o renderizador Direct3D 9 e adiciona alguns novos recursos que a versão anterior do Direct3D não tem.
+; Renderizador [[Vulkan]] no Linux, usando o DXVK para converter chamadas DX11 em Vulkan
+; Executável de 64 bits
+: O jogo é executado em 64 bits em todas as plataformas; o suporte a 32 bits e MacOS foi abandonado. O 64 bits permite melhor desempenho e permite que o jogo acesse mais de 4 GB de RAM.
+; Shaders [[Physically Based Rendering|PBR]]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Introduz um novo shader {{Shader Name|PBR (Strata shader)|alt=PBR}} que tenta criar reações realistas à luz
+; Recursos portados do {{portal2branch|1}}
+: Incluindo, mas não se limitando a [[linked portal door|World Portals]] e a [[weapon portalgun|Portal Gun]]
+; Compatibilidade com versões anteriores do BSP v19-21, bem como suporte ao BSP v25
+; Compatibilidade com versões anteriores do {{src13|4}} (e anteriores) modelos de ramificação
+: O formato de modelo encontrado em jogos como {{hl2}}{{tf2}}{{portal}}{{css}}{{dods}} agora é compatível.
+; Suporte a vídeo [[WEBM]], substituindo vídeos antigos [[BIK|Bink]]
+: Maior taxa de quadros, menor tamanho de arquivo e maior facilidade de criação
+; Nova versão [[VTF]] v7.6 
+: Adiciona suporte aos formatos de compactação de textura ATI1N, ATI2N, BC6H e BC7 de maior qualidade, bem como à compactação sem perdas {{w|deflate}} sobre o formato de imagem existente, para reduzir o tamanho. Melhor suporte para texturas 4K{{como}}.
+; Muitos aprimoramentos no suporte ao Linux
+; Ferramentas e utilitários da engine totalmente multiplataforma
+; Áudio Steam
+; Muitos aprimoramentos no editor de níveis {{Hammer|2}}, chamado {{hammerqt|2}}
+; Muitas melhorias na qualidade do código (refatores, limpeza e C++20)
+; [https://sentry.io/welcome/ Sentry] integração de relatórios de falhas
 
-==Availability==
+==Disponibilidade==
 {{see also|[[:Category:Strata Source engine branch games]]}}
-The following titles run on the {{strata|2}} branch:
+Os títulos a seguir são executados na ramificação {{strata|2}}:
 * {{p2ce|4}}
 * {{momentum|4}}
-* {{portalrev|4}} (Uses older version of {{p2ce|3.1|nt=1}} as a base)
+* {{portalrev|4}} (Usa a versão mais antiga do {{p2ce|3.1|nt=1}} como base)
 
-The source code for this branch is '''not''' available, however, authoring tools exist for each game, located in {{path|/bin/win64/}}.
+O código-fonte dessa ramificação '''não''' está disponível, mas existem ferramentas de criação para cada jogo, localizadas em {{path|/bin/win64/}}.
 
-==See also==
+==Veja Também==
 *[https://wiki.stratasource.org/shared/ Strata Source's Wiki]
-*{{Mapbase|4}}, a mod for {{Src13sp|3.1}} with similar goals
+*{{Mapbase|4}}, Um mod para {{Src13sp|3.1}} com objetivos semelhantes
 *{{asd|4}}
 *{{strataHammer|4}}
 {{branch-navbox}}

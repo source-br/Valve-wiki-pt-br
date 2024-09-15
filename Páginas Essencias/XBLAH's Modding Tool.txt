@@ -8,8 +8,8 @@
 | image     = Software Cover - XBLAH's Modding Tool.jpg
 
 <!-- Details -->
-| initial_release = Jan 11, 2020
-| stable_release = Jan 13, 2024
+| initial_release = 11 de Janeiro, 2020
+| stable_release = 13 de Janeiro, 2024
 | written_in = csharp
 | distribution = Commercial software
 | type = Mod tool • Map compiler • Map tool • Model compiler • Model tool • Texture tool • Sound tool • VPK tool
@@ -24,24 +24,24 @@
 
 }}
 
-{{Xblahmt|4}} is an Integrated Development Environment written by '''[[User:XBLAH|XBLAH]]''' to improve {{Valve|4.1|addtext=-games}} modders productivity and quality of life.
+{{Xblahmt|4}} é um ambiente de desenvolvimento integrado criado pelo '''[[User:XBLAH|XBLAH]]''' para melhorar a produtividade e a qualidade de vida dos modders dos {{Valve|4.1|jogos da Valve}}.
 
-The IDE includes features like mod creation, map editing, compiling and decompiling, model compiling, editing and decompiling, material editing, soundscape editing, vpk packing and unpacking and general scripting and automation.
+O IDE inclui recursos como criação de mods, edição de mapas, compilação e descompilação, compilação, edição e descompilação de modelos, edição de materiais, edição de paisagens sonoras, empacotamento e descompactação de vpk e scripts e automação em geral.
 
-{{notice|As of December 2023, with version 2.0 or newer, XBLAH's Modding Tool is available in two editions. The Essentials Edition, free of charge, and the Advanced Edition, which requires a [https://www.patreon.com/xblah Patreon subscription].}}
+{{notice|A partir de dezembro de 2023, com a versão 2.0 ou mais recente, a Ferramenta de Modding da XBLAH estará disponível em duas edições. A Essentials Edition, gratuita, e a Advanced Edition, que requer uma assinatura do [https://www.patreon.com/xblah Patreon].}}
 
 
 __TOC__
 
-= Features =
-[[File:XBLAH's Modding Tool - Welcome Tab - v2.2.0.png|thumb|480px|{{xblahmt|4}} - Welcome Tab]]
-{{Xblahmt|4}} is organized in different dashboards depending on which role you have in the mod development. There are dashboards available for mod leaders, level designers, material designers, model designers, sound designers, programmers, animators, and particle designers, each one with a specialized toolset in that field.
-{{notice|The Essentials Edition contains only the Modding Dashboard and part of Level Design Dashboard. The Advanced Edition contains the complete toolset.}}
+= Funcionalidades =
+[[File:XBLAH's Modding Tool - Welcome Tab - v2.2.0.png|thumb|480px|{{xblahmt|4}} - Tela de Boas Vindas]]
+{{Xblahmt|4}} é organizado em diferentes painéis, dependendo da função que você tem no desenvolvimento do mod. Há painéis disponíveis para líderes de mods, designers de níveis, designers de materiais, designers de modelos, designers de som, programadores, animadores e designers de partículas, cada um com um conjunto de ferramentas especializadas nesse campo.
+{{notice|A Essentials Edition contém apenas o Modding Dashboard e parte do Level Design Dashboard. A Advanced Edition contém o conjunto completo de ferramentas.}}
 
-== Game ==
+== Jogo ==
 
-;Create a mod
-:[[Create a Mod|Creating a bare-bones mod]] usually requires more than just creating a [[liblist.gam]] or a [[gameinfo.txt]]. Mods based on {{gldsrc|4}} and {{source|4}} games can be created with the {{Xblahmt|4}} using an intuitive interface, that creates all the required files and directories. {{mapbase|4}} mods are also supported. ([[XBLAH's_Modding_Tool/Docs/Game/New Mod|See documentation]]).
+;Criando um Mod
+:[[Create a Mod|Criando um mod simples]] Normalmente precisa de mais do que apenas criar um [[liblist.gam]] ou um [[gameinfo.txt]]. Mods baseados em jogos {{gldsrc|4}} e {{source|4}} podem ser criados com o {{Xblahmt|4}} usando uma interface intuitiva, que cria todos os arquivos e diretórios necessários. Os mods do {{mapbase|4}} também são compatíveis. ([[XBLAH's_Modding_Tool/Docs/Game/New Mod|Veja a documentação]]).
 
 ;Refresh Mods
 :In case you manually added or modified any mods for the current game, you can refresh the mod listing. ([[XBLAH's_Modding_Tool/Docs/Game/Refresh Mods|See documentation]])
