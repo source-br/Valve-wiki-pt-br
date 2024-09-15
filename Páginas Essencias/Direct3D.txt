@@ -2,54 +2,42 @@
 {{stub}}
 
 <!-- Add the categories to the main page, not here -->
-'''Direct3D''' is a graphics application programming interface (API) for {{win|4|nt=1}}. It is part of {{wiki|DirectX}}. 
+'''Direct3D''' é uma interface de programação de aplicativos gráficos (API) para {{win|4|nt=1}}. Ela faz parte do {{wiki|DirectX}}.
 
-{{gldsrc|4}} engines ships with a [[software renderer]], [[OpenGL]] and initially, {{w|Direct3D#Direct3D_6.0|Direct3D 6}}, prior to it being removed in 2013 after [[SteamPipe]] update. Unlike OpenGL (since detail textures support was added in 2004 with the release of {{cscz|1|nt=CS:CZ}}) and like the Software renderer, it doesn't seems to have issues with overbright lighting. Also in {{nightfire|2}}, this game used Direct3D 8 instead.
+Os mecanismos {{gldsrc|4}} são fornecidos com um [[software renderer]], [[OpenGL]] e, inicialmente, {{w|Direct3D#Direct3D_6.0|Direct3D 6}}, antes de ser removido em 2013 após a atualização do [[SteamPipe]]. Ao contrário do OpenGL (já que o suporte a texturas detalhadas foi adicionado em 2004 com o lançamento do {{cscz|1|nt=CS:CZ}}) e como o renderizador de software, ele não parece ter problemas com iluminação excessivamente brilhante. Também em {{nightfire|2}}, esse jogo usava o Direct3D 8.
 
-{{source|4}} mainly used Direct3D 9 (Shader Model 2) renderer, which later was upgraded to support Shader Model 3.0 {{since|{{src06}}}}, but offers backward compatibility with older GPUs using [[DirectX Versions|DirectX feature levels]] as low as DX8 (or DX7, DX6 in previous version of Source). {{l4dbranch|2}} requires GPUs with Direct3D 9.0/DX9.0c (Shader Model 3.0) support in order to run.
+{{source|4}} usava principalmente o renderizador Direct3D 9 (Shader Model 2), que mais tarde foi atualizado para suportar o Shader Model 3.0 {{since|{{src06}}}}, mas oferece compatibilidade retroativa com GPUs mais antigas que usam [[DirectX Versions|Níveis de recursos do DirectX]] tão baixo quanto DX8 (ou DX7, DX6 na versão anterior do Source). {{l4dbranch|2}} requer GPUs com suporte a Direct3D 9.0/DX9.0c (Shader Model 3.0) para ser executado.
 
-Some third-party engine branch like {{tfbranch|2}} and {{strata|2}} use Direct3D 11 instead. As of 2024, nearly all of Valve games also added support for [[Vulkan]] renderer on Windows, using DXVK to translates D3D9 to Vulkan. Enabling Vulkan translation will require the "{{code|-vulkan}}" launch option (except in {{portalrtx|1}} and upcoming {{hl2rtx|1}}).
+Algumas ramificações de mecanismos de terceiros, como {{tfbranch|2}} e {{strata|2}}, usam o Direct3D 11. A partir de 2024, quase todos os jogos da Valve também adicionaram suporte ao renderizador [[Vulkan]] no Windows, usando o DXVK para traduzir D3D9 para Vulkan. Para ativar a tradução do Vulkan, você precisará da opção de inicialização “{{code|-vulkan}}” (exceto em {{portalrtx|1}} e no futuro {{hl2rtx|1}}).
 
-{{source2|4}} mainly uses Direct3D 11, but also has options to use the [[Vulkan]] renderer.
+{{source2|4}} usa principalmente o Direct3D 11, mas também tem opções para usar o renderizador [[Vulkan]].
 
-=={{idtech2|4|nt=4}} (WinQuake) Direct3D==
+== Direct3D da {{gldsrc|4|nt=4}}==
+* Funciona com Direct3D 6
+====Funcionalidades====
+* '''Iluminação colorida''' - O Quake simplesmente tinha iluminação monótona
+* '''Texturas transparentes''' - O vidro agora pode ser usado em mapas
+* '''Filtragem de textura''' - Quake ([https://quake.fandom.com/wiki/GLQuake GLQuake]) simplesmente Filtragem de textura
+* '''[[Detail textures (GoldSrc)|Texturas detalhadas]] '''
+* '''Simulação dinâmica da íris''' - semelhante à [[HDR|HDR Rendering]] {{csXbox|only}}
 
+== Direct3D na {{Src|4}} ==
+* É executado principalmente no Direct3D 9.0. A versão posterior da ramificação Source (a partir de {{l4d|1}}) usa o Direct3D 9.0c (e as ramificações de mecanismos de terceiros usam o Direct3D 11 ou 12).
+* Antes do {{l4dbranch|1}}, o Source suporta [[DirectX Versions|Níveis de compatibilidade do DirectX]] para placas de vídeo mais antigas (como as de nível DirectX 8) que suportam apenas alguns, mas não todos os recursos do DX9.
+* Consulte a página {{source|1}} para conhecer os recursos.
 
-====Features====
-*'''Support for windowed video mode'''
-*'''Texture Filtering'''
+== Direct3D na {{Src2|4}} ==
+* Funciona com Direct3D 11
+* Consulte a página {{source2|1}} para conhecer os recursos.
 
-====Missing Features and Limits and Problems====
-*'''No Rudimentary Shadows'''
-*'''No 32-bit color'''
-*'''Many resolutions from vanilla quake are not unsupport'''
-
-== {{gldsrc|4|nt=4}} Direct3D==
-* Runs on Direct3D 6
-====Features====
-* '''Colored lighting''' - Quake simply had monotone lighting
-* '''Transparent textures''' - Glass can now be used in maps
-*'''Texture Filtering''' - Quake ([https://quake.fandom.com/wiki/GLQuake GLQuake]) simply Texture Filtering
-* '''[[Detail textures (GoldSrc)|Detailed textures]] '''
-* '''Dynamic iris simulation''' - similar to [[HDR|HDR Rendering]] {{csXbox|only}}
-
-== {{Src|4}} Direct3D ==
-* Primarily runs on Direct3D 9.0. Later version of Source branch (starting {{l4d|1}}) uses Direct3D 9.0c (and third-party engine branches use Direct3D 11 or 12).
-* Prior to {{l4dbranch|1}}, Source supports [[DirectX Versions|DirectX compatibility levels]] for older graphics card (such as DirectX 8 level card) that only support some, but not all DX9 features.
-* See {{source|1}} page for features.
-
-== {{Src2|4}} Direct3D ==
-* Runs on Direct3D 11
-* See {{source2|1}} page for features.
-
-== See also ==
-* [[DirectX Versions]] - list of DirectX feature levels
+== Veja também ==
+* [[DirectX Versions|Versões do DirectX]] - lista de níveis de recursos do DirectX
 * [[OpenGL]]
-* [[Vulkan]], another graphics API, successor to OpenGL.
+* [[Vulkan]], outra API gráfica, sucessora do OpenGL.
 * [[Software renderer]]
 
-== External links ==
+== Links Externos ==
 * {{w|Direct3D}}
-*{{w|Quake (video_game)#WinQuake|WinQuake}} on Wikipedia
-*[https://quake.fandom.com/wiki/WinQuake WinQuake] on Quake Fandom wiki
+*{{w|Quake (video_game)#WinQuake|WinQuake}} na Wikipédia
+*[https://quake.fandom.com/wiki/WinQuake WinQuake] Na Quake Fandom Wiki
 [[Category:Graphics API]]
