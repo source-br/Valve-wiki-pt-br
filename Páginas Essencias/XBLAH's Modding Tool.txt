@@ -43,59 +43,59 @@ __TOC__
 ;Criando um Mod
 :[[Create a Mod|Criando um mod simples]] Normalmente precisa de mais do que apenas criar um [[liblist.gam]] ou um [[gameinfo.txt]]. Mods baseados em jogos {{gldsrc|4}} e {{source|4}} podem ser criados com o {{Xblahmt|4}} usando uma interface intuitiva, que cria todos os arquivos e diretórios necessários. Os mods do {{mapbase|4}} também são compatíveis. ([[XBLAH's_Modding_Tool/Docs/Game/New Mod|Veja a documentação]]).
 
-;Refresh Mods
-:In case you manually added or modified any mods for the current game, you can refresh the mod listing. ([[XBLAH's_Modding_Tool/Docs/Game/Refresh Mods|See documentation]])
+;Mods de atualização
+:Caso tenha adicionado ou modificado manualmente algum mod para o jogo atual, você pode atualizar a lista de mods. ([[XBLAH's_Modding_Tool/Docs/Game/Refresh Mods|Ver documentação.]])
 
 <gallery mode=nolines widths=384px heights=288px>
-Image:XBLAH's Modding Tool - Create a mod v1.17.0.png|Creating a mod
+Image:XBLAH's Modding Tool - Create a mod v1.17.0.png|Criando um mod
 </gallery>
 
-== Modding ==
-;Run a Mod
-:You can run mods straight from {{Xblahmt|4}}, without having to restart Steam when you create or install a new mod. {{Xblahmt|4}} supports lots of different run modes. It contains basic presets for each game, and you can add new ones.  ([[XBLAH's_Modding_Tool/Docs/Mod/Run|See documentation]])
+== Modificação ==
+;Executar um Mod
+:Você pode executar mods diretamente do {{Xblahmt|4}}, sem precisar reiniciar o Steam quando criar ou instalar um novo mod. O {{Xblahmt|4}} suporta vários modos de execução diferentes. Ele contém predefinições básicas para cada jogo, e você pode adicionar novas predefinições.  ([[XBLAH's_Modding_Tool/Docs/Mod/Run|Veja a documentação.]])
 
-;Open the Mod Folder
-:{{Xblahmt|4}} provides a shortcut to the selected mod folder, proving itself useful in case you need to modify any files manually. ([[XBLAH's_Modding_Tool/Docs/Mod/Open_Mod_Folder|See documentation]])
+;Abra a pasta Mod
+:{{Xblahmt|4}} fornece um atalho para a pasta de mods selecionada, o que se mostra útil caso você precise modificar algum arquivo manualmente. ([[XBLAH's_Modding_Tool/Docs/Mod/Open_Mod_Folder|Veja a documentação.]])
 
-;File Explorer
-:All the files mounted into the game info can be previewed with {{Xblahmt|4}} in the File Explorer. The File Explorer replaces the [[GCFScape]] as the ultimate file browsing tool, since it will mount all the VPKs and loose files according to the game info, to show the modder a comprehensive list of files. This relieves the modder of having to browse vpks individually, and the integrated features of the tool usually dismisses the necessity of extracting the files from the vpks, since they can be accessed natively by double-clicking the file (or right-clicking for more options). ([[XBLAH's_Modding_Tool/Docs/Mod/File_Explorer|See documentation]])
+;Explorador de arquivos
+:Todos os arquivos montados nas informações do jogo podem ser visualizados com {{Xblahmt|4}} no Explorador de arquivos. O File Explorer substitui o [[GCFScape]] como a melhor ferramenta de navegação de arquivos, pois ele monta todos os VPKs e arquivos soltos de acordo com as informações do jogo, para mostrar ao modder uma lista abrangente de arquivos. Isso alivia o modder da necessidade de procurar vpks individualmente, e os recursos integrados da ferramenta geralmente dispensam a necessidade de extrair os arquivos dos vpks, já que eles podem ser acessados nativamente clicando duas vezes no arquivo (ou clicando com o botão direito do mouse para obter mais opções). ([[XBLAH's_Modding_Tool/Docs/Mod/File_Explorer|Veja a documentação.]])
 
-;Deleting a Mod
-:You can delete the selected mod in case you don't want to work with it or have it anymore. ([[XBLAH's_Modding_Tool/Docs/Mod/Delete_Mod|See documentation]])
+;Deletando um mod
+:Você pode excluir o mod selecionado caso não queira mais trabalhar com ele ou tê-lo.([[XBLAH's_Modding_Tool/Docs/Mod/Delete_Mod|Veja a documentação.]])
 
 <gallery mode=nolines widths=384px heights=288px>
-Image:XBLAH's_Modding_Tool_-_Modding_-_Run_-_Expert_Mode.png|Running a Mod
-Image:XBLAH's Modding Tool - Modding - File explorer.png|File Explorer
+Image:XBLAH's_Modding_Tool_-_Modding_-_Run_-_Expert_Mode.png|Executando um mod
+Image:XBLAH's Modding Tool - Modding - File explorer.png|Explorador de Arquivos
 </gallery>
 
-=== Mod Configuration ===
+=== Configuração do mod ===
 
-;Game Info
-:The mod information can be edited with {{Xblahmt|4}} through a comprehensive UI without requiring the modder to mess with text files. It includes all the major keys of {{gldsrc|4}} and {{source|4}}. ([[XBLAH's_Modding_Tool/Docs/Mod/Game_Info|See documentation]])
+;Informações do jogo
+:As informações do mod podem ser editadas com {{Xblahmt|4}} por meio de uma interface de usuário abrangente, sem que o modder precise mexer em arquivos de texto. Ele inclui todas as principais chaves de {{gldsrc|4}} e {{source|4}}.([[XBLAH's_Modding_Tool/Docs/Mod/Game_Info|Veja a documentação.]])
 
-;Mounting Game Assets
-:The mod mounted content can be edited with {{Xblahmt|4}}, pointing to directories and [[VPK|VPKs]] in the desired order, without the risk of messing the [[Gameinfo.txt|game info]]. ([[XBLAH's_Modding_Tool/Docs/Mod/Content_Mount|See documentation]])
+;Montagem de assets de jogos
+:O conteúdo montado no mod pode ser editado com {{Xblahmt|4}}, apontando para diretórios e [[VPK|VPKs]] na ordem desejada, sem o risco de bagunçar o [[Gameinfo.txt|game info]]. ([[XBLAH's_Modding_Tool/Docs/Mod/Content_Mount|Veja a documentação.]])
 
-;Managing Chapters
-:Chapters for single-player games can be created with {{Xblahmt|4}} through an UI. The modder can easily create new chapters, select the chapter images, chapter background images, the first map of the chapter, the background map, and the tool will do the dirty work of creating the required vtfs, vmts and scripts. It gives the option to automatically blur the background images, so the modder can just take a screenshot of the background map and the tool will apply the usual blur. This replaces the need of saving [[VTF|VTFs]], creating chapter images with weird proportions, and so on. ([[XBLAH's_Modding_Tool/Docs/Mod/Chapters|See documentation]])
+;Gerenciando capítulos
+:Os capítulos para jogos de um jogador podem ser criados com {{Xblahmt|4}} por meio de uma interface do usuário. O modder pode criar facilmente novos capítulos, selecionar as imagens do capítulo, as imagens de fundo do capítulo, o primeiro mapa do capítulo, o mapa de fundo, e a ferramenta fará o trabalho sujo de criar os vtfs, vmts e scripts necessários. Ela oferece a opção de desfocar automaticamente as imagens de fundo, de modo que o modder pode simplesmente tirar uma captura de tela do mapa de fundo e a ferramenta aplicará o desfoque usual. Isso substitui a necessidade de salvar [[VTF|VTFs]], criar imagens de capítulo com proporções estranhas e assim por diante. ([[XBLAH's_Modding_Tool/Docs/Mod/Chapters|Veja a documentação.]])
 
-;Starting maps
-:For {{gldsrc|4}} games, you can set the map that will be run when you start a new game and the map that will run when you start the training section. ([[XBLAH's_Modding_Tool/Docs/Mod/Starting_Maps|See documentation]])
+;Mapas iniciais
+:Para jogos {{gldsrc|4}}, você pode definir o mapa que será executado quando você iniciar um novo jogo e o mapa que será executado quando você iniciar a seção de treinamento. ([[XBLAH's_Modding_Tool/Docs/Mod/Starting_Maps|Veja a documentação.]])
 
-;Menu Items
-:Main menu items can be added, modified or removed with {{Xblahmt|4}} based on a provided list of options. ([[XBLAH's_Modding_Tool/Docs/Mod/Menu_Items|See documentation]])
+;Itens do menu
+:Os itens do menu principal podem ser adicionados, modificados ou removidos com {{Xblahmt|4}} com base em uma lista de opções fornecida. ([[XBLAH's_Modding_Tool/Docs/Mod/Menu_Items|Veja a documentação.]])
 
 <gallery mode=nolines widths=384px heights=288px>
-Image:XBLAH's Modding Tool - Game Info v1.17.png|Game Info
-Image:XBLAH's Modding Tool - Content Mount v1.17.png|Mounting content
-Image:XBLAH's Modding Tool - Chapters v1.17.0.png|Single-player Chapters
-Image:XBLAH's Modding Tool - Starting maps v1.17.png|Starting Maps
-Image:XBLAH's Modding Tool - Menu Items v1.17.png|Game Menu Editor
+Image:XBLAH's Modding Tool - Game Info v1.17.png|Informações
+Image:XBLAH's Modding Tool - Content Mount v1.17.png|Montando o conteúdo
+Image:XBLAH's Modding Tool - Chapters v1.17.0.png|Capítulos Single-Player
+Image:XBLAH's Modding Tool - Starting maps v1.17.png|Mapas iniciais
+Image:XBLAH's Modding Tool - Menu Items v1.17.png|Editor do menu do jogo
 </gallery>
 
-=== File Management ===
-;Packing Files Manually
-:Instead of distributing loose files, you can select the files you want and pack them into a [[VPK]]. The selected files will be automatically deleted after they are packed into the [[VPK]], cleaning up your mod folder. The [[VPK]] will be saved under {{path|MOD_NAME/custom/}}. ([[XBLAH's_Modding_Tool/Docs/Mod/Pack_Files_Manually|See documentation]])
+=== Gerenciamento de arquivos ===
+;Empacotar arquivos manualmente
+:Em vez de distribuir arquivos soltos, você pode selecionar os arquivos que deseja e empacotá-los em um [[VPK]]. Os arquivos selecionados serão excluídos automaticamente depois de serem empacotados no [[VPK]], limpando a pasta do mod. O [[VPK]] será salvo em {{path|MOD_NAME/custom/}}. ([[XBLAH's_Modding_Tool/Docs/Mod/Pack_Files_Manually|Veja a documentação.]])
 
 ;Pack Subdirectory under {{path|MOD_NAME/custom/}}
 :Instead of manually packing files into a [[VPK]], you can select a folder under the {{path|MOD_NAME/custom/}} directory and it will convert all the Unpacked Files into a single [[VPK]]. You will have the option to delete the Unpacked Files. ([[XBLAH's_Modding_Tool/Docs/Mod/Pack_Files_Manually|See documentation]])
