@@ -2,24 +2,24 @@
 {{CD|CPhysBox|file1=1}}
 {{this is a|brush entity|name=func_physbox}}
 It is treated as a physics object.
-{{warning|Trying to spawn this entity without a model crashes the game. (for example by {{cmd|ent_create}})}}
+{{warning|Tentar criar esta entidade sem um modelo faz com que o jogo seja bloqueado. (por exemplo, através de {{cmd|ent_create}})}}
 
 == Keyvalues ==
 {{Brush rendering note}}
 
 {{KV Targetname}}
-{{KV|Impact Damage Type|intn=Damagetype|choices|Sets the "sharpness" of the brush. Sharp objects are far more damaging.}}
+{{KV|Impact Damage Type|intn=Damagetype|choices|Define a “sharpness" (nítidez) do pincel. Os objectos afiados são muito mais prejudiciais.}}
 :* 0 : Blunt
 :* 1 : Sharp
-{{KV|Mass Scale|intn=massScale|float|A scale multiplier for the object's mass. Use the convar <code>sv_massreport 1</code> to see the actual mass of the object ingame.}}
-{{KV|Override Parameters|intn=overridescript|string|A list of physics key/value pairs that are usually in a physics prop .qc file. Format is 'key,value,key,value,etc'.}}
-{{KV|Health Level to Override Motion|intn=damagetoenablemotion|integer|If specified, this object will start motion disabled. Once its health has dropped below this specified amount, it will enable motion.}}
-{{KV|Physics Impact Force to Override Motion|intn=forcetoenablemotion|float|If specified, this object will start motion disabled. Any impact that imparts a force greater than this value on the physbox will enable motion.}}
-{{KV|Strength|intn=health|integer|Number of points of damage to take before breaking.  0 means don't break.}}
-{{KV|Preferred Player-carry Angles|intn=preferredcarryangles|vector|If the 'Use Preferred Carry Angles' spawnflag is set, this angle is the angle which the object should orient to when the player picks it up, with the physgun or +USE.}}
-{{KV|Not solid to world|intn=notsolid|choices|If set, the object will pass through world geometry.}}
-:* 0 : Solid to World
-:* 1 : Passes through World
+{{KV|Mass Scale|intn=massScale|float|Um multiplicador de escala para a massa do objeto. Use o convar <code>sv_massreport 1</code> para ver a massa real do objeto no jogo.}}
+{{KV|Override Parameters|intn=overridescript|string|Uma lista de pares de chave/valor de física que normalmente se encontram num ficheiro .qc de prop de física. O formato é 'key,value,key,value,etc'.}}
+{{KV|Health Level to Override Motion|intn=damagetoenablemotion|integer|Se especificado, este objeto começará com o movimento desativado. Quando a sua saúde descer abaixo deste valor especificado, activará o movimento.}}
+{{KV|Physics Impact Force to Override Motion|intn=forcetoenablemotion|float|Se especificado, este objeto começará com o movimento desativado. Qualquer impacto que transmita uma força superior a este valor na caixa física ativará o movimento.}}
+{{KV|Strength|intn=health|integer|Número de pontos de dano a sofrer antes de quebrar. 0 significa não quebrar.}}
+{{KV|Preferred Player-carry Angles|intn=preferredcarryangles|vector|Se a spawnflag 'Use Preferred Carry Angles' estiver definida, este ângulo é o ângulo para o qual o objeto deve ser orientado quando o jogador o apanha, com a arma física ou +USE.}}
+{{KV|Not solid to world|intn=notsolid|choices|Se definido, o objeto passará pela geometria do mundo.}}
+:* 0 : Solido para o Mundo
+:* 1 : Passa por Mundo
 {{KV BreakableBrush}}
 
 == Flags ==
