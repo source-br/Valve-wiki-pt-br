@@ -1,0 +1,24 @@
+{{LanguageBar}}
+{{screenshot}}
+
+'''Conteúdo de Alta-Definição do {{L|hl|Half-Life 1}}''' foi o conteúdo usado para aumentar a qualidade de texturas e quantidade de polígonos para modelos. É incluso na instalação do {{hlbs|1}} do Half-Life (que permitiu vários pacotes de conteúdo personalizados, como alguns criados pelos usuários). Com o lançamento do Blue Shift no {{steamicon|1}}, o conteúdo foi adicionado como uma atualização sob demanda (embora nunca tenha sido mencionado).
+
+O conteúdo de alta-definição foi originado da versão de Dreamcast, e depois, [[Half-Life (PS2)|a versão de PS2]]. A contagem de polígonos para vários modelos foram aumentados, porem não na mesma extensão comparado com o atual Conteúdo de Alta-Definição.
+
+O Pacote de Alta-Definição no steam contem apenas animações requisitadas pelo Half-Life, Blue Shift e Opposing Force, inutilizando muitos mods que usam modelos esfolados do Half-Life. Alguns modelos como o Assistente Holográfico não possuem suas versões HD, ao contrário do {{hlps2|1}}.
+
+No {{hls|4}}, o Pacote de Alta-Definição usada em half-life, que foi [https://github.com/ValveSoftware/Source-1-Games/issues/1238 adicionado em 2013] mais tarde foi descoberto que era [https://gamebanana.com/mods/239220 originário do GameBanana], em vez de reutilizar o criado pela Gearbox. Atualmente não se sabe se a Valve licenciou ou roubou este pacote e o utilizou sem licenciá-lo (Embora a [https://steamcommunity.com/games/280/announcements/detail/2001012563991970199 Valve tenha creditado o autor original]), e ainda existe nos arquivos do jogo até hoje.
+
+== Galeria ==
+=== {{L|PC|PC}} ===
+{{Todo|Adicionar mais screenshots.}}
+<gallery mode=nolines heights=256px widths=384px>
+HL_HD_models_comparison_-_Original_vs_HD.jpg|Comparação entre o modelo original e HD do [[monster_human_grunt|Soldado HECU]]
+</gallery>
+=== {{L|PS2|PS2}} / {{L|Dreamcast|Dreamcast}} ===
+<gallery mode=nolines heights=256px widths=384px>
+File:HL PS2 Hazard Course health charger screenshot.png|O {{L|Health Charger|Kit de Primeiros-socorros}} da versão de PS2 do {{hl|4}}. Além disso, esta é a única versão do jogo que possui o modelo do Assistente Holográfico (Gina Cross) em Alta Definição.
+</gallery>
+=== {{L|hls|Half-Life:Source}} (Alta-Definição - Source) ===
+{{Todo|Adicionar screenshot.}}
+[[Category:Valve Games]][[Category:Half-Life]][[Category:Half-Life: Source]]
