@@ -18,13 +18,13 @@ It is treated as a physics object.
 {{KV|Strength|intn=health|integer|Número de pontos de dano a sofrer antes de quebrar. 0 significa não quebrar.}}
 {{KV|Preferred Player-carry Angles|intn=preferredcarryangles|vector|Se a spawnflag 'Use Preferred Carry Angles' estiver definida, este ângulo é o ângulo para o qual o objeto deve ser orientado quando o jogador o apanha, com a arma física ou +USE.}}
 {{KV|Not solid to world|intn=notsolid|choices|Se definido, o objeto passará pela geometria do mundo.}}
-:* 0 : Solido para o Mundo
-:* 1 : Passa por Mundo
+:* 0 : Solid to World
+:* 1 : Passes through World
 {{KV BreakableBrush}}
 
 == Flags ==
 {{Fl BreakableBrush}}
-{{Fl|4096|Start Asleep}}
+{{Fl|4096|Start Asleep|Start Asleep}}
 {{Fl|8192|Ignore +USE for Pickup}}
 {{Fl|16384|Debris - Don't collide with the player or other debris}}
 {{Fl|32768|Motion Disabled}}
@@ -56,9 +56,9 @@ It is treated as a physics object.
 {{IO|OnPlayerUse|Fired when the player tries to +USE the physbox. This output will fire only if the Generate output on +USE spawnflag is set.}}
 {{O Breakable}}
 
-== See also ==
+== Veja também ==
 * {{ent|func_physbox_multiplayer}}
-* [[Collapsing_tower]] - a prefab that demonstrates some creative usage of func_physboxes.
-* [[Prop Footsteps]] - a tutorial on the subject, demonstrating essential code for when players walk on entities like this (it's not ignored during footstep sound computation).
+* [[Collapsing_tower]] - um prefab que demonstra algumas utilizações criativas de func_physboxes.
+* [[Prop Footsteps]] - um tutorial sobre o assunto, que demonstra o código essencial para quando os jogadores andam sobre entidades como esta (não é ignorado durante o cálculo do som dos passos).
 
 [[Category:Physics]]
