@@ -2,7 +2,7 @@
 {{Hierarchy}}
 <span style="color:white; font-weight: bold;">{{For|about={{Autolang|the game engine}}
 |{{Autolang|the documentation on Source 2}}
-|[[Source_2/Docs|Source 2 Documentation]]|}}</span>
+|[[Source_2/Docs|Documentação da Source 2]]|}}</span>
 
 {{Infobox engine
 |title = Source 2
@@ -22,72 +22,72 @@
 |previousengine = {{Src|2}}
 |nextengine = 
 }}
-{{todo|This page is not a stub but could use some more detail.}}
-[[File:Screenshot-CS2-Source 2 engine.png|340px|thumb|In-game screenshot of {{CsgoMap|de_dust2}} in {{Cs2|1}}. It is also the most recent and latest {{src2|name}} game to be released.]]
-[[File:Screenshot - CS2 LC Performance Test map.jpg|340px|thumb|Another in-game screenshot of {{Cs2|1}}, with the community-made map "[https://steamcommunity.com/sharedfiles/filedetails/?id=3181655247 Lost Coast] by CZXA1", showcasing the graphical capabilities of Source 2, such as [[Volumetric lighting]], 8K textures and lightmaps.]]
-[[File:De_nuke - Source vs Source 2 comparison.jpg|340px|thumb|Comparison of {{CsgoMap|de_nuke}} map in {{src|1}} and {{source2|1}}.]]
+{{todo|Esta página não é um stub, mas poderia ser mais detalhada.}}
+[[File:Screenshot-CS2-Source 2 engine.png|340px|thumb|Imagem de {{CsgoMap|de_dust2}} em {{Cs2|1}}. É também o mais recente e último jogo {{src2|name}} a ser lançado.]]
+[[File:Screenshot - CS2 LC Performance Test map.jpg|340px|thumb|Outra imagem do jogo {{Cs2|1}}, com o mapa criado pela comunidade “[https://steamcommunity.com/sharedfiles/filedetails/?id=3181655247 Lost Coast] pelo CZXA1”, que mostra as capacidades gráficas do Source 2, como [[Volumetric lighting]], texturas 8K e lightmaps.]]
+[[File:De_nuke - Source vs Source 2 comparison.jpg|340px|thumb|Comparação do mapa {{CsgoMap|de_nuke}} em {{src|1}} e {{source2|1}}.]]
 
-{{source2|4}} is a 3D video game engine developed by [[Valve]] as a successor to {{src|4}}.
-Introduced in 2015, it is used in {{dota2|1}}, {{svrh|1}}, {{hla|1}}, {{s&box|1}}, {{cs2|1}}, and much more.<!-- once this page is a bit longer, this list should probably be shortened. not while it's still kinda short, though. now it did! -->
+O {{source2|4}} é um motor de videogames 3D desenvolvido pela [[Valve]] como sucessor do {{src|4}}.
+Introduzido em 2015, é usado em {{dota2|1}}, {{svrh|1}}, {{hla|1}}, {{s&box|1}}, {{cs2|1}}, e muito mais. <!-- once this page is a bit longer, this list should probably be shortened. not while it's still kinda short, though. now it did! -->
 
-Development of Source 2 was planned after the release of {{hl2ep2|1}} and other {{tob|1}} games. In 2010, {{l4d2|1}} was privately ported to the {{Src2|name}} engine as a tech demo, with one of the maps recreated in the Source 2 engine. The engine was later made public with the [[Dota 2 Workshop Tools]] Alpha in August 6th 2014 and formally announced by [[Valve]] in March of 2015 at the [[wikipedia: Game Developers Conference|Game Developers Conference]]. It was then implemented into ''Dota 2'' on June 17th 2015.
-Valve has announced that Source 2 will be released to the public for free, and it will only take money should it be used for commercial products.
+O desenvolvimento da Source 2 foi planeado após o lançamento de {{hl2ep2|1}} e outros jogos {{tob|1}}. Em 2010, o {{l4d2|1}} foi portado de forma privada para o motor {{Src2|name}} como uma demonstração técnica, com um dos mapas recriados no motor Source 2. O motor foi mais tarde tornado público com o [[Dota 2 Workshop Tools]] Alpha em 6 de agosto de 2014 e formalmente anunciado pela [[Valve]] em março de 2015 na [[wikipedia: Game Developers Conference|Game Developers Conference]]. Foi então implementada no “Dota 2” em 17 de junho de 2015.
+A Valve anunciou que a Source 2 será lançada ao público gratuitamente e que só aceitará dinheiro se for usada para produtos comerciais.
 
-The engine is capable of rendering highly complex and well detailed scenes with minimal framerate drops, thanks to its new 64-bit support alongside Vulkan, Direct3D 11, allowing for better multi-core rendering, better graphics and more efficient 3D rendering.
+a engine é capaz de renderizar cenas altamente complexas e bem detalhadas com quedas mínimas da taxa de fotogramas, graças ao seu novo suporte de 64 bits juntamente com Vulkan, Direct3D 11, permitindo uma melhor renderização multi-core, melhores gráficos e uma renderização 3D mais eficiente.
 
-==Features==
-=== Renderer ===
-; Native [[wikipedia: DirectX 11| DirectX 11®]] and [[wikipedia:Vulkan|Vulkan®]] support, with Shader Model 5.0 and later.
-; Support for both forward and deferred rendering pipelines.
-: Deferred rendering allows games to render as much light with little performance impact.
-; [[Screen Space Ambient Occlusion]] support
-; [[Physically Based Rendering]] support
-: PBR render graphics in a way that more accurately models the flow of light in the real world.
-; [[Volumetric lighting]] support.
-; [[WEBM|WebM]]
-: Source 2 uses WebM video, replacing the previous [[BIK|Bink Video format]]. This will allow the cutscenes to take less storage space as WebM provides better compression compared to Bink. WebM is also a open-format compared to Bink video.
-; Volumetric smokes {{only|{{cs2}}}}
-: Smokes are now volumetric objects, that can be pushed by grenades, bullets, and more. It also react to lighting and the smokes fill the spaces naturally.
-=== Physics ===
+==Funcionalidades==
+=== Renderização ===
+; Suporte nativo para [[wikipedia: DirectX 11| DirectX 11®]] e [[wikipedia:Vulkan|Vulkan®]], com Shader Model 5.0 e posterior.
+; Suporte para pipelines de renderização avançados e diferidos.
+: A renderização diferida permite que os jogos renderizem o máximo de luz com pouco impacto no desempenho.
+; Suporte de [[Screen Space Ambient Occlusion]].
+; Suporte de [[Physically Based Rendering]].
+: O PBR processa os gráficos de uma forma que modela com maior precisão o fluxo de luz no mundo real.
+; Suporte a [[Volumetric lighting]].
+; [[WEBM|WebM]].
+: A Source 2 usa vídeo WebM, substituindo o formato anterior [[BIK|Bink Video]]. Isso permitirá que as cutscenes ocupem menos espaço de armazenamento, já que o WebM oferece melhor compressão em comparação com o Bink. O WebM também é um formato aberto em comparação com o vídeo Bink.
+; Fumaças Volumetrics {{only|{{cs2}}}}
+: As fumaças são agora objetos volumetric, que podem ser empurrados por granadas, balas e muito mais. Também reagem à iluminação e os fumos preenchem os espaços naturalmente.
+=== Física ===
 ; [[Rubikon]]
-: Valve's new in-house physics engine. Includes support for [[Cloth Simulation]].
-=== Sound System ===
+: O novo motor de física interno da Valve. Inclui suporte para [[Cloth Simulation]].
+=== Sistema de Som ===
 ; [https://valvesoftware.github.io/steam-audio/ Steam Audio]
-: Valve's new in-house sound system licensed under Apache 2.0 license, replaces proprietary Miles Audio System. 
-; Improved Steam Audio
-: Sounds have been reworked to better reflect the physical environment, be more distinct, and express more game state. They have also been rebalanced for a more comfortable listening experience.
-; Other audio improvements
-: Improved audio and voice processing.{{clarify}}
-=== Networking ===
-; Sub-tick system {{since|{{Cs2}}}}
-: Tick rate no longer matters for moving, shooting, or throwing.
+: O novo sistema de som interno da Valve, licenciado sob a licença Apache 2.0, substitui o sistema proprietário Miles Audio System. 
+; Steam Audio Melhorado
+: Os sons foram reformulados para refletirem melhor o ambiente físico, serem mais distintos e expressarem mais o estado do jogo. Também foram reequilibrados para uma experiência auditiva mais confortável.
+; Outras melhorias no áudio
+: Processamento de áudio e voz melhorado.{{clarify}}
+=== Redes ===
+; Sistema de subticks {{since|{{Cs2}}}}
+: A Tick rate já não é importante para mover, disparar ou lançar.
 === UI ===
 ; [[Panorama]]
-: Valve's new Custom GUI interface that resembles modern web design and authoring (HTML5/CSS/JS). Using .XML and JavaScript files, developers can create dynamic and clean HUDs and menus and even high-quality in-game intractable panels.
-: Scalable across any resolution, compared to [[VGUI]] used in previous Source games (prior to {{l4d|1}}) which would become small if the game is running at higher resolution.
-=== Tools ===
-; Integrated asset management via the [[Asset System]].
-; New engine-integrated authoring tools, rebuilt from the ground up.
-: All compiling tools except VRAD are now merged into one. The map compiling tool are named as [[Resourcecompiler]].
+: A nova interface GUI personalizada da Valve que se assemelha ao design e à criação modernos da Web (HTML5/CSS/JS). Utilizando ficheiros .XML e JavaScript, os programadores podem criar HUDs e menus dinâmicos e limpos e até painéis intratáveis de alta qualidade no jogo.
+: Escalável em qualquer resolução, em comparação com a [[VGUI]] usada nos jogos Source anteriores (antes de {{l4d|1}}) que se tornaria pequena se o jogo estivesse a correr numa resolução mais alta.
+=== Ferramentas ===
+; Gestão integrada de activos através do [[Asset System]].
+; Novas ferramentas de criação integradas no motor, reconstruídas a partir do zero.
+: Todas as ferramentas de compilação, exceto o VRAD, estão agora fundidas numa só. A ferramenta de compilação de mapas tem o nome de [[Resourcecompiler]].
 ; {{Hammer5|2}}
-: Completely rebuilt [[Valve Hammer Editor|Hammer]] level editor, featuring modern polygon mesh editing tools.
-; Hardware accelerated ray-tracing for [[VRAD (Source 2)|VRAD]]
-: VRAD3 now requires graphics card with ray-tracing support to preview & bake lighting. This will allow VRAD to quickly calculates lighting data.
-: VRAD3 is supported in all Source 2 games since 2022. Some games such as {{hla|1}} and {{Svrh|1}} still provides previous version (VRAD2) for users who want to compile maps on systems that does not support ray-tracing.
-=== Programming ===
-; 64-bit support
-: Faster game performance, and allowing game to access over 4 GB of RAM. Previously, Source 2 also support 32-bit, which has been dropped with the release of {{dota2|4}} update in 2021 (except {{svrh|4}}).
+: Editor de níveis [[Valve Hammer Editor|Hammer]] completamente reconstruído, com ferramentas modernas de edição de malhas poligonais.
+; Traçado de raio acelerado por hardware para [[VRAD (Source 2)|VRAD]]
+: O VRAD3 requer agora uma placa gráfica com suporte de ray-tracing para pré-visualizar e preparar a iluminação. Isto permitirá ao VRAD calcular rapidamente os dados de iluminação.
+: O VRAD3 é suportado em todos os jogos da Source 2 desde 2022. Alguns jogos como {{hla|1}} e {{Svrh|1}} ainda fornecem a versão anterior (VRAD2) para utilizadores que queiram compilar mapas em sistemas que não suportam ray-tracing.
+=== Programação ===
+; Suporte de 64 bits
+: Desempenho de jogo mais rápido, e permitindo que o jogo aceda a mais de 4 GB de RAM. Anteriormente, a Source 2 também suportava 32 bits, o que foi abandonado com o lançamento da atualização {{dota2|4}} em 2021 (exceto {{svrh|4}}).
 
-==Limitations==
-{{warning|Support for 32-bit, OpenGL, DirectX 9 (includes Direct3D 9), XAudio, and macOS versions below 10.14 were removed in 2021 with the {{dota2|1}} update. {{svrh|1}} is not affected. Newer games such as {{hla|1}} and {{cs2|1}} don't support them.<br>Newer games like {{Cs2|1}} will also require a CPU with SSE 4.2 support.}}
-{{warning|Some games like {{cs2|2}} no longer support {{sq|1}}, making things non-trivial to port and with no chance of a proper transition period when both implementations are functional.}}
+==Limitações==
+{{warning|O suporte para versões de 32 bits, OpenGL, DirectX 9 (inclui Direct3D 9), XAudio e macOS inferiores a 10.14 foi removido em 2021 com a atualização {{dota2|1}}. O {{svrh|1}} não foi afetado. Jogos mais recentes, como {{hla|1}} e {{cs2|1}}, não são compatíveis com eles.<br>Jogos mais recentes, como {{Cs2|1}}, também exigirão uma CPU com suporte a SSE 4.2.}}
+{{warning|Alguns jogos, como o {{cs2|2}}, já não suportam o {{sq|1}}, o que faz com que as coisas não sejam triviais e não haja hipótese de um período de transição adequado em que ambas as implementações estejam funcionais.}}
 
-==Products using Source 2 {{Table tools|Source_2_games}}==
+==Produtos usando Source 2 {{Table tools|Source_2_games}}==
 {{source 2 games}}
 
-==Documentation==
-* [[Source 2/Docs|Source 2 Documentation Index]]
-* [[Source 2 General Discoveries]]
+==Documentação==
+* [[Source 2/Docs|Índice de documentação da Source 2]]
+* [[Source 2 General Discoveries|Source 2 Descobertas gerais]]
 
-==See also==
+==Veja também==
 * [[w:Source 2|Source 2 on Wikipedia]][[Category:Game engines]] [[Category:Valve]]
