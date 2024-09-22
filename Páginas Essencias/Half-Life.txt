@@ -1,3 +1,4 @@
+{{wip}}{{translate}}
 {{LanguageBar}} {{hl topicon}} {{gldsrc topicon}}
 
 <span style="color:white; font-weight: bold;">{{For|about=the 1998 game|the documentation on GoldSrc and Half-Life SDK|[[Half-Life SDK]]|}}</span>
@@ -7,57 +8,57 @@
 | image = Software Cover - Half-Life.jpg
 | developer = [[Valve Corporation]]
 | publisher = [[Sierra|Sierra Entertainment]] (retail)<br>Valve Corporation
-| series = [[Half-Life series]]
-| releasedates = {{ExpandBox|title=November 19, 1998|'''Windows:'''<br>November 19, 1998<br>'''PlayStation 2:'''<br>November 14, 2001<br>'''macOS, Linux:'''<br>Beta: January 28, 2013<br>Stable: February 14, 2013<!-- expand template -->}}
-| genre = {{w|icon=0|First-person shooter|First-person shooter}}
-| mode =  {{w|icon=0|Single-player video game|Single-player}},  {{w|icon=0|Multiplayer video game|Multiplayer}}
+| series = [[Serie Half-Life]]
+| releasedates = {{ExpandBox|title=19 de novembro, 1998|'''Windows:'''<br>19 de novembro, 1998<br>'''PlayStation 2:'''<br>14 de novembro 2001<br>'''macOS, Linux:'''<br>Beta: 28 de janeiro, 2013<br>Stable: 14 de fevereiro , 2013<!-- expand template -->}}
+| genre = {{w|icon=0|First-person shooter|Jogo de tiro em primeira pessoa}}
+| mode =  {{w|icon=0|Single-player video game|Jogo Solo}},  {{w|icon=0|Multiplayer video game|Multi-Jogador}}
 | platform =  {{w|icon=0|Windows|Windows}},  {{w|icon=0|Playstation 2|Playstation 2}},  {{w|icon=0|macOS|macOS}},  {{w|icon=0|Linux|Linux}}
 | engine = {{gldsrc|4}}
 | appid = 70
 | codelang =  {{w|icon=0|C++|C++}}
-| modsupport = Yes, <span style="font-weight:bold" title="Mod folder needs to be placed alongside Half-Life\valve folder to be detected by Steam">drop-in folders</span>
+| modsupport = Sim, <span style="font-weight:bold" title="A pasta do Mod precisa ser colocada ao lado da pasta Half-Life\valve para ser detectada pelo Steam">pastas suspensas(?)</span>
 | sdk = [[Half-Life SDK]]
 | sysreq = <span></span>
-*  {{w|icon=0|Windows 7|Win 7}} or later
+*  {{w|icon=0|Windows 7|Win 7}} ou superior
 * 800  {{w|icon=0|Hertz|MHz}}  {{w|icon=0|Central processing unit|CPU}}
 * 512 {{w|icon=0|Megabyte|MB}} RAM
-* 4  {{w|icon=0|Gigabyte|GB}} disk space
-* 32 MB  {{w|icon=0|Video random-access memory|VRAM}} video card
-''For details, [[#System Requirements|see below]]''
+* 4  {{w|icon=0|Gigabyte|GB}} de espaço em disco
+* 32 MB  {{w|icon=0|Video random-access memory|VRAM}} placa de vídeo
+''Para mais detalhes, [[#System Requirements|olha abaixo]]''
 
-
+| steamdeck = {{Steamdeck verified|4}}
 | distribution = Retail, [[Steam]]
 | website = https://www.half-life.com/halflife
-| links = {{Steam store|app/70|'''Steam''' page}}<br>{{steamicon}} [https://store.steampowered.com/mods/70/ Mods for '''Half-Life'''] on Steam<br>{{moddb|page=other|games/half-life|'''ModDB''' page}}
+| links = {{Steam store|app/70|Pagina do '''Steam'''}}<br>{{steamicon}} [https://store.steampowered.com/mods/70/ Mods para '''Half-Life'''] no Steam<br>{{moddb|page=other|games/half-life|Pagina do '''ModDB'''}}
 | previousgame = N/A
 | nextgame = {{op4|2}}
 }}
 
-[[File:C1a0 testmachine.jpg|thumb|''"They're waiting for you [[Dr. Gordon Freeman|Gordon]]... in the [[Anti-Mass Spectrometer|test chamberrr....]]"'']]
+[[File:C1a0 testmachine.jpg|thumb|''"Estão esperando por você {{L|Dr. Gordon Freeman|Gordon}}, na {{L|Anti-Mass Spectrometer|Na camara de testesss....}}"'']]
 
-<span style="color:white; font-weight:bold">Half-Life</span>, [[Valve]]'s debut 1998 title, blends action and adventure with award-winning technology to create a [[Black Mesa Research Facility|frighteningly realistic world]] where players must think to survive. Named Game of the Year by over 50 publications, it also includes an exciting multiplayer mode that allows you to play against friends and enemies around the world.
+<span style="color:white; font-weight:bold">Half-Life</span>, Título de estreia da {{L|Valve}} em 1998, combina ação e aventura com tecnologia premiada para criar um {{L|Black Mesa Research Facility|mundo assustadoramente realista}} onde os jogadores devem pensar para sobreviver. Nomeado Jogo do Ano por mais de 50 publicações, também inclui um emocionante modo multijogador que permite jogar contra amigos e inimigos ao redor do mundo.
 
-'''Half-Life''' is also the debut of the [[GoldSrc]] engine, and was followed by a [[Source]] engine sequel in 2004, <span style="font-weight:bold;">[[Half-Life 2]]</span>.
+'''Half-Life''' é também a estreia do motor gráfico [[GoldSrc]], e foi seguido por uma sequência do motor [[source]] em 2004, <span style="font-weight:bold;">[[Half-Life 2]]</span>.
 
-A PlayStation 2 [[Half-Life (PS2)|port of the game]] was released in 2001, developed by [[Gearbox Software]], which features many changes which were not present in the PC version of the game.
+{{L|Half-Life (PS2)|Um porte do jogo}} para PlayStation 2 foi lançado em 2001, desenvolvido pela [[Gearbox Software]], que apresenta muitas mudanças que não estavam presentes na versão de PC.
 
-On November 17, 2023, the game received a major update for its 25th anniversary{{ref|1}}, simulating the retail/WON menu UI,{{ref|3}} implementing proper widescreen support with Hor+ [[FOV]] and better UI scaling for high-DPI and 4K (or higher) displays, partially fixing support for overbright lighting, and much more. The game was also available for free to keep until November 20. Additionally, '''[[Uplink]]''' and content from '''[[Half-Life: Further Data]]''' was added to the game. The downside with this update however, is that several non-standalone GoldSrc mods (except custom content and textures) and games (like '''[[Counter-Strike]]''', '''[[Team Fortress Classic]]''' and more) were initially broken with this update; Valve provides a beta build ({{code|steam_legacy}}) to revert to the version prior to the update, to fix the mod incompatibility.
+17 de novembro de 2023, o jogo recebeu uma atualização importante para seu aniversario de 25 anos{{ref|1}}, simulando a UI do menu original/WON,{{ref|3}} implementação de suporte widescreen adequado com Hor+ {{L|FOV}} e melhor dimensionamento de UI para telas de alto DPI e 4K (ou superior), 
+arrumando parcialmente o suporte para iluminação excessiva e muito mais. O jogo também estava disponível gratuitamente até 20 de novembro. Além disso, '''{{L|Uplink}}''' e conteúdo de '''{{L|Half-Life: Further Data}}''' foram adicionados ao jogo. A desvantagem desta atualização, entretanto, é que vários mods GoldSrc não independentes (exceto conteúdo personalizado e texturas) e jogos (como '''[[Counter-Strike]]''', '''[[Team Fortress Classic]] ''' e mais) foram inicialmente quebrados com esta atualização; A Valve fornece uma versão beta ({{code|steam_legacy}}) para reverter para a versão anterior à atualização, para corrigir a incompatibilidade de mods.
+== Conteúdo ==
+* Mapas do Half-Life ({{code|valve}})
+* Pacote HD Half-Life ({{code|valve_hd}})
+* Compartilhamento GoldSrc ({{code|valve}})
+* Código GoldSrc
 
-== Content ==
-* Half-Life maps ({{code|valve}})
-* Half-Life HD pack ({{code|valve_hd}})
-* GoldSrc shared ({{code|valve}})
-* GoldSrc code
+== Capítulos ==
+'''Half-Life''' tem um total de 20 Capítulos, 19 dos quais são jogáveis.
 
-== Chapters ==
-'''Half-Life''' has total of 20 chapters, 19 of which are playable.
-
-There are 14 (15 with Hazard Course) chapters set in [[Black Mesa Research Facility|Black Mesa]] and 4 (5 with Endgame) chapters set in [[Xen]].
+Existem 14 (15 com o Hazard Course é claro) capítulos ambientados na [[Black Mesa Research Facility|Black Mesa]] e 4 (5 com o fim de jogo) capítulos ambientados em [[Xen]].
 {{Chapters|game=hl}}
 
-== Official multiplayer maps ==
+== Mapas oficiais de Multi-Jogador ==
 {{stub}}
-The original release of '''Half-Life''' included 8 multiplayer maps:
+O lançamento original de '''Half-Life''' incluía 8 mapas multijogador:
 * ''Boot Camp'' ({{code|boot_camp.bsp}})
 * ''Bounce'' ({{code|bounce.bsp}})
 * ''Datacore'' ({{code|datacore.bsp}})
@@ -136,7 +137,8 @@ For engine specific bugs, see [[GoldSrc#Bugs and Limitations|Bugs and Limitation
 * '''Half-Life''' ports:
 ** [[Half-Life (PS2)|PlayStation 2 version]]
 ** [[Half-Life (Dreamcast)|Cancelled Dreamcast version]]
-* '''[[Black Mesa]]''' - Fan-made remake of '''Half-Life'''
+** [[Half-Life: Source]] - remaster, ported to the {{Src|1}} engine.
+* '''[[Black Mesa (Source)|Black Mesa]]''' - Fan-made remake of '''Half-Life''', running on {{Src|1}} engine.
 * '''[[Half-Life 2]]''' - Sequel to '''Half-Life'''
 * [[Half-Life.fgd]]
 * [[Half-Life SDK]]
@@ -152,5 +154,3 @@ For engine specific bugs, see [[GoldSrc#Bugs and Limitations|Bugs and Limitation
 * {{w|Half-Life (video game)|Half-Life}} on Wikipedia
 {{Valve games}}
 {{Half life games|hidecancelled=true|hide3rdparty=true}}
-
-[[Category:Playable Steam Deck games]]
