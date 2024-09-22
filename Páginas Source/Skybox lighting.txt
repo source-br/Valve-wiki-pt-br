@@ -1,23 +1,23 @@
 {{LanguageBar}}
 <onlyinclude>[[File:Toolsskybox.gif|right]]
 
-Skyboxes are the main source of light for most maps, and as such are one of the most important parts of making a map.
+As skyboxes são a principal fonte de luz da maioria dos mapas e, como tal, são uma das partes mais importantes da criação de um mapa.
 
-===Overview===
-Skybox lighting enters the map through every [[skybox|toolsskybox]]-textured [[brush]], representing direct sun/moonlight and diffuse skylight. Its basic properties are controlled by three entities used in combination (four in some games): 
+===Visão geral===
+A iluminação Skybox entra no mapa através de cada [[skybox|toolsskybox]]-texturizado [[brush]], representando a luz direta do sol/lua e a luz difusa da skylight. As suas propriedades básicas são controladas por três entidades usadas em combinação (quatro em alguns jogos):
 
-* {{ent|light_environment}} defines the direction, color and intensity of the direct sunlight, and the color and intensity of the diffuse skylight.
-* {{ent|shadow_control}} defines the color, direction, and attenuation distance of the [[Dynamic Shadows|dynamic shadows]] that are created by <code>light_environment</code>. Dynamic shadows will be buggy and unconfigurable without this entity.
-* {{ent|env_sun}} places a glowing sprite in the skybox to represent the Sun's apparent position in the sky. It has no effect on lighting aside from this.
-* {{ent|env_cascade_light}} casts harsh, real-time shadows onto the map, usually copying settings from the {{ent|light_environment}} entity. {{since|{{csgo}}}}{{also|{{bms}}}}
-* {{ent|light_deferred_global}} casts dynamic shadows and lighting similar to '''env_cascade_light''' {{only|{{asd}}}}{{also|{{lw}}}}
+* {{ent|light_environment}} define a direção, a cor e a intensidade da luz solar direta e a cor e a intensidade da luz difusa da skylight.
+* {{ent|shadow_control}} define a cor, direção e distância de atenuação das [[Dynamic Shadows|sombras dinâmicas]] que são criadas pelo <code>light_environment</code>. Sombras dinâmicas serão problemáticas e não configuráveis sem esta entidade.
+* {{ent|env_sun}} coloca um sprite brilhante na skybox para representar a posição aparente do Sol no céu. Para além disso, não tem qualquer efeito na iluminação.
+* {{ent|env_cascade_light}} lança sombras duras e em tempo real no mapa, normalmente copiando as definições da entidade {{ent|light_environment}}. {{since|{{csgo}}}}{{also|{{bms}}}}
+* {{ent|light_deferred_global}} projecta sombras dinâmicas e iluminação semelhante a '''env_cascade_light''' {{only|{{asd}}}}{{also|{{lw}}}}
 
-===Explanation===
-To make sense of it all, just make sure you have only one of each of these entities in your map, and that the '''Pitch and Yaw <angles>''' are set the same for all three of them. (''Pitch'' is equivalent to the Sun's angle of elevation from the ground, and ''Yaw'' is its compass bearing.)
+===Explicação===
+Para que tudo isto faça sentido, certifique-se de que tem apenas uma de cada uma destas entidades no seu mapa, e que os '''Pitch and Yaw <angles>''' estão definidos da mesma forma para as três entidades. (''Pitch'' é equivalente ao ângulo de elevação do Sol em relação ao solo, e ''Yaw'' é o rumo da bússola).
 
-These lighting settings—direction, color, brightness, etc.—are fairly specific to the actual image used for the 2D skybox. The [[Sky List]] article suggests some settings for official game skyboxes.  The {{ent|worldspawn}} entity defines which [[Sky List|skybox]] to use. Also note that fog will look wrong if {{ent|env_fog_controller}}'s settings don't correspond to the particular skybox in use.
-{{Note|'''Pitch''' can be overridden for <code>light_environment</code> and <code>env_sun</code>, but not <code>shadow_control</code>. The '''Pitch''' override also cannot be switched off and its rotation is measured counter-clockwise from the horizontal (so straight down is -90&deg;) whereas the '''<angles> Pitch''''s rotation is clockwise (so straight down is +90&deg;). The workaround for this is to make sure your '''Pitch''' override merely repeats the '''<angles>''' value; for example, if your <code>shadow_control</code>, <code>light_environment</code> and <code>env_sun</code> '''<angles>''' are "45 -60 0", set the '''Pitch''' override to "-45".}}</onlyinclude>
-==See also==
+Estas definições de iluminação - direção, cor, brilho, etc. - são bastante específicas da imagem real usada para a skybox 2D. O artigo [[Sky List]] sugere algumas configurações para skyboxes de jogos oficiais.  A entidade {{ent|worldspawn}} define qual a [[Sky List|skybox]] a usar. Nota também que o nevoeiro vai parecer errado se as definições do {{ent|env_fog_controller}} não corresponderem ao skybox em uso.
+{{Note|O '''Pitch'''' pode ser sobreposto para <code>light_environment</code> e <code>env_sun</code>, mas não para <code>shadow_control</code>. A substituição do '''Pitch''' também não pode ser desligada e sua rotação é medida no sentido anti-horário a partir da horizontal (assim, em linha reta para baixo é -90&deg;), enquanto a rotação do '''<angles> Pitch'''s é no sentido horário (assim, em linha reta para baixo é +90&deg;). A solução para isso é certificar-se de que o seu '''Pitch''' override apenas repete o valor do '''<angles>'''; por exemplo, se o seu <code>shadow_control</code>, <code>light_environment</code> e <code>env_sun</code> '''<angles>''' são “45 -60 0”, defina o '''Pitch''' override para “-45”.}}</onlyinclude>
+==Veja também==
 *[[Skybox Basics]]
 *{{ent|light_environment}}
 
