@@ -25,17 +25,17 @@ Os eventos de output são criados na guia Outputs da caixa de diálogo [[Hammer 
 
 Os campos de configuração do output são:
 
-; Output name
-: What event causes the output to fire. For example, a [[trigger_multiple]] entity can fire an '''OnTrigger''' output when a player steps into it.
-; Target entity
-: The [[targetname]] or [[classname]] of the entity that will receive input. Accepts the * character as a search wildcard.
-:* A bold name means that the targetname points to multiple entities
-:* A red name means that the targetname doesn't point to anything {{bug|Valid classname and wildcard values and [[Targetname#Keywords|special targetnames]] will also appear red. Don't worry: the engine will recognise them!|only=}}
-; Input name
-: The input on the target entity that will be triggered. This too will be context sensitive. For example, if sending an output to a Door entity, some of the available inputs will be "Close" or "Open".
-; Parameters
-: You can pass data to the target entity with parameters. A parameter might be anything: how loud to play [[ambient_generic|a sound]], the [[targetname]] of another entity, or perhaps [[color255|a color]]. It all depends on what the input accepts. If it doesn't accept anything, this field will be greyed out.
-: Some outputs, like [[math_counter]]'s <code>OutValue</code>, generate parameters themselves. To use a generated parameter, just leave the field reading <code><none></code>. {{note|If the output value is a [[targetname]], remember that it may not be unique!}}
+; Nome do output
+:O evento que faz com que a output seja acionada. Por exemplo, uma entidade [[trigger_multiple]] pode disparar uma output '''OnTrigger''' quando um jogador entra nela.
+; Entidade alvo
+: O [[targetname]] ou [[classname]] da entidade que receberá o input. Aceita o caractere * como um caractere de pesquisa geral.
+:* Um nome em negrito significa que o targetname aponta para várias entidades
+:* Um nome vermelho significa que o targetname não aponta para nada  {{bug|Os valores válidos de classname e curinga e [[Targetname#Keywords|special targetnames]] também aparecerão em vermelho. Não se preocupe: o mecanismo os reconhecerá!|only=}}
+; Nome do input
+: A entrada na entidade de destino que será acionada. Isso também será sensível ao contexto. Por exemplo, se estiver enviando um output para uma entidade Porta, alguns dos inputs disponíveis serão “Fechar” ou “Abrir”.
+; Parametros
+: Você pode passar dados para a entidade de destino com parâmetros. Um parâmetro pode ser qualquer coisa: a intensidade da reprodução de [[ambient_generic|um som]], o [[targetname]] de outra entidade ou talvez [[color255|uma cor]]. Tudo depende do que a entrada aceita. Se ela não aceitar nada, esse campo ficará acinzentado.
+: Alguns outputs, como o <code>OutValue</code> do [[math_counter]], geram parâmetros por si mesmos. Para usar um parâmetro gerado, basta deixar o campo com a leitura <code><none></code>. {{note|Se o valor de output for um [[targetname]], lembre-se de que ele pode não ser único!}}
 ; Time delay
 : The number of seconds to wait after the output event occurs before firing.
 ; Fire once only
