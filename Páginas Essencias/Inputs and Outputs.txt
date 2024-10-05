@@ -3,27 +3,27 @@
 
 {{toc-right}}
 
-'''Inputs''' and '''Outputs''' (collectively "I/O") are the means by which [[Entity|entities]] communicate between each other in [[:Category:Level Design|maps]]. Entities have two methods for communication: sending an "output" to another entity, or receiving an "input" from another entity. For example, one entity may send an output when it is killed to another entity's input which causes it to change color. That same output could also be used to trigger another entity's spawning input. The outputs are matched to the inputs via a "connection", which controls what extra data is relayed to the receiver, how much of a delay there is before the output is received, and whether the output should be allowed to be sent again later. Outputs can be linked to any input and vice versa. This allows complex and powerful interactions between entities.
+'''Inputs''' e '''Outputs''' (coletivamente “I/O”) são os meios pelos quais [[Entity|entidades]] comunicam entre si em [[:Categoria:Level Design|mapas]]. As entidades têm dois métodos de comunicação: enviar uma “output" para outra entidade, ou receber um “input” de outra entidade. Por exemplo, uma entidade pode enviar uma output quando é morta para o input de outra entidade, o que faz com que esta mude de cor. Essa mesmo output pode também ser usada para ativar a input de desova de outra entidade. Os outputs são ligados aos inputs através de uma “ligação”, que controla os dados extra que são transmitidos ao recetor, o tempo de espera até que o output seja recebido e se o output pode ser enviado novamente mais tarde. As outputs podem ser ligadas a qualquer input e vice-versa. Isto permite interações complexas e poderosas entre entidades.
 
-Consider a [[logic_timer]] entity. It might be configured to "fire" its <code>OnTimer</code> output when it hits its time limit, which "triggers" (or "calls") the <code>ShowSprite</code> input of an [[env_sprite]]. When the timer hits its limit, the sprite appears. By using the connection properties, you could also cause the output to be triggered after a two second delay, or to trigger once but never again.
+Considere uma entidade [[logic_timer]]. Ela pode ser configurada para “disparar” sua output <code>OnTimer</code> quando atingir seu tempo limite, que “aciona” (ou “chama”) a input <code>ShowSprite</code> de um [[env_sprite]]. Quando o temporizador atinge o seu limite, o ator aparece. Usando as propriedades de ligação, também é possível fazer com que o output seja acionado após um atraso de dois segundos, ou que seja acionado uma vez mas nunca mais.
 
 == Inputs ==
 
-'''Inputs''' are commands that cause an entity to change what it is doing. They are "triggered" (or "called") by outputs - they cannot be manipulated directly.
+'''Inputs''' são comandos que fazem com que uma entidade mude o que está a fazer. São “acionados” (ou “chamados”) pelas outputs - não podem ser manipulados diretamente.
 
-You can view a list of input events that an entity is receiving in the Inputs tab of the [[Hammer Object Properties Dialog|object properties dialog]]. Clicking the "mark" button will take you to the entity that the input is being received from.
+É possível ver uma lista de eventos de input que uma entidade está a receber no separador Inputs do [[Hammer Object Properties Dialog|diálogo de propriedades do objeto]]. Clicando no botão " mark ", o utilizador será levado para a entidade da qual o input está a ser recebido.
 
 # [[use]]
 
 == Outputs ==
 
-[[File:Outputs-new.png|thumb|Hammer's "Object Properties" dialog]]
+[[File:Outputs-new.png|thumb|Caixa de diálogo “Propriedades do objeto” do Hammer]]
 
-'''Outputs''' are events that fire when an entity's state changes. For example, a [[logic_timer|timer]] will have an output for reaching its end, a [[func_button|button]] an output for being pressed, and a [[prop_door_rotating|door]] an output for coming to a close.
+'''Outputs''' são eventos que são acionados quando o estado de uma entidade muda. Por exemplo, um [[logic_timer|timer]] terá um output para chegar ao fim, um [[func_button|botão]] um output para ser pressionado e um [[prop_door_rotating|porta]] um output para ser fechado.
 
-Output events are created in the Outputs tab of the [[Hammer Object Properties Dialog|object properties dialog]]. This interface provides a list of the outputs already emitting from the entity, configuration fields for the one(s) currently selected, and buttons for creating new and deleting old. Finally, the button in the bottom left labelled "mark" will take you to the target entity of the current output.
+Os eventos de output são criados na guia Outputs da caixa de diálogo [[Hammer Object Properties Dialog|object properties dialog]]. Essa interface fornece uma lista das saídas já emitidas pela entidade, campos de configuração para o(s) output(s) atualmente selecionada(s) e botões para criar novas e excluir antigas. Finalmente, o botão no canto inferior esquerdo denominado “mark” (marcar) o levará à entidade de destino da output atual.
 
-The output configuration fields are:
+Os campos de configuração do output são:
 
 ; Output name
 : What event causes the output to fire. For example, a [[trigger_multiple]] entity can fire an '''OnTrigger''' output when a player steps into it.
