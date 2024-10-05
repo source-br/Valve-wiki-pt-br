@@ -2,83 +2,83 @@
 [[Category:Tutorials]]
 [[Category:Skybox]]
 {{subpage|[[Skybox Basics]]}}
-[[File:Layoututh.jpg|thumb|right|250px|The example layout of a small map that is discussed in this article.]]
+[[File:Layoututh.jpg|thumb|right|250px|O exemplo do layout de um pequeno mapa que é abordado neste artigo.]]
 
-This article discusses the different methods of how skybox brushes can be placed on a map, as well as their advantages and disadvantages. For this purpose, an example of a map is given on which all methods are applied. Roof brushes are hidden for tutorial purposes.
+Este artigo aborda os diferentes métodos de colocação de brushes skybox num mapa, bem como as suas vantagens e desvantagens. Para o efeito, é apresentado um exemplo de um mapa no qual são aplicados todos os métodos. As escovas de telhado estão ocultas para efeitos de tutorial.
 {{clr|left}}
 
-== Overview ==
+== Visão geral ==
 
 {| style="border:1px solid #666"
 |- style="background-color:#444"
 !colspan=2| Method
-! Description
-! Advantages
-! Disadvantages
+! Descrição
+! Vantagens
+! Desvantagens
 
 |-
-! ''Box ("Diaper") Method''
+! ''Método Box ("Diaper")''
 | [[File:Improperskyboxexample.gif|140px]]
-| Create a huge hollow skybox block that contains the entire level
+| Criar um enorme bloco de skybox oco que contenha todo o nível
 |style=background-color:rgba(0,255,0,0.1)|
-* Very easy to create
+* Muito fácil de criar
 |style=background-color:rgba(255,0,0,0.1)|
-* Unnecessarily long compile time, unnecessarily bad performance
-* Using [[Hammer Cordon Usage|cordon]]s is easier, while accomplishing the same thing
+* Tempo de compilação desnecessariamente longo, desempenho desnecessariamente mau
+* A utilização de [[Hammer Cordon Usage|cordon]]s é mais fácil, mas permite realizar o mesmo objetivo
 
 |- style=background-color:rgba(255,255,255,0.05)
-! ''Tight Skybox''
+! ''Skybox apertada''
 | [[File:Properskyboxexample.gif|140px]]
-| Create skybox walls and ceilings room by room without creating unintended walkable areas
+| Criar paredes e tectos skybox divisão a divisão sem criar áreas transitáveis não intencionais
 |style=background-color:rgba(0,255,0,0.1)|
-* Reasonable compile time and performance
+* Tempo de compilação e desempenho razoáveis
 |style=background-color:rgba(255,0,0,0.1)|
-* Creation is work, [[leak]]s are more likely to appear
-* Tall structures in other sections may disappear even though they should be visible
+* Criação é um trabalho, é mais provável que apareçam [[leak]]s
+* As estruturas altas de outras secções podem desaparecer, embora devessem estar visíveis
 
 |-
-! ''Dynamic approach''
+! ''Abordagem dinâmica''
 | [[File:Towerop1.jpg|140px]]
-| Like ''Tight Skybox'' but not ''that'' tight, leaving the different sections of the map connected above the playable area
+| Como a ''Skybox apertada'', mas não ''tão'' apertada, deixando as diferentes secções do mapa ligadas acima da área jogável
 |style=background-color:rgba(0,255,0,0.1)|
-* Reasonable compile time and performance
-* Can account for tall structures to stay visible from different sections
-* Better immersion: bullets, grenades, and physics props won't collide with skybox as if it were a wall
+* Tempo de compilação e desempenho razoáveis
+* Pode ter em conta estruturas altas para ficarem visíveis a partir de diferentes secções
+* Melhor imersão: balas, granadas e props físicos não colidem com a skybox como se esta fosse uma parede
 |style=background-color:rgba(255,0,0,0.1)|
-* Creation is work, leaks are more likely to appear
+* Criação é um trabalho, as fugas são mais susceptíveis de aparecer
 |}
 
-Some more benefits of creating a proper map-optimizing skybox can include:
-*Easier use of [[areaportal]]s
-*Easier organisation of {{ent|env_soundscape}} triggers
-*Rendering of larger numbers of [[Prop detail|detail]] props on displacements
+Alguns outros benefícios da criação de uma skybox adequada para otimizar o mapa podem incluir
+*Uso mais fácil de [[areaportal]]s
+*Organização mais fácil de ativadores {{ent|env_soundscape}}
+*Renderização de um maior número de adereços [[Prop detail|detail]] em displacements.
 
-{{Tip|Tall structures that should stay visible across multiple sections of the level (e.g. a crane) can be moved to a [[3D Skybox]]. If necessary, the structure can instead be duplicated.}}
-{{Note|In {{cs}}{{czero}}{{css}}{{csgo}}, you may want arbitrarily thrown grenades to never touch the skybox. To accomplish this, the ceiling of the skybox should be at least [[Counter-Strike: Global Offensive/Mapper's Reference#Grenades|1500 units higher]] than the highest place that a player can throw grenades from. Additionally, skybox walls cannot extend the level's walls if no grenade should hit them.}}
+{{Tip|As estruturas altas que devem permanecer visíveis em várias seções do nível (por exemplo, uma crane) podem ser movidas para uma [[Skybox 3D]]. Se necessário, a estrutura pode ser duplicada.}}
+{{Note|Em {{cs}}{{czero}}{{css}}{{csgo}}, podes querer que as granadas lançadas arbitrariamente nunca toquem na skybox. Para isso, o teto da skybox deve ser pelo menos [[Counter-Strike: Global Offensive/Mapper's Reference#Grenades|1500 units a mais]] do que o lugar mais alto de onde um jogador pode lançar granadas. Para além disso, as paredes da skybox não podem prolongar as paredes do nível se nenhuma granada as atingir.}}
 
-== Box Method ==
+== Método de caixa ==
 
-Most inexperienced mappers tend to create a large box around their level and texture it with the <code>tools/toolsskybox</code> texture, then carve it outwards to create a literal 'sky'''box''''. Most mappers do this because they are not experienced with how a skybox works and its effects, or could do this simply because they do not want any leaks in their map. This is sometimes referred to as a "diaper" skybox.
+A maioria dos mapeadores inexperientes tende a criar uma grande caixa em torno de seu nível e texturizá-la com a textura <code>tools/toolsskybox</code>, em seguida, esculpi-la para fora para criar, literalmente, uma '''sky box'''. A maioria dos mapeadores faz isso porque não tem experiência com o funcionamento de uma skybox e seus efeitos, ou pode fazer isso simplesmente porque não quer vazamentos em seu mapa. Isto é por vezes referido como um skybox "diaper".
 
-Either way, this ''"Box Method"'' is not the way you should form your skybox, as it can cause more issues than it solves.
-To demonstrate why, a small map will be created for the purpose of this article. It's a simple layout: a few paths with three large areas and walls separating them all. This isn't the most complicated map but it serves to illustrate the point nonetheless. Also, notice how the ground throughout the level is made from displacements sewn together. This is quite common, and you will see how this affects the skybox and map optimization in a moment. With the ''"Box Method"'' applied, the map would appear like the image below.
+De qualquer forma, este ''“Método da caixa”'' não é a forma como deve formar a sua skybox, pois pode causar mais problemas do que os que resolve.
+Para demonstrar o porquê, será criado um pequeno mapa para o objetivo deste artigo. É um esquema simples: alguns caminhos com três grandes áreas e paredes a separá-las. Este não é o mapa mais complicado, mas serve para ilustrar o ponto. Além disso, repara como o chão ao longo do nível é feito de displacements costurados uns aos outros. Isto é bastante comum, e verá como isto afecta a skybox e a otimização do mapa daqui a pouco. Com o '''Box Method (Método de Caixa)''' aplicado, o mapa apareceria como a imagem abaixo.
 
 [[File:Improperskyboxexample.gif]]<br/>
 
-The displacements are fading in and out for a reason; to demonstrate that they are not actually taken into account by [[VVIS]]. Displacements do not block visibility and VVIS will not calculate visleafs that stop at the surface of displacements; the visleafs will go straight through them. If you had a wall made of displacements, your computer would still render all the models, players and geometry behind them. Only the world geometry - in this case the walls/brushes - will block visibility and create the visleafs that control the items to be rendered.
+Os displacements estão a desaparecer e a desaparecer por uma razão: para demonstrar que não são efetivamente tidos em conta pelo [[VVIS]]. Os displacements não bloqueiam a visibilidade e o VVIS não calcula as visleafs que param na superfície dos displacements; as folhas de visão atravessam-nos diretamente. Se tivesse uma parede feita de displacements, o seu computador continuaria a renderizar todos os modelos, jogadores e geometria por trás deles. Apenas a geometria do mundo - neste caso, as paredes/brushes - irá bloquear a visibilidade e criar as visleafs que controlam os itens a renderizar.
 
-{{Tip|When your map's outer borders are still in development, it is more beneficial to use the [[Hammer_Cordon_Usage|cordon tools]] until you've reached a stage of map development where you want to start setting up your final skybox and optimizing your map. Cordons function the same way as the box method, but are cleaner to use.}}
-{{Note|You may notice that the origin of the map lies inside the level.<br>In {{src}}, this is a bad practice, as VVIS will automatically cut visleafs along the axis of the origin. Instead, this should be moved into one of the 4 quadrants of the x/y axis.<br>In {{gldsrc}}, however, this advice can and should be ignored, as the map canvas is significantly smaller, and brushes placed too close to the edge of the map often will compile incorrectly, especially if small.}}
+{{Tip|Quando as bordas exteriores do seu mapa ainda estão em desenvolvimento, é mais benéfico usar as [[Hammer_Cordon_Usage|cordon tools]] até chegar a uma fase de desenvolvimento do mapa em que quer começar a configurar a sua skybox final e otimizar o seu mapa. Os cordons funcionam da mesma forma que o método da caixa, mas são mais simples de utilizar.}}
+{{Note|Pode reparar que a origem do mapa se encontra dentro do nível.<br>No {{src}}, isto é uma má prática, pois o VVIS corta automaticamente as folhas de visão ao longo do eixo da origem. Em vez disso, a origem deve ser movida para um dos 4 quadrantes do eixo x/y.<br>No {{gldsrc}}, no entanto, este conselho pode e deve ser ignorado, pois a tela do mapa é significativamente menor, e os brushes colocados muito perto da borda do mapa muitas vezes compilam incorretamente, especialmente se forem pequenos.}}
 
-== Tight Skybox ==
+== Skybox apertada ==
 
-An example of a properly created skybox is as follows:
+Segue o anexo de um exemplo de um skybox criada corretamente:
 
 [[File:Properskyboxexample.gif]]
 
-The skybox now conforms with the outline of the level, and the nodraw texture is used in all areas underneath the walls and floor, instead of the <code>tools/toolsskybox</code> texture. This reduces the amount of calculations needed (lowering your compile times significantly) because the skybox doesn't contain all that empty space generated by the previous method. The nodraw texture is used because we don't need to create light beneath the level, and we don't want rendering errors that will occur when light hits the displacements from below.
+a skybox agora está em conformidade com o contorno do nível, e a textura nodraw é usada em todas as áreas sob as paredes e o chão, ao invés da textura <code>tools/toolsskybox</code>. Isto reduz a quantidade de cálculos necessários (reduzindo significativamente o tempo de compilação) porque a skybox não contém todo o espaço vazio gerado pelo método anterior. A textura nodraw é usada porque não precisamos de criar luz por baixo do nível e não queremos erros de renderização que ocorrerão quando a luz atingir as displacements a partir de baixo.
 
-All these methods make for noticeable changes to the compile:
+Todos estes métodos introduzem alterações visíveis na compilação:
 
 [[File:Vviscompare.gif|left]]
 
@@ -94,21 +94,21 @@ All these methods make for noticeable changes to the compile:
 
 ''VisDataSize:'' '''2048''' »» '''196'''
 {{clr}}
-For such a small map, these differences are already enormous, and will dramatically increase the performance of the map in-game, especially if the map was larger.
+Para um mapa tão pequeno, estas diferenças já são enormes e irão aumentar drasticamente o desempenho do mapa no jogo, especialmente se o mapa for maior.
 
-== When Not To Build Sections ==
-Conforming the skybox to the paths of your level shouldn't be done all the time, but only where appropriate. There are a few cases where you should leave gaps to see through, so you can view the next section of the map, for example.
+== Quando não construir seções ==
+Conformar a skybox com os caminhos do nível não deve ser feito sempre, mas apenas quando apropriado. Há alguns casos em que se deve deixar espaços para ver através deles, para que se possa ver a seção seguinte do mapa, por exemplo.
 
-A tall orange 'tower' has been placed in the middle area of the map, as can be seen below. However, if the skybox remains as it is then that tower will appear/disappear when people walk around due to the construction of the skybox. Trimming down the skybox in places is required to make sure that the tower is visible from all angles that the player is able to see it from.
+Uma 'torre' laranja alta foi colocada na área central do mapa, como pode ser visto abaixo. No entanto, se a skybox se mantiver como está, essa torre aparecerá/desaparecerá quando as pessoas andarem à volta, devido à construção da skybox. É necessário cortar a skybox em alguns pontos para garantir que a torre é visível de todos os ângulos a partir dos quais o jogador a pode ver.
 
-By removing and trimming walls so that the tower can be seen from any angle, and by using the nodraw texture between the walls in the center, we end up with a result similar to this:
+Removendo e recortando as paredes para que a torre possa ser vista de qualquer ângulo e utilizando a textura nodraw entre as paredes no centro, obtemos um resultado semelhante a este:
 
 [[File:Towerop1.jpg]]
 
-One can also try to limit the area in which the tower will be rendered. Simply raise the height of some walls, so that when the player is near a wall and the tower is behind it, the tower cannot be seen due to the wall's height:
+Também se pode tentar limitar a área em que a torre será mostrada. Basta aumentar a altura de algumas paredes, para que quando o jogador estiver perto de uma parede e a torre estiver atrás dela, a torre não possa ser vista devido à altura da parede:
 
 [[File:Towerop2.jpg]]
 
-== See also ==
+== Veja também ==
 [[Optimization_(level_design)|Category:Optimization (Level Design)]]
 [[Level_Design_FAQ|Category:Level_Design_FAQ]]
