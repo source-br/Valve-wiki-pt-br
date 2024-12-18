@@ -1,122 +1,127 @@
+{{wip}}
 {{LanguageBar}}
 {{src topicon}}
 {{Hierarchy}}
-
-
-<span style="color:white; font-weight: bold;">{{For|about=the game engine|the documentation on Source and its SDK|[[SDK|Source SDK Documentation]]|}}</span>
+<span style="color:white; font-weight: bold;">{{For|about=o motor do jogo|a documentação do source e seu SDK|{{L|SDK|Source SDK Documentation}}|}}</span>
 {{Infobox engine
 |title = Source
 |image = SourceLogoWhite.png
 |imagewidth = 280px
-|imagetooltip = Logo of the Source engine.
+|imagetooltip = Logo do Motor Source.
 |image2 = Screenshot-CSS-Source_engine_comparison.jpg
-|imagetooltip2 = Screenshot in-game of {{css|1}}, using the Source Engine.
-|developer = [[Valve Corporation]]
-|releasedates = October 7, 2004
+|imagetooltip2 = Screenshot do {{css|1}}, usando o motor source.
+|developer = {{L|Valve Corporation}}
+|releasedates = 7 de outubro, 2004
 |codelang = [[WP:C++|C++]]
-|sdk = [[SDK Docs|Source SDK Documentation]]
-|platform = {{Win|1}}, {{Mac|1}}, {{Linux|1}}, {{xbox|1|nt=1}}, {{360|1}}, {{ps3|1}}, {{switch|1}}, {{android|1}}<!-- only first-party games -->
+|sdk = {{L|SDK Docs|Source SDK Documentation}}
+|platform = {{Win|1}}, {{Mac|1}}, {{Linux|1}}, {{xbox|1|nt=1}}, {{360|1}}, {{ps3|1}}, {{switch|1}}, {{android|1}}<br><font style="font-size:12px;">'''''Note:''' Apenas jogos Primarios da Valve.''</font><!-- only first-party games -->
 |sysreq = 
-|website = [https://web.archive.org/web/20110724220714/http://source.valvesoftware.com/ Official Website] (archived)
-|links = {{github|ValveSoftware/Source-1-Games|GitHub Issues}} (bug report for all Source games, except CS:GO)<br>{{github|ValveSoftware/source-sdk-2013|Source SDK 2013 source code}}
-|license = [[WP:Proprietary software|Proprietary]] <br><font style="font-size:12px;">({{src13}}, {{asbranch}} source code available for non-commercial purposes.)</font>
-|previousengine = {{Gldsrc|2}}
-|nextengine = {{Src2|2}}
+|website = [https://web.archive.org/web/20110724220714/http://source.valvesoftware.com/ Website Oficial] (Arquivado)
+|links = {{github|ValveSoftware/Source-1-Games|Problemas no Github}} (Reportagem de bugs de todos os jogos source, exceto CS:GO)<br>{{github|ValveSoftware/source-sdk-2013|Codigo fonte do Source SDK 2013}}
+|license = [[WP:Proprietary software|Proprietario]] <br><font style="font-size:12px;">({{src13}}, {{asbranch}} Código fonte disponível para usos não comerciais.)</font>
+|previousengine = {{Gldsrc|4.1}}
+|nextengine = {{Src2|4.1}}
 }}
-[[File:Screenshot-CSGO-Source_engine_comparison.jpg|340px|thumb|right|Screenshot in-game of {{csgo|1}}, using Valve's [[Counter-Strike: Global Offensive engine branch|latest branch]] of the Source Engine.]]
-[[File:Apex Legends - Screenshot 5.jpg|340px|thumb|right|Promotional screenshot of {{apex|1}}, which runs on a [[Titanfall engine branch|heavily modified]] version of the Source Engine, featuring DirectX (Direct3D) 11, detailed models and better graphics, plus increased the engine limit, allowing maps to be larger.]]
-{{src|4}} is a 3D game engine created by {{Valve|1}} in 2004, and is the successor to {{gldsrc|3.1}}. The {{src|1}} engine is well-known for its advancements in physics, AI, and graphics which made the games realistic for it's time, while being scalable on older, less powerful hardware. One game, {{hl2|1}}, earned several awards for it's graphics, which were made possible with Source. {{src|name}} has been used by [[Valve]], [[#Third-Party|third-party companies]], and (much like GoldSrc) countless community [[Modification|mods]] by people around the globe, with at least 100 games developed on Source. The engine also has [[:Category:Source_engine_branches|several branches]], each with new features added and improved graphical capabilities.
+[[File:Screenshot-CSGO-Source_engine_comparison.jpg|340px|thumb|right|Screenshot dentro do {{csgo|1}}, usando a {{L|Counter-Strike: Global Offensive engine branch|ultima versão}} do Motor Source da Valve.]]
+[[File:Apex Legends - Screenshot 5.jpg|340px|thumb|right|Screenshot promocional do {{apex|1}}, que roda em uma versão {{L|Titanfall engine branch|pesadamente modificada}} do Source Engine, tendo DirectX (Direct3D) 11, modelos detalhados e gráficos melhores, limite maior do motor aumentado, permitido com que mapas sejam maiores.]]
+{{src|4}} É um motor gráfico 3D criado pela {{Valve|4}} em 2004, e é o sucessor da {{gldsrc|3.1}}. O Motor {{src|1}} é bem conhecido pelo seus avanços em física, IA, e gráficos que fizeram jogos realistas para seu tempo, ao mesmo tempo que é escalável em hardware mais antigo e menos potente. {{hl2|1}} ganhou vários prêmios por seus gráficos, que foram possíveis graças ao Source. {{src|name}} foi utilizada pela {{L|Valve}}, [[#Third-Party|corporações de terceiros]], e (parecido com a Goldsrc) incontáveis {{L|Modification|mods}} feitos pela comunidade ao redor do globo, com pelo menos 100 jogos desenvolvidos na Source. O motor tem varias {{LCategory|Source_engine_branches|ramificações}}, cada uma contendo uma função adicionada e improvisando as capacidades gráficas.
 
-Despite the Source engine being almost 20 years old, and has been superseded by the {{source2|3.1}} engine for first-party usage since 2015, it's still being commonly used today by modders and some third-party companies due to the lack of some Source 2 documentation and was rarely licensed to third-party developers compared to Source, and it's still regularly being maintained with engine and security updates.
+Apesar do motor source estar na casa dos 20 anos, já sendo ultrapassado e substituído pelo {{source2|4.1}} como motor principal partir de 2015. O motor continua sendo amplamente utilizado pela comunidade de modding e corporações de terceiros pelo fato da {{source2|4.1} não ter tantos documentos explicativos de utilização e raramente ser licenciado pela valve para desenvolvedores de terceiros comparado ao source, ainda sendo mantido regularmente com atualizações de segurança e ate mesmo melhorias para o próprio motor.
 
-{{Clarify|not all {{src|name}} games have {{VAC|1|nt=0}}. See {{Apex Legends|1}}.}}
-{{Clarify|The features list below may not apply to third-party or newer Source engine branches. For a list of branches, [[:Category:Engine branches|see this category page]].}}
+{{Clarify|Nem todos os jogos {{src|name}} tem o {{VAC|Anti-Cheat da Valve}}. Veja {{Apex Legends|1}}.}}
 
-==[[:Category:Programming|Renderer]]==
-* Supports [[Shader]] Model 2.0 to 3.0
-** Some third-party games can also support Shader Model 5.0 and later by using Direct3D 11 and later, like {{tfbranch|3.1}} and {{stratabranch|3.1}}.
-* [[Anti-aliasing]] support
-** {{src|name}} is the first Valve engine to support anti-aliasing, prior to MSAA (4X) being added to {{gldsrc|1}} in 2013. 
-** '''MSAA''' is the traditional anti-aliasing method, works by samples (renders) each pixel multiple times at different locations within the frame and averages the samples to produce the final pixel value. It is commonly used in most older video games, including almost all Source engine games (except {{bms|1}} (since the Xen update), {{apex|1}}, etc...). Up to 8x MSAA (or 6x MSAA in Source 2004) is supported. Older GPUs (such as pre-Maxwell Nvidia cards) also support CSAA.
-** '''FXAA''' is also supported in {{Csgobranch|3}}. Unlike MSAA, FXAA has less performance hit than most other AA methods due to it being a post-processing effect, which meant that it can be unofficially added to older Source engine games (or even other video games, other engines and other applications in general), using software such as ReShade, or even built-in via the graphics driver settings, and unlike MSAA (without [[$allowalphatocoverage|alpha to coverage]]), FXAA and other post-processing method will affect transparent textures, however, due to it's nature, this makes FXAA looks worse than many other AA methods as it's appear to blur the image, plus it does not reconstruct the pixel which was missing due to lack of an traditional anti-aliasing.
-** '''MLAA''' is another post-processing anti-aliasing method, which is used in {{ps3|2}} version of {{p2|1}}. MLAA has a [https://www.tomshardware.com/reviews/radeon-hd-7870-review-benchmark,3148-2.html larger performance impact] than FXAA.<br>{{MConfirm|What about anti-aliasing on the PS3 version of CS:GO?}}
-** '''TAA''' is a modern AA method commonly used in most modern games, superseded the MSAA method for anti-aliasing, it works by combining information from past frames and the current frame to remove jaggies in the current frame. However, as mentioned, TAA combines information from past and current frames can cause blurring and ghosting effect while in motion, more noticeable with low FPS. In Source engine case, it is only available in few games such as {{Apex|2}}.<br>{{tip|If the game is running in 4K resolution or above, or by downscaling 4K to 1080p or lower, the need for anti-aliasing is greatly reduced. Post-processing AA such as FXAA are recommended over MSAA on higher resolution, as they are less demanding.}}
-* More anisotropic and texture filtering options
-** Anisotropic filtering allow textures on far distance to look sharper and less blurry.
-** Compared to GoldSrc (prior to 2013) featuring only Bilinear or Trilinear texture filtering, {{src|name}} features more texture filtering options, ranging from Bilinear, Trilinear, 2x Anisotropic to 16x.
-* [[Wikipedia:Bump mapping|Bump mapping]] and [[w:Normalmapping|Normal mapping]] on models and the world
-* Author [[shader]]s with [[HLSL]]
-* Cube and environment mapping
-** Cubemapping also supports Anisotropy {{csgo|since}} 
-* [[$phong|Phong]] shading for models
-** Phong is also supported on world brushes {{csgo|since}}{{mb|also}}
-* Dynamic lights, vertex lighting and [[lightmap]]s, many light types including flickering, pulsing etc.
-* [[HDR]] {{since|{{src06}}}} and LDR (SDR) lighting
-** LDR is deprecated since {{l4dbranch|2}}. This does not apply to some games such as the original release of {{dota2|1}}, for example.
-* Water with refraction, real-time world reflections and fresnel effects
-** Water also supports [[Water (shader)#Special behaviour|flow mapping]] {{l4dbranch|since}}
-* [[:Category:Particle System|Advanced particle systems]] that can emit [[sprite]]s or [[model]]s
-* [[Dynamic RTT shadow angles in Source 2007|Render-to-texture]] shadows allow for a large number of characters per scene {{l4dbranch|since}} {{mb|also|addtext={{xe}}}}
-* [[Func occluder|Occluder entities]] for visibility blocking
-* Indoor/Outdoor environments
-** Deformable terrain
-** [[3D Skybox]]es extend the horizon and add parallax on distant objects
-** Dynamically rendered organics (grass, trees, etc.)
-**[[$treeSway|Swaying trees]] {{l4dbranch|since}} {{also|{{tf2}}{{xe}}{{gmod}}{{mapbase}}}}
-* Subdivision surfaces, diffuse & specular bump maps
-* Real-time radiosity lighting
-* Real-time [[env_cascade_light|Cascaded Shadow Mapping]] that comes from the skybox {{csgo|since}} {{asd|also|addtext={{lw}}{{xe}}}}
-* Effects include but are not limited to: particles, beams, volumetric smoke, sparks, blood, & environmental effects like fog and rain
-* Scalability
-* [[Screen Space Ambient Occlusion (SSAO)|Screen Space Ambient Occlusion]] (SSAO) {{only|{{sfm}} {{dota2|nt=1}}}}
-** A technique for efficiently approximating the ambient occlusion effect in real time.
-* Widescreen display support
-** {{Source|name}} is one of the earliest game engines to support Widescreen monitors natively (16:9 and 16:10 aspect ratio) without stretching the image, while most games from that era are usually designed for 4:3/5:4 displays only.<br> Games such as {{hl2|1}} support widescreen display at launch back in 2004, with horizontal FOV (field of view), allow you to see more details.
-* [[Physically Based Rendering|Physically Based Rendering]] {{strata|only|addtext={{tfbranch}}{{rr}}{{hdtf}}{{p2d}}}}
-* [[Parallax mapping|Parallax Occlusion Mapping]]{{xe|only|addtext={{strata}}}}
-* Support various graphics API (Direct3D, OpenGL, Vulkan)
-* Direct3D, and DirectX Levels
-**{{Note|Most Source games runs on Direct3D 9.0c/D3D9Ex on modern hardware (or Direct3D 11/12 on third-party games). Older version of Source engine branches offer support for DirectX 8 level cards (or DX6-DX7 in previous versions), while running on D3D9.<br>[[DirectX Versions|Direct3D 9]] can be forced by the launch option {{code|-dx9}}, if it was forced by commands such as {{code|-gamepadui}}, which enables both the [[Gamepad UI in mods|Gamepad UI]] and Vulkan renderer unless combined with {{code|-dx9}}}}
-** [[DirectX Versions#DirectX_9|Direct3D 9]] {{not|{{l4dbranch}}}}
-*** This version of Direct3D also provide compatibility with DX8 (or earlier) level cards, with modifications and fixed-function shaders. [[RTX Remix]] games such as {{portalrtx|1}} uses DX7 level in order to make RTX Remix functional.
-** [[DirectX Versions#DirectX_9.0c|Direct3D 9.0c]] {{src06|since}}
-** [[DirectX Versions#D3D9Ex|Direct3D 9Ex]] {{src13|since}} {{also|{{csgo}}}} - DX9 Windows Aero extensions, requires {{Win7|3.1|nt=Vista}} or later. User can enable/disable in Video Settings - Advanced (Windows Aero extensions), or through {{code|-disable_d3d9ex}} {{csgo|only}}.
-** [[DirectX Versions#DirectX_11|Direct3D 11]] {{tfbranch|only|addtext={{strata}}{{Vindictus}}}} 
-** [[DirectX Versions#DirectX_12|Direct3D 12]] {{Apex|only}}
-* [[OpenGL]]{{src09|since|addtext= /{{srcmp}}}} which is another graphics API used in Source games on {{mac|1}} and {{Linux|1}}.
-**Dxlevel 92 is the [[OpenGL]] equivalent to DirectX 9 Shader Model 3 (D3D9.0c)
-*[[Vulkan]] graphics API {{hl2|only|addtext={{portal}}{{rr}}{{l4d2}}{{portal2}}{{csgo}}}}
-** A successor to OpenGL, this also fixes various graphical issues such as the Portal 2's [[Env_projectedtexture|projected textures]], which does not render properly on newer graphics drivers. Enable Vulkan using {{code|-vulkan}} [[command line argument|launch options]].
-{{note|{{csgo|2}} has Vulkan support only on {{Linux|1}}}}
-{{note|Source allows up to 8 [[LOD Models]], although it does not have automatic [[w:Level of detail (computer graphics)|level of detail]] out of box. Manual LoD is supported, however.}}
-{{warning|{{csgo|2}} currently does not support level of detail. [[$lod]] will be ignored, but the model will still work. Try to avoid using this command in {{csgo}}.}}
+== Recursos==
+Lista de recursos e capacidades para o motor {{src|4.1}}. Alguns recursos novos listados aqui podem não se aplicar para ramificações antecessores ou superiores da Source, ou jogos/ramificações de terceiros.
 
-==[[:Category:Material System|Materials System]]==
+Para uma lista de Ramificações da Source (incluindo jogos de terceiros) com seus recursos específicos veja esta {{LCategory|Engine branches|categoria}}.
+==={{LCategory|Programming|Renderização}}===
+* Suporta modelos 2.0 e 3.0 do {{L|Shader}}.
+** Alguns jogos de terceiros podem suportar Modelo Shader 5.0 ou superior utilizando o Direct3D 11 ou superior, como {{tfbranch|2.1}} e {{stratabranch|2.1}}.
+* Suporte a {{L|Anti-aliasing|Anti-serrilhamento}} (MSAA, FXAA, MLAA, TAA, etc.)
+** Veja a pagina do {{L|Anti-aliasing|anti-serrilhamento}} para mais informações, recursos e desvantagens, com vários métodos de anti-serrilhado.
+* Mais opções de filtragem de textura e anisotrópicas.
+** Filtros Anisotrópicos permitindo texturas em varias distancias deixando-as finas e menos borradas.
+** Comparado ao GoldSrc (anterior a 2013) fornecendo apenas filtragem de textura bilinear ou trilinear, a {{src|name}} fornece mais opções de filtragem de textura, indo de bilinear, trilinear, anisotrópico 2x ate 16x.
+* Suporte para pipelines de renderização tanto forward quanto {{L|deferred lighting|deferred}}.
+** Renderização Deferred é uma técnica de renderização que permite jogos a renderizar muitas luzes com baixo impacto na performance. Renderização Deferred são utilizados naturalmente na maioria dos títulos modernos.
+* [[Wikipedia:Bump mapping|Bump mapping]] e {{L|w:Normalmapping|Normal mapping}} em modelos do mundo
+* Autor {{L|shader}}s com {{L|HLSL}}
+* Cubo e mapeamento de ambiente
+** Cubemapping também suporta Anisotropia {{since|{{L|csgo}}}}
+* {{L|$phong|Phong}}, sombreamento para modelos
+** Phong é também suportado em world brushes {{since|{{csgo}}}}{{also|{{mb}}}}
+* Inclui vários tipos de luzes como Luzes dinâmicas, luzes vertex, {{L|lightmap}}s, flickering, pulsing etc.
+* {{L|HDR}} {{since|{{src06}}}} e luzes LDR (SDR)
+** LDR é obsoleto desde {{l4dbranch|4}}. Isto não se aplica a alguns jogos como exemplo os lançamentos originais de {{dota2|4}}.
+* Água com refração, reflexões em tempo real e efeitos fresnel.
+** Água também suporta {{L|Water (shader)#Special behaviour|flow mapping}} {{since|{{l4dbranch}}}}
+* {{LCategory|Particle System|Sistema de Partículas Avançadas}} que pode emitir {{L|sprite}}s ou {{L|model}}s
+* Sombras de {{L|Dynamic RTT shadow angles in Source 2007|Renderização para textura}} permitem uma quantidade maior de caracteres por cena {{since|{{l4dbranch}}}} {{also|{{mb|addtext={{xe}}}}}}
+* {{L|Func occluder|Oclusor de entidades}} para bloqueio de visibilidade.
+* Ambientes internos e externos
+** Terreno deformável
+** {{L|3D Skybox|Skyboxes em 3D}} expandem o horizonte e adicionam parallax em objetos distantes.
+** Renderização orgânica dinâmica (folhas, arvores, etc.)
+**{{L|$treeSway|Balanço de arvores}} {{since|{{l4dbranch}}}} {{also|{{tf2}}{{xe}}{{gmod}}{{mapbase}}}}
+* Subdivisão de superfície, difusão e mapas de colisão especular
+* Iluminação de radiosidade em tempo real
+* Mapeamento de {{L|env_cascade_light|sombra em cascata}} em tempo real que vem da skybox {{since|{{csgo}}}} {{also|{{asd|addtext={{lw}}{{xe}}}}}}
+* Efeitos incluem mas não são limitados á: Partículas, feixes, fumaça volumétrica, faíscas, sangue e efeitos do ambiente como neblina e chuva.
+* Escalabilidade
+* {{L|Screen Space Ambient Occlusion (SSAO)|Oclusão Ambiental em Espaço de Tela}} (SSAO) {{only|{{sfm}} {{dota2|nt=1}}}}
+** Uma técnica para eficientemente aproximar o efeito de oclusão de ambiente em tempo real.
+* Suporte para tela panoramica
+** {{Source|name}} é um dos primeiros motores gráficos á suportar nativamente monitores panorâmicos (proporção 16:9 e 16:10) sem precisar esticar a imagem, emquanto a maior parte dos jogos daquela era são geralmente projetados apenas para proporções de exibição 4:3/5:4.<br> Jogos como {{hl2|1}} oferecem suporte a exibição panorâmica desde 2004, com FOV (Field of View/Campo de Visão) horizontal permitindo uma visão mais detalhadas.
+* {{L|Physically Based Rendering|Base de física Renderizada}} {{only|{{strata|addtext={{tfbranch}}{{rr}}{{hdtf}}{{p2d}}}}}}
+* {{L|Parallax mapping|Mapeamento de oclusão parallax}}{{only|xe|addtext={{strata}}}}
+* Suporte a varias APIs gráficas (Direct3D, OpenGL, Vulkan, etc)
+* Versões do Direct3D
+** {{L|DirectX Versions#DirectX_9|Direct3D 9}}
+*** '''Níveis de compatibilidade do DirectX para placas gráficas mais antigas:'''
+*** DirectX 7.0 (Source 2004/2006 ou jogos {{L|RTX Remix}} apenas)
+*** DirectX 8.0 ({{code|dxlevel 80}} arrumado a função shaders)
+*** DirectX 8.1 ({{code|dxlevel 81}} o mesmo de cima, com suavidade nas sombras)
+*** DirectX 9.0 ({{code|dxlevel 90}})
+*** DirectX 9.0+ ({{code|dxlevel 95}})
+*** {{Note| Compatibilidade com níveis de DirectX não são suportados atualmente desde {{l4dbranch|1}}. <br>Além disso, independentemente de qual {{code|dxlevel}} foi selecionado, todos os jogos Source irão rodar Direct3D 9.}}
+** {{L|DirectX Versions#D3D9Ex|Direct3D 9Ex}} {{since|{{src13}}}} {{also|{{csgo}}}} - Extensão do Windows Aero DX9 requer {{Win7|3.1|nt=Vista}} ou superior. Usuário pode habilitar ou desabilitar nas configurações de vídeo - Avançado (Extensão Windows Aero) ou por {{code|-disable_d3d9ex}}; {{only|{{csgo}}}}
+** {{L|DirectX Versions#DirectX_11|Direct3D 11}} {{only|{{tfbranch|addtext={{strata}}{{Vindictus}}}}}}
+** {{L|DirectX Versions#DirectX_12|Direct3D 12}} {{only|{{Apex}}}}
+**{{Note|{{L|DirectX Versions|Direct3D 9}} pode ser forçado pelas opções de inicialização via {{code|-dx9}}, caso ele for forçado por comandos como por exemplo {{code|-gamepadui}}, que habilita ambos {{L|Gamepad UI in mods|Gamepad UI}} e renderização Vulkan a menos que combinado com {{code|-dx9}}}}
+* {{L|OpenGL}}{{since|{{src09|addtext= /{{srcmp}}}}}} que é outra API gráfica usada em jogos Source no {{mac|1}} e {{Linux|1}}.
+**{{code|dxlevel 92}} é o equivalente do {{L|OpenGL}} ao DirectX 9 Shader Model 3 (D3D9.0c)
+*{{L|Vulkan}} API gráfica {{only|{{hl2|addtext={{portal}}{{rr}}{{l4d2}}{{portal2}}{{csgo}}}}}}
+** O sucessor do OpenGL, Vulkan pode ser usado para gambiar vários problemas gráficos como o as {{L|Env_projectedtexture|texturas projetadas}} de portal 2, que não renderiza apropriadamente em novos drivers gráficos (ambos NVidia e AMD). Habilitar Vulkan usando {{code|-vulkan}} nas {{L|command line argument| opções de inicialização}}.
+{{note|{{csgo|2}} tem suporte ao Vulkan apenas via {{Linux|1}}}}
+{{note|A Source permite até 8 {{L|LOD Models|níveis de modelos}}, embora ele não tenha um {{L|w:Level of detail (computer graphics)|nível de detalhe}} automático já á disposição, mudança de LoD manual é suportada.}}
+{{warning|{{csgo|2}} atualmente não suporta nível de detalhes (LoD). {{L|$lod}} ira ser ignorado, entretanto o modelo ainda ira continuar a funcionando. Tente evitar de utilizar este comando no {{csgo}}.}}
+
+==={{LCategory|Material System|Sistema de Materiais}}===
 * Instead of traditional textures, '''Source''' defines sets of materials that specify what the object is made from and the texture used for that object. A material specifies how an object will fracture when broken, what it will sound like when broken or dragged across another surface, and what that object's mass and buoyancy are. This system is much more flexible than other texture-only systems
-* Materials can interact with objects or [[NPC]]s, such as mud or ice for vehicles to slide/lose traction on
+* Materials can interact with objects or {{L|NPC}}s, such as mud or ice for vehicles to slide/lose traction on
 
-==[[Source Multiplayer Networking|Multiplayer Network Code]]==
+==={{L|Source Multiplayer Networking|Multiplayer Network Code}}===
 * Time- and gamer-tested by millions of gamers around the world
-* Support for both [[wikipedia:Local area network|LAN]]-based multiplayer and Internet-based multiplayer games
+* Support for both {{L|wikipedia:Local area network|LAN}}-based multiplayer and Internet-based multiplayer games
 * Prediction analysis for interpolating collision/hit detection
 * Optimizations for high-latency, high-packet-loss 56k connections
 
-==[[:Category:Modeling|Advanced Characters]]==
+==={{LCategory|Modeling|Advanced Characters}}===
 * Detailed and believable characters
-* Realistic [[Eyeball|eyes]]
+* Realistic {{L|Eyeball|eyes}}
 ** Focus on player/object, not simply parallel views
 ** Proper eye bulge for realistic eye reflections
 * Simulated musculature provides outstanding emotions, speech, and body language
-* [[:Category:Choreography|Language independent speech]], characters can speak naturally in many languages
+* {{LCategory|Choreography|Language independent speech}}, characters can speak naturally in many languages
 * Skeletal/bone system for animation
 * Layered animation system can synthesize complex animations out of several pieces
 
-==[[:Category:Physics|Physics]]==
-* Uses [[Havok]] physics engine, licensed from Havok Group (now acquired by [[w:Microsoft|Microsoft]])
+==={{LCategory|Physics|Physics}}===
+* Uses {{L|Havok}} physics engine, licensed from Havok Group (now acquired by {{L|w:Microsoft|Microsoft}})
 * More responsive world with realistic interactions
 * Sounds & graphics follow from physics
 * AI characters can interact with physically simulated objects
-* Ropes/cables, machines, constraint systems, [[w:Ragdoll physics|ragdoll physics]]
+* Ropes/cables, machines, constraint systems, {{L|w:Ragdoll physics|ragdoll physics}}
 * Can be controlled by level design
 * Kinematic animated bone followers
 * Custom procedural physics controllers
@@ -128,84 +133,89 @@ Despite the Source engine being almost 20 years old, and has been superseded by 
 ** Multiple players in a vehicle in multiplayer
 ** Hovercraft support for cheaper simulation
 
-==[[:Category:AI|Advanced AI]]==
-* [[Inputs and Outputs|I/O system]] allows level designers to control AI
+==={{LCategory|AI|Advanced AI}}===
+* {{L|Inputs and Outputs|I/O system}} allows level designers to control AI
 * Sophisticated navigation: characters that run, fly, jump, crouch, climb stairs and ladders, and burrow underground
 * AI senses things using sight, sound, and smell
-* [[ai_relationship|AI relationships]] determine friend/foe status of other entities
+* {{L|ai_relationship|AI relationships}} determine friend/foe status of other entities
 * Battle AI allows squads of AI characters to operate together, know when to advance, retreat, lay cover fire, etc.
 
-==[[:Category:Sound System|Sound System]]==
+==={{LCategory|Sound System|Sound System}}===
 * 7.1, 5.1 surround sound, 4 speaker surround
 :{{bug|On system running Windows Vista and later, due to the game engine using DirectSound and older version of Miles Sound System, the game may output only 5.1 surround despite 7.1 selected or 7.1 audio may not work properly without custom {{code|dsound.dll}} (such as Creative Alchemy, DSOAL or IndirectSound). This issue is not affected by some third-party games, such as {{titanfall2|1}}, {{apex|1}} as they used newer version of Miles Sound System.}}
 :{{note|Some or newer Source games (such as {{as|1}}, {{portal2|1}} and {{csgo|1}}) may not include options to enable 7.1 surround sound without using console commands.}}
 * High-quality 3D spatialization
-* Custom software [[DSP]]
+* Custom software {{L|DSP}}
 * Automatic DSP based on environmental geometry
-* Microsoft ADPCM-compressed [[WAV]] files
+* Microsoft ADPCM-compressed {{L|WAV}} files
 * 16-bit 44.1 KHz (CD Quality), stereo wave data with all features
 : {{Note|Source does ''not'' support 48 KHz audio (DVD Quality) by default.}}
-* [[MP3]] decompression (requires [http://www.radgametools.com/miles.htm Miles] license)
+* {{L|MP3}} decompression (requires [http://www.radgametools.com/miles.htm Miles] license)
 * Support for audio streaming on any wave {{clarify}}
 * Real-time wave file stitching {{clarify}}
 * Pre-authored Doppler effect encoded waves
 * Pre-authored distance variant encoded waves
-* [[Commentary System|Commentary system]]
+* {{L|Commentary System|Commentary system}}
 
-==[[:Category:VGUI|UI]]==
+==={{LCategory|VGUI|UI}}===
 <div style="float:right">[[File:Ep2_menu.jpg|340px|thumb|Screenshot of {{hl2ep2|1}} main menu, which is rendered using VGUI, with '''New Game''', '''Options''', and '''Achievements''' window opened.]]
 [[File:HL2_GamepadUI_menu.png|340px|thumb|Screenshot of VGUI's Gamepad UI used in some {{src13|1}} games after 2022. This UI was enabled by default when playing on {{deck|1}}.]]
 <!-- TODO: CSGO menu -->
 </div>
 * '''Server browser''' — Displays all active game servers and allows a player to choose which one to participate in. Players can filter and sort server lists to speed up the display and selection of a server.
-* '''[[:Category:VGUI|VGUI]]''' — Valve's custom GUI interface mimics most of the Windows controls but is rendered using the '''Source''' engine for both in game and out of game uniform '''UI''' display. Some features:
-** Dynamic in-game [[HUD Elements|HUD]] display
-** Many [[wikipedia:Graphical widget|widgets]]/controls (e.g., buttons, treeview, html control…)
+* '''{{LCategory|VGUI|VGUI}}''' — Valve's custom GUI interface mimics most of the Windows controls but is rendered using the '''Source''' engine for both in game and out of game uniform '''UI''' display. Some features:
+** Dynamic in-game {{L|HUD Elements|HUD}} display
+** Many {{L|wikipedia:Graphical widget|widgets}}/controls (e.g., buttons, treeview, html control…)
 ** Themes/custom visualization allowed
 ** Platform independent
 ** Localized text (Unicode compliant)
-** '''[[Gamepad UI in mods|Gamepad UI]]''' <!-- TODO: Create a page about Gamepad UI in general --> ({{src13|4.1}} version) — Since the release of {{hl2|3.1}} (and its episodes) as well as {{portal|3.1}} updates in 2022, Valve have added a modern UI which is designed for consoles and handhelds like {{steamdeck|2}}. With the new Gamepad UI, it was more scalable across any resolution (including 4K and higher), unlike the regular VGUI (which, the higher the resolution, the text and UI will become smaller). This UI can be also enabled manually by using {{code|-gamepadui}} [[command line argument]] (which will also enable [[Vulkan]] renderer that may not work on some older GPUs unless {{code|-dx9}} is used in combination of {{code|-gamepadui}}).
+** '''{{L|Gamepad UI in mods|Gamepad UI}}''' <!-- TODO: Create a page about Gamepad UI in general --> ({{src13|4.1}} version) — Since the release of {{hl2|3.1}} (and its episodes) as well as {{portal|3.1}} updates in 2022, Valve have added a modern UI which is designed for consoles and handhelds like {{steamdeck|2}}. With the new Gamepad UI, it was more scalable across any resolution (including 4K and higher), unlike the regular VGUI (which, the higher the resolution, the text and UI will become smaller). This UI can be also enabled manually by using {{code|-gamepadui}} {{L|command line argument}} (which will also enable {{L|Vulkan}} renderer that may not work on some older GPUs unless {{code|-dx9}} is used in combination of {{code|-gamepadui}}).
 * '''Scaleform''' (''officially called '''Scaleform GFx''''') — Introduced with {{csgobranch|1}} at launch until 2018, this is a vector graphics rendering engine used to display {{flash|1}}-based UI and HUD for games.
-* '''[[Panorama]]''' {{csgo|since}} — Introduced in 2018, replacing Scaleform, Valve's new Custom GUI interface that resembles modern web design and authoring (HTML5/CSS/JS). Using <code>[[.XML]]</code> and JavaScript files, developers can create dynamic and clean HUDs and menus and even high-quality in-game intractable panels.
+* '''{{L|Panorama}}''' {{csgo|since}} — Introduced in 2018, replacing Scaleform, Valve's new Custom GUI interface that resembles modern web design and authoring (HTML5/CSS/JS). Using <code>[[WP:XML|.XML]]</code> and JavaScript files, developers can create dynamic and clean HUDs and menus and even high-quality in-game intractable panels.
 {{clr}}
 
-==[[:Category:Programming|Programming]]==
-* Source natively support various CPU architectures, such as x86 (PC and 8th, 9th-gen Consoles), ARM ({{Android|2}}, {{Switch|2}}), PowerPC ({{360|2}}, {{ps3|2}}), and more, with both 32 and [[w:64-bit|64-bit]].
-** Support for [[w:64-bit|64-bit]] architecture will allow Source to handle more than 2-4GB<!-- 32-bit exe without LAA will be limited to 2GB by default --> of RAM limit.
-** Historically, {{hl2|3.1}} had a [[w:64-bit|64-bit]] update in 2005, but it was later removed for unknown reasons. {{Csgo|3.1|nt=CS:GO}} later received an [[w:64-bit|64-bit]] update in 2016 for Mac and Linux systems. On April 19, 2024, {{Tf2|3.1}} was upgraded to [[w:64-bit|64-bit]] on Windows and Linux.
-* All code written in C/C++ using Visual Studio .NET 2003 and later. Easily and quickly derive new entities from existing base classes
+==={{LCategory|Programming|Programming}}===
+* Source natively support various CPU architectures, such as x86 (PC and 8th, 9th-gen Consoles), ARM ({{Android|2}}, {{Switch|2}}), PowerPC ({{360|2}}, {{ps3|2}}), and more, with both 32 and {{L|w:64-bit|64-bit}}.
+** Support for {{L|w:64-bit|64-bit}} architecture will allow Source to handle more than 2-4GB<!-- 32-bit exe without LAA will be limited to 2GB by default --> of RAM limit.
+** Historically, {{hl2|3.1}} had a {{L|w:64-bit|64-bit}} update in 2005, but it was later removed for unknown reasons. {{Csgo|3.1|nt=CS:GO}} later received an {{L|w:64-bit|64-bit}} update in 2016 for Mac and Linux systems. On April 19, 2024, {{Tf2|3.1}} was upgraded to {{L|w:64-bit|64-bit}} on Windows and Linux.
+* All code written in C/C++ using {{L|Visual Studio}} .NET 2003 and later. Easily and quickly derive new entities from existing base classes
+** {{L|Source SDK 2013}} code, by default, can be compiled on Visual Studio 2013 only. See {{L|Compiling under VS2022}} if you want to compile Source 2013 with newer versions of Visual Studio.
+** Linux version are compiled using {{L|Compiler_choices#GCC|GNU Compiler Collection}}.
 * Internal context sensitive performance monitoring system
 * Graphics performance measurement tools built into the engine
 * Modular code design (via DLLs) allows swapping out of core components for easy upgrading or code replacement
-* [[VScript]] scripting system allows using external coding languages, such as Squirrel and Lua, in maps to create more complex systems {{l4d2|since}} {{tf2|also|addtext={{mb}}}}
+* {{L|VScript}} scripting system allows using external coding languages, such as Squirrel and Lua, in maps to create more complex systems {{l4d2|since}} {{tf2|also|addtext={{mb}}}}
 
-==[[:Category:Tools|Tools]]==
+==={{LCategory|Tools|Tools}}===
 <div style="float:right">[[File:Hammer screen.jpg|thumb|340px|Screenshot of one of the Source SDK tools, {{hammer|3.1|nt=1}}, a WYSIWYG map editor.]]
 </div>
 * {{hlfaceposer|2}}
 ** Facial expression tool used to craft speech and emotions
 * {{hammer|2|nt=1}}
 ** WYSIWYG World editor
-** Create [[Brush|world brushes]]
-** [[Displacement|Terrain editor]]
-** Place [[Prop|detailed world models]] and [[NPC|AI NPCs]]
-** Set [[Navmesh|navigation points/paths]] for NPCs
-** Place [[Tool textures (Source)|triggers, clip brushes]], logic, etc.
+** Create {{L|Brush|world brushes}}
+** {{L|Displacement|Terrain editor}}
+** Place {{L|Prop|detailed world models}} and {{L|NPC|AI NPCs}}
+** Set {{L|Navmesh|navigation points/paths}} for NPCs
+** Place {{L|Tool textures (Source)|triggers, clip brushes}}, logic, etc.
 ** Allows level designer to hook up I/O between entities to control AI within the game
 * {{hlmv|2|nt=1}}
-** Full [[model]] previewer
+** Full {{L|model}} previewer
 ** Rotate models in any direction
 ** Set up hit boxes
 ** View physics hull
 ** View normals
 ** Wireframe, shaded or textured view modes
-* [[Studiomdl]]
+* {{L|Studiomdl}}
 ** Model compiler
-* [[VBSP]], [[VRAD]], [[VVIS]], [[VMPI]]
+* {{L|VBSP}}, {{L|VRAD}}, {{L|VVIS}}, {{L|VMPI}}
 ** Map compilation tools (bsp, lighting and visibility)
 ** VMPI — distributed compilation tool allowing level compiles to be spread across many PCs greatly reducing compile times
 * Exporters
-** [[:Category:XSI|XSI]], Max and Maya <code>.smd</code> exporters for exporting 3D models
+** {{LCategory|XSI|XSI}}, Max and Maya <code>.smd</code> exporters for exporting 3D models
+
+== Branches ==
+*For the list of Source engine branches (including third-party branches), see {{L|List of Source engine branches}}.
 
 ==Products using Source {{Table tools|Source_games}}==<!-- DO NOT remove the underscore on this template, as it would break the edit, purge, etc... button completely -->
 This is the list of games that uses the {{source|4}} engine.
@@ -219,7 +229,7 @@ Games, tool and mods made by third-party companies and mod teams.
 ====Released====
 <!-- To edit the list, please go to "Template:Source games", or go back to previous page and click on the [edit] button on the year itself. List of games prior to 2020s are located in separate pages due to wiki limitations and to avoid long load times.-->
 {{Expand|title=2004 - 2019|noborder=1|
-* To see the list of third-party Source games from 2004 to 2019, check the [[List of third-party Source games]] page for more information.
+* To see the list of third-party Source games from 2004 to 2019, check the {{L|List of third-party Source games}} page for more information.
 }}
 {{Expand|title=2020 - present ([[Template:Source games/2020s|edit]])|noborder=1|startcollapsed=0|
 {{Source games/2020s}}
@@ -230,25 +240,25 @@ This section are for unreleased third-party games and tools that have been annou
 {{Expand|title=List of Source games currently in development ([[Template:Source games/unreleased|edit]])|noborder=1|startcollapsed=0|
 {{Source games/unreleased}}
 }}
-[[:Category:Third Party Source Engine Games|More Third-party Source Engine games]]
-* [[:Category:Source mods|More Source mods]]
+{{LCategory|Third Party Source Engine Games|More Third-party Source Engine games}}
+* {{LCategory|Source mods|More Source mods}}
 
 ==See also==
 * [[Wikipedia:Source (game engine)]]
-* [[Source Engine Features]]
-* [[Source SDK]]
-* [[SDK Docs|Source SDK Documentation]]
-* [[Source SDK 2013]]
+* {{L|Source Engine Features}}
+* {{L|Source SDK}}
+* {{L|SDK Docs|Source SDK Documentation}}
+* {{L|Source SDK 2013}}
 
 ==External links==
 * [https://web.archive.org/web/20110724220714/http://source.valvesoftware.com/ Official Website] (archived) - Official website about the Source engine
-{{todo|How relevant and current these guides are? Keep links to current manuals instead of all at appropriate places. Use [[Special:LinkSearch]] for this.}}
+{{todo|How relevant and current these guides are? Keep links to current manuals instead of all at appropriate places. Use {{LSpecial|LinkSearch}} for this.}}
 * Source Engine Tutorials https://www.sourcemodding.com/tutorials/source
 * Tutorials for Source Engine https://gamebanana.com/tuts/games/35
 * Tutorials - Source - Mod DB https://www.moddb.com/engines/source/tutorials
 * [https://github.com/ValveSoftware/Source-1-Games/issues GitHub Issues page] - for engine bug reports.
 {{Branch-navbox|nocat=1}}
 
-[[Category:Game engines]]
-[[Category:Valve]]
-[[Category:Glossary]]
+{{ACategory|Game engines}}
+{{ACategory|Valve}}
+{{ACategory|Glossary}}
