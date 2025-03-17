@@ -1,0 +1,149 @@
+{{LanguageBar}}
+
+[[File:Closed captions.jpg|thumb|300px|Closed captions in Half-Life 2]]. Dr. Breen's pre-recorded speech is made less distinct, as it is not as important.]]
+
+'''Closed captions''', or subtitles, are text descriptions that accompany sound and dialogue. They cue players who can't hear what's going on to what people are saying, and to a certain extent what's happening around them. It can be also used for translation and/or localization. With a bit of ingenuity they can also be used to display dialogue that has not been recorded yet.
+
+Subtitling or full closed captions can be enabled in the Source engine in Options > Audio.
+
+Closed captions are available for sounds defined either in [[soundscript]]s or in {{code|scripts\[[Sentences.txt|sentences.txt]]}}
+
+==Editing closed captions==
+{{modernConfirm|Can a closed-caption DAT file be [[BSPZIP|packed]] into a BSP map, for custom closed captions in multiplayer?}}
+Closed captions are stored in {{code|closecaption_%language%.dat}} (e.g. {{code|closecaption_english.dat}}) in {{path|(game dir)\resource\}}. A DAT file is binary file compiled from a corresponding TXT file by the {{path|captioncompiler|exe|ico=exe}} tool. 
+
+Although the engine {{since|{{src06}}}} does not read from the text file, Valve provided their originals for use by modders. You can find them in your {{path|\resource}} folder or possibly in the [[VPK]]s.
+
+The format of the text file is:
+
+<source lang=php>
+lang
+{ 
+	Language "English" //(or "Spanish", "French", etc)
+	Tokens 
+	{ 
+		// Captions defined here.
+		nameofsound	"This is the caption."
+
+		barn.chatter	"We're picking up radio chatter. They're looking for your car."
+		// etc...
+	}
+}
+</source>
+
+* The text file must be saved in either the ''UCS-2 Little Endian'' or the ''UTF-16 Little Endian'' format.
+* The name of the sound must be something defined in your [[soundscript]]s, not a raw filename.
+* Remember to wrap "quote marks" around any block of data containing whitespace.
+* {{Warning|In Source 2006 or earlier, having more than 2048 characters in a caption will cause the game to crash on startup.}}
+
+
+Example for sentences.txt:
+
+<source lang=php>
+nameofsound soundfile {captioncodehere closecaption nameofsound}
+
+BA_LATE barney/c1a0_ba_late {Len 2.33 closecaption BA_LATE}
+</source>
+
+===Caption codes===
+
+;<code><sfx></code>: Marks a line as a sound effect that will only be displayed with full closed captioning. If the user has cc_subtitles set to "1", it will not display these lines.
+{{warning| Captions tagged as SFX may not show up in multiplayer. }}
+;<code><clr:255,255,255></code>: Sets the color of the caption using RGB color; 0 is no color, 255 is full color. For example, ;<code><clr:255,255,255></code> would be white.
+;<code><playerclr:255,176,0:255,255,255></code>: Sets the RGB color of the caption depending on whether it is coming from the player/client or not. The first color is for when the sound is emitted by the player and the second color is for when it is emitted by anything or anyone else, separated by colon. For example, <code><playerclr:255,176,0:255,255,255></code> would be orange when the sound is emitted by the player or their equipment and white when emitted by anything else.
+;<code><nowiki><B></nowiki></code>: Bolds all text following the tag.
+;<code><nowiki><I></nowiki></code>: Italics text following the tag. {{note|<code><nowiki><B></nowiki></code> and <code><nowiki><I></nowiki></code> can both be undone in the same line. "<code><nowiki>This is <B>bold text!<B> This is unbold.</nowiki></code>" would look like this: This is '''bold text!''' This is unbold.}}
+;<code><norepeat:15></code>: Controls how often a line can be repeated. If set to 15, this line won't be repeated in the next 15 seconds.
+;<code><len:5></code>: Overrides how long the line will display. For example, <code><len:5></code> will make the caption stay on the screen for 5 seconds. Without this, they stay for the duration of the sound + the time stored in the {{ent|cc_linger_time}} convar.
+;<code><cr></code>: Manually adds a new line (carriage return) for any further text in the caption. 
+: ''For example, "Occupation:<cr>Subtitles"'' =
+: <code>Occupation: 
+: Subtitles</code>
+;<code><delay:2></code>: Sets a delay in between caption text, automatically adding a new line clearing all formatting. For example, with <code><nowiki>"<i><clr:255,176,0>HEV enabled.<delay:3>Your HEV was enabled."</nowiki></code>, "HEV enabled" will appear in italics and an orange color. 3 seconds later, "Your HEV was enabled" will emerge below it without any formatting from the previous line. The new line will always be directly below the previous one even if there are other captions below it.
+{{warning| Sometimes broken in {{tsp|2}}.}}
+
+===Compiling===
+The captions must be compiled with <code>captioncompiler.exe</code>. Since the caption file must be dragged from the mod resource directory in order to produce the .dat file. e.g. <code>C:\Program Files\Steam\steamapps\SourceMods\[mod name]\resource\</code>, this process will become slightly easier if you create a batch command file in the resource folder. Copy the following code into a text file and save it as a .bat file in the resources folder:
+
+<syntaxhighlight lang=winbatch>
+"C:\Program Files (x86)\Steam\steamapps\common\Half-Life 2\bin\captioncompiler.exe" %1
+pause
+</syntaxhighlight>
+
+{{tip|With a batch file, you can use the <code>-game "path to [[mod folder]]"</code> parameter to override the global [[Game Directory|vproject]] value.  Place it after <code>%1</code>, leaving a space. This saves you from having to launch the SDK and change it there.}}
+
+{{note|You might get the error "Can't find steam app user info". Following [[Can't_find_steam_app_user_info|this]] page should fix this error.}}
+
+{{note|All the filepaths in this file should be '''absolute''', meaning they start at <code>C:\</code>.}}
+
+{{note|Depending on the engine branch, one might change the location of the exe indicated at the batch file into other folders, as the compiled .dat file might not be compatible with such version.}}
+
+Drag your caption .txt files onto the Batch file to use it as you would the .exe itself.
+
+{{modernConfirm|Is it possible (or feasible) to decompile DAT subtitle files?}}
+
+== Playing sounds in your map with closed captions ==
+Sometimes, you may want to play a sound with closed captions (or subtitles, really) when the player activates a trigger. Unfortunately, {{ent|ambient_generic}}'s "Play Everywhere" flag is broken for [[Soundscripts|soundscripts]], and subtitles only work on soundscripts and in [[Sentences.txt|sentences.txt]] (except for commentary nodes, see [[Commentary_System#Subtitles | here]]). Hence you'll have to do a bit of a hack: use {{ent|point_clientcommand}} to execute three commands:
+
+* {{ent|play|path/to/sound/file}}
+* {{ent|cc_linger_time|'''X'''}}, where X is a manually-tweaked value
+* {{ent|cc_emit|'''commentaryFileName'''}}, where commentaryFileName is a key from the closed captions text file.
+
+Make sure both '''{{ent|closecaption}}''' and '''{{ent|cc_subtitles}}''' are set to 1.
+
+== Captions without sounds ==
+
+Recording dialogue is a very resource-expensive process. If, once dialogue has been recorded, you decide you want to change something, making those changes can prove very costly, so final dialogue recording is often best done as one of the final stages in a project.
+
+However, while creating choreographed scenes, it is highly desirable to have the dialogue available as early as possible. One way around this conflict is for the developer to record their own placeholder audio, but even this can take up significant amounts of time. A cheaper way of creating placeholder dialogue is to use closed captions without any attached dialogue.
+
+There are three steps involved in accomplishing this:
+
+;1. Creating the captions
+:Sound tokens (e.g. <code>barn.chatter</code> above) can have closed captions attached without corresponding entries in the sound manifest. To create new closed captions, simply add new entries to the ''closecaption_english.txt'' (or other language file), as [[Closed Captions#Editing closed captions|described above]].
+;2. Adding the captions in Faceposer
+:In Faceposer, dialogue-free closed captions are added in the same way normal dialogue is added (right-click on the timeline and choose <code>WAV File...</code>). However, because the closed caption tokens are not in the sound manifest, they will not appear on the list of available sounds. Instead, simply refer to the entries you added in step 1 and type the token name manually into the <code>Sound</code> textbox.
+;3. Setting the length of caption appearance time
+:Once the first two steps are complete, your scenes will display the closed captions when they are played in game (as long as closed captions are turned on in the game options, of course). However, because there is no associated sound file, the event has no length. This means that the closed captions will leave the screen almost as soon as they are displayed, leaving a player little time to read them. While this is acceptable for captions comprised of one or two words, some more work is required to keep longer captions up on screen for a sufficient amount of time.
+
+Faceposer doesn't support editing the length of WAV file events, but they can be edited through manual editing of the <code>.vcd</code> file. Open the <code>.vcd</code> in Notepad and find the speak event you wish to change the length of. A search for the name of the speak event will take you to the right place in the file.
+
+There you will find an entry like this one:
+
+ event speak "Test"
+ {
+ 	time 1.000000 -1.000000
+ 	param "test.test"
+ 	fixedlength
+ 	cctype "cc_master"
+ 	cctoken ""
+ }
+
+The <code>time</code> line denotes the start and end time of the event. The end time is set to <code>-1.000000</code> because the speak event currently has no length. Edit this number to be the time (in seconds, on the timeline) when you wish the closed caption to end and save the file.
+
+Obviously the desired length of time that a caption appears for will differ depending on the length of text. In general, when trying to decide how long text should appear on screen for, a good first estimate can often be achieved by timing yourself reading the text aloud and then doubling that number, to account for its unfamiliarity to fresh eyes.
+
+{{note|You may find it useful to include a {{ent|logic_auto}} and a {{ent|point_clientcommand}} in your map, set to issue the console command {{ent|closecaption|1}} on map load. This will ensure that you don't need to remind anyone using your mod (e.g. other team members) to turn on their captions.}}
+
+{{warning|As a final note, this method could charitably be described as "experimental" and less charitably as a hack. As with all hacks, there exists the possibility that unpredictable and unexpected behaviour will be introduced. It is recommended that you make backups of your <code>.vcd</code>'s before manually editing them, and keep regular backups of your <code>.vcd</code>'s, lest Faceposer undo those edits suddenly.}}
+
+== Captions for BINK videos ==
+[[File:Screenshot - P3 Cutscene subtitles.png|thumb|300px|Custom implementation of Captions for Bink-based videos in {{p3|1}}.]]
+
+With the release of {{l4d|4}}, it is now possible to put subtitles on [[Bink]]-based videos.<br>
+A similar implementation of this feature was also used in {{p3|4}}, a {{src09|1}} game, but it's only available on German language (and Brazilian language for the Zoom Platform) by default, and only displays if the game language was set to any language that have subtitles file. It's uses the {{code|.srt}} subtitle file format and the subtitles can be located in {{path|...\p3\media\subtitles}} folder. Subtitles for other language can be added by editing the .srt files, using any text editors (Notepad on Windows, Notepad++), or [https://github.com/SubtitleEdit/subtitleedit/releases Subtitle Edit].
+
+==Notes==
+In {{l4d2|4}} and later games, Valve uses subtitles_language for the subtitles instead of keeping them in the closecaption_language files ''with'' the "hearing impaired" captions. The probable reasoning for this is because "closed captions" is for the hearing impaired, and for convenience. "Subtitles" is a more accepted term to use for this entity's purpose. Though, the sounds can still be marked as <sfx>.
+
+As of Steam Deck updates in {{hl2|4}} and {{portal|4}} along with {{l4d2|4}}, the subtitle font is now anti-aliased.
+{{todo|It should be possible to antialias the subtitles in other games by editing their VGUI2 [[.res]] files.}}
+
+==See also==
+* [[Other FacePoser Tools]]
+* Closed caption related console commands are prefixed with <code>cc_</code>. See [[Console Command List]] for a full list.
+* [https://github.com/p0358/source-caption-compiler source-caption-compiler] (JavaScript library for Source caption compilation, alternative to captioncompiler.exe)
+{{SDKTools}}
+[[Category:Choreography]]
+[[Category:Plain text files]]
+[[Category:Plain text formats]]
