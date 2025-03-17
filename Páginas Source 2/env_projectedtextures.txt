@@ -1,0 +1,50 @@
+{{LanguageBar}}
+{{TabsBar|main=s2|base=env_projectedtexture}}
+{{This is a|point entity|name=env_projectedtexture|engine=source 2}} It projects a texture for use in things like flashlights.
+
+==Flags==
+{{fl|1|Enabled}}
+{{fl|2|Always Update (moving light)}}
+
+==Keyvalues==
+{{KV Targetname}}
+{{KV|target|intn=target|target_destination|}}
+{{KV|FOV|intn=lightfov|float|Field of view for which to project the texture}}
+{{KV|NearZ|intn=nearz|float|Near Z cutoff for projected texture}}
+{{KV|FarZ|intn=farz|float|Far Z cutoff for projected texture}}
+{{KV|Enable Shadows|intn=enableshadows|boolean|Enables/disables shadows from this projected texture.}}
+{{KV|Shadow Quality|intn=shadowquality|choices|Quality of shadows}}
+:{| class=standard-table
+! Value || Description
+|-
+| <code>0</code> || Low
+|-
+| <code>1</code> || High
+|-
+|}
+{{KV|Light Only Target|intn=lightonlytarget|boolean|Limit flashlight effect to only effect target entity.}}
+{{KV|Light World|intn=lightworld|boolean|Flashlight effects static world geometry.}}
+{{KV|Simple Projection|intn=simpleprojection|boolean|Indicates if this is a simple, non-light casting texture projection}}
+{{KV|Brightness Scale|intn=brightnessscale|float|Scale the light color by this brightness}}
+{{KV|Light Color|intn=lightcolor|color255|Light Color RGB-Intensity}}
+{{KV|Camera Space|intn=cameraspace|integer|Angles are interpreted as being relative to camera.}}
+{{KV|Texture Name||intn=texturename|material|}}
+{{KV|Flip Horizontal|intn=flip_horizontal|choices|Should the projected texture be flipped horizontally?}}
+:{| class=standard-table
+! Value || Description
+|-
+| <code>0</code> || No
+|-
+| <code>1</code> || Yes
+|-
+|}
+
+==Inputs==
+{{I|TurnOn|Turn on the texture}}
+{{I|TurnOff|Turn off the texture}}
+{{I|AlwaysUpdateOn|Turn on per frame updating (for moving lights)}}
+{{I|AlwaysUpdateOff|Turn off per frame updating (for moving lights)}}
+{{I|SetFOV|Set Field of view|param=float}}
+{{I|SpotlightTexture|Set the spotlight texture|param=string}}
+{{I|EnableShadows|Set the if shadows are enabled|param=boolean}}
+{{I|LightColor|Change the light color/brightness|param=color255}}

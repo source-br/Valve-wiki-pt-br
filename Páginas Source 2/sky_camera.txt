@@ -1,0 +1,10 @@
+{{LanguageBar}}
+{{Tabs|source=1|source2=1|main=source|sky_camera}}
+{{Confirm|Confirm if some of the Source 1 stuff works the same or differently in Source 2.}}
+{{this is a|point entity|name=sky_camera|engine=Source 2|sprite=1}} It is used to mark the position of the map's origin inside the [[3D Skybox]]. As your position changes relative to the maps origin it will be scaled and applied relative to the <code>sky_camera</code>.
+
+When the map is compiled, the areas containing <code>sky_camera</code>(s) are skipped during vis calculations. This can be overridden by <code>-forceskyvis</code> on [[resourcecompiler]]{{confirm}}.
+
+By default, only one <code>sky_camera</code> may be active at a time and it cannot move.
+
+[[Category:Skybox]]

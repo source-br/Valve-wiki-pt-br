@@ -1,0 +1,203 @@
+{{LanguageBar}}
+{{TabsBar|main=s2|base=env_projectedtexture}}
+{{CD|CEnvProjectedTexture|file1=env_projectedtexture.cpp}}
+[[File:Env projectedtexture appearances.jpg|thumb|Env_projectedtexture has different appearances]]
+[[File:Projected texture.jpg|thumb|Projecting a colorful [[texture]] in [[Garry's Mod]].]]
+[[File:Global_shadow_mapping.jpg|thumb|[[Portal 2]] uses projected textures extensively for world lighting.]]
+[[File:volumetric_projected_texture_p2ce.jpg|thumb|Showcase of {{P2CE}} volumetrics in a [[Portal 2]] map.]]
+{{this is a|point entity|name=env_projectedtexture|since=Source 2006}} 
+It projects a [[texture]] as a dynamic light that affects all objects in the world, optionally with [[Wikipedia:Shadow mapping|Shadow Mapping]]. env_Projectedtexture does not light the world similarly that other light entities which are ray-traced when you compile the map. This light however is real-time and works without RAD.
+
+{{warning|This is the most expensive light entity in the engine, use sparingly. Newer hardware with a good CPU can handle it better.}} 
+{{note|While it is technically supported in {{asd|4}} and {{lw|4}}, it is highly recommended that you use {{ent|Light_deferred}} instead.}}
+{{Note|Removed from {{bms|4}} in the December 24 2017 update ([[Xengine]] update) and replaced with {{ent|newLight_Spot}}.}}
+{{note|Projected textures don't render when the mod folder is called portal. {{workaround|Use a mod name other than portal.}}}} 
+
+==Flags==
+{{fl|1|Enabled}}
+{{bug|Always starts on in {{gmod|2}} and {{css|2}}.{{workaround|Use [[logic_auto]] with TurnOff input.}}}}
+{{fl|2|Always Update (for moving light)|only={{AS}}{{Mapbase}}.}}
+All lights always update in {{gmod|2}}.
+{{tip|If a game doesn't support this flag, you still can move projected texture. Clear parent each 0.24 seconds and set parent each 0.25 seconds, this will update the projected texture position (parent must have [[attachment]] point).}}
+
+==Keyvalues==
+{{KV Targetname}}
+{{KV|Target|intn=target|targetname|The entity will rotate to point at this target. Make sure you check the ''Always update'' flag if you set this.}}
+{{KV|FOV|intn=lightfov|float|The field of view cone/pyramid at which the texture is projected.
+:{{confirm|This keyvalue does not work in Alien Swarm.}}}}
+{{KV|NearZ|intn=nearz|float|Objects closer than this will not receive the light from the projection.}}
+{{KV|FarZ|intn=farz|float|Objects beyond this distance will not receive the light from the projection.}}
+{{KV|Enable Shadows|intn=enableshadows|boolean|Enables/disables shadows from this projected texture.}}
+{{KV|Shadow Quality|intn=shadowquality|integer choices|Quality of shadows.
+:*0: Low (sharp, pixelized shadows)
+:*1: High (smooth edged shadows)}}
+{{KV|Shadow Filter|intn=shadowfilter|int|Changes the Shadow Filter parameter of the light, which is responsible for smoothing the light. Works only when enabled Always update flag.|only=Mapbase}}
+{{KV|Light Only Target|intn=lightonlytarget|boolean|Limit flashlight effect to only affect target entity.}}
+{{KV|Light World|intn=lightworld|boolean|Control whether flashlight affects static world geometry.}}
+{{KV|Light Color|intn=lightcolor|color255 + int|Light color and intensity. {{Note|This entity has different brightness rules when compared to {{ent|light}}. A good number to start at is 10000 with a Brightness scale of 5-10}}}}
+{{KV|Camera Space|intn=cameraspace|integer|Angles are interpreted as being relative to camera.}}
+{{KV|Texture Name|intn=texturename|string|nofgd=1|The [[texture]] which this entity projects. Must be a [[VTF]] file (not VMT), relative to <code>/materials</code>.}}
+{{KV|Texture Frame|intn=textureframe|int|nofgd=1|If the texture is animated, this is the frame it should begin on.}}
+{{KV|Simple Projection|intn=simpleprojection|since=AS|nofgd=1|boolean|Indicates if this is a simple, non-light casting texture projection.}}
+{{KV|Simple Projection Size|intn=projection_size|float|Size of the simple projection.|since=AS|nofgd=1}}
+{{KV|Simple Projection Rotation|intn=projection_rotation|since=AS|nofgd=1|float|}}
+{{KV|Brightness Scale|intn=brightnessscale|float|since=AS|also=Mapbase|Scale the light color by this brightness.}}
+{{KV|Color Transition Time|intn=colortransitiontime|float|since=AS|also=Mapbase|Amount of time it takes for a color change to occur. Higher numbers cause faster transitions.}}
+{{KV|Appearance|intn=style|integer choices|since=P2|also={{GMOD}}|Various Custom Appearance presets. {{Note|Requires input <code>AlwaysUpdateOn</code> to work.}} }}
+{{lightstyle presets}}
+{{KV|Custom Appearance|intn=pattern|string|since=P2|also={{GMOD}}|Set a custom pattern of light brightness for this light. Pattern format is a string of characters, where '''a''' is total darkness, '''z''' fully bright. i.e. <code>aaggnnttzz</code> would be a steppy fade in from dark to light.}}
+{{KV|Default Appearance|intn=defaultstyle|string|since=P2|}}
+{{KV|Light Strength|float|only={{GMOD}}|intn=lightstrength|How bright the light appears.
+:{{confirm|How is this different than brightnessscale?}}}}
+{{KV|Light View Models|boolean|only={{INFRA}}|intn=lightviewmodels|Control whether flashlight effects view models.}}
+{{KV|Light Not PVS Culled|boolean|only={{INFRA}}|intn=lightnotpvsculled|Disable PVS culling optimization for this light (you shouldn't do this unless it's explicitly causing problems).}}
+{{KV|Enable Volumetrics|boolean|nofgd=1|only={{strata}}|intn=volumetric|Whether or not to use volumetrics for this projected texture.}}
+{{KV|Volumetric Intensity|float|nofgd=1|only={{strata}}|intn=volumetricintensity|Defines the intensity of the volumetrics. (Default is 1. Can go above; no strict limit)}}
+{{Important|As of 31/10/23, Volumetrics are currently broken due to a missing shader. According to a dev, the shader was working in DX9 but was not ported to DX11 due it planning to be remade, however currently this has not yet been worked on. Do not enable volumetrics while this is the case! {{Note|The volumetric shader has been re-implemented in {{portalrev|4}}. It is planned to upstream this to {{P2ce|4}}, however it has not been done yet due to a bug where the volumetric lighting flickers when the player has paint on their face. [https://discord.com/channels/663715905267564564/1193094832944586793/1196906748976562386 Confirmation from P2:CE developer], and [https://discord.com/channels/663715905267564564/1193094832944586793/1245083987626561586 another developer mentioning the bug.]}}}}
+{{KV|Movie Name|string|only={{strata}}|intn=moviename|{{Code|preset=3|[[WebM|.webm]]}} file used in place of the texture.}}
+
+==Inputs==
+{{note|In some [[FGD]]s, only <code>TurnOn</code>, <code>TurnOff</code> and <code>FOV</code> are present.}}
+{{IO|TurnOn|Turns on the texture.}}
+{{IO|TurnOff|Turns off the texture.}}
+{{IO|FOV|param=float|Sets '''FOV'''.}}
+{{IO|EnableShadows|param=bool|Set the if shadows are enabled.}}
+:{{bug|Can only can enabled/disabled if shadows are enabled when the entity is intitially spawned.|tested={{css}}}}
+{{IO|Ambient|param=float|Set ambient.}} 
+:{{bug|Non-functional.}}
+::{{confirm|Does it work in any game?}}
+{{IO|SpotlightTexture|param=string|Sets the spotlight texture.
+:{{note|Disabled in {{portal2}} onwards. Fixed in {{P2CE}}}}}}
+{{IO|Target|param=string|Specify a new '''Target''' entity to point at.}}
+{{IO|CameraSpace|param=boolean|Sets '''Camera Space'''.}}
+{{IO|LightOnlyTarget|param=boolean|Sets '''Light Only Target'''.}}
+{{IO|LightWorld|param=boolean|Sets '''Light World'''.|nofgd=1}}
+{{IO|AlwaysUpdateOn|since=AS|Turn on per frame updating (for moving lights).|also=Mapbase}}
+{{IO|AlwaysUpdateOff|since=AS|Turn off per frame updating (for moving lights).|also=Mapbase}}
+{{IO|LightColor|since=AS|param=color255|Change the '''Light Color'''.|also={{Mapbase}}{{GMOD}}}}
+{{IO|SetBrightness|param=float|Sets the brightness.|only={{Mapbase}}}}
+{{IO|SetLightStyle|param=integer|Sets an '''Appearance'''. (see Appearance keyvalue above for possible values)|since=P2|also={{GMOD}}}}
+{{IO|SetPattern|Sets '''Custom Appearance'''. (see Custom Appearance keyvalue above)|param=string|since=P2|also={{GMOD}}}}
+{{IO|SetNearZ|Sets '''NearZ'''.|param=float|since=P2|also={{GMOD}}}}
+{{IO|SetFarZ|Sets '''FarZ'''.|param=float|since=P2|also={{GMOD}}}}
+{{IO|EnableVolumetrics|param=boolean|Enables or disables volumetrics.|only={{P2CE}}}}
+{{IO|SetVolumetricIntensity|param=float|Sets the intensity of the volumetrics. (Default is 1. Can go above; no strict limit)|only={{P2CE}}}}
+{{IO|SetBrightnessScale|param=float|Sets the brightness.|only={{P2CE}}}}
+
+==Caveats and Fixes==
+{{main|Env_projectedtexture/fixes}}
+{| class="standard-table"
+! Issue/Caveat
+! Affected games
+! Fix/Workarounds
+! Notes
+|-
+| The Volumetrics option in {{strata|2}} is temporarily broken due to a missing shader
+| {{strata|2}}
+| N/A
+| {{Note|This was fixed in {{portalrev}}. There are plans to upstream it to P2CE [https://discord.com/channels/663715905267564564/1193094832944586793/1196906748976562386]}}
+|-
+| Valve's games only support one shadow map in the [[PVS]] at a time (including player flashlight).
+| Official {{src|3.1}} games/stock {{src13|3.1|nt=0}} code
+| It is possible to modify/remove this limit in game code by [[Env_projectedtexture/fixes#Enabling_multiple_shadow_maps.|following these instructions]].
+
+If mapping for a multiplayer game without game code access where {{ent|point_servercommand}} is available and permitted, the cvar {{cmd|mp_flashlight}} can be forcibly set to {{code|0}} to disable to the player flashlight and from interfering with {{mono|env_projectedtexture}}.
+| The following games/branches have exceptions to this:
+*{{gmod}}: 9 (Can be increased with {{code|-numshadowtextures #}})
+*{{strata}}: 8
+*{{mapbase}}: 4 (Can be increased with {{code|-numshadowtextures #}})
+*{{infra}}: 8
+|-
+| Textures used for projected textures require the flags Clamp S, Clamp T and Clamp All to avoid glitchy tiling. Also note, that VTFs are used directly and no VMT is needed.
+| All {{src|3.1}} games
+| N/A
+| N/A
+|-
+| Shadows are only rendered when the user is running with "High" shadow detail.<br> 
+| All {{src|3.1}} games ''except'' {{portal2}} and {{csgo}}.
+| If your options menu does not show the "High" shadow detail setting by default (especially all Intel graphics card), add<br>  {{code|-force_vendor_id 0x10DE -force_device_id 0xFFFF}} to the game's launch options
+| 
+*{{csgo}} dynamic shadows from Projected Textures work on "Low" settings
+|-
+| In multiplayer, {{code|mat_supportflashlight}} must be set to 1 for flashlights to work
+| All multiplayer {{src|3.1}} games
+| N/A
+| By default these ConVars are disabled in [[Team Fortress 2]], so this entity won't work there without special configuration
+|- 
+| [[Viewmodel]]s won't receive light or shadows from projected textures
+| All {{src|3.1}} games ''except'' {{gmod}} and {{portal2}}
+| [[env_projectedtexture/fixes#Enabling shadow receiving on the view model]]
+|-
+| Some Nvidia graphics cards (especially with latest drivers and/or all newer {{nvidia|4}} cards since around mid-late 2010s) render big/small white specks, squares or noises (and sometimes it's also flickering) on certain textures
+| {{portal2|3.1}} and {{gmod|3.1}}, possibly all {{src|3.1}} games{{confirm}}.
+| Remove the bumpmap ({{ent|$bumpmap}} or {{ent|$ssbump}}) or {{ent|$detail}} textures), or use {{code|mat_bumpmap 0}} (to disable Bumpmapping), or run the game in Vulkan ({{code|-vulkan}} launch option).
+| [https://www.youtube.com/watch?v=PJ1mnJHln5Q Video of said bug.]<br>Also in GMOD (click to preview): <br>[[File:Bug-env_projectedtexture-GMOD-Nvidia.gif|120px|A animated GIF of said bug, but in {{gmod|4}}.]]
+|-
+| While running in DirectX 9 mode, some graphics cards will not render shadows from {{code|env_projectedtexture}} regardless of the shadow detail setting, and as a result will render the texture through brushes and props instead of properly stopping them
+| {{portal2|3.1}}
+| Run the game in Vulkan mode with the launch parameter {{code|-vulkan}}
+| Also affects all DX9 based mods, fixed in {{p2ce}} and {{portalrev}}
+|-
+| Parenting does not work with stock SDK code
+| {{src13|3.1|nt=0}}
+| [[Env_projectedtexture/fixes#Fixing Parenting]]
+| N/A
+|-
+| No smooth transition between this light and {{ent|env_cascade_light}}
+| {{csgo|3.1|nt=1}}
+| N/A
+| N/A
+|- 
+| {{code|SpotlightTexture}} [[input]] is disabled in some branches
+| {{portal2branch|3.1}} and {{csgobranch|3.1|nt=1}}
+| N/A
+| Fixed in {{strata|4}}
+|-
+| The light will cause multiple layered {{code|info_overlays}} to show through each other 
+| {{Todo|At least in {{gmod}}}}
+| N/A
+| N/A
+|-
+!colspan="4"|Source 2007/2009 Bugs
+|-
+|colspan="4"|{{note|the way that this page was structured before made it easy to put newly discovered bugs in the wrong category, so some of the following bugs may or may not be in modern titles.}}
+|-
+| The configurable texture value from Hammer is not accepted - will always default to {{code|effects/flashlight001}}
+| {{src07|3.1}}, {{src09|3.1}}, {{srcmp|3.1}}, {{src13mp|3.1}}
+| Use the {{code|SpotlightTexture}} [[input]] or override the actual contents of the default VTF with a new one.
+[[Env_projectedtexture/fixes#Fix_configurable_texture_value_in_Hammer]]
+|N/A
+|-
+| This entity cannot target another entity
+| {{src07|3.1}}, {{src09|3.1}}, {{srcmp|3.1}} {{confirm}}
+| [[env_projectedtexture/fixes#Fixing targeting]]
+| N/A
+|-
+| [[Model]]s will not receive their own shadows correctly
+| {{src07|3.1}}, {{src09|3.1}}, {{srcmp|3.1}} {{confirm}}
+| Create a bumpmap for the texture.<br>Even a flat bumpmap is sufficient, such as {{file|dev/flat_normal|vtf}}.
+| N/A
+|-
+| This entity will cause issues if the entity overlaps a portal in {{portal|3.1}}
+| {{portal|3.1}}
+| N/A
+| {{ModernConfirm|Is this fixed in latest version of Portal?}}
+|-
+|}
+
+==See also==
+* [[Volumetric lighting]]
+* [[Lighting]]
+* [[Adding Light]]
+* [[Intermediate Lighting]]
+* [[Advanced Lighting]]
+* [[Effect flags]] (dynamic light effects)
+* [[Tool textures]] (for Block light)
+* {{ent|newLight_Point}}
+* {{ent|newLight_Spot}}
+* {{ent|newLight_Dir}}
+* {{ent|NewLights_settings}}
+* {{ent|env_cascade_light}}
+* [https://chetanjags.wordpress.com/2023/07/18/blackmesa-xenengine-part-4-lighting-shadows/ BlackMesa XenEngine: Part 4 – Lighting & Shadows] (page from Black Mesa developer about new lights)
+
+[[Category:Lighting]]

@@ -1,0 +1,562 @@
+{{LanguageBar}}
+{{Source topicon}}
+{{Tabs|VTF (Valve Texture Format)|source=1|custom1=VTEX (Valve Texture)|custom1alt=Source 2|main=source}}
+{{toc-right}}
+
+The '''Valve Texture Format''' ('''VTF''') is the proprietary [[texture]] format used by the {{source|4}} engine. VTF files are generally referenced in a [[Material]] instead of being accessed directly, which allows re-use in different ways.
+
+{{tip|It is possible, to an extent, to restore DXT compressed VTF files (i.e. removing compression artifacts) by [[Restoring Texture After DXT Compression|using an AI]].}}
+
+==Limitations and Caveats==
+{{stub|section=1}}
+{{warning|Compatibility isn't trivial. See [[#Versions|versions ↓]] for details.}}
+{{note|All block-compressed VTF files (such as those which use DXT compression) must have dimensions that are a multiple of 4. Although VTF dimensions are usually restricted to [[Wikipedia:Powers of two#The first 96 powers of two|powers of two]], some third-party tools can import and export non-powers of two textures. If you opt to use non-power-of-two textures, expect texture filtering to break (this can be "remedied" by setting the point sampling flag on the texture).
+Additionally, non-power-of-two VTFs are not read correctly by {{hammer|4.1}} (and possibly in-game), being treated as the next largest power of two.
+{{clarify|Mipmaps under 4x4 are still stored as 4x4 blocks, but only part of them are used.}} }}
+{{modernConfusion|Unlike texture formats such as [[DDS]], which store mipmaps from largest to smallest, VTF files store mipmaps from smallest to largest.}}
+{{important|{{src13|2}}-based branches {{not|{{gmod}}}} refuse to load VTFs larger than 32 MiB (33,554,432 bytes). This means that in such branches, a 4096x4096 texture is limited to certain [[#Image data formats|image formats]], mainly DXT1, DXT5, and I8.}}
+
+==Tools==
+{{stub|section=1}}
+VTF files can be created from [[TGA]] or [[PFM]] images using the Source SDK Tool [[Vtex (Source 1)|Vtex]]. The following third party tools can also be used to create, view, or edit VTFs.
+
+===Viewing===
+* [[VTF Shell Extensions|Windows thumbnail handler]] (Windows XP+)
+* [[VTF Explorer]] (Windows; can explore inside GCFs)
+* [http://forre.st/vtf gdk-pixbuf-vtf] (Gnome\Nautilus\Eog)
+* [http://www.irfanview.com/plugins.htm IrfanView plugin]
+* [http://www.filedropper.com/imageviewer002 Leadworks Image Viewer] {{Dead_link}} (supports VTF)
+
+===Editing===
+* [[VTFEdit]] (GUI) and [[VTFCmd]] ([[command line]])
+* [[Photoshop VTF Plugin|Photoshop Plug-in]] (6 and to CC 2018, 32-bit version only)
+* [http://code.google.com/p/gimp-vtf/ GIMP Plug-in]
+* [http://nemesis.thewavelength.net/index.php?p=50 Paint.NET Plug-in] {{Dead_link}} – the official website
+* [https://web.archive.org/web/20200201044118/http://nemesis.thewavelength.net:80/index.php?p=50 Paint.NET Plug-in] – archive on Wayback Machine
+* [[3DSMax VTF plugin|3DSMax plugin]] (versions 6 to 2009)
+* [[VIDE]]
+
+===Conversion===
+* [[VTFVer]] (7.5 to 7.4)
+* {{no_vtf|3.1}}
+* [https://github.com/geotavros/vtf75tovtf74/releases 7.5 to 7.4 Batch Converter]
+* [https://github.com/Mix-Anik/Easy-VTF-Converter/releases Easy VTF Version (7.0-7.5) Converter]
+* [https://github.com/StrataSource/vtex2 vtex2] (Supports v7.6)
+
+==Files==
+Both [[texture]]s and [[material]]s are stored in subfolders of {{path|<nowiki><mod_dir>/materials/</nowiki>}}, or {{path|<nowiki>pak01_dir.vpk/materials/</nowiki>}}.
+{{Note|In older {{source|3.1}} games like {{tf2|3.1}} and {{hl2|3.1}}, as well as some third-party games/mods, Valve and/or other developers separated the textures and materials into different [[VPK]]s. Typically, textures are located in {{path|<nowiki><mod_dir>/<game>_textures</nowiki>|vpk}} while materials are in {{path|<nowiki><mod_dir>/<game>_misc</nowiki>|vpk}}. Most Source 2009 games and earlier (including Source SDK Base 2006, 2007) stores textures inside {{path|vpks/depot_<nowiki><appid></nowiki>_dir|vpk}}.}}
+
+==Storage capabilities==
+The VTF image format can store either a flat texture, an [[$envmap|environment map]], or a volumetric texture. Each of these can have multiple frames.
+
+* Textures up to 4096x4096 pixels. 
+{{note|Textures with dimensions larger than 4096 pixels can be created, if a few conditions are met. The resulting .vtf should be below 32 MiB (33,554,432 bytes){{not|{{csgo}}{{gmod}}}}, the resolutions used is a powers of two and isn't exceeding 65,536 pixels in either dimension and the total amount of pixels of the image should be below 16.7 megapixels: For example, a texture the size of 512x32,768 will work, because 512 multiplied by 32,768 equals 16.7 megapixels.}}
+
+* An environment map is a six-faced [[w:cube mapping|cube map]], unless the version is less than 7.5 and the first frame in the header is -1, then it will be seven-faced.
+* A volumetric texture is a texture with depth, where each frame is a "layer" which are layered in the third dimension. So a 16x16x16 volumetric texture has 16 separate 16x16 textures stacked to give depth. This format is used internally by Source, and you shouldn't have any need to actually create one yourself.
+* For each frame and face, the VTF file contains both the basic original source image data (pixel map) and a series of [[MIP Mapping|mipmaps]] used for rendering the texture over varying distances. For block compressed formats such as DXT1, the source image dimensions must be a multiple of 4, since block compressed formats compress the image's data into 4x4 chunks. Although the source image may be rectangular, square mipmaps are stored more efficiently in the VTF.
+* Start frame (for animations)
+* [[$bumpmap|Bump map]] scale
+* A [[$reflectivity|Reflectivity]] value for use by [[VRAD]]
+* A very low resolution copy of the VTF for color sampling by the engine.
+
+===Resources===
+VTF 7.3 added an extensible "resource data" system. Anything can be added, but Source will recognise only the following:
+
+* A [[w:Cyclic redundancy check|CRC]] of the input file, used by VTEX to decide whether to override a texture, usually accompanied by the 0x2 flag.
+* An [[w:UV mapping|U/V]] LOD control. This is the highest mipmap which should be loaded when the game's Texture Detail setting is "High" (<code>mat_picmip 0</code>). An U LOD Control value of 11 will select the mipmap which is 2048 pixels (2<sup>11</sup>) across at the "High" texture setting, and 4096 pixels across at the "Very High" (<code>mat_picmip -1</code>) texture setting. {{note|Since users are currently only presented with one texture detail setting above High, there is little point setting this value to anything except 50% or 100% of your texture's size. Otherwise, the user would need to manually set their<code>mat_picmip</code>to a lower value to see the full-res texture, like in {{tf2}}, which requires<code>sv_cheats</code>in most other titles.}}
+* [[Animated Particles|Animated particle sheet]] data.
+* Expanded texture settings. This is a collection of 32 flags, none of which are in use by Valve. Unlike the built-in VTF flags these can be defined on a game-by-game basis.
+
+==Image data formats==
+The VTF image format can store image data in a variety of formats. Some formats were meant for the engine, some only as an interim format for conversions. The uncompressed formats are not lossy and the compressed (DXT) formats are.
+{{note|The VTF format can actually store many more formats than those listed below -- consult your engine branch's <code>public/bitmap/imageformat.h</code> to see exactly what it supports. However, these formats are not GUARANTEED to work and their enum values are prone to being shuffled around between engine branches.}}
+
+===Image data format table===
+{| class="wikitable sortable" style="text-align:center;"
+! Format || <span title="Red bits">R</span> || <span title="Green bits">G</span> || <span title="Blue bits">B</span> || <span title="Grey (&quot;Intensity&quot;) bits">I</span> || <span title="Palette Bits">[[Palette|P]]</span> || <span title="Alpha bits">[[Alpha|A]]</span> || <span title="Total bits">T</span> || <span title="Compressed">Comp</span> || <span title="Supported">Sup</span> || Comments
+|-
+| A8 || 0 || 0 || 0 || N/A || N/A || 8 || 8 || False || True || No color (fully black), 8-bit alpha
+|-
+| ABGR8888 || 8 || 8 || 8 || N/A || N/A || 8 || 32 || False || True || Uncompressed texture with 8-bit alpha
+|-
+| ARGB8888 || 8 || 8 || 8 || N/A || N/A || 8 || 32 || False || True || Uncompressed texture with 8-bit alpha, similar to ABGR8888
+|-
+| BGR565 || 5 || 6 || 5 || N/A || N/A || 0 || 16 || False || True || Uncompressed opaque texture, limited color depth
+|-
+| BGR888 || 8 || 8 || 8 || N/A || N/A || 0 || 24 || False || True || Uncompressed opaque texture, full color depth
+|-
+| BGR888_BLUESCREEN || 8 || 8 || 8 || N/A || N/A || 0 || 24 || False || True || Same as BGR888, but blue pixels (hex color #0000ff) are rendered transparent instead.
+|-
+| BGRA4444 || 4 || 4 || 4 || N/A || N/A || 4 || 16 || False || True || Uncompressed texture with alpha, half color depth
+|-
+| BGRA5551 || 5 || 5 || 5 || N/A || N/A || 1 || 16 || False || True || Uncompressed texture, limited color depth, 1-bit alpha
+|-
+| BGRA8888 || 8 || 8 || 8 || N/A || N/A || 8 || 32 || '''''Either''''' || True || [[#HDR compression|Compressed HDR ↑]] texture with no alpha or uncompressed SDR texture with 8-bit alpha
+|-
+| BGRX5551 || 5 || 5 || 5 || N/A || N/A || 1 || 16 || False || True || 
+|-
+| BGRX8888 || 8 || 8 || 8 || N/A || N/A || 8 || 32 || False || True || Like BGRA8888, but the alpha channel is always set to 255, making it functionally equivalent to BGR888.
+|-
+| DXT1<br>DXT1_ONEBITALPHA || N/A || N/A || N/A || N/A || 4 || N/A || 4 || '''''True''''' || True || Standard compression, optional 1-bit alpha (recommended for opaque).<br>DXT1_ONEBITALPHA format does not properly work; use regular DXT1 with 1-bit alpha flag enabled instead.
+|-
+| DXT3 || N/A || N/A || N/A || N/A || 4 || 4 || 8 || '''''True''''' || True || Standard compression, uninterpolated 4-bit Alpha
+|-
+| DXT5 || N/A || N/A || N/A || N/A || <span title="Separate palettes for color and alpha">4+4</span>|| N/A || 8 || '''''True''''' || True || Standard compression, interpolated 8-bit alpha (recommended for transparent/translucent)
+|-
+| I8 || N/A || N/A || N/A || 8 || N/A || N/A || 8 || False || True || Luminance (Grayscale), no alpha
+|-
+| IA88 || N/A || N/A || N/A || 8 || N/A || 8 || 16 || False || True || Luminance (Grayscale), 8-bit alpha
+|-
+| P8 || N/A || N/A || N/A || N/A || 8 || N/A || 8 || False || '''''False''''' || 256-color paletted
+|-
+| RGB565 || 5 || 6 || 5 || N/A || N/A || 0 || 16 || False || True || Uncompressed texture, limited color depth, similar to BGR565.<br>Not properly supported in all branches; prefer BGR565 instead, which always works.
+|-
+| RGB888 || 8 || 8 || 8 || N/A || N/A || 0 || 24 || False || True || Uncompressed opaque texture, similar to BGR888.
+|-
+| RGB888_BLUESCREEN || 8 || 8 || 8 || N/A || N/A || 0 || 24 || False || True || Same as RGB888, but blue pixels (hex color #0000ff) are rendered transparent instead.
+|-
+| RGBA16161616 || 16 || 16 || 16 || N/A || N/A || 16 || 64 || False || True || Integer HDR Format
+|-
+| RGBA16161616F || 16 || 16 || 16 || N/A || N/A || 16 || 64 || False || True || Floating Point HDR Format
+|-
+| RGBA8888 || 8 || 8 || 8 || N/A || N/A || 8 || 32 || False || True || Uncompressed texture with 8-bit alpha, similar to ABGR8888
+|-
+| UV88 || 8 || 8 || N/A || N/A || N/A || N/A || 16 || False || True || Uncompressed du/dv Format
+|-
+| UVLX8888 || N/A || N/A || N/A || N/A || N/A || N/A || 32 || False || True ||
+|-
+| UVWQ8888 || N/A || N/A || N/A || N/A || N/A || N/A || 32 || False || True ||
+|}
+{{note|Certain 16-bit (ex: BGR565, BGRA4444) and 24-bit (ex: BGR888, RGB888) formats are converted to 32-bit (BGRA8888 in DX9, RGBA8888 in DX11) before being uploaded to the GPU; this means their main purpose is for saving installation size.{{tip|If making a texture for {{strata|4.1}}, prefer using Deflate-compressed VTFs in RGBA8888 (or BC7) format instead of using 16-bit or 24-bit formats, as Deflate offers better filesize savings without any quality loss; needing to both decompress the texture and convert to 32-bit would increase load times unnecessarily.}} }}
+
+====HDR compression====
+HDR textures can be stored in compressed form using any format with a non-binary alpha channel (BGRA8888 is ''greatly preferred'' and is what is used by [[Vtex (Source 1)|Vtex]], but DXT5 or BGRA4444 also work).
+
+The formula to convert colors from 8 bits-per-channel back to 16 bits-per-channel integer HDR is:
+
+{{codeblock|1=RGB = RGB * (A * 16)}}
+
+and for 16 bits-per-channel floating point HDR:
+
+{{codeblock|1=RGB = (RGB * (A * 16)) / 262144}}
+
+[[Vtex (Source 1)|Vtex]] can convert 32 bits-per-channel {{w|Portable Floatmap|PFM}} files to this format, and {{no_vtf|3.1}} can convert compressed HDR VTFs to regular 16 bits-per-channel {{Wikipedia|OpenEXR|EXR}} files.
+
+{{note|Interpreting the data as HDR is done in the shader, and is currently only supported by the [[Sky (Source 1 shader)|Sky shader]]. The sky shader also has an alternate "HDR compression method B", which uses multiple textures (at different exposures?{{confirm}}) to create an HDR image.<br>
+HDR cubemaps are always stored as uncompressed RGBA16161616F, except in {{strata|4}}, where they can be stored as BC6H.}}
+
+===Additional data formats===
+These are additional image formats that are found in {{file|imageformat|h}} of {{src13|4}} and {{asbranch|4}}.
+
+:{| class="standard-table mw-collapsible mw-collapsed" style="width: 900px"
+|+ style="text-align: left;" |Formats found in {{src13|1}}
+
+!Format || Red Bits || Green Bit || Blue Bits || Alpha Bits || Total Bits ||Compressed || Supported ||Comments
+|-
+| R32F || 32 || 0 || 0 || 0 || 32 || False || ? || Single-channel 32-bit floating point
+|-
+| RGB323232F || 32 || 32 || 32 || 0  || 48 || False || ? || 32-Bit Floating point HDR
+|-
+| RGBA32323232F || 32 || 32 || 32 || 32  || 64 || False || ? || 32-Bit Floating point HDR w/alpha channel
+|}
+
+:{| class="standard-table mw-collapsible mw-collapsed" style="width: 900px"
+|+ style="text-align: left;" |Formats found in {{asbranch|1}}
+{{clarify|How are the RGB10A2 and R16f formats "either" compressed or uncompressed?}}
+!Format || Red Bits || Green Bit || Blue Bits || Alpha Bits || Total Bits ||Compressed || Supported ||Comments
+|-
+| RG1616F || 16 || 16 || 0 || 0 || 32 || False || ? || Dual-channel 16-bit floating point
+|-
+| RG3232F || 32 || 32 || 0 || 0  || 64 || False || ? || Dual-channel 32-bit floating point
+|-
+| RGBX8888 || 8 || 8 || 8 || 8 || 32 || False || ? || Like RGBA8888, but alpha channel is always set to 255, making it functionally equivalent to RGB888.
+|-
+| RGBA1010102 || 10 || 10 || 10 || 2 || 32 || ''Either'' || ? || 10 bit-per component render targets
+|-
+| BGRA1010102 || 10 || 10 || 10 || 2 || 32 || ''Either'' || ? || 10 bit-per component render targets
+|-
+| R16F || 16 || 0 || 0 || 0 || 16 ||''Either'' || ? || Single-channel 16 bit floating point
+|}
+
+Additionally, {{strata|4}} adds support for additional compression formats:
+:{|class="standard-table mw-collapsible mw-collapsed" style="width: 1080px"
+|+ style="text-align: left;" |Formats found in {{strata|1}}
+! Format || Red Bits || Green Bits || Blue Bits || Grey Bits || Palette Bits || Total Bits || Compressed || Supported || Comments
+|-
+| ATI1N || N/A || N/A || N/A ||  N/A || 4 || 4 || '''''True''''' || True || AKA BC4, greyscale; Identical to alpha channel of DXT5.<br/>Support in DirectX 9 and older is GPU-dependent.
+|-
+| ATI2N || N/A || N/A || N/A ||  N/A || 4+4 || 8 || '''''True''''' || True || AKA BC5, Red and Green; equivalent to two ATI1N textures.<br/>Support in DirectX 9 and older is GPU-dependent.
+|-
+| BC6H || N/A || N/A || N/A ||  N/A || 8 || 8 || '''''True''''' || True* || Block-compressed 16-bpc HDR textures; no alpha channel.<br/>Not supported in DirectX 10 and older.
+|-
+| BC7 || N/A || N/A || N/A ||  N/A || 8 || 8 || '''''True''''' || True || High-quality block compression; alpha channel optional.<br/>Not supported in DirectX 10 and older.
+|}<!-- DirectX version support isn't applicable to Strata, but is still useful if someone tries to add support to another engine (either another fork of Source or non-Source entirely).--> 
+{{note|Although Strata supports BC6H (as of 20 May 2023) and uses the format for HDR cubemaps, currently the only publicly available tool that can view BC6H VTFs is {{vPKEdit|4}}. No tool can currently create them.}}
+
+===Choosing an image format===
+[[File:Dxtn_comparison.jpg|right|150px|thumb|Comparison of how DXTn compression affects different types of images (click to view)]]
+Though the VTF image format provides support for a wide range of image data formats, there are only a handful of image data formats you are likely to use.  These formats and their criteria are described below:
+
+* '''BGR888'''
+: 24 bits per pixel; no alpha.
+: Use this format for textures with no alpha channel and very fine gradients (i.e. normal maps or light halos).
+* '''BGR565'''
+: 16 bits per pixel; no alpha.
+: Use this format instead of BGR888 to save 33% of space with often negligible quality loss (especially for [[$basetexture|basetextures]]).
+: Recommended for lower resolution textures where DXT block compression would be noticeable (i.e. GoldSrc ports).
+:: {{note|BGR888 may still be desired for textures with fine gradients (such as LDR skyboxes or red glowing textures), as well as for improved accuracy for normal maps (BGR565 is incapable of properly representing a "flat" normal map). }}
+* '''BGRA8888'''
+: 32 bits per pixel; supports alpha.
+: Use this format for textures with an alpha channel and very fine gradients (i.e. normal maps or light halos). It can also be used to produce Very High quality textures.
+: Recommended for lower resolution textures where DXT block compression would be noticeable (i.e. GoldSrc ports).
+* '''DXT1''' (also known as BC1)
+: 4 bits per pixel; limited alpha support.
+: Use this format for typical textures with no alpha channel.
+:: {{Note|DXT1 supports 1 bit of alpha precision. '''However''', any areas of 0 alpha will be fully black. This functionality is therefore best used for textures using [[$alphatest]] (although DXT5 can sometimes handle mipmaping of such textures more effectively, and should be used if using [[$allowalphatocoverage]]).}}
+* '''DXT3''' (also known as BC2)
+: 8 bits per pixel; supports alpha.
+: ''[[DirectX_Texture_compression_5 | DXT5]] should almost always be used over DXT3'', but DXT3 is acceptable (not necessarily better) for textures with an alpha channel with sharp gradients, such as if using [[$allowalphatocoverage]]; see [[:File:DXTn alpha comparison.png]].<br>DXT3 takes up the same file size as DXT5.
+: {{bug|tested={{hl2dm}}|[[VRAD]] is unable to calculate texture shadows for textures using DXT3 compression. Use DXT5 or BGRA8888 for shadow-casting textures instead.}}
+* '''[[DirectX_Texture_compression_5 | DXT5]]'''  (also known as BC3)
+:8 bits per pixel; supports alpha.
+:Use this format for typical textures with an alpha channel.
+* '''I8'''
+: 8 bits per pixel; no alpha.
+: Use this format for greyscale textures with no alpha channel and very fine gradients (i.e. light halos). 
+* '''IA88'''
+:16 bits per pixel; supports alpha.
+: Use this format for greyscale textures with an alpha channel and very fine gradients (i.e. smoke or light halos).
+* '''A8'''
+: 8 bits per pixel; alpha only.
+: Use this, in conjunction with {{ent|$color}}, for single-color textures with an alpha channel, such as [[decals (GoldSrc)|GoldSrc-style decals]]. By default, the texture's color will be pure white (#000000).
+* '''RGBA16161616F'''
+: 64 bits per pixel; supports alpha.
+: Use this format for [[HDR]] textures.
+:: {{tip|[[HDR Skybox Creation|HDR skyboxes]] can also use a compressed format using BGRA8888, providing generally acceptable quality at half the file size. The [[#HDR compression|compressed format ↑]] is recommended for custom skyboxes [[BSPZIP|packaged]] in multiplayer maps.}}
+* '''UV88'''
+:16 bits per pixel; no alpha.
+:Use this format for [[Du/dv_map | DuDv]] maps.
+
+Find technical details on the various DXT compression formats [http://www.fsdeveloper.com/wiki/index.php?title=DXT_compression_explained here] and [http://www.reedbeta.com/blog/understanding-bcn-texture-compression-formats/ here.]
+
+====Additional formats in Strata Source====
+{{strata|4}} supports additional image formats in VTF v7.6, which provide better compression, reducing GPU VRAM requirements while retaining better image quality than DXT1 or DXT5.
+* '''BC7'''
+:8 bits per pixel; supports alpha.
+:Use this format instead of DXT5 for textures with an alpha channel, as it uses the same amount of GPU memory.
+:Use this format instead of BGR888 or BGR565 when more detail is needed than provided by DXT1.
+* '''ATI1N''' (also known as BC4)
+:4 bits per pixel; no alpha.
+:Use this format instead of I8 or DXT1 for greyscale textures. It uses the same amount of GPU memory as DXT1.
+* '''BC6H'''
+:8 bits per pixel; no alpha.
+:Use this format for [[HDR]] textures. It is a quarter the size of [[#HDR compression|compressed HDR ↑]] in GPU memory, while being similar or better quality.
+{{note|All Source engine branches since the {{orangebox|4}} unofficially support ATI1N and ATI2N. Despite this, they are not guaranteed to work correctly; ATI1N is interpreted as red instead of greyscale, and the Z axis of ATI2 normal maps may not be correctly generated depending on the user's GPU if using vanilla shaders{{cn|there is code in the vanilla shaders specifically to handle ATI2N normal maps}}.}}
+
+==Texture flags==
+{{tip|Most shader settings are configured as [[:Category:List of Shader Parameters|material parameters]], not texture flags.}}
+
+A VTF file can contain the following flags (version 7.5):
+
+{| class=standard-table
+| '''Flag''' || '''Value''' || '''Comment'''
+|-
+| Point Sampling || 0x0001 || Disable Bilinear filtering for "pixel art"-style texture filtering. {{note|Breaks mipmapping, see [[$pointsamplemagfilter]] if using {{csgo|4|nt=1}} branch or derivatives.}}
+|-
+| Trilinear Sampling || 0x0002 || Always use [[Wikipedia:Trilinear filtering|Trilinear filtering]], even when set to Bilinear in video settings.
+|-
+| Clamp S || 0x0004 || Clamp S coordinates, to prevent horizontal texture wrapping.
+|-
+| Clamp T || 0x0008 || Clamp T coordinates, to prevent vertical texture wrapping.
+|-
+| Anisotropic Sampling || 0x0010 || Always use [[Wikipedia:Anisotropic_filtering|Anisotropic filtering]], even when set to Bilinear or Trilinear in video settings.
+|-
+| Hint DXT5 || 0x0020 || Used in [[Skybox Basics|skyboxes]]. Makes sure edges are seamless.{{how}}
+|-
+| PWL Corrected
+| rowspan=2 | 0x0040 || Purpose unknown.
+|-
+| SRGB || Uses [[Wikipedia:sRGB|sRGB color space]]. Useful for High Gamuts. Deprecated in 7.5.
+|-
+| No Compress || 0x0040 || No DXT compression used (internal to vtex).
+|-
+| Normal Map || 0x0080 || Texture is a normal map.
+|-
+| No Mipmaps || 0x0100 || Load largest mipmap only. Does not delete existing mipmaps, just disables them.
+|-
+| No Level Of Detail || 0x0200  || Not affected by texture resolution settings.
+|-
+| No Minimum Mipmap || 0x0400 || If set, load mipmaps below 32x32 pixels. {{warning|Required on Env Maps for custom shaders, like PBR, to work correctly.}} {{tip|Use this on noisy [[diffuse]]/[[albedo]], [[normal map]], and [[$detail|detail]] textures to reduce aliasing when viewed at a distance.}}
+|-
+| Procedural || 0x0800 || Texture is an procedural texture (code can modify it).
+|-
+| One Bit Alpha || 0x1000 || One bit alpha channel used.
+|-
+| Eight Bit Alpha || 0x2000 || Eight bit alpha channel used. {{note|Actually used by all formats with non-binary alpha channel (ex: BGRA4444, BGRA1616161616F)}}
+|-
+| Environment Map || 0x4000 || Texture is an environment map.
+|-
+| Render Target || 0x8000 || Texture is a render target.
+|-
+| Depth Render Target || 0x10000 || Texture is a depth render target.
+|-
+| No Debug Override  || 0x20000 || {{todo|Add description}}
+|-
+| Single Copy || 0x40000 || {{todo|Add description}}
+|-
+| Pre SRGB  || 0x80000 || SRGB correction has already been applied
+|-
+| One Over Mipmap Level In Alpha  || 0x80000 || Fill the alpha channel with 1/Mipmap Level. Deprecated (Internal to VTEX?)
+|-
+| Premultiply Color By One Over Mipmap Level  || 0x100000 || (Internal to VTEX?)
+|-
+| Normal To DuDv  || 0x200000 || Texture is a DuDv map (internal to vtex).
+|-
+| Alpha Test Mipmap Generation  || 0x400000 || (internal to VTEX)
+|-
+| No Depth Buffer  || 0x800000 || Do not [[w:Z-buffering|buffer]] for Video Processing, generally render distance.
+|-
+| Nice Filtered  || 0x1000000 || [[NICE filtering]] was used to generate the mipmaps (internal to VTEX).
+|-
+| Clamp U || 0x2000000 || Clamp U coordinates (for volumetric textures).
+|-
+| Vertex Texture || 0x4000000 || Usable as a vertex texture
+|-
+| SSBump  ||0x8000000 || Texture is a [[$ssbump|SSBump]].
+|-
+| Border  ||0x20000000 || Clamp to border colour on all texture coordinates
+|}
+
+==File format==
+The VTF image format is described as follows.
+
+===VTF layout===
+{| class=standard-table 
+! 7.2
+! 7.3 +
+|-
+| style="vertical-align:top;" |
+# VTF Header
+# VTF Low Resolution Image Data
+# For Each Mipmap (Smallest to Largest)
+#* For Each Frame (First to Last)
+#** For Each Face (First to Last)
+#*** For Each Z Slice (Min to Max; Varies with Mipmap)
+#**** VTF High Resolution Image Data
+| style="vertical-align:top;" |
+# VTF Header
+# Resource entries
+#* VTF Low Resolution Image Data
+#* [[#Resources|Other resource data ↑]]
+#* For Each Mipmap (Smallest to Largest)
+#** For Each Frame (First to Last)
+#*** For Each Face (First to Last)
+#**** For Each Z Slice (Min to Max; Varies with Mipmap)
+#***** VTF High Resolution Image Data
+|}
+
+* Image section, or non-header data, starts slightly different between 7.2 and 7.3+ in most cases. For 7.2, it starts at the offset from the beginning of the file with the value of header size. For 7.3+, it starts immediately after the end of the header.
+
+===VTF enumerations===
+==== Image format ====
+<source lang="cpp">
+enum ImageFormat
+{
+	IMAGE_FORMAT_NONE = -1,
+	IMAGE_FORMAT_RGBA8888 = 0,
+	IMAGE_FORMAT_ABGR8888,
+	IMAGE_FORMAT_RGB888,
+	IMAGE_FORMAT_BGR888,
+	IMAGE_FORMAT_RGB565,
+	IMAGE_FORMAT_I8,
+	IMAGE_FORMAT_IA88,
+	IMAGE_FORMAT_P8,
+	IMAGE_FORMAT_A8,
+	IMAGE_FORMAT_RGB888_BLUESCREEN,
+	IMAGE_FORMAT_BGR888_BLUESCREEN,
+	IMAGE_FORMAT_ARGB8888,
+	IMAGE_FORMAT_BGRA8888,
+	IMAGE_FORMAT_DXT1,
+	IMAGE_FORMAT_DXT3,
+	IMAGE_FORMAT_DXT5,
+	IMAGE_FORMAT_BGRX8888,
+	IMAGE_FORMAT_BGR565,
+	IMAGE_FORMAT_BGRX5551,
+	IMAGE_FORMAT_BGRA4444,
+	IMAGE_FORMAT_DXT1_ONEBITALPHA,
+	IMAGE_FORMAT_BGRA5551,
+	IMAGE_FORMAT_UV88,
+	IMAGE_FORMAT_UVWQ8888,
+	IMAGE_FORMAT_RGBA16161616F,
+	IMAGE_FORMAT_RGBA16161616,
+	IMAGE_FORMAT_UVLX8888
+};
+</source>
+
+==== Texture flags ====
+<source lang="cpp">
+enum CompiledVtfFlags
+{
+	// Flags from the *.txt config file
+	TEXTUREFLAGS_POINTSAMPLE = 0x00000001,
+	TEXTUREFLAGS_TRILINEAR = 0x00000002,
+	TEXTUREFLAGS_CLAMPS = 0x00000004,
+	TEXTUREFLAGS_CLAMPT = 0x00000008,
+	TEXTUREFLAGS_ANISOTROPIC = 0x00000010,
+	TEXTUREFLAGS_HINT_DXT5 = 0x00000020,
+	TEXTUREFLAGS_PWL_CORRECTED = 0x00000040,
+	TEXTUREFLAGS_NORMAL = 0x00000080,
+	TEXTUREFLAGS_NOMIP = 0x00000100,
+	TEXTUREFLAGS_NOLOD = 0x00000200,
+	TEXTUREFLAGS_ALL_MIPS = 0x00000400,
+	TEXTUREFLAGS_PROCEDURAL = 0x00000800,
+
+	// These are automatically generated by vtex from the texture data.
+	TEXTUREFLAGS_ONEBITALPHA = 0x00001000,
+	TEXTUREFLAGS_EIGHTBITALPHA = 0x00002000,
+
+	// Newer flags from the *.txt config file
+	TEXTUREFLAGS_ENVMAP = 0x00004000,
+	TEXTUREFLAGS_RENDERTARGET = 0x00008000,
+	TEXTUREFLAGS_DEPTHRENDERTARGET = 0x00010000,
+	TEXTUREFLAGS_NODEBUGOVERRIDE = 0x00020000,
+	TEXTUREFLAGS_SINGLECOPY	= 0x00040000,
+	TEXTUREFLAGS_PRE_SRGB = 0x00080000,
+        
+        TEXTUREFLAGS_UNUSED_00100000 = 0x00100000,
+	TEXTUREFLAGS_UNUSED_00200000 = 0x00200000,
+	TEXTUREFLAGS_UNUSED_00400000 = 0x00400000,
+
+	TEXTUREFLAGS_NODEPTHBUFFER = 0x00800000,
+
+	TEXTUREFLAGS_UNUSED_01000000 = 0x01000000,
+
+	TEXTUREFLAGS_CLAMPU = 0x02000000,
+	TEXTUREFLAGS_VERTEXTEXTURE = 0x04000000,
+	TEXTUREFLAGS_SSBUMP = 0x08000000,
+
+	TEXTUREFLAGS_UNUSED_10000000 = 0x10000000,
+
+	TEXTUREFLAGS_BORDER = 0x20000000,
+
+	TEXTUREFLAGS_UNUSED_40000000 = 0x40000000,
+	TEXTUREFLAGS_UNUSED_80000000 = 0x80000000,
+};
+</source>
+
+===VTF header===
+<source lang="cpp">
+typedef struct tagVTFHEADER
+{
+    char            signature[4];       // File signature ("VTF\0"). (or as little-endian integer, 0x00465456)
+    unsigned int    version[2];         // version[0].version[1] (currently 7.2).
+    unsigned int    headerSize;         // Size of the header struct  (16 byte aligned; currently 80 bytes) + size of the resources dictionary (7.3+).
+    unsigned short  width;              // Width of the largest mipmap in pixels. Must be a power of 2.
+    unsigned short  height;             // Height of the largest mipmap in pixels. Must be a power of 2.
+    unsigned int    flags;              // VTF flags.
+    unsigned short  frames;             // Number of frames, if animated (1 for no animation).
+    unsigned short  firstFrame;         // First frame in animation (0 based). Can be -1 in environment maps older than 7.5, meaning there are 7 faces, not 6.
+    unsigned char   padding0[4];        // reflectivity padding (16 byte alignment).
+    float           reflectivity[3];    // reflectivity vector.
+    unsigned char   padding1[4];        // reflectivity padding (8 byte packing).
+    float           bumpmapScale;       // Bumpmap scale.
+    int             highResImageFormat; // High resolution image format.
+    unsigned char   mipmapCount;        // Number of mipmaps.
+    int             lowResImageFormat;  // Low resolution image format (Usually DXT1).
+    unsigned char   lowResImageWidth;   // Low resolution image width.
+    unsigned char   lowResImageHeight;  // Low resolution image height.
+
+    // 7.2+
+    unsigned short  depth;              // Depth of the largest mipmap in pixels. Must be a power of 2. Is 1 for a 2D texture.
+
+    // 7.3+
+    unsigned char   padding2[3];        // depth padding (4 byte alignment).
+    unsigned int    numResources;       // Number of resources this vtf has. The max appears to be 32.
+
+    unsigned char   padding3[8];        // Necessary on certain compilers
+} VTFHEADER;
+</source>
+
+===VTF Resource Entry===
+<source lang="cpp">
+struct ResourceEntryInfo
+{
+	unsigned char	tag[3]; 		// A three-byte "tag" that identifies what this resource is.
+	unsigned char	flags;			// Resource entry flags. The only known flag is 0x2, which indicates that no data chunk corresponds to this resource.
+	unsigned int	offset;			// The offset of this resource's data in the file. 
+};
+</source>
+
+;Tags
+:<code>{ '\x01', '\0', '\0' }</code> - Low-res (thumbnail) image data.
+:<code>{ '\x30', '\0', '\0' }</code> - High-res image data.
+:<code>{ '\x10', '\0', '\0' }</code> - Animated particle sheet data. The entire resource is a compiled [[Animated_Particles|SHT]] file.
+:<code>{ 'C', 'R', 'C' }</code> - [[w:Cyclic redundancy check|CRC]] data. Added by [[VTEX_(Valve_Texture_Tool)|VTEX]], is a CRC of the ''input file'' used to create the VTF, not any part of the VTF itself.
+:<code>{ 'L', 'O', 'D' }</code> - Texture LOD control information.
+:<code>{ 'T', 'S', 'O' }</code> - Game-defined "extended" VTF flags.
+:<code>{ 'K', 'V', 'D' }</code> - Arbitrary KeyValues data. This resource is only defined and added by third-party tooling.
+
+===VTF lo-res image data===
+Tightly packed low resolution image data in the format described in the header. The low resolution image data is always stored in the DXT1 compressed image format. Its dimensions are that of the largest mipmap with a width or height that does not exceed 16 pixels. i.e. for a 256x256 pixel VTF: 16x16, for a 256x64 pixel VTF: 16x4, for a 1x32 pixel VTF: 1x16, for a 4x4 pixel VTF: 4x4.
+
+===VTF hi-res image data===
+Tightly packed interleaved high resolution image data in the format described in the header. Common [[#Image data formats|image formats]] include DXT1, DXT5, BGR888, BGRA8888 and RGBA16161616F. All dimensions must be a multiple of 4.
+
+==Versions==
+===7.6===
+Unofficial VTF version supported by {{strata|4}}. Not compatible with any of Valve's games, or other mods.
+* Adds support for {{w|deflate}} and {{w|zstd}} compression of image data, allowing for reduced storage size.
+* Fixes support for ATI1N and ATI2N, and adds support for BC6H and BC7.
+
+===7.5===
+* Incompatible with {{src04|4}} to {{src13|4}} (e.g. {{hl2}}, {{hls}}, {{portal1}}), {{tf2branch|4|nt=0}} (e.g. {{hl2dm}}, {{css}}, {{dods}}, {{tf2}}, {{hldms}}) and {{l4dbranch|4}}-based games. Also supported on {{gmod|4}}. <br>Textures with VTF version 7.5 used by materials in those games need to be converted using a tool such as [[VTFVer]]. This is useful when e.g. mounting content from {{portal2|4}} or {{csgo|4}} into older games.
+** Common errors encountered when using VTFVer to convert {{csgo|1}} textures to v7.4:
+*** In some cases, an "Exception could not be handled" error manifests during texture conversion. It is not confirmed what causes this at the current time.
+*** Additionally, some of {{csgo|1}} envmap textures, such as <code>materials/environment maps/metal_generic_xxx.vtf</code>, fail to be converted properly and must be reconstructed in an older vtf version. This can be done by simple exporting as <code>.tga</code> and re-importing and saving as v7.4 or earlier.
+* Released July 19th, 2010 as part of {{as|4}}.
+* Bitwise equivalent to v7.4.
+* Redefines and revises two texture flags.{{elaborate}}
+* Spheremaps now officially redundant.
+* Most changes internal to the VTF creation process with VTEX, e.g. mipmap fading, alpha decay and {{xbox360|4}} formats.
+
+===7.4===
+* Requires {{Src07|4}} or newer.
+* Bitwise equivalent to v7.3.
+* {{360|1}}/{{ps3|1}}'s VTF has {{code|VTFX}} signature at the beginning of the file content(s) and stored in big-endian.
+* Addresses issues related to how gamma-correction is performed on textures for TV-output on {{360|1}} combined with hunting down OS Paged Pool Memory.
+* Released October 10th, 2007 as part of [[w:The Orange Box|The Orange Box]] and its [[Source 2007|Source engine branch]].
+
+===7.3===
+* Requires {{Src07|4}} or newer.
+* Added an extensible resource orientated structure.
+* Added CRC, Texture LOD Control and Sheet resources, along with backwards compatible Image and Low Resolution Image resources.
+* Added several vendor specific depth-stencil formats (for internal engine use), along with normal map formats and linear uncompressed formats.
+* Released September 18th, 2007 as part of the {{tf2|4}} beta.
+
+===7.2===
+* Added volumetric texture support.
+* Released September 23rd, 2005 as a [[Steam]] engine update and supported in later versions of {{src04|4}}.
+
+===7.1===
+* Added spheremap support to environment maps. (This was intended for DirectX 6 support which was later cut.)
+
+===7.0===
+* Initial release. (Internal release only, though some v7.0 textures made it to the published title.)
+
+==Other implementations==
+* the LGPL C/C++ library [[VTFLib]]
+* [https://file.io/fqh8bhLzX1rD cl-valve-texture-format] — VTF reader and writer in Common Lisp.
+
+==See also==
+* [[Creating a Material]]
+* [[Material]]
+* [[VMT]]
+* [[WAD]], [[SPR]], and [[BMP]]/[[TGA]] ({{gldsrc|4}} equivalents)
+* [[VTEX (Source 2)|VTEX]] ({{src2|4}} equivalent)
+* [[DDS]]
+
+[[Category:File formats]]
+[[Category:Image formats]]
+[[Category:Material System]]

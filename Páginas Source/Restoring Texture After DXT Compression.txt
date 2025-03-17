@@ -1,0 +1,19 @@
+[[File:DXT decompression comparison.png|thumb|right|250px|Original compressed texture versus the decompressed texture via the AI.<br>(Click to see full size)]]
+[[VTF]] Textures saved in a compressed DXT format suffer irreversible data loss. If the source files for the texture are unavailable, the only choice is to use the compressed texture which can be problematic due to the blocky artifacts and green tint from the compression. If this is used for further edits and then re-compressed, the quality loss will get even greater.
+
+The effects of the DXT can now be reversed by the use of an [https://en.wikipedia.org/wiki/Artificial_intelligence#Artificial_neural_networks AI neural network] model, which has been specifically trained on images in their original format versus their DXT-compressed version. The results are effective on cartoony textures and remove most of the blocky artefacts, although fine-grain detail on more realistic textures will be smoothed out.
+{{note|The AI can only work off information already present in the image, hence the results will never be the same as the original source file. It is only an approximation.}}
+{{warning|DXT textures with fine-grain detail, such as rock or sand, will be smoothed out if cleaned up.}}
+==Steps==
+{{warning|The model linked in this tutorial is trained on textures that have had [[green tint]] introduced due to improper decompression algorithms used by older DXT decoders. Running an image that has been properly decoded (using a tool like VTFEdit Reloaded or Vtex2) will result in a minor hue shift.}}
+# Download [https://github.com/n00mkrad/cupscale/releases/ CupScale] and follow the [https://upscale.wiki/wiki/Cupscale_Installation install instructions here]. {{note|Make sure you have Python 3.9 installed rather than any newer version, as only that specific version will work.}} {{warning|If you don't have all dependencies installed as listed in CupScale's dependency checker, attempting to modify the image will confusingly cause the process to immediately cancel.}}
+# Download the AI model from [https://drive.google.com/file/d/1WXBNdlqDWV10a3L1_U7zuNkSpN9aBF0M/view?usp=sharing here] and assign the model to CupScale (underneath <code>ESRGAN Model Options</code>).
+# Export your compressed texture into .png format and drag it onto CupScale's area.
+# Run the AI by pressing the <code>Upscale and Save</code> button. This might take a while depending on how powerful your GPU is and the image resolution.
+# The new decompressed image will be available beside your original image. 
+==See also==
+* [[Fixing DXT Green Tint Compression]]
+
+[[Category:Material System]]
+[[Category:Technical]]
+[[Category:Tutorials]]

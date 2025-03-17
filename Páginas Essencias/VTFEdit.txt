@@ -1,0 +1,68 @@
+{{LanguageBar}}
+{{stub}}{{cleanup}}
+{{SoftwareBox
+<!-- Basic info -->
+| title     = VTFEdit [[File:Icon-VTFEdit.png|16px]]
+
+<!-- Details -->
+| developer =  Neil "Jed" Jedrzejewski<br>Ryan "Nemesis" Gregg
+| initial_release = June 29, 2005‎{{confirm}}
+| stable_release = Jan 22nd, 2017<!-- according to the exe and the website's last updated date -->
+| written_in = c++
+| type =  Texture tool
+| distribution = Freeware
+| website = [https://nemstools.github.io/pages/VTFLib-Download.html Download]
+
+<!-- Operating system(s)-->
+| windows = 1
+
+<!-- Target engine(s)-->
+| source = 1
+
+}}
+
+{{ModernDeprecated|The creator of VTFEdit has abandoned his projects and website, If you encounter bugs please try using the unofficially updated version ({{vtfeditreloaded|4}}).}}
+{{vtfedit|4}} is a GUI frontend for the functions contained within [[VTFLib]], an LGPL open source programming library. VTFEdit is a successor to [[VTFTool]] and is written by [[User:Wunderboy|Neil "Jed" Jedrzejewski]] and [[User:Nem|Ryan "Nemesis" Gregg]].
+
+VTFEdit itself was written solely by Ryan and is a .NET-based GUI tool for the creation and conversion of [[VTF]] and [[VMT]] files. It is a powerful tool allowing files of various formats to be converted to/from VTF format in all of the Source texture formats. 
+
+VTFEdit produces [[MIP_Mapping|mipmaps]] and DXTn compressed images using nVidia's [http://developer.nvidia.com/object/dds_utilities.html nvDXTlib] library, offering a wide range of formats and filters.
+
+Other features include the ability to create [[Normal_Maps|normal maps]] from greyscale images, various sharpening filters for MIP Map generation, access to all VTF header flags, a simple tree-based VMT creation system with [[GCF]] access, a WAD conversion tool, a batch conversion tool, and a VMT creation wizard.
+
+{{warning|Support for importing and exporting HDR textures is limited; use [[Vtex (Source 1)|Vtex]] to create HDR textures, and {{no_vtf|3.1}} to export them.}}
+{{Important|1=You must have [https://www.microsoft.com/en-us/download/details.aspx?id=21 .NET 3.5] installed to use VTFEdit. The program or Windows will prompt you to install .NET 3.5 if you try to run VTFEdit without it.}}
+==Bugs==
+{{bug|hidetested=1|VTFEdit will crash if you attempt to paste anything but text into the editor.}}
+{{Bug|hidetested=1|VTFEdit DXT decoder has issues that will cause the texture to have [[Fixing DXT Green Tint Compression|green tint]] when extracting it. This is fixed in {{vtfeditreloaded|1}}. The encoder is unaffected.}}
+{{bug|hidetested=1|VTFedit may freeze if you are converting a large number of files, in which case you should wait until the process is completed and do not interrupt it.}}
+
+== Screenshots ==
+<gallery mode=nolines>
+File:Vtfedit1.png|VTFEdit in action
+File:Vtfedit2.png|VMT Editing
+</gallery>
+
+== See also ==
+*{{vtfeditrld|4}}
+*[[Creating a Material]]
+*[[VMT Editor]]
+*[[VTFVer]]
+
+== External links == 
+* [https://github.com/NeilJed/VTFLib VTFLib] - official GitHub repository and binary download
+* [http://nemesis.thewavelength.net/index.php?p=41 Nem's Tools {{bracket|VTFLib - Download - VTEEdit v1.3.3 Full}}]{{dead link}} – the official website
+* [https://web.archive.org/web/20170913055549/http://nemesis.thewavelength.net/index.php?c=238#p238 Nem's Tools {{bracket|VTFLib - Download - VTEEdit v1.3.3 Full}}] – archive on Wayback Machine
+* [https://nemstools.github.io/pages/VTFLib-Download.html Nem's Tools {{bracket|VTFLib - Download}}] – archive hosted on GitHub (faster)
+{{Expand|noborder=1|title=VTFEdit/VTFLib - More mirrors|
+* [https://gamebanana.com/tools/95 VTFLib/VTFEdit v1.3.3] – download @ Gamebanana
+* [https://gamebanana.com/tools/6801 Nem's Tools Archives] – download @ Gamebanana
+* [https://www.tophattwaffle.com/downloads/vtfedit/ VTFEdit | TopHATTwaffle] – download @ TopHATTwaffle's website
+* [https://valvedev.info/guide/ZVYi VTFEdit | Valve Developer Union] – download @ Valve Developer Union
+* [http://www.therazzerapp.de/tools/vtfedit.html Download @ TheRaZZeRApp]{{dead link}}
+* [https://kynooo.github.io/downloads/vtfedit133.exe VTFEdit | Kyno's Storage] – download @ Kyno's website
+}}
+* [https://aur.archlinux.org/packages/vtfedit/ Arch User Repository] – AUR package for VTFEdit on Arch Linux
+* {{no_vtf|3.1}} – a console-only alternative to [[VTF2TGA]]
+{{sdktools|cat=0|0}}
+[[Category:Material System]][[Category:Third Party Tools]]

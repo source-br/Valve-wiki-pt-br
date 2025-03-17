@@ -1,0 +1,467 @@
+{{Tabs|VTF (Valve Texture Format)|source=1|custom1=VTEX (Valve Texture)|custom1alt=Source 2|main=source}}
+{{for|the Source 1 command-line program|[[VTEX (Valve Texture Tool)]]}}
+VTEX is the proprietary texture format use by the [[Source 2]] engine, succeeding the {{src|1}}'s [[VTF]] texture format. The VTEX format includes a .vtex source file that describes how to compile the texture, and the actual compiled .vtex_c texture file.
+
+For most uses the .vtex_c file is compiled automatically by the tools, and no .vtex source file is generated. In some cases, such as when creating sprites for particle effects or textures for [[env_cubemap_fog]] and [[env_gradient_fog]], no automated tool exists and the .vtex file has to be created manually.
+
+{{todo|Mention [https://github.com/kristiker/source2utils/releases/ dds2vtex] somewhere.}}
+= Source file format =
+The .vtex file is a [[DMX]] file usually created in the keyvalues2_noids text format. It describes how to compile a texture from a set of image inputs. Placing a .vtex file in the content directory of the current add-on will cause the tools to compile it when referenced.
+
+== Template file ==
+<syntaxhighlight lang="js">
+<!-- dmx encoding keyvalues2_noids 1 format vtex 1 -->
+"CDmeVtex"
+{
+	"m_inputTextureArray" "element_array" 
+	[
+		"CDmeInputTexture"
+		{
+			"m_name" "string" "InputTexture0"
+			"m_fileName" "string" "materials/my_textures/my_texture.png"
+			"m_colorSpace" "string" "srgb"
+			"m_typeString" "string" "2D"
+			"m_imageProcessorArray" "element_array" 
+			[
+				"CDmeImageProcessor"
+				{
+					"m_algorithm" "string" "None"
+					"m_stringArg" "string" ""
+					"m_vFloat4Arg" "vector4" "0 0 0 0"
+				}
+			]
+		}
+	]
+	"m_outputTypeString" "string" "2D"
+	"m_outputFormat" "string" "DXT1"
+	"m_outputClearColor" "vector4" "0 0 0 0"
+	"m_nOutputMinDimension" "int" "0"
+	"m_nOutputMaxDimension" "int" "0"
+	"m_textureOutputChannelArray" "element_array" 
+	[
+		"CDmeTextureOutputChannel"
+		{
+			"m_inputTextureArray" "string_array" [ "InputTexture0" ]
+			"m_srcChannels" "string" "rgba"
+			"m_dstChannels" "string" "rgba"
+			"m_mipAlgorithm" "CDmeImageProcessor"
+			{
+				"m_algorithm" "string" "Box"
+				"m_stringArg" "string" ""
+				"m_vFloat4Arg" "vector4" "0 0 0 0"
+			}
+			"m_outputColorSpace" "string" "srgb"
+		}
+	]
+	"m_vClamp" "vector3" "0 0 0"
+	"m_bNoLod" "bool" "0"
+}
+
+</syntaxhighlight>
+
+== File data format ==
+{{note | The lists may be incomplete.}}
+
+The .vtex file is structures as a CDmeVtex list with arrays for CDmeInputTexture input textures and CDmeTextureOutputChannel output channel sets. 
+
+=== CDmeVtex root keys ===
+{| class="standard-table"
+! style="width: 200px;" | Attribute
+! style="width: 60px;" |Type
+! Description
+|-
+| m_inputTextureArray
+| element_array
+| Array of CDmeInputTexture entries describing each input image.
+|-
+| m_textureOutputChannelArray
+| element_array
+| Array of CDmeTextureOutputChannel entries describing sets of output channels.
+|-
+| m_outputTypeString
+| string
+| Type of texture to generate.
+|-
+| m_outputFormat
+| string
+| Image data format to generate.
+|-
+| m_outputClearColor
+| vector4
+| Initial color before input textures are applied to the output.
+|-
+| m_nOutputMinDimension
+| int
+| The minimum size of a side of the output texture in pixels .
+|-
+| m_nOutputMaxDimension
+| int
+| The maximum size of a side of the output texture in pixels.
+|-
+| m_nOutputDimensionReduce
+| int
+| {{todo}}
+|-
+| m_vClamp
+| vector3
+| Whether to clamp the S, T and U coordinates respectively.
+|-
+| m_bNoLod
+| bool
+| Disables Level of Detail.
+|-
+| m_bHiddenAssetFlag
+| bool
+| Marks the output file as a hidden asset.
+|-
+| m_bCreateLinearColorSpaceApiTexture
+| bool
+| {{todo}}
+|-
+| m_nDisplayRectWidth
+| int
+| {{todo}}
+|-
+| m_nDisplayRectHeight
+| int
+| {{todo}}
+|-
+| m_nMotionVectorsMaxDistanceInPixels
+| int
+| {{todo}}
+|}
+
+=== CDmeInputTexture keys ===
+{| class="standard-table"
+! style="width: 200px;" | Attribute
+! style="width: 60px;" |Type
+! Description
+|-
+| m_name
+| string
+| Name to refer to this input by.
+|-
+| m_fileName
+| string
+| Filename for the input image.
+|-
+| m_colorSpace
+| string
+| Image color space: linear or srgb
+|-
+| m_fileExt
+| string
+| {{todo}}
+|-
+| m_nMinBitsPerChannel
+| int
+| {{todo}}
+|-
+| m_typeString
+| string
+| Type of input texture.
+|-
+| m_imageProcessorArray
+| element_array
+| Array of image processor algorithms to apply to the input.
+|-
+| m_bPassThroughToCompiledVtex
+| bool
+| Pass through the input image directly to the texture file?
+|-
+| m_n3DSliceCount
+| int
+| {{todo}}
+|-
+| m_n3DSliceWidth
+| int
+| {{todo}}
+|-
+| m_n3DSliceHeight
+| int
+| {{todo}}
+|}
+
+=== CDmeTextureOutputChannel keys ===
+{| class="standard-table"
+! style="width: 200px;" | Attribute
+! style="width: 60px;" |Type
+! Description
+|-
+| m_srcChannels
+| string
+| Specifies the used channels of the input texture and their order: r, g, b and a
+|-
+| m_dstChannels
+| string
+| Specifies what channels of the output textures map to the specified input channels: r, g, b and a
+|-
+| m_mipAlgorithm
+| CDmeImageProcessor
+| Image processor algorithm to use for mipmap generation.
+|-
+| m_outputColorSpace
+| string
+| Output color space: linear or srgb
+|-
+| m_inputTextureArray
+| string_array
+| Array of input textures by their m_name keys.
+|}
+
+
+=== CDmeImageProcessor keys ===
+{| class="standard-table"
+! style="width: 200px;" | Attribute
+! style="width: 60px;" |Type
+! Description
+|-
+| m_algorithm
+| string
+| What algorithm to use for this image processor.
+|-
+| m_stringArg
+| string
+| Algorithm specific argument.
+|-
+| m_vFloat4Arg
+| vector4
+| Algorithm specific argument.
+|}
+
+
+=== Texture types ===
+{| class="standard-table"
+! style="width: 200px;" | Format
+! Description
+|-
+| 1D
+| One dimensional texture.
+|-
+| 2D
+| Two dimensional texture.
+|-
+| 3D
+| Three dimensional volumetric texture.
+|-
+| 1DARRAY
+| Array of one dimensional textures.
+|-
+| 2DARRAY
+| Array of two dimensional textures.
+|-
+| 3DARRAY
+| Array of three dimensional volumetric textures.
+|-
+| CUBE
+| Single cubemap texture with a cross layout.
+|-
+| CUBEARRAY
+| Array of cubemap sides.
+|}
+
+
+=== Image data formats ===
+{| class="standard-table"
+! style="" | Format
+! Description
+|-
+| DXT1
+| Standard RGB block compression (also known as BC1)
+|-
+| DXT5
+| Standard RGBA block compression (also known as BC3)
+|-
+| ATI1N 
+| Single-channel (greyscale) block compression (also known as BC4)
+|-
+| ATI2N 
+| Two-channel block compression (also known as BC5)
+|-
+| BC6H 
+| HDR block compression
+|-
+| BC7 
+| High quality RGB or RGBA block compression {{dota2|not}}
+|-
+| I8 
+| Uncompressed greyscale
+|-
+| IA88 
+| Uncompressed greyscale with alpha
+|-
+| RGBA8888 
+| 
+|-
+| BGRA8888  
+| 
+|-
+| R16 
+| 
+|-
+| RG1616 
+| 
+|-
+| RGBA16161616 
+| 
+|-
+| R16F 
+| 
+|-
+| RG1616F 
+| 
+|-
+| RGBA16161616F 
+| 
+|-
+| R32F 
+| 
+|-
+| RG3232F 
+| 
+|-
+| RGB323232F 
+| 
+|-
+| RGBA32323232F 
+| 
+|-
+| R11_EAC 
+| 
+|-
+| RG11_EAC 
+| 
+|}
+
+=== Image processor algorithms ===
+These algorithms can be added to an input m_imageProcessorArray.
+{| class="standard-table"
+! style="width: 200px;" | Algorithm
+! Description
+|-
+| None
+| Do nothing.
+|-
+| Inverse
+| Invert the image channels.
+|-
+| NormalizeNormals
+| Normalize the vectors of a normal map to have a length of 1.
+|-
+| FillToPowerOfTwo
+| Fill the texture to the nearest power of two size.
+|-
+| FillToMultipleOfFour
+| Fill the texture to the nearest multiple of two size.
+|-
+| EncodeRGBM
+| Encode a HDR texture to RGBM: RGB with a multiplier in the alpha channel.
+|-
+| Mod2XCenter
+| {{todo}}
+|-
+| HeightToNormal
+| Generate a normal map from a height map.
+|-
+| DilateColorInTransparentPixels
+| {{todo}}
+|-
+| ConvertToYCoCg
+| Convert the channels to the YCoCg color model.
+|}
+
+
+=== Mipmap processor algorithms ===
+One of these algorithms can be selected as the mip processing algorithm for the output.
+{| class="standard-table"
+! style="width: 200px;" | Algorithm
+! Description
+|-
+| None
+| Output without mipmaps.
+|-
+| Box
+| Standard box filtered mipmaps.
+|-
+| Nice
+| Use Source 1 [[NICE_filtering|NICE filtered]] mipmaps.
+|-
+| BoxInverse
+| Standard box filtered mipmaps with inverted colors.
+|-
+| MultiplyNoMip
+| Multiply two input textures together.
+|-
+| MultiplyBox
+| Multiply two input textures together, with box filtering mipmaps.
+|-
+| AlphaWeighted
+| {{todo|Used for transparency masks and color in the same texture.}}
+|-
+| Normals
+| {{todo|Regular tangent space normal maps?}}
+|-
+| AnisoNormal
+| {{todo}}
+|-
+| AnisoNormalRoughness
+| {{todo}}
+|-
+| AnisoRoughness_RG
+| {{todo}}
+|-
+| HemiOctAnisoRoughness
+| Used with hemi-octahedron normal maps and anisotropic roughness maps packed into the RB and GA channels respectively.
+|-
+| HemiOctIsoRoughness_RG_B
+| Used with hemi-octahedron normal maps and regular isotropic roughness maps packed into the RB and G channels respectively.
+|-
+| HemiOctAnisoRoughness_RG_BA
+| {{todo}}
+|-
+| GGXCubeMapBlur
+| Blur cubemap mips to use for variable roughness reflections with the GGX BRDF.
+|-
+| GGXCubeMapBlur_RGBM
+| Blur cubemap mips to use for variable roughness reflections with the GGX BRDF. For RGBM encoded textures.
+|-
+| RGBM
+| Generate mips for RGBM encoded textures.
+|-
+| Mip2DGradient
+| {{todo}}
+|-
+| PreserveCoverage
+| {{todo}}
+|-
+| MipDepth
+| {{todo}}
+|-
+| MipHeight
+| {{todo}}
+|-
+| MipWidth
+| {{todo}}
+|-
+| AutoLevels
+| {{todo}}
+|-
+| WrapGaussian
+| {{todo}}
+|-
+| HeightCombine
+| {{todo}}
+|}
+
+
+= Compiled file format =
+{{todo}}
+
+The compiled .vtex_c format can be extracted with the third party tool {{vrf|4}}.
+
+= See also =
+[[SteamVR/Environments/Fog_Tutorial|SteamVR Home env_gradient_fog tutorial]]
+
+[[Category:Source 2]]
+[[Category:Material System]]
+[[Category:File formats]]

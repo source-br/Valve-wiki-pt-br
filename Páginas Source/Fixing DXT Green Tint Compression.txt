@@ -1,0 +1,26 @@
+[[File:DXT compression demo.jpg|thumb|right|300px|Textura original (esquerda) comparada com uma copia uma cópia reconvertida e não tratada (direita), demostrando os efeitos de compressão DXT.]]
+{{update|Isto não e um problema com compressão DXT, mas sim com o decodificado DXT regular do {{VTFEdit|4|addtext='s}}, no qual afeta a visualização e exportação! Em vez disso use o [https://github.com/Sky-rym/VTFEdit-Reloaded VTFEdit Reloaded]. (O plug-in {{photoshop|2}} também parece ter esse problema.)<br>As cores de VTFs criados com Vtex, VTFEdit, VTFEdit Reloaded, e Vtex2 todos parecerão imperceptíveis um do outro quando vistos lado a lado no jogo ou no Hammer. No entanto, compressores mais novos provavelmente serão um pouco mais eficazes na redução de artefatos de compressão visíveis e na melhoria da qualidade do mipmap. {{tf2}} O Vtex também produz resultados significativamente piores do que outras versões do Vtex, tais como {{asw}}, {{hl2}} ou {{csgo}}.}}
+Na {{src|2|nt=1}}, texturas são armazenadas usando o Valve Texture Format (VTF), que pode armazenar informações da imagem em uma grande variedade de formatos. Os mais comuns e  padronizados são os  lossy e baseados em compressão DXT1 (usando para texturas sem canal alfa) e DXT5 (usando para texturas com canal alfa).
+
+Entretanto, quando um arquivo VTF com compressão DXT e visto ou extraído usando o  {{VTFEdit|2}}, o resultado da extração terá um  tom levemente esverdeado. Normalmente, este resultado alterado não teria necessidade de alterações. Entretanto, se o projeto requer tanto a texturas e a versão modificada lado a lado, as diferenças tornaram-se inevitavelmente evidentes, solicitando a implementação de uma solução alternativa.
+
+Uma solução natural seria de armazenar a textura usando um formato diferente, tais como descomprimida, e portanto, sem perdas, como BGR888 ou BGRA8888. Entretanto, estes formatos iram aumentar consideravelmente o tamanho do arquivo e uso de VRAM. Em vez disso, use {{vtfeditreloaded|2}}, que conserta o tom esverdeado da textura quando visualizado ou extraído.
+
+==Consertando problemas do tom esverdeado==
+# Abra a textura original no editor de imagem de sua escolha.
+# Crie um layer vazio com suporte a canal alfa em cima da textura original.
+# Preenchia o novo layer usando o Balde com a cor RGB 7 3 7 (Notação HTML #070307).
+# Copie a textura original a cole a no canal alfa do novo layer.
+# Ajuste o modo do layer para Legacy Addition (GIMP),<sup>[1]</sup>Subexposição linear (Photoshop), Aditivo (Paint.NET) ou o modo de mesclagem baseado em adição equivalente do seu editor.
+# Achate a imagem se a textura não contem nenhuma forma de transparência. Mais se conter, mescle todos os layers visíveis .
+# Exporte-as como TGA e converta-as para VTF usando o {{Vtfeditreloaded|4}}. Para o formato de imagem, use tanto DXT1 ou DXT5, dependendo do seu material original.
+
+===Notas de rodapé===
+# Para o GIMP 2.10, Para o GIMP 2.10, todo o programa foi portado para a biblioteca de processamento de imagens GEGL, que é baseado no espaço de cor RGB linear em oposição ao espaço de cor RGB corrigido por gama (perceptual), que modifica o comportamento de vários modos de mesclagem. É por isso que é necessário alternar os modos de mesclagem de Normal para Legacy; para compatibilidade com versões anteriores à versão 2.10.
+
+==Veja também==
+* {{L|Restoring Texture After DXT Compression}}
+
+{{ACategory:Material System}}
+{{ACategory:Technical}}
+{{ACategory:Tutorials}}

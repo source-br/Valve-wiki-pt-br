@@ -1,0 +1,97 @@
+{{strings subpage
+|number=8
+| en=8
+| eo=7
+| hr=8
+| ru=8
+| vi=8
+| zh=8
+}}
+
+*{{{{PAGENAME}}|title}}
+*{{{{PAGENAME}}|top}}
+*{{{{PAGENAME}}|bottom1}}
+*{{{{PAGENAME}}|bottom2}}
+*{{{{PAGENAME}}|bottom3}}
+*{{{{PAGENAME}}|bottom4}}
+*{{{{PAGENAME}}|bottom5}}
+*{{{{PAGENAME}}|bottom6}}
+
+<includeonly>
+
+<onlyinclude>{{#switch:{{{1|}}}
+| title = {{#switch: {{intlang}}
+	| #default = Automatic Category
+	| eo = Aŭtomata Kategorio
+	| hr = Automatska kategorija
+	| ru = Автоматичес&shy;кая&nbsp;категория
+	| vi = Thể loại<br>tự dộng
+	| zh = 自动<br>类别
+	}}
+
+| top = {{#switch: {{intlang}}
+	| #default = Please <span style=color:#FFF>do not</span> manually add pages to this category
+	| eo = Bonu <span style=color:#FFF>ne</span> mane aldonu paĝojn al tiu ĉi kategorio.
+	| hr = <span style=color:#FFF>Nemojte</span> ručno dodavati stranice u ovu kategoriju
+	| ru = Пожалуйста <span style=color:#FFF>НЕ</span> добавляйте вручную страницы в эту категорию
+	| vi = Xin <span style=color:#FFF>đừng</span> tự ý thêm trang vào cái thể loại này.
+	| zh = 请<span style=color:#FFF>不要</span>手动将页面添加到此类别。
+	}}
+
+| bottom1 = {{#switch: {{intlang}}
+	| #default = This category is automatically added
+	| eo = Tiun ĉi kategorion aŭtomate aldonis
+	| hr = Ova se kategorija automatski dodaje
+	| ru = Эта категория наполняется автоматически
+	| vi = Cái thể loại này sẽ được tự động thêm
+	| zh = 此类别
+	}}
+
+| bottom2 = {{#switch: {{intlang}}
+	| #default = by the
+	| eo = la
+	| hr = prilikom korištenja
+	| ru = при использовании
+	| vi = bởi
+	| zh = 由
+	}}
+
+| bottom3 = {{#switch: {{intlang}}
+	| #default = following templates:
+	| eo = sekvantaj ŝablonoj:
+	| hr = sljedeći predlošci:
+	| ru = следующих шаблонов:
+	| vi = những bản mẫu này:
+	| zh = 以下模板自动添加：
+	}}
+
+| bottom4 = {{#switch: {{intlang}}
+	| #default = template. 
+	| eo = ŝablono.
+	| hr = predložak.
+	| ru = шаблона. 
+	| vi = bản mẫu này.
+	| zh = 模板自动添加。
+	}}
+
+| bottom5 = {{#switch: {{intlang}}
+	| #default = by a template used on these pages. 
+	| eo = de ŝablono uzata en tiuj paĝoj.
+	| hr = prema predlošku korištenom na ovim stranicama.
+	| ru = при использовании шаблона на страницах.
+	| vi = bởi cái bản mẫu được sử dụng trong những trang này. 
+	| zh = 由下列页面上使用的模板自动添加。
+	}}
+
+| bottom6 = {{#switch: {{intlang}}
+	| #default = <br>If the page has been added to this category by a template, but does not show up, you can "{{purge}}" this page.
+	| hr = <br>Ako je stranica dodana ovoj kategoriji prema predlošku, ali se ne prikazuje, možete "{{purge|očistiti}}" ovu stranicu.
+	| ru = <br>Если страница была добавлена в эту категорию с помощью шаблона, но не отображается, нажмите "Очистить буфер" этой страницы.
+	| vi = <br>Nếu trang đã được thêm vào mục này bởi một bản mẫu, nhưng nó không hiện lên, bạn có thể "{{purge|Làm mới}}" trang thể loại này.
+	| zh = <br>如果页面已经通过某个模板添加到此分类，你可以「{{purge|刷新}}」此页面。
+	}}
+
+| #default = {{error|Unrecognized string used!}}
+}}</onlyinclude>
+
+</includeonly>

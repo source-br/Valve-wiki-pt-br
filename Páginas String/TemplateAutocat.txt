@@ -1,0 +1,27 @@
+{{ulf|en=1|eo=1|ru=1|vi=1|zh=1}}
+{{todo|pick nicer colors? feels like current color doesn't fit too well}}
+{{Doc}}
+
+<includeonly><onlyinclude>{{footer
+|bgcolor = #262626
+|borderrgb = 230, 54, 29
+|borderalpha = 1
+|titlergb = 230, 54, 29
+|textbgrgb = 230, 54, 29
+|title = {{Autocat/strings|title}}
+|1='''{{Autocat/strings|top}}'''<br>{{Autocat/strings|bottom1}} {{#if: {{{1|}}}
+          |{{Autocat/strings|bottom2}} {{#if:{{{2|}}}
+
+                  |{{Autocat/strings|bottom3}} {{Code|&#123;&#123;[[Template:{{{1|}}}|{{{1|}}}]]&#125;&#125;}} {{Code|&#123;&#123;[[Template:{{{2|}}}|{{{2|}}}]]&#125;&#125;}} {{#if:{{{3|}}}
+
+                         |{{Code|&#123;&#123;[[Template:{{{3|}}}|{{{3|}}}]]&#125;&#125;}}|}} {{#if:{{{4|}}}
+
+                                |{{Code|&#123;&#123;[[Template:{{{4|}}}|{{{4|}}}]]&#125;&#125;}}|}} {{#if:{{{5|}}}
+
+                                       |{{Code|&#123;&#123;[[Template:{{{5|}}}|{{{5|}}}]]&#125;&#125;}}|}}|{{Code|&#123;&#123;[[Template:{{{1|}}}|{{{1|}}}]]&#125;&#125;}} {{Autocat/strings|bottom4}}}}
+
+          |{{Autocat/strings|bottom5}}
+
+          }}{{Autocat/strings|bottom6}}
+}}{{yesno|{{{nocat|}}}|no=[[Category:Automatic category]]|yes=}}</onlyinclude></includeonly>
+<noinclude>[[Category:Asbox templates]]</noinclude>
