@@ -1,0 +1,48 @@
+{{LanguageBar}}
+__NOTOC__
+{{Industry tool|{{w|Paint.NET}}}}
+{{SoftwareBox
+<!-- Basic info -->
+| title     = Paint.NET
+| image = Icon-Paintdotnet.png
+<!-- Details -->
+| developer = dotPDN, LLC
+| initial_release = 6 de Maio, 2004
+| stable_release = 5 de Março, 2024
+| written_in = csharp
+| type = Graphics editor
+| distribution = Freeware
+| website = [https://www.getpaint.net getpaint.net]
+<!-- Target engine(s)-->
+| source = 1
+| source2 = 1
+}}
+
+O {{Paintdotnet|4.1}} é um editor de gráficos raster gratuito. Desenvolvido por [https://www.dotpdn.com/ dotPDN, LLC] somente para {{win|4.1}}.
+
+Faça o download gratuito em [https://getpaint.net/ getpaint.net] ou compre-o na {{ms store|9NBHCS1LX4R0|Microsoft Store}}.
+
+== Uso com a Source ==
+
+=== Suporte a VTF ===
+
+[[File:Paintdotnet-vtf-dialog.png|250px]]
+
+[https://nemstools.github.io/pages/Miscellaneous-PDN_VTF_Plug-In.html Faça o download do plug-in VTF do Paint.NET aqui].
+
+==== Funcionalidades ====
+*As versões do [[VTF]] de ''7.0'' a ''7.5'' são compatíveis.
+*As texturas do [[Mapa normal]] podem ser geradas automaticamente.
+*Suporte para opções de [[mipmapping]].
+*Os modelos são fornecidos para [[compression]], [[skybox]]es e [[Decals|sprays]].
+*O [[Alpha]] será exportado se o formato escolhido for compatível com ele.
+
+{{bug|Se algumas caixas de seleção aparecerem em branco ao exportar uma textura, você deverá mudar para o esquema de cores '''Light''' nas configurações.}}
+
+=== Suporte à correção de cores RAW ===
+{{main|Color Correction#Creating Color Correction using Paint.NET|Creating Color Correction using Paint.NET}}
+
+{{sdktools|0}}
+[[Category:Third Party Tools]]
+[[Category:Material System]]
+[[Category:Third Party Source 2 Tools]]

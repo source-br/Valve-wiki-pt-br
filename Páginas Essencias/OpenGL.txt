@@ -1,70 +1,70 @@
 {{cleanup|grammar}}
-{{todo|Write about custom OpenGL renderer in {{xash|4}}/{{paranoia|4}}/{{cof|4}} and etc. (possibly also {{csneo|4}}?)}}
-'''OpenGL''' is a cross-platform 3D graphics API, which is used by the hardware renderers of {{gldsrc|1}} and {{idtech2|1}}, as well as one {{src2|1}} game ({{dota2|1}}). It is also used on {{Src|1}} engine, for systems that doesn't support [[Direct3D]] ({{mac|1}} and {{linux|1}}), and for [[GLView]].
+{{todo|Escreva sobre o renderizador OpenGL personalizado em {{xash|4}}/{{paranoia|4}}/{{cof|4}} e etc. (possivelmente também {{csneo|4}}?)}}
+'''OpenGL'''' é uma API de gráficos 3D multiplataforma usada pelos renderizadores de hardware de {{gldsrc|1}} e {{idtech2|1}}, bem como por um jogo {{src2|1}} ({{dota2|1}}). Ele também é usado no mecanismo {{Src|1}}, para sistemas que não oferecem suporte ao [[Direct3D]] ({{mac|1}} e {{linux|1}}) e para o [[GLView]].
 
-OpenGL was later superseded by [[Vulkan]], released in 2016. OpenGL was discontinued in 2017, having reached version 4.6.
+Mais tarde, o OpenGL foi substituído pelo [[Vulkan]], lançado em 2016. O OpenGL foi descontinuado em 2017, tendo alcançado a versão 4.6.
 
 =={{idtech2|name}} (GLQuake)==
-{{todo|{{quake2|4}} has additional stuff that goldsrc uses}}
-{{idtech2|4}} (GLQuake) uses [[OpenGL]] version 1.0.
-[[File:GLQuake 1.png|thumbnail|Screenshot in-game of {{Quake|4}} GLQuake, using OpenGL.]]
-====Features====
-*'''Experimental Reflections'''
-*'''Translucent Water'''
-*'''Dynamic Shadows''' 
-{{note|To enables Dynamic Shadows {{code|r_shadows}} must be set to {{code|1}}}}
-*'''Texture Filtering'''
-*'''32-bit color'''
+{{todo|{{quake2|4}} tem outras coisas que a goldsrc usa}}
+{{idtech2|4}} (GLQuake) usa [[OpenGL]] versão 1.0.
+[[File:GLQuake 1.png|thumbnail|Captura de tela no jogo do {{Quake|4}} GLQuake, usando OpenGL.]]
+====Funcionalidades====
+*'''Reflexões experimentais'''
+*'''Água translúcida'''
+*'''Sombras dinâmicas''' 
+{{note|Para ativar as sombras dinâmicas, {{code|r_shadows}} deve ser definido como {{code|1}}}}
+*'''Filtragem de textura'''
+*'''cor 32-bit'''
 
 ==GoldSrc==
-{{gldsrc|4}} uses [[OpenGL]] version 1.0 which is same version as using the {{idtech2|4}} (GLQuake).
-{{Confirm|According to PCGW, it mentions that HL uses OpenGL 2.1 (with latest version). Confirm if Mac or Linux version use any other version of OpenGL such as 2.1 or 1.x like Windows.}}
-[[File:Half-life opengl.png|thumbnail|Screenshot in-game of {{hl1|4}}, using OpenGL.]]
-====Features====
-* '''Colored lighting''' - Quake simply had monotone lighting
-* '''Translucent and transparent textures''' - Glass can now be used in maps
-* '''Water waves'''
-*'''Texture Filtering''' - like [https://quake.fandom.com/wiki/GLQuake GLQuake]
-* '''[[Detail textures (GoldSrc)|Detail textures]]''' (since 2004)<!-- DoD 1.2 and CZero -->
-* '''Dynamic Shadows''' ({{cmd|r_shadows}}; removed in 2003 Steam update, but re-added in 25th Anniversary update)
-=====Since 2013 SteamPipe Update=====
-* '''FBO renderer''' - A new method of rendering the game, which allows MSAA to work with GoldSrc engine. This also allows the game to run on fullscreen in a borderless window.
-* '''MSAA [[anti-aliasing]]''' - GoldSrc now natively performs 4x MSAA, reducing the amount of jagged edges/staircase effect on the geometry. This is automatically enabled when using the FBO renderer, unless the {{code|-nomsaa}} [[command-line option]] is used.
+{{gldsrc|4}} usa a versão 1.0 do [[OpenGL]], que é a mesma versão que você usa no {{idtech2|4}} (GLQuake).
+{{Confirm|De acordo com o PCGW, ele menciona que o HL usa o OpenGL 2.1 (com a versão mais recente). Confirme se a versão para Mac ou Linux usa alguma outra versão do OpenGL, como 2.1 ou 1.x, como o Windows.}}
+[[File:Half-life opengl.png|thumbnail|Captura de tela no jogo de {{hl1|4}}, usando OpenGL.]]
+====Funcionalidades====
+* '''Iluminação colorida''' - O Quake simplesmente tinha iluminação monótona
+* '''Texturas translúcidas e transparentes''' - O vidro agora pode ser usado em mapas
+* '''Ondas de água'''
+*'''Filtragem de textura''' - como [https://quake.fandom.com/wiki/GLQuake GLQuake]
+* '''[[Detail textures (GoldSrc)|Textura de detalhes]]''' (desde 2004)<!-- DoD 1.2 and CZero -->
+* '''Dynamic Shadows''' ({{cmd|r_shadows}}; removido na atualização do Steam de 2003, mas adicionado novamente na atualização do 25º aniversário)
+=====Atualização do SteamPipe desde 2013=====
+* '''FBO renderer''' - Um novo método de renderização do jogo, que permite que o MSAA funcione com o mecanismo GoldSrc. Isso também permite que o jogo seja executado em tela cheia em uma janela sem bordas.
+* '''MSAA [[anti-aliasing]]''' - O GoldSrc agora executa nativamente 4x MSAA, reduzindo a quantidade de bordas irregulares/efeito de escada na geometria. Isso é ativado automaticamente ao usar o renderizador FBO, a menos que você use a opção {{code|-nomsaa}} [[command-line option]] seja usada.
 
 ===Svengine===
-{{Svengine|1}} uses OpenGL 1.x with some 3.x features.
+{{Svengine|1}} usa o OpenGL 1.x com alguns recursos 3.x.
 
 ==Source==
-In {{src|4}}, [[OpenGL]] uses [[ToGL]] to convert [[DirectX Versions|DirectX]] shaders to [[OpenGL]] for {{mac|3}} and {{Linux|3}} and uses OpenGL version 2.1 which is similar to Direct3D 9.0b.
+Em {{src|4}}, o [[OpenGL]] usa o [[ToGL]] para converter os shaders do [[DirectX Versions|DirectX]] em [[OpenGL]] para {{mac|3}} e {{Linux|3}} e usa a versão 2.1 do OpenGL, que é semelhante ao Direct3D 9.0b.
 ===[[DirectX Versions|Dxlevel 92]]===
-[[DirectX Versions|Dxlevel 92]] is Source's [[OpenGL]] equivalent to [[DirectX Versions|DirectX 9 Shader Model 2]] (DX9.0b)
+[[Versões do DirectX|Dxlevel 92]] é o [[OpenGL]] equivalente ao [[Versões do DirectX|DirectX 9 Shader Model 2]] (DX9.0b)
 
-====Features====
-* [[$lightwarptexture|Lightwarp]] support
-* [[HDR|High dynamic range rendering]] (enabled by default)
-* Refractions with the use of a bump-map
-* High-quality reflective water (used frequently)
-* Softer edge dynamic shadows
-* Normal-mapped lighting on models
-* Improved-quality specular effects
-* [[$phong|Phong]] shading
-* [[Color Correction]]
-* Motion Blur
+====Funcionalidades====
+* Suporte a [[$lightwarptexture|Lightwarp]]
+* [[HDR|High dynamic range rendering]] (ativado por padrão)
+* Refrações com o uso de um mapa de relevo
+* Água refletora de alta qualidade (usada com frequência)
+* Sombras dinâmicas com bordas mais suaves
+* Iluminação com mapeamento normal em modelos
+* Efeitos especulares de qualidade aprimorada
+* Shading [[$phong|Phong]]
+* [[Color Correction|Correção de cor]]
+* Desfoque de Movimento
 
 ==Source 2==
-{{Dota2|4}} is the only Source 2 game which supports OpenGL. It uses OpenGL version 2.1.
+{{Dota2|4}} é o único jogo da Source 2 que suporta OpenGL. Ele usa a versão 2.1 do OpenGL.
 
-OpenGL support for Dota 2 was dropped with the November 15th, 2021 update for Windows, and later Mac/Linux, with the optional OpenGL DLC for Windows completely emptied.
+O suporte a OpenGL para o Dota 2 foi abandonado com a atualização de 15 de novembro de 2021 para Windows e, posteriormente, para Mac/Linux, com o DLC OpenGL opcional para Windows completamente esvaziado.
 
-==See also==
+==Veja também==
 * [[Direct3D]]
 * [[Vulkan]]
 * [[Software renderer]]
 
-== External links ==
+== Links Externos ==
 * {{w|OpenGL}}
-* {{w|Quake (video_game)#GLQuake|GLQuake}} on Wikipedia
-* [https://quake.fandom.com/wiki/GLQuake GLQuake] on Quake Fandom wiki
+* {{w|Quake (video_game)#GLQuake|GLQuake}} na Wikipédia
+* [https://quake.fandom.com/wiki/GLQuake GLQuake] na Quake Fandom wiki
 
 [[Category:Glossary]]
 [[Category:Graphics API]]

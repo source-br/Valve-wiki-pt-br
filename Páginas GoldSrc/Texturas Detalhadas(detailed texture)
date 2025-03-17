@@ -1,0 +1,23 @@
+{{LanguageBar|title=Texturas Detalhadas(GoldSrc)}}
+{{gldsrc topicon}}
+{{back|Half-Life SDK/Textures}}
+{{for|texturas detalhadas usadas no {{src|4}}|{{L|$detail}}}}
+{{stub}}
+'''Texturas Detalhadas''' no {{gldsrc|4.1}} são texturas que são are textures que são sobrepostas em texturas {{L|WAD}} para aumentar o detalhe percebível na superfície, sem aumentar o tamanho em texel (oque resultaria em uma usagem maior de {{L|AllocBlock}}). Eles são usados extensivamente no {{dod|4.1}} (desda versão 1.2) e {{czero|4.1}}.
+
+Ao contrário do {{Src|4.1}}, texturas detalhadas no {{gldsrc|4.1}} sempre usam {{L|DecalModulate}} e são sempre em 24 bits.
+{{bug|As texturas detalhadas estão com problemas nas últimas versões do HL25 e podem não ser exibidas corretamente ao serem redimensionadas.}}
+{{Important|'''<big>"Não confie apenas nas texturas detalhadas para que um mapa tenha a aparência 'correta'!"</big>'''<br>
+GPUs de usuários ao qual bloquearam a extensão {{code|GL_ARB_multitexture}} (como para {{pcgw|Half-Life#OpenGL_overbright_lighting|ativar a iluminação excessiva}} nas versões anteriores ao 25º aniversário da engine) não verão texturas detalhadas.<br>
+Adicionalmente, usuários caso queiram podem desabilitar as texturas detalhadas pelo {{L|cvar}} {{code|r_detailtextures}} ou pelas configurações de vídeo no menu. 
+{{note|Texturas detalhadas estão indisponíveis no {{L|software mode|modo de Software}}, mas isso vem com uma série de outras limitações e é frequentemente ignorado.}} }}
+{{bug|Texturas detalhadas não irão funcionar caso utilizado os binários do {{linux|4.1}}. ([https://github.com/ValveSoftware/halflife/issues/1688 Problema relevante no Github])
+{{workaround|Utilize os binários do {{win|4.1}} através do {{w|Proton (software)|Proton|icon=hide}} em vez disso.}}
+}}
+{{bug|As texturas detalhadas que não são potências de dois não são exibidas corretamente quando o Mipmapping está ativado (problema que persiste desde a atualização NPoT no final de 2019; [https://github.com/ValveSoftware/halflife/issues/3148 problema relevante no GitHub]). Texturas detalhadas que são potências de dois funcionam bem em texturas WAD que não são potências de dois.}}
+{{note|Texturas detalhadas só podem ser usadas no {{L|BSP (GoldSrc)|BSP}} e texturas {{L|WAD}}. Para permitir mais detalhe para ser adicionado em uma textura {{L|MDL (GoldSrc)|MDL}}, use uma tela de resolução mais alta, as texturas MDL não são submetidas ao AllocBlock (já que eles não são lightmapped). As UVs também podem ser realinhadas para usar mais texturas, se uma tela de 512x512 (1024x1024 em {{sven}}) não for suficiente.{{tip|Use {{hlam|4}} para habilitar mipmaps para texturas de alta-resolução, para reduzir significativamente o brilho nas texturas quando vistas à distância.}} }}
+{{note|Escala de texturas detalhadas não pode ir abaixo de 1, ao contrario do Source. Para reduzir a repetição em grandes superfícies, use {{L|megatexture|megatextura}}s.}}
+==Links externos ==
+* [https://the303.org/tutorials/gold_texture_p9.htm The303's GoldSrc texture tutorial - Part 9: DETAIL Textures]
+
+{{ACategory|GoldSrc Textures}}

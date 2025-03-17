@@ -1,28 +1,28 @@
 {{LanguageBar}}
 
-'''Truevision Graphics Adapter''' ([[TGA]]), commonly referred to as "targa" (Truevision Advanced Raster Graphics Adapter), is a non-proprietary image format from Truevision that is favored by [[Valve]]. The file extension for targas is <code>.tga</code>. It is the base format for [[VTF|Valve Texture Files]] (<code>.vtf</code>s) and is used to store images used by the [[Steam|Steam client]]. TGA files are readable and editable with {{GIMP|4}}, {{photoshop|4}}, and other image editing programs.
+'''Truevision Graphics Adapter''' ([[TGA]]), comumente chamado de “targa” (Truevision Advanced Raster Graphics Adapter), é um formato de imagem não proprietário da Truevision, preferido pela [[Valve]]. A extensão de arquivo para targas é <code>.tga</code>. É o formato base para [[VTF|Valve Texture Files]] (<code>.vtf</code>s) e é usado para armazenar imagens usadas pelo [[Steam|Steam client]]. Os arquivos TGA podem ser lidos e editados com o {{GIMP|4}}, o {{photoshop|4}} e outros programas de edição de imagens.
 
-The format stores the basic RGB (red, green, blue) channels with 8-bit precision (0-255) for a total of 24 bits/pixel, with an optional additional 8-bit [[alpha channel]] for a total of 32 bits/pixel. The extra channel contains information that the [[VMT]] [[shader]]s can use for effects such as transparency or specularity. Targa files are uncompressed, meaning that the most quality is preserved in the image, however file sizes are often much larger than image formats like [[PNG]], which use {{w|Lossless compression}}, or [[JPEG]], which uses {{w|Lossy compression}}.
+O formato armazena os canais RGB (vermelho, verde, azul) básicos com precisão de 8 bits (0-255) para um total de 24 bits/pixel, com um [[alpha channel|canal alpha]] opcional adicional de 8 bits para um total de 32 bits/pixel. O canal extra contém informações que os [[shader]]s do [[VMT]] pode usar para efeitos como transparência ou especularidade. Os arquivos Targa são descompactados, o que significa que a maior qualidade possível é preservada na imagem; no entanto, o tamanho dos arquivos costuma ser muito maior do que o de formatos de imagem como [[PNG]], que usa {{w|Lossless compression}}, ou [[JPEG]], que usa {{w|Lossy compression}}.
 
-Most textures in Source start life as [[TGA]]s that are edited and adjusted with any suitable [[image editor]]. The TGA is then compiled into the Valve Texture Format ([[VTF]]) using <code>[[Vtex (Source 1)|Vtex]].exe</code> (or a third-party tool such as [[VTFEdit]]) to participate in the [[Material System]].
+A maioria das texturas no Source começa como [[TGA]] que são editadas e ajustadas com qualquer [[image editor|editor de imagens]] adequado. Em seguida, o TGA é compilado no Valve Texture Format ([[VTF]]) usando o <code>[[Vtex (Source 1)|Vtex]].exe</code> (ou uma ferramenta de terceiros, como o [[VTFEdit]]) para participar do [[Material System]].
 
-{{tip|{{win|2}} does not show thumbnail previews for TGA images by default. Thumbnails can be added by installing a TGA thumbnail plugin or by changing the default application for opening TGA files to {{paintdotnet|2}}.}}
-{{todo|Targa for GoldSrc}}
-{{bug|The {{code|LoadTGA()}} function from {{quake|4.1}} <sup>[[https://github.com/id-Software/Quake/blob/master/QW/client/gl_warp.c#L483 code]]</sup>, which is reused in {{gldsrc|4.1}}, does not properly handle the alpha channel of RLE-compressed TGAs, treating them as inverted. 24-bit TGAs are unaffected.<br>Additionally, TGAs are assumed to have an origin of bottom-left; TGAs with an origin of top-left will be read upside-down.<br>{{vtex|4.1}} does not use LoadTGA, but is still affected by at least some of these bugs{{confirm}}. {{VTFEdit|4.1}} is not affected by this bug.}}
-== Targa for [[Vtex (Source 1)|VTEX]] ==
-=== Valid Format ===
-For a targa image to be recognized as valid by VTEX, it must meet the following criteria:
-* It must be 24 or 32 bits per pixel in depth. (8 and 16 bits per pixel are not recognized.)
-* Its dimensions (height and width) must have a pixel size equal to a power of 2. (i.e. 2^4=16, 2^5=32, 2^6=64, 2^7=128, 2^8=256, 2^9=512, etc.)
-* Its dimensions can not be bigger than 2048 pixels.
-* The height and width doesn't need to be the same—64x128, 256x512 works fine—but square images are preferred by the Source engine, so use them whenever possible, even when it doesn't seem like the best way to go.
-* RLE compression is optional but should be avoided due to occasional conversion troubles, especially on 32-bit images.
+{{tip|Por padrão, o {{win|2}} não mostra visualizações em miniatura para imagens TGA. Você pode adicionar miniaturas instalando um plug-in de miniaturas TGA ou alterando o aplicativo padrão para abrir arquivos TGA para {{paintdotnet|2}}.}}
+{{todo|Targa para GoldSrc}}
+{{bug|A função {{code|LoadTGA()}} de {{quake|4.1}} <sup>[[https://github.com/id-Software/Quake/blob/master/QW/client/gl_warp.c#L483 codigo]]</sup>, que é reutilizada em {{gldsrc|4.1}}, não manipula corretamente o canal alfa de TGAs compactados em RLE, tratando-os como invertidos. Os TGAs de 24 bits não são afetados.<br>Além disso, presume-se que os TGAs tenham uma origem inferior esquerda; os TGAs com uma origem superior esquerda serão lidos de cabeça para baixo.<br>{{vtex|4.1}} não usa o LoadTGA, mas ainda é afetado por pelo menos alguns desses erros{{confirm}}. O {{VTFEdit|4.1}} não é afetado por esse bug.}}
+== Targa para [[Vtex (Source 1)|VTEX]] ==
+=== Formato válido ===
+Para que uma imagem targa seja reconhecida como válida pela VTEX, ela deve atender aos seguintes critérios:
+* Deve ter 24 ou 32 bits de profundidade por pixel. (8 e 16 bits por pixel não são reconhecidos).
+* Suas dimensões (altura e largura) devem ter um tamanho de pixel igual a uma potência de 2 (ou seja, 2^4=16, 2^5=32, 2^6=64, 2^7=128, 2^8=256, 2^9=512, etc.).
+* Suas dimensões não podem ser maiores que 2048 pixels.
+* A altura e a largura não precisam ser as mesmas - 64x128, 256x512 funcionam bem -, mas as imagens quadradas são preferidas pelo mecanismo de origem, portanto, use-as sempre que possível, mesmo que não pareçam ser a melhor opção.
+* A compactação RLE é opcional, mas deve ser evitada devido a problemas ocasionais de conversão, especialmente em imagens de 32 bits.
 
-=== Scale ===
-The default texture scale in Hammer is <code>0.25</code>. This means that 1 texture pixel = 0.25 [[Dimensions|map units]] in Hammer and in game, or a 512x512 texture covers 128x128 map units (equivalent to 8x8 feet or 2.4x2.4 meters).
+=== Escala ===
+A escala de textura padrão no Hammer é <code>0,25</code>. Isso significa que 1 pixel de textura = 0,25 [[Dimensions|map units]] no Hammer e no jogo, ou seja, uma textura de 512x512 cobre 128x128 unidades de mapa (equivalente a 8x8 pés ou 2,4x2,4 metros).
 {| class=standard-table
 |+ Relative [[Dimensions]] for (Default) Texture Scale 0.25
-! Texture || Hammer || FileSize || Description
+! Textura || Hammer || Tamanho de Arquivo || Descrição
 |-
 ! pixels || map units || kB (32bit) 
 |style="background-color:#222222"|
@@ -41,26 +41,26 @@ The default texture scale in Hammer is <code>0.25</code>. This means that 1 text
 |-
 |256 x 256 || 64 x 64 || 256 ||
 |-
-|512 x 512 || 128 x 128 || 1024 (1MB)|| This is the most common size for archictextures : brickwork, concrete, etc.
+|512 x 512 || 128 x 128 || 1024 (1MB)|| Esse é o tamanho mais comum para texturas arquitetônicas: alvenaria, concreto, etc.
 |-
 |1024 x 1024 || 256 x 256 || 4096 (4MB) ||
 |-
-|2048 x 2048 || 512 x 512 || 16384 (16MB) || This is the largest size that [[Vtex (Source 1)|vtex]] can cope with and is only used for large non-tiling brushes like 2D skyboxes.
+|2048 x 2048 || 512 x 512 || 16384 (16MB) || Esse é o maior tamanho com o qual o [[Vtex (Source 1)|vtex]] pode lidar e é usado somente para brushes grandes que não sejam de ladrilho, como skyboxes 2D.
 |}
-* '''Texture (pixels)''' : Square format is preferred but rectangles are acceptable. Each dimension must be a power of two up to 2048.
-* '''Hammer (map units)''' : using the default Texture Scale of 0.25. This can be overridden locally per surface in Hammer or per ''material'' by using the [[$basetexturetransform]] ''scale'' factor in the [[VMT]]. For example A 512x512 texture with a scale of 0.5 will cover only 64x64 map units, and when viewed up close should appear highly detailed. This can also be done with 2048x2048 and 1024x1024 textures by scaling to 512x512 using {{code|scale 4 4}} and {{code|scale 2 2}} respectively.
-* '''Filesize (kB)''' : is given for 32bit uncompressed rasta image. {{Todo|[[VTF]] uses its own compression system…}}
+* '''Textura (pixels)''' : É preferível o formato quadrado, mas retângulos são aceitáveis. Cada dimensão deve ser uma potência de dois até 2048.
+* '''Hammer (map units)''' : usando a escala de textura padrão de 0,25. Isso pode ser substituído localmente por superfície no Hammer ou por “material” usando o fator de “escala” [[$basetexturetransform]] no [[VMT]]. Por exemplo, uma textura de 512x512 com uma escala de 0,5 cobrirá apenas 64x64 unidades de mapa e, quando vista de perto, parecerá altamente detalhada. Isso também pode ser feito com texturas de 2048x2048 e 1024x1024, dimensionando-as para 512x512 usando {{code|escala 4 4}} e {{code|escala 2 2}}, respectivamente.
+* '''Tamanho de Arquivos (kB)''' : é fornecido para uma imagem rasta de 32 bits não compactada. {{Todo|[[VTF]] usa seu próprio sistema de compactação...}}
 
-{{Note|3D Skybox scale is 1/16th of map scale, so textures for 3D skybox surfaces should be designed accordingly.}}
+{{Note|A escala do 3D Skybox é 1/16 da escala do mapa, portanto, as texturas das superfícies do 3D Skybox devem ser projetadas de acordo.}}
 
-=== Save Location ===
-Remember that Vtex is only able to locate targa images located inside the <code>/materialsrc/</code> folder of the current game, so you may want to save it there directly to spare you the trouble of having to move it there later.
+=== Localização de Salvamento ===
+Lembre-se de que o Vtex só é capaz de localizar imagens targa localizadas dentro da pasta <code>/materialsrc/</code> do jogo atual, portanto, talvez você queira salvá-las diretamente lá para evitar o trabalho de ter que movê-las para lá mais tarde.
 
-== External links ==
-* [[Wikipedia:Truevision_TGA|Wikipedia entry for TGA]]
-* [http://astronomy.swin.edu.au/~pbourke/dataformats/tga/ TGA Format Specification]
-* [http://www.irfanview.com/ Irfanview, a popular TGA viewer]
-* [http://www.snarkpit.net/index.php?s=articles&article=126 Texture file formats from The SnarkPit site]
+== Links externos ==
+* [[Wikipedia:Truevision_TGA|Entrada na Wikipedia para TGA]]
+* [http://astronomy.swin.edu.au/~pbourke/dataformats/tga/ Especificação do formato TGA]
+* [http://www.irfanview.com/ Irfanview, um visualizador TGA popular]
+* [http://www.snarkpit.net/index.php?s=articles&article=126 Formatos de arquivo de textura do site The SnarkPit]
 [[Category:Material System]]
 [[Category:File formats]]
 [[Category:Image formats]]

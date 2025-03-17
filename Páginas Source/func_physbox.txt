@@ -1,0 +1,64 @@
+{{LanguageBar}}
+{{CD|CPhysBox|file1=1}}
+{{this is a|brush entity|name=func_physbox}}
+It is treated as a physics object.
+{{warning|Tentar criar esta entidade sem um modelo faz com que o jogo seja bloqueado. (por exemplo, através de {{cmd|ent_create}})}}
+
+== Keyvalues ==
+{{Brush rendering note}}
+
+{{KV Targetname}}
+{{KV|Impact Damage Type|intn=Damagetype|choices|Define a “sharpness" (nítidez) do pincel. Os objectos afiados são muito mais prejudiciais.}}
+:* 0 : Blunt
+:* 1 : Sharp
+{{KV|Mass Scale|intn=massScale|float|Um multiplicador de escala para a massa do objeto. Use o convar <code>sv_massreport 1</code> para ver a massa real do objeto no jogo.}}
+{{KV|Override Parameters|intn=overridescript|string|Uma lista de pares de chave/valor de física que normalmente se encontram num ficheiro .qc de prop de física. O formato é 'key,value,key,value,etc'.}}
+{{KV|Health Level to Override Motion|intn=damagetoenablemotion|integer|Se especificado, este objeto começará com o movimento desativado. Quando a sua saúde descer abaixo deste valor especificado, activará o movimento.}}
+{{KV|Physics Impact Force to Override Motion|intn=forcetoenablemotion|float|Se especificado, este objeto começará com o movimento desativado. Qualquer impacto que transmita uma força superior a este valor na caixa física ativará o movimento.}}
+{{KV|Strength|intn=health|integer|Número de pontos de dano a sofrer antes de quebrar. 0 significa não quebrar.}}
+{{KV|Preferred Player-carry Angles|intn=preferredcarryangles|vector|Se a spawnflag 'Use Preferred Carry Angles' estiver definida, este ângulo é o ângulo para o qual o objeto deve ser orientado quando o jogador o apanha, com a arma física ou +USE.}}
+{{KV|Not solid to world|intn=notsolid|choices|Se definido, o objeto passará pela geometria do mundo.}}
+:* 0 : Solid to World
+:* 1 : Passes through World
+{{KV BreakableBrush}}
+
+== Flags ==
+{{Fl BreakableBrush}}
+{{Fl|4096|Start Asleep|Start Asleep}}
+{{Fl|8192|Ignore +USE for Pickup}}
+{{Fl|16384|Debris - Don't collide with the player or other debris}}
+{{Fl|32768|Motion Disabled}}
+{{Fl|65536|Use Preferred Carry Angles}}
+{{Fl|131072|Enable motion on Physcannon grab}}
+{{Fl|262144|Not affected by rotor wash}}
+{{Fl|524288|Generate output on +USE}}
+{{Fl|1048576|Physgun can ALWAYS pick up. No matter what.}}
+{{Fl|2097152|Physgun is NOT allowed to pick this up.}}
+{{Fl|4194304|Physgun is NOT allowed to punt this object.}}
+{{Fl|8388608|Prevent motion enable on player bump}}
+
+== Inputs ==
+{{IO|Wake|Wake up this physics object, if it is sleeping.}}
+{{IO|Sleep|Put this physics object to sleep. It will wake if given the <code>Wake</code> input, or if force is applied to it. Note that physics objects go to sleep automatically after coming to rest for a while, so you don't really need to use this.}}
+{{IO|EnableMotion|Enable physics motion/collision response.}}
+{{IO|DisableMotion|Disable physics motion/collision response.}}
+{{IO|ForceDrop|If this object is being carried by a player, with the physgun or +USE, force it to be dropped.}}
+{{I BreakableBrush}}
+
+== Outputs ==
+{{IO|OnDamaged|Fired when this entity is damaged.}}
+{{IO|OnAwakened|Fired when this entity becomes awake (collision/force is applied).}}
+{{IO|OnMotionEnabled|Fired when motion is enabled due to damage/physcannon/force.}}
+{{IO|OnPhysGunPickup|Fired when a player picks this object up, either with the physgun or +USE.}}
+{{IO|OnPhysGunPunt|Fired when a player punts this object with the physgun.}}
+{{IO|OnPhysGunOnlyPickup|Fired when a player picks this object up WITH THE PHYSGUN. +USE pickups do not fire this output.}}
+{{IO|OnPhysGunDrop|Fired when a player drops this object.}}
+{{IO|OnPlayerUse|Fired when the player tries to +USE the physbox. This output will fire only if the Generate output on +USE spawnflag is set.}}
+{{O Breakable}}
+
+== Veja também ==
+* {{ent|func_physbox_multiplayer}}
+* [[Collapsing_tower]] - um prefab que demonstra algumas utilizações criativas de func_physboxes.
+* [[Prop Footsteps]] - um tutorial sobre o assunto, que demonstra o código essencial para quando os jogadores andam sobre entidades como esta (não é ignorado durante o cálculo do som dos passos).
+
+[[Category:Physics]]

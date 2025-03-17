@@ -1,0 +1,203 @@
+{{Strings subpage <!-- EDITORS: To keep things clean, it is recommended to sort language codes from A to Z. -->
+| number = 19
+| en = 19
+| cs = 0
+| de = 0
+| es = 18 <!-- unos sin traducciones están bien con los del inglés -->
+| eo = 0
+| fi = 0
+| fr = 0
+| he = 0
+| hr = 19
+| it = 0
+| ja = 0
+| ka = 0
+| ko = 0
+| nl = 0
+| pl = 0
+| pt-br = 19
+| ru = 19
+| sv = 0
+| tr = 0
+| uk = 0
+| vi = 0
+| zh = 0
+| zh-tw = 0
+}}
+__NOTOC__
+
+=== Preview ===
+*{{{{PAGENAME}}|developer|lang={{ucfirst:{{Intlang}}}}}}
+*{{{{PAGENAME}}|series|lang={{ucfirst:{{Intlang}}}}}}
+*{{{{PAGENAME}}|releasedates|lang={{ucfirst:{{Intlang}}}}}}
+*{{{{PAGENAME}}|genre|lang={{ucfirst:{{Intlang}}}}}}
+*{{{{PAGENAME}}|mode|lang={{ucfirst:{{Intlang}}}}}}
+*{{{{PAGENAME}}|platform|lang={{ucfirst:{{Intlang}}}}}}
+*{{{{PAGENAME}}|engine|lang={{ucfirst:{{Intlang}}}}}}
+*{{{{PAGENAME}}|appid|lang={{ucfirst:{{Intlang}}}}}}
+*{{{{PAGENAME}}|codelang|lang={{ucfirst:{{Intlang}}}}}}
+*{{{{PAGENAME}}|modsupport|lang={{ucfirst:{{Intlang}}}}}}
+*{{{{PAGENAME}}|sdk|lang={{ucfirst:{{Intlang}}}}}}
+*{{{{PAGENAME}}|sysreq|lang={{ucfirst:{{Intlang}}}}}}
+*{{{{PAGENAME}}|steamdeck|lang={{ucfirst:{{Intlang}}}}}}
+*{{{{PAGENAME}}|distribution|lang={{ucfirst:{{Intlang}}}}}}
+*{{{{PAGENAME}}|website|lang={{ucfirst:{{Intlang}}}}}}
+*{{{{PAGENAME}}|links|lang={{ucfirst:{{Intlang}}}}}}
+*{{{{PAGENAME}}|previousgame|lang={{ucfirst:{{Intlang}}}}}}
+*{{{{PAGENAME}}|nextgame|lang={{ucfirst:{{Intlang}}}}}}
+
+<includeonly>
+
+<onlyinclude>{{#switch:{{{1|}}}
+
+| developer = {{#switch: {{{lang|{{ROOTPAGENAME}}}}}
+	| #default = Developer(s)
+	| Es = Desarrollador(es)
+	| Hr = Programer(i)
+    | Pt-br = Desenvolvedora(s)
+	| Ru = Разработчик
+	}}
+
+| publisher = {{#switch: {{{lang|{{ROOTPAGENAME}}}}}
+	| #default = Publisher(s)
+	| Es = Distribuidor(es)
+	| Hr = Izdavač(i)
+    | Pt-br = Distribuidora(s)
+	| Ru = Издатель
+	}}
+
+| series = {{#switch: {{{lang|{{ROOTPAGENAME}}}}}
+	| #default = Series
+	| Es = Serie
+	| Hr = Serija
+    | Pt-br = Série
+	| Ru = Серия
+	}}
+
+| releasedates = {{#switch: {{{lang|{{ROOTPAGENAME}}}}}
+	| #default = Release date(s)
+	| Es = Lanzamiento
+	| Hr = Datum(i) objave
+    | Pt-br = Lançamento
+	| Ru = Дата выхода
+	}}
+
+| genre = {{#switch: {{{lang|{{ROOTPAGENAME}}}}}
+	| #default = Genre(s)
+	| Es = Género(s)
+	| Hr = Žanr(ovi)
+    | Pt-br = Gênero(s)
+	| Ru = Жанр(ы)
+	}}
+
+| mode = {{#switch: {{{lang|{{ROOTPAGENAME}}}}}
+	| #default = Mode(s)
+	| Es = Modo(s)
+	| Hr = Način(i)
+    | Pt-br = Modo(s)
+	| Ru = Режим(ы)
+	}}
+
+| platform = {{#switch: {{{lang|{{ROOTPAGENAME}}}}}
+	| #default = Platform(s)
+	| Es = Plataforma(s)
+	| Hr = Platforma(e)
+    | Pt-br = Plataforma(s)
+	| Ru = Платформа
+	}}
+
+| engine = {{#switch: {{{lang|{{ROOTPAGENAME}}}}}
+	| #default = Engine
+	| Es = Motor
+	| Hr = Pogon
+    | Pt-br = Motor Gráfico
+	| Ru = Движок
+	}}
+
+| appid = {{#switch: {{{lang|{{ROOTPAGENAME}}}}}
+	| #default = Steam AppID
+	| Hr = Steam AppID
+	| Ru = Steam AppID
+	}}
+
+| codelang = {{#switch: {{{lang|{{ROOTPAGENAME}}}}}
+	| #default = Written in
+	| Es = Escrito en
+	| Hr = Napisano u
+    | Pt-br = Escrito em
+	| Ru = Язык программ.
+	}}
+
+| modsupport = {{#switch: {{{lang|{{ROOTPAGENAME}}}}}
+	| #default = Mod support
+	| Es = Compatibilidad de mod
+	| Hr = Mod podrška
+    | Pt-br = Compatibilidade com Mods
+	| Ru = Поддержка модов
+	}}
+
+| sdk = {{#switch: {{{lang|{{ROOTPAGENAME}}}}}
+	| #default = SDK
+	| Hr = Alati
+	| Ru = Инструменты
+	}}
+
+| sysreq = {{#switch: {{{lang|{{ROOTPAGENAME}}}}}
+	| #default = System requirements
+	| Es = Requisitos de sistema
+	| Hr = Zahtjevi sustava
+    | Pt-br = Requisitos de Sistema
+	| Ru = Системные требования
+	}}
+
+| steamdeck = {{#switch: {{{lang|{{ROOTPAGENAME}}}}}
+	| #default = Steam Deck compatbility
+	| Es = Compatibilidad de Steam Deck
+	| Hr = Kompatibilnost sa Steam Deck-om
+    | Pt-br = Compatibilidade com Steam Deck
+	| Ru = Поддержка Steam Deck
+	}}
+<!-- RU: Тут не "распространение", потому что слово слишком длинное. Перевод по смыслу -->
+| distribution = {{#switch: {{{lang|{{ROOTPAGENAME}}}}}
+	| #default = Distribution
+	| Es = Distribución
+	| Hr = Distribucija
+    | Pt-br = Distribuição
+	| Ru = Метод(ы) дистрибуции
+	}}
+
+| website = {{#switch: {{{lang|{{ROOTPAGENAME}}}}}
+	| #default = Official website
+	| Es = Sitio web oficial
+	| Hr = Službena stranica
+    | Pt-br = Site Oficial
+	| Ru = Сайт
+	}}
+
+| links = {{#switch: {{{lang|{{ROOTPAGENAME}}}}}
+	| #default = Links
+	| Es = Enlaces
+	| Hr = Poveznice
+	| Ru = Ссылки
+	}}
+
+| previousgame = {{#switch: {{{lang|{{ROOTPAGENAME}}}}}
+	| #default = Previous game
+	| Es = Juego previo
+	| Hr = Prethodna 
+    | Pt-br = Jogos Anteriores
+	| Ru = Предыдущая игра
+	}}
+
+| nextgame = {{#switch: {{{lang|{{ROOTPAGENAME}}}}}
+	| #default = Next game
+	| Es = Siguiente juego
+	| Hr = Sljedeća igra
+    | Pt-br = Jogos Posteriores
+	| Ru = Следующая игра
+	}}
+
+|#default = {{error|Error on string: {{{1}}} !}}
+}}</onlyinclude>
+
+</includeonly>
