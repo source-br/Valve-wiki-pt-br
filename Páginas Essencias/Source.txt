@@ -1,7 +1,4 @@
-{{wip}}
-{{LanguageBar}}
-{{src topicon}}
-{{Hierarchy}}
+ {{LanguageBar}} {{src topicon}} {{Hierarchy}} {{Update|Artigo será traduzida totalmente, e após completo, a atualização de informações começara após o refinamento ortográfico/gramatical. Ou será apenas traduzido e o restante das informações mais atuais serão adicionados por outros tradutores.}}
 <span style="color:white; font-weight: bold;">{{For|about=o motor do jogo|a documentação do source e seu SDK|{{L|SDK|Source SDK Documentation}}|}}</span>
 {{Infobox engine
 |title = Source
@@ -47,7 +44,7 @@ Para uma lista de Ramificações da Source (incluindo jogos de terceiros) com se
 * [[Wikipedia:Bump mapping|Bump mapping]] e {{L|w:Normalmapping|Normal mapping}} em modelos do mundo
 * Autor {{L|shader}}s com {{L|HLSL}}
 * Cubo e mapeamento de ambiente
-** Cubemapping também suporta Anisotropia {{since|{{L|csgo}}}}
+** Cubemapping também suporta Anisotropia {{since|{{csgo}}}}
 * {{L|$phong|Phong}}, sombreamento para modelos
 ** Phong é também suportado em world brushes {{since|{{csgo}}}}{{also|{{mb}}}}
 * Inclui vários tipos de luzes como Luzes dinâmicas, luzes vertex, {{L|lightmap}}s, flickering, pulsing etc.
@@ -94,169 +91,169 @@ Para uma lista de Ramificações da Source (incluindo jogos de terceiros) com se
 ** O sucessor do OpenGL, Vulkan pode ser usado para gambiar vários problemas gráficos como o as {{L|Env_projectedtexture|texturas projetadas}} de portal 2, que não renderiza apropriadamente em novos drivers gráficos (ambos NVidia e AMD). Habilitar Vulkan usando {{code|-vulkan}} nas {{L|command line argument| opções de inicialização}}.
 {{note|{{csgo|2}} tem suporte ao Vulkan apenas via {{Linux|1}}}}
 {{note|A Source permite até 8 {{L|LOD Models|níveis de modelos}}, embora ele não tenha um {{L|w:Level of detail (computer graphics)|nível de detalhe}} automático já á disposição, mudança de LoD manual é suportada.}}
-{{warning|{{csgo|2}} atualmente não suporta nível de detalhes (LoD). {{L|$lod}} ira ser ignorado, entretanto o modelo ainda ira continuar a funcionando. Tente evitar de utilizar este comando no {{csgo}}.}}
+{{warning|{{csgo|2}} atualmente não suporta nível de detalhes (LoD). {{L|$lod}} ira ser ignorado, entretanto o modelo ainda ira continuar a funcionando. Tente evitar à utilização deste comando no {{csgo}}.}}
 
 ==={{LCategory|Material System|Sistema de Materiais}}===
-* Instead of traditional textures, '''Source''' defines sets of materials that specify what the object is made from and the texture used for that object. A material specifies how an object will fracture when broken, what it will sound like when broken or dragged across another surface, and what that object's mass and buoyancy are. This system is much more flexible than other texture-only systems
-* Materials can interact with objects or {{L|NPC}}s, such as mud or ice for vehicles to slide/lose traction on
+* Ao invés de texturas tradicionais à '''Source''' define conjuntos de materiais que especificam do que o objeto é feito e a textura usada para aquele objeto. Um material especifica como um objeto irá se fraturar quando quebrado, como será o som quando quebra ou arrastado sobre outra superfície e qual será a massa e flutuabilidade daquele objeto será. Esse sistema é muito mas flexível comparado à sistemas de apenas texturas.
+* Materiais podem interagir com objetos ou {{L|NPC}}s e afins como lama ou gelo para veículos escorregarem/perderem tração.
 
-==={{L|Source Multiplayer Networking|Multiplayer Network Code}}===
-* Time- and gamer-tested by millions of gamers around the world
-* Support for both {{L|wikipedia:Local area network|LAN}}-based multiplayer and Internet-based multiplayer games
-* Prediction analysis for interpolating collision/hit detection
-* Optimizations for high-latency, high-packet-loss 56k connections
+==={{L|Source Multiplayer Networking|Código de rede multijogador}}===
+* Tempo e teste de gamer por milhares de gamers ao redor do mundo.
+* Suporte para ambos Multijogador baseado em {{L|wikipedia:Local area network|LAN}} e baseado em multijogador de internet.
+* Análise prévia para colisão e detecção de acerto por interpolação.
+* Optimização para alta latência e conexões de 56k com grande perda de pacotes.
 
-==={{LCategory|Modeling|Advanced Characters}}===
-* Detailed and believable characters
-* Realistic {{L|Eyeball|eyes}}
-** Focus on player/object, not simply parallel views
-** Proper eye bulge for realistic eye reflections
-* Simulated musculature provides outstanding emotions, speech, and body language
-* {{LCategory|Choreography|Language independent speech}}, characters can speak naturally in many languages
-* Skeletal/bone system for animation
-* Layered animation system can synthesize complex animations out of several pieces
+==={{LCategory|Modeling|Personagens avançados}}===
+* Personagens detalhados e críveis.
+* {{L|Eyeball|Olhos}} realistas.
+** Foco no jogador ou objeto, em vez de apenas ter uma visão paralela.
+** Curvatura adequada dos olhos para reflexos realistas.
+* Musculatura simulada fornece emoções, discursos e linguagem corporal marcantes.
+* {{LCategory|Choreography|Discurso independente de idioma}}, personagens podem falar naturalmente em varias línguas.
+* Sistema de animação de esqueleto/ossos.
+* Sistema de animação em camadas pode sintetizar animações complexas à partir de várias peças.
 
-==={{LCategory|Physics|Physics}}===
-* Uses {{L|Havok}} physics engine, licensed from Havok Group (now acquired by {{L|w:Microsoft|Microsoft}})
-* More responsive world with realistic interactions
-* Sounds & graphics follow from physics
-* AI characters can interact with physically simulated objects
-* Ropes/cables, machines, constraint systems, {{L|w:Ragdoll physics|ragdoll physics}}
-* Can be controlled by level design
-* Kinematic animated bone followers
-* Custom procedural physics controllers
-* Vehicles
-** Wheels slip and skid
-** Realistic suspensions with springs on each wheel
-** Realistic leaning during acceleration/deceleration and turning
-** Individually tunable parameters such as horsepower, gearing, max speed, shift speed, tire material, tire friction, spring tension/dampening, etc.
-** Multiple players in a vehicle in multiplayer
-** Hovercraft support for cheaper simulation
+==={{LCategory|Physics|Física}}===
+* Utiliza motor de física {{L|Havok}}, licenciado pelo grupo Havok (agora adquirido pela {{L|w:Microsoft|Microsoft}})
+* Mundo mas responsivo com interações realistas.
+* Sons e gráficos sequem à física.
+* Personagens IA podem interagir com objetos físicos simulados.
+* Cabos/Cordas, maquinário, sistema de restrição, {{L|w:Ragdoll physics|física ragdoll}}.
+* Pode ser controlado por level disign.
+* Ossos seguem animação cinemático.
+* Controles de física procedural customizado.
+* Veículos.
+* Rodas escorregam e derrapam.
+** Suspenção realista com molas em cada roda.
+** Inclinação realista durante aceleração, desaceleração e curva.
+** Parâmetros ajustáveis ​​individualmente, como potencia, transmissão (gearing), velocidade máxima, velocidade do shift, material do pneu, atrito do pneu, tensão/amortecimento da mola, etc.
+** Múltiplos jogadores em um veículo no multijogador.
+** Suporte para hovercraft para simulação mais barata
 
-==={{LCategory|AI|Advanced AI}}===
-* {{L|Inputs and Outputs|I/O system}} allows level designers to control AI
-* Sophisticated navigation: characters that run, fly, jump, crouch, climb stairs and ladders, and burrow underground
-* AI senses things using sight, sound, and smell
-* {{L|ai_relationship|AI relationships}} determine friend/foe status of other entities
-* Battle AI allows squads of AI characters to operate together, know when to advance, retreat, lay cover fire, etc.
+==={{LCategory|AI|I.A Avançada}}===
+* {{L|Inputs and Outputs|Sistema de entrada e saída}} permite a designers de níveis à controla a IAAI
+* Navegação sofisticada: personagens que corem, voam, pulam, agacham, sobem degraus ou escadas e escavam no subsolo.
+* À IA tem sentidos como visão, som e olfato.
+* {{L|ai_relationship|Relacionamento de IA}} determina o estado amigo ou inimigo de outras entidades.
+* À IA de Batalha permite esquadrões de personagens IA à trabalharem juntos sabendo quando avançar, recuar, pegar cobertura de fogo, etc.
 
-==={{LCategory|Sound System|Sound System}}===
-* 7.1, 5.1 surround sound, 4 speaker surround
-:{{bug|On system running Windows Vista and later, due to the game engine using DirectSound and older version of Miles Sound System, the game may output only 5.1 surround despite 7.1 selected or 7.1 audio may not work properly without custom {{code|dsound.dll}} (such as Creative Alchemy, DSOAL or IndirectSound). This issue is not affected by some third-party games, such as {{titanfall2|1}}, {{apex|1}} as they used newer version of Miles Sound System.}}
-:{{note|Some or newer Source games (such as {{as|1}}, {{portal2|1}} and {{csgo|1}}) may not include options to enable 7.1 surround sound without using console commands.}}
-* High-quality 3D spatialization
-* Custom software {{L|DSP}}
-* Automatic DSP based on environmental geometry
-* Microsoft ADPCM-compressed {{L|WAV}} files
-* 16-bit 44.1 KHz (CD Quality), stereo wave data with all features
-: {{Note|Source does ''not'' support 48 KHz audio (DVD Quality) by default.}}
-* {{L|MP3}} decompression (requires [http://www.radgametools.com/miles.htm Miles] license)
-* Support for audio streaming on any wave {{clarify}}
-* Real-time wave file stitching {{clarify}}
-* Pre-authored Doppler effect encoded waves
-* Pre-authored distance variant encoded waves
-* {{L|Commentary System|Commentary system}}
+==={{LCategory|Sound System|Sistema sonoro}}===
+* Som surround 7.1, 5.1, de 4 alto-falantes
+:{{bug|hidetested=1|Em sistemas utilizando o Windows Vista ou posterior, devido ao motor gráfico utilizar DirectSound e versões antigas do Sistema Sonoro Miles, o motor pode produzir apenas 5.1 sorround apesar de 7.1 ser selecionado ou áudio 7.1 não estar funcionado apropriadamente sem o {{code|dsound.dll}} customizado (como Creative Alchemy , DSOAL ou IndirectSound). Este problema não é afetado por algum jogo de terceiro como {{titanfall2|1}}, {{apex|1}} já que eles usaram a versão mais recente do Miles Sound System.}}
+:{{note|Alguns ou mais recente jogos da Source (como {{as|1}}, {{portal2|1}} e {{csgo|1}}) podem não incluir opções para ativar o som surround 7.1 sem usar comandos do console.}}
+* Espacialização 3D de alta qualidade.
+* Software customizado {{L|DSP}}.
+* Baseamento DSP automático em geometria ambiental.
+* Microsoft ADPCM arquivos {{L|WAV}} comprimidos.
+* 16-bit 44.1 KHz (qualidade de CD ), dados de onda estéreo com todos os recursos.
+: {{Note|À Source ''não'' suporta áudio de 48 KHz (qualidade de DVD) por padrão.}}
+* descompressão {{L|MP3}} (Requer licença [http://www.radgametools.com/miles.htm Miles])
+* Suporte para transmissão em qualquer onda sonora {{clarify}}
+* Costura/Junção de arquivo wave em tempo real {{clarify}}
+* Pré-autoria de ondas codificadas de efeito Doppler.
+* Pré-autoria de ondas codificadas variantes de distância.
+* {{L|Commentary System|Sistema de comentários}}
 
-==={{LCategory|VGUI|UI}}===
-<div style="float:right">[[File:Ep2_menu.jpg|340px|thumb|Screenshot of {{hl2ep2|1}} main menu, which is rendered using VGUI, with '''New Game''', '''Options''', and '''Achievements''' window opened.]]
-[[File:HL2_GamepadUI_menu.png|340px|thumb|Screenshot of VGUI's Gamepad UI used in some {{src13|1}} games after 2022. This UI was enabled by default when playing on {{deck|1}}.]]
+==={{LCategory|VGUI|Interface de Usuário (UI)}}===
+<div style="float:right">[[File:Ep2_menu.jpg|340px|thumb|Screenshot do menu principal do {{hl2ep2|1}}, que é renderizado usando VGUI, com as janelas '''Novo Jogo''', '''Opções''' e '''Conquistas''' abertas.]]
+[[File:HL2_GamepadUI_menu.png|340px|thumb|Screenshot do VGUI UI de Gamepad usada em alguns jogos {{src13|1}} após 2022. Esta UI foi habilitada por padrão quando jogando por {{deck|1}}.]]
 <!-- TODO: CSGO menu -->
 </div>
-* '''Server browser''' — Displays all active game servers and allows a player to choose which one to participate in. Players can filter and sort server lists to speed up the display and selection of a server.
-* '''{{LCategory|VGUI|VGUI}}''' — Valve's custom GUI interface mimics most of the Windows controls but is rendered using the '''Source''' engine for both in game and out of game uniform '''UI''' display. Some features:
-** Dynamic in-game {{L|HUD Elements|HUD}} display
-** Many {{L|wikipedia:Graphical widget|widgets}}/controls (e.g., buttons, treeview, html control…)
-** Themes/custom visualization allowed
-** Platform independent
-** Localized text (Unicode compliant)
-** '''{{L|Gamepad UI in mods|Gamepad UI}}''' <!-- TODO: Create a page about Gamepad UI in general --> ({{src13|4.1}} version) — Since the release of {{hl2|3.1}} (and its episodes) as well as {{portal|3.1}} updates in 2022, Valve have added a modern UI which is designed for consoles and handhelds like {{steamdeck|2}}. With the new Gamepad UI, it was more scalable across any resolution (including 4K and higher), unlike the regular VGUI (which, the higher the resolution, the text and UI will become smaller). This UI can be also enabled manually by using {{code|-gamepadui}} {{L|command line argument}} (which will also enable {{L|Vulkan}} renderer that may not work on some older GPUs unless {{code|-dx9}} is used in combination of {{code|-gamepadui}}).
-* '''Scaleform''' (''officially called '''Scaleform GFx''''') — Introduced with {{csgobranch|1}} at launch until 2018, this is a vector graphics rendering engine used to display {{flash|1}}-based UI and HUD for games.
-* '''{{L|Panorama}}''' {{csgo|since}} — Introduced in 2018, replacing Scaleform, Valve's new Custom GUI interface that resembles modern web design and authoring (HTML5/CSS/JS). Using <code>[[WP:XML|.XML]]</code> and JavaScript files, developers can create dynamic and clean HUDs and menus and even high-quality in-game intractable panels.
+* '''Lista de Servidores''' — Mostra todos os servidores ativos e permite os jogadores a entrarem no desejado. Jogadores também podem organizar e filtrar a lista de servidores para mostrar e selecionar o servidor desejado mais rápido.
+* '''{{LCategory|VGUI|VGUI}}''' — A interface gráfica personalizada da Valve, imita a maior parte dos controles do Windows, mas é renderizada usando o motor '''Source''' para ambos dentro e fora do jogo para uma interface de usuário mais uniforme. Algumas características:
+** Exibição Dinâmica ({{L|HUD Elements|HUD}}) Dentro de jogo.
+** Muitos {{L|wikipedia:Graphical widget|widgets}}/controles (ex., botões, treeview, controle html…)
+** Temas/customização visual permitida.
+** Independência de plataforma
+** Texto localizado (Unicode complacente)
+** '''{{L|Gamepad UI in mods|Gamepad UI}}''' <!-- TODO: Create a page about Gamepad UI in general --> (versão {{src13|4.1}}) — Desdo lançamento do {{hl2|3.1}} (e seus episódios) como também atualizações do {{portal|3.1}} em 2022, a Valve adicionou uma IU moderna que é projetada para consoles e portáteis como o {{steamdeck|2}}. Com a nova interface de controle (Gamepad UI), ela passou a ser mais escalável em qualquer resolução (incluindo 4K e superior), ao contrário da VGUI convencional (Quanto maior a resolução, menores ficam o texto e a interface). A interface também pode ser ativada manualmente utilizando {{code|-gamepadui}} {{command line argument}} (que também ativara a renderização {{L|Vulkan}}, que pode não funcionar em GPUs mais antigas, a menos que {{code|-dx9}} seja usado em combinação com {{code|-gamepadui}}).
+* '''Scaleform''' (''oficialmente chamado de '''Scaleform GFx''''') — Introduzido com {{csgobranch|4}} no lançamento até 2018, é um motor gráfico de renderização vetorial usado para exibir interfaces baseados em {{flash|1}}.
+* '''{{L|Panorama}}''' {{csgo|since}} — Introduzido em 2018 substituindo o Scaleform, à nova interface (GUI) personalizada da Valve que se assemelha ao design moderno da web e à criação de interfaces (HTML5/CSS/JS). Usando <code>[[WP:XML|.XML]]</code> e arquivos em JavaScript aonde desenvolvedores podem criar HUDs e menus limpos e dinâmicos, além de painéis intratáveis de alta qualidade.
 {{clr}}
 
-==={{LCategory|Programming|Programming}}===
-* Source natively support various CPU architectures, such as x86 (PC and 8th, 9th-gen Consoles), ARM ({{Android|2}}, {{Switch|2}}), PowerPC ({{360|2}}, {{ps3|2}}), and more, with both 32 and {{L|w:64-bit|64-bit}}.
-** Support for {{L|w:64-bit|64-bit}} architecture will allow Source to handle more than 2-4GB<!-- 32-bit exe without LAA will be limited to 2GB by default --> of RAM limit.
-** Historically, {{hl2|3.1}} had a {{L|w:64-bit|64-bit}} update in 2005, but it was later removed for unknown reasons. {{Csgo|3.1|nt=CS:GO}} later received an {{L|w:64-bit|64-bit}} update in 2016 for Mac and Linux systems. On April 19, 2024, {{Tf2|3.1}} was upgraded to {{L|w:64-bit|64-bit}} on Windows and Linux.
-* All code written in C/C++ using {{L|Visual Studio}} .NET 2003 and later. Easily and quickly derive new entities from existing base classes
-** {{L|Source SDK 2013}} code, by default, can be compiled on Visual Studio 2013 only. See {{L|Compiling under VS2022}} if you want to compile Source 2013 with newer versions of Visual Studio.
-** Linux version are compiled using {{L|Compiler_choices#GCC|GNU Compiler Collection}}.
-* Internal context sensitive performance monitoring system
-* Graphics performance measurement tools built into the engine
-* Modular code design (via DLLs) allows swapping out of core components for easy upgrading or code replacement
-* {{L|VScript}} scripting system allows using external coding languages, such as Squirrel and Lua, in maps to create more complex systems {{l4d2|since}} {{tf2|also|addtext={{mb}}}}
+==={{LCategory|Programming|Programação}}===
+* A Source naturalmente suporta varias arquiteturas de CPU, como x86 (PC e 8°a e 9°a geração de consoles), ARM ({{Android|2}}, {{Switch|2}}), PowerPC ({{360|2}}, {{ps3|2}}), e mais com ambos 32 e {{w|64-bit|64}} bits.
+** Suporte para a arquitetura de {{w|:64-bit|64-bits}}, permitindo um melhor manuseio de RAM comparado ao limite padrão de 2 e 4 GBs<!-- 32-bit exe without LAA will be limited to 2GB by default --> na Source.
+** Historicamente, {{hl2|3.1}} e {{hl2lc|3.1}} receberam uma atualização para {{L|w:64-bit|64 bits}} em 2005, mas ela foi posteriormente removida, provavelmente devido a instabilidades em alguns sistemas da época. Em 2016, {{Csgo|3.1|nt=CS:GO}} recebeu uma atualização semelhante para os sistemas Mac e Linux. Já em 19 de abril de 2024, o {{Tf2|3.1}} foi atualizado para {{L|w:64-bit|64 bits}} nas plataformas Windows e Linux. Todos os demais jogos da linha {{src13mp|nt=sdkshort|3.2}}, como {{css}}, {{dods}}, {{hl2dm}}, {{hldms}}, além do {{src13mp|4.3}}, foram atualizados para a versão {{tf2branch|4}}, passando a contar com suporte à arquitetura de 64 bits, tanto nos jogos quanto no SDK Base.
+* Código escrito em C e C++ usando o {{L|Visual Studio}} .NET 2003 e superiores. # ToDoTranslate-ConfusedSentence Easily and quickly derive new entities from existing base classes
+** O código do {{L|Source SDK 2013}} por padrão pode ser apenas compilado em Visual Studio 2013. Veja {{L|Compiling under VS2022|Compilando por Vs2022}} caso queira compilar o Source 2013 com novas versões do Visual Studio.
+** A versão Linux é compilada usando {{L|Compiler_choices#GCC|Coleção de Compilação do GNU}}.
+* Sistema interno de monitoramento de desempenho sensível ao contexto.
+* Ferramentas de mediação de performance gráfica embutida no motor.
+* Design modular de codigo (via DLLs) permite alterar componentes principais para facilitar a reposição ou atualização de codigo.
+* Sistema {{L|VScript}} permite a usagem de linguagens de código externo, como Squirrel e Lua, em mapas para criar sistemas mais complexos. {{l4d2|since}} {{tf2|also|addtext={{mb}}}}
 
-==={{LCategory|Tools|Tools}}===
+==={{LCategory|Tools|Ferramentas (Tools)}}===
 <div style="float:right">[[File:Hammer screen.jpg|thumb|340px|Screenshot of one of the Source SDK tools, {{hammer|3.1|nt=1}}, a WYSIWYG map editor.]]
 </div>
 * {{hlfaceposer|2}}
-** Facial expression tool used to craft speech and emotions
+** Ferramenta de expressão facial, usada para construir falas e emoções
 * {{hammer|2|nt=1}}
-** WYSIWYG World editor
-** Create {{L|Brush|world brushes}}
-** {{L|Displacement|Terrain editor}}
-** Place {{L|Prop|detailed world models}} and {{L|NPC|AI NPCs}}
-** Set {{L|Navmesh|navigation points/paths}} for NPCs
-** Place {{L|Tool textures (Source)|triggers, clip brushes}}, logic, etc.
-** Allows level designer to hook up I/O between entities to control AI within the game
+** Editor de Mundo WYSIWYG
+** Cria {{L|Brush|world brushes}}
+** {{L|Displacement|Editor de terreno}}
+** Coloca {{L|Prop|modelos detalhados no mundo}} e {{L|NPC|IA NPCs}}
+** Define {{L|Navmesh|pontos/caminhos de navegação}} para NPCs
+** Coloca {{L|Tool textures (Source)|triggers, clip brushes}}, logica, etc.
+** Permite que designers de níveis conectem E/S entre entidades para controlar a IA dentro do jogo
 * {{hlmv|2|nt=1}}
-** Full {{L|model}} previewer
-** Rotate models in any direction
-** Set up hit boxes
-** View physics hull
-** View normals
-** Wireframe, shaded or textured view modes
+** Previsualização total de {{L|model|modelo}}
+** Rotaciona modelos em qualquer direção
+** Configura caixas de acerto (hitbox)
+** Visualização de casco físico (physics hull)
+** Visualização normals
+** Modos de visualização wireframe, sombreamento (shaded) ou texturizado (textured)
 * {{L|Studiomdl}}
-** Model compiler
+** Compilador de Modelo
 * {{L|VBSP}}, {{L|VRAD}}, {{L|VVIS}}, {{L|VMPI}}
-** Map compilation tools (bsp, lighting and visibility)
-** VMPI — distributed compilation tool allowing level compiles to be spread across many PCs greatly reducing compile times
-* Exporters
-** {{LCategory|XSI|XSI}}, Max and Maya <code>.smd</code> exporters for exporting 3D models
+** Ferramentas de compilação de mapas (bsp, luminosidade e visibilidade)
+** VMPI — ferramenta de compilação, permitindo a compilação de níveis espalhados entre computadores, reduzindo significativamente o tempo de compilação
+* Exportadores
+** {{LCategory|XSI|XSI}}, exportadores Max e Maya <code>.smd</code> por exportar modelos 3D
 
-== Branches ==
-*For the list of Source engine branches (including third-party branches), see {{L|List of Source engine branches}}.
+==Ramificações==
+*Para uma lista de ramificações do motor Source (incluindo ramificações de terceiros), Veja a {{L|List of Source engine branches|Lista de Ramificações da Source Engine}}.
 
-==Products using Source {{Table tools|Source_games}}==<!-- DO NOT remove the underscore on this template, as it would break the edit, purge, etc... button completely -->
-This is the list of games that uses the {{source|4}} engine.
+==Produtos utilizando Source {{Table tools|Source_games}}==<!-- DO NOT remove the underscore on this template, as it would break the edit, purge, etc... button completely -->
+Esta é a lista de jogos que usam o motor {{source|4}}.
 <!-- To edit the list of the game, please visit the template page "Template:Source games" instead, then go to one of it's subpages there. Or use the edit button shown near the template itself-->
 
-===Products made by Valve===
+===Produtos feitos pela Valve===
 <center><small>[[Template:Source games/Valve|Click here to edit this list.]]</small></center>
 {{Source games/Valve}}
-===Third-Party===
-Games, tool and mods made by third-party companies and mod teams.
-====Released====
+===Terceiros===
+Jogos, ferramentas e mods feitos por corporações e equipes de modificações de terceiros.
+====Lançados====
 <!-- To edit the list, please go to "Template:Source games", or go back to previous page and click on the [edit] button on the year itself. List of games prior to 2020s are located in separate pages due to wiki limitations and to avoid long load times.-->
 {{Expand|title=2004 - 2019|noborder=1|
-* To see the list of third-party Source games from 2004 to 2019, check the {{L|List of third-party Source games}} page for more information.
+* Para a lista de jogos source produzidos por terceiros entre 2004 a 2019, acesse a pagina {{L|List of third-party Source games}} para mais informações.
 }}
 {{Expand|title=2020 - present ([[Template:Source games/2020s|edit]])|noborder=1|startcollapsed=0|
 {{Source games/2020s}}
 }}
-====In development (Unreleased)====
-This section are for unreleased third-party games and tools that have been announced, and it is currently in development, not publicly released, is in Beta/Early Access, or planned to be released.
+====Em desenvolvimento (Não-lançado)====
+Esta sessão é para jogos e ferramentas de terceiros que foram anunciadas mas não lançadas, e atualmente esta em desenvolvimento, não publicamente lançado, em beta/acesso antecipado, ou planejado para ser lançado.
 <!-- NOTE: Sort the game by year if the release date is announced, otherwise, if it's was TBA (to be announced), sort by game name. -->
-{{Expand|title=List of Source games currently in development ([[Template:Source games/unreleased|edit]])|noborder=1|startcollapsed=0|
+{{Expand|title=Lista de jogos Source atualmente em desenvolvimento ([[Template:Source games/unreleased|edit]])|noborder=1|startcollapsed=0|
 {{Source games/unreleased}}
 }}
-{{LCategory|Third Party Source Engine Games|More Third-party Source Engine games}}
-* {{LCategory|Source mods|More Source mods}}
+{{LCategory|Third Party Source Engine Games|Mais jogos Source de terceiros}}
+* {{LCategory|Source mods|Modificações/mods Source}}
 
-==See also==
+==Veja Também==
 * [[Wikipedia:Source (game engine)]]
-* {{L|Source Engine Features}}
-* {{L|Source SDK}}
-* {{L|SDK Docs|Source SDK Documentation}}
+* {{L|Source Engine Features|Caracteristicas da Source}}
+* {{L|Source SDK|Kit de Desenvolvimento Source}}
+* {{L|SDK Docs|Documentação do Source SDK}}
 * {{L|Source SDK 2013}}
 
-==External links==
-* [https://web.archive.org/web/20110724220714/http://source.valvesoftware.com/ Official Website] (archived) - Official website about the Source engine
-{{todo|How relevant and current these guides are? Keep links to current manuals instead of all at appropriate places. Use {{LSpecial|LinkSearch}} for this.}}
-* Source Engine Tutorials https://www.sourcemodding.com/tutorials/source
-* Tutorials for Source Engine https://gamebanana.com/tuts/games/35
-* Tutorials - Source - Mod DB https://www.moddb.com/engines/source/tutorials
-* [https://github.com/ValveSoftware/Source-1-Games/issues GitHub Issues page] - for engine bug reports.
+==Links Externos==
+* [https://web.archive.org/web/20110724220714/http://source.valvesoftware.com/ Official Website] (archived) - Site oficial sobre o motor Source 
+{{todo|Quão relevante e atual estas guias são? Mantenha os links para os manuais atuais em vez de todos em locais apropriados. Use {{LSpecial|LinkSearch}} para isso.}}
+* Tutorial da Source Engine Tutorials https://www.sourcemodding.com/tutorials/source
+* Tutoriais para a Source Engine https://gamebanana.com/tuts/games/35
+* Tutoriais - Source - Mod DB https://www.moddb.com/engines/source/tutorials
+* [https://github.com/ValveSoftware/Source-1-Games/issues GitHub Issues page] - para reporte de bugs/problemas encontrados no motor.
 {{Branch-navbox|nocat=1}}
 
 {{ACategory|Game engines}}
