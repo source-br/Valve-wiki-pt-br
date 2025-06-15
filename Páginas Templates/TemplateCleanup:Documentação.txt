@@ -1,0 +1,54 @@
+{{Doc/subpage}}
+
+==Utilização==
+Menciona uma pagina para limpeza. Você pode escolher adicionar uma razão para a menção de limpeza, ou simplesmente colocar <code><nowiki>{{cleanup}}</nowiki></code> na pagina.
+
+==Parâmetros== 
+
+{| class="standard-table plainlinks" style="width:100%"
+! Parâmetros
+! Descrição
+! Exemplos
+! Resultado
+|-
+| Sem parametros
+| Para usar quanto paginas inteiras precisam ser limpadas.
+| {{Code|<nowiki>{{Cleanup}}</nowiki>}}
+| {{Cleanup|nocat=1}}
+|- 
+| {{param|1}}
+| Opcionalmente você pode adicionar informações adicionais.
+| {{Code|<nowiki>{{Cleanup|Texto de Exemplo}}</nowiki>}}
+| {{Cleanup|Texto de Exemplo|nocat=1}}
+|-
+|height="50px" | {{param|nocat}}
+| Previne a pagina de ser adicionada para a [[:Category:Cleanup|categoria de limpeza]] e/ou [[:Category:Tutorial cleanup|categoria de limpeza:Tutorial]].
+|colspan="2" style=text-align:center;|{{code|<nowiki>{{Cleanup|nocat=1}}</nowiki>}}
+|- 
+| {{param|type|tutorial}}
+| Para uso em paginas de tutorial.
+| {{Code|<nowiki>{{Cleanup|type=tutorial}}</nowiki>}}
+| {{Cleanup|type=tutorial|nocat=1}}
+|- 
+| {{param|type|entulho}}
+| Menciona uma pagina para limpeza '''imediata''', por conta de possivelmente estar uma bagunça completa.
+| {{Code|<nowiki>{{Cleanup|type=rubbish}}</nowiki>}}
+| {{Cleanup|type=rubbish|nocat=1}}
+|- 
+| {{param|type|descartar}}
+| Para uso quando um artigo for despejado de outro site.
+| {{Code|<nowiki>{{Cleanup|type=dump}}</nowiki>}}
+| {{Cleanup|type=dump|nocat=1}}
+|}
+{{Clr}}
+{{{othersections|}}} <!-- such as Tracking category -->
+<includeonly>{{sandbox other||
+<!-- Categories below this line, please -->
+[[Category:Inline note templates|{{PAGENAME}}]]
+[[Category:Notice templates|{{PAGENAME}}]]
+}}</includeonly>
+
+<includeonly>[[Category:Notice templates|{{PAGENAME}}]]</includeonly>
+
+== Veja também ==
+* [[:Category:cleanup]]
