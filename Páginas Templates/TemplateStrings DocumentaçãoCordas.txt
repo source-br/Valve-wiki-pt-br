@@ -1,0 +1,68 @@
+{{Doc/subpage}}
+<onlyinclude>
+<!-- Please place categories where indicated at the bottom of this page.) -->
+
+Um painel indicando que a pagina em que está contem uma corda (String), que são usadas ao invés da analise de #troca (ou anteriormente, {{tl2|autolang}}(s)) na pagina base.
+== Procurando em criar uma subpágina de cordas (strings)?==
+Caso esteja procurando em criar uma subpágina de cordas, apenas crie uma subpágina "{{code|/strings}}" , então cole o codigo a seguir: 
+{{Expand|title=Veja o Código|
+{{CodeBlock|<nowiki>{{Strings subpage<!-- Não se esqueça de atualizar quando colocar novas traduções nas cordas (strings). -->
+|number = 1
+| en = 1
+| de = 1
+| eo = 1
+| es = 1
+| fi = 1
+| fr = 1
+| ru = 1
+| vi = 1
+| zh = 1
+}}
+
+* {{{{PAGENAME}}|Example}}
+
+<includeonly><onlyinclude>{{#switch:{{{1}}}<!-- Lembre-se de manter isto limpo, filtrando de A a Z, e copie e cole a '''tab space''' ao invez de ficar pressionando "espaço" repetidamente. -->
+
+| Example = {{#switch: {{language}}
+		| #default = Example
+		| de = Beispiel
+		| eo = Ekzemplo
+		| es = Ejemplo
+		| fi = Esimerkki
+		| fr = Exemple
+		| ru = Пример
+		| vi = Ví dụ
+		| zh = 示例
+		}}
+
+}}</onlyinclude></includeonly>
+</nowiki>}}
+}}
+
+{{Note|(Não requerido), mas quando adicionar uma nova linguagem, é recomendável filtrar o código de linguagem de A a Z.}}
+
+== Parâmetros e Exemplos ==
+{| class="standard-table" width="100%"
+! {{Dictionary/common|Param}}
+! {{Dictionary/common|Desc}}
+! {{Dictionary/common|Example}}
+|-
+| align="center" | Sem Parâmetros
+| Coloca o Template.
+| {{CodeBlock|margin=5px|<nowiki>{{Subpágina de strings}}</nowiki>}}
+|-
+| align="center" | {{Code|style=2|{{Param|número}}}}
+| Número de Cordas.
+| {{CodeBlock|margin=5px|<nowiki>| número = 6</nowiki>}}
+|-
+| align="center" | {{Code|style=2|{{Param|<código de linguagem>}}}}
+| Número de cordas traduzidas dentro da linguagem especifica.
+| {{CodeBlock|margin=5px|<nowiki>| en = 6</nowiki>}}{{CodeBlock|margin=5px|<nowiki>| eo = 3</nowiki>}}{{CodeBlock|margin=5px|<nowiki>| he = 2</nowiki>}}
+|}
+
+Quando criar uma nova subpágina de cordas, clique nos três pontos no topo direito da caixa do documento, e clique em "Strings", isto ira criar uma subpágina de cordas com a formatação apropriada aplicada. É claro, isto não é requerido e você pode simplesmente criar um novo do zero, se desejar.
+</onlyinclude>
+{{Doc/Sandbox other|
+<!-- Categories below this line, please -->
+[[Category:Templates]]
+}}

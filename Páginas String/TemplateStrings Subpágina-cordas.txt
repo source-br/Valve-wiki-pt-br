@@ -1,0 +1,35 @@
+{{Strings subpage
+|number = 4
+| en = 4
+| pt-br = 4
+}}
+
+
+* {{{{FULLPAGENAME}}|sos}}
+* {{{{FULLPAGENAME}}|approx}}
+* {{{{FULLPAGENAME}}|number}}
+* {{{{FULLPAGENAME}}|Purge}}
+
+<includeonly>
+
+<onlyinclude>{{#switch:{{{1}}}
+
+| sos = {{#switch:{{Intlang}}
+	| #default = Subpage of strings
+    | pt-br = Subpágina de cordas
+}}
+| approx = {{#switch:{{Intlang}}
+	|#default = Approximate status of translation:
+    | pt-br = Estado aproximado da tradução: 
+}}
+| number = {{#switch:{{Intlang}}
+	|#default = Number of strings:
+    | pt-br = Numero de cordas:
+}}
+| Purge = {{#switch:{{Intlang}}
+	| #default = Purge base's cache 
+    | pt-br = Purgar o cache base
+}}
+}}</onlyinclude>
+
+</includeonly>
