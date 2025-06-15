@@ -1,0 +1,170 @@
+{{{{FULLPAGENAME}}|String info}}
+
+*{{{{FULLPAGENAME}}|page 1}}
+*{{{{FULLPAGENAME}}|page 2}}
+*{{{{FULLPAGENAME}}|page 3}}
+*{{{{FULLPAGENAME}}|page 4}}
+*{{{{FULLPAGENAME}}|page link}}
+*{{{{FULLPAGENAME}}|page tag}}<!-- language syntax features! -->
+
+*{{{{FULLPAGENAME}}|template 1}}
+*{{{{FULLPAGENAME}}|template 2}}
+*{{{{FULLPAGENAME}}|template 2.1}}
+*{{{{FULLPAGENAME}}|template 2.2}}
+*{{{{FULLPAGENAME}}|template 3}}
+*{{{{FULLPAGENAME}}|template 3.1}}
+*{{{{FULLPAGENAME}}|template 3.2}}
+*{{{{FULLPAGENAME}}|NotTranslated 1}}
+*{{{{FULLPAGENAME}}|HelpBy}}
+*{{{{FULLPAGENAME}}|FinishTrans 1}}
+*{{{{FULLPAGENAME}}|FinishTrans 1.1}}<!-- language syntax features! -->
+*{{{{FULLPAGENAME}}|Translating}}
+*{{{{FULLPAGENAME}}|MachineTrans}}
+*{{{{FULLPAGENAME}}|MachineTranslated}} 
+*{{{{FULLPAGENAME}}|NotRecommended}}
+*{{{{FULLPAGENAME}}|WillBeRemoved}}
+*{{{{FULLPAGENAME}}|UpdateTrans 1}}
+*{{{{FULLPAGENAME}}|UpdateTrans 1.1}}<!-- language syntax features! -->
+
+*{{{{FULLPAGENAME}}|notes}}
+
+*{{{{FULLPAGENAME}}|languageSwitcher|es}}
+*{{{{FULLPAGENAME}}|languageSwitcher|en}}
+*{{{{FULLPAGENAME}}|languageSwitcher|zh}}
+*{{{{FULLPAGENAME}}|languageSwitcher|de}}
+*{{{{FULLPAGENAME}}|languageSwitcher|ru}}
+*{{{{FULLPAGENAME}}|languageSwitcher|vi}}
+*{{{{FULLPAGENAME}}|languageSwitcher|eo}}
+
+<includeonly>
+
+<onlyinclude>{{#switch:{{{1|}}}
+| String info = {{Strings subpage
+	|number= 23
+	|en=23
+	|pt-br=23
+	}}
+
+| page 1 = '''{{#switch:{{{lang|{{Intlang}}}}}
+	| #default = This {{#if:{{{2|}}}|{{{2}}}|page}} needs to be translated.
+	| pt-br = Esta página precisa de ser traduzida.
+	}}'''
+	   
+| page 2 = {{#switch:{{{lang|{{Intlang}}}}}
+	| #default = This {{#if:{{{2|}}}|{{{2}}}|page}} either contains information that is only partially or incorrectly translated, or there isn't a translation yet.
+	| pt-br = Esta página ou contém informações que são apenas parcialmente ou incorretamente traduzidas, ou ainda não há uma tradução.
+	}}
+	
+| page 3 = {{#switch:{{{lang|{{Intlang}}}}}
+	| #default = If this page cannot be translated for some reason, or is left untranslated for an extended period of time after this notice is posted, the page should be requested to be deleted.
+	| pt-br = Se esta página não puder ser traduzida por algum motivo, ou for deixada sem tradução por um longo período de tempo após este Aviso ser publicado, a página deve ser solicitada para ser apagada.
+	}}
+	
+| template 4 | page 4 = {{#switch:{{{lang|{{Intlang}}}}}
+	| #default = Also, please make sure the article complies with the
+    | pt-br = Além disso, certifique-se de que o artigo tenta cumprir com a
+	}}
+	
+| page link = {{#switch:{{{lang|{{Intlang}}}}}
+	| #default = alternate languages guide.
+    | pt-br = alternação entre guia de linguagem.
+	| zh = 多语言指导。
+	}}
+	
+| template 1 = '''{{#switch:{{{lang|{{Intlang}}}}}
+	| #default = This template needs translations.
+	| pt-br = Este template precisa de tradução.
+	}}'''
+	
+| template 2 = {{#switch:{{{lang|{{Intlang}}}}}
+	| #default = This template does not contain translations for the 
+	| pt-br = Este template não contem uma tradução para a(s)
+	}}
+			
+| template 2.1 = {{#switch:{{{lang|{{Intlang}}}}}
+	| #default = following languages:
+	| pt-br = seguintes línguas
+	}}
+	
+| template 2.2 = {{#switch:{{{lang|{{Intlang}}}}}
+	| #default = most popular languages.
+	| pt-br = Língua mais popular.
+	}}
+	
+| template 3 = {{#switch:{{{lang|{{Intlang}}}}}
+	| #default = If you are fluent in one of these languages, please help out by translating the text inside this template. This can be done by using the
+	| pt-br = Se você é fluente em alguma destas línguas, por favor, nos ajude a traduzir o texto deste template. Isto pode ser feito usando a
+	}}
+	
+| template 3.1 = {{#switch:{{{lang|{{Intlang}}}}}
+	| #default = template's [[{{#if:{{{2|}}}|{{{2}}}|{{FULLPAGENAME}}/strings}}|/strings]] subpage or the 
+	| pt-br = subpágina [[{{#if:{{{2|}}}|{{{2}}}|{{FULLPAGENAME}}/strings}}|/strings]] do template, ou o
+	}}
+	
+| template 3.2 = {{#switch:{{{lang|{{Intlang}}}}} 
+	| #default = {{T|language}} template where appropriate.
+	| pt-br = template {{T|language}}, aonde for apropriado.
+	}}
+	
+| notes = '''{{#switch:{{{lang|{{Intlang}}}}}
+	| #default = The following content or section specifically needs to be translated:
+	| pt-br = O conteúdo ou sessão a seguir, especificamente precisar ser traduzida:
+	}}'''
+	
+| NotTranslated 1 = '''{{#switch:{{{lang|{{Intlang}}}}}
+	| #default = This page has not been fully translated.
+	| pt-br = Esta pagina não foi totalmente traduzida.
+	}}'''
+	
+| HelpBy = {{#switch:{{{lang|{{Intlang}}}}}
+	| #default = You can help by 
+	| pt-br = Você pode ajudar em
+	}}
+	
+| FinishTrans 1 = {{#switch:{{{lang|{{Intlang}}}}}
+	| #default = finishing the translation.
+	| pt-br = finalizar esta tradução.
+	}}
+| Translating = '''{{#switch:{{{lang|{{Intlang}}}}}
+	| #default = This page is being translated.				
+	| pt-br = Esta pagina esta a ser traduzida.
+	}}'''
+	
+| MachineTrans = '''{{#switch:{{{lang|{{Intlang}}}}}
+	| #default = This translated page needs to be updated.
+	| pt-br = Esta pagina traduzida precisa ser atualizada.
+	}}'''
+	
+| MachineTranslated = '''{{#switch:{{{lang|{{Intlang}}}}}
+	| #default = This page is Machine translated
+	| pt-br = Esta pagina foi traduzida por maquina
+	}}'''
+	
+| NotRecommended = {{#switch:{{{lang|{{Intlang}}}}}
+	| #default = It is not recommended to use machine translation without any corrections.
+	| pt-br = Não é recomendado a tradução por maquina sem qualquer correção.
+	}}
+
+| WillBeRemoved = {{#switch:{{{lang|{{Intlang}}}}}
+	| #default = If the article is not corrected in the long term, it will be removed.
+	| pt-br = Caso o artigo não seja corrigido no longo prazo, ele será removido.
+	}}
+	
+| UpdateTrans 1 = {{#switch:{{{lang|{{Intlang}}}}}
+	| #default = updating the translation.
+	| pt-br = atualizando a tradução.
+	}}
+
+| Update needed = {{#switch: {{intlang}}
+	| #default = This translated page needs to be updated.
+	| pt-br = Esta pagina traduzida precisa ser atualizada.
+	}}
+
+| Help update = {{#switch: {{intlang}}
+	| #default = You can help by updating the translation.
+	| pt-br = Você pode ajudar a atualizar a tradução.
+	}}
+| languageSwitcher = {{flag|{{{2|}}}}}<!--
+-->}}</onlyinclude>
+
+</includeonly>
