@@ -1,0 +1,28 @@
+{{Strings subpage
+|number = 3
+|en = 3
+|pt-br = 3
+}}
+
+* {{{{PAGENAME}}|Update}}
+* {{{{PAGENAME}}|because}}
+* {{{{PAGENAME}}|Note}}
+
+<includeonly><onlyinclude><!--
+
+-->{{#switch:{{{1|}}}
+|Update={{#switch: {{language}}
+  |#default = This article or section needs to be <u>updated</u> to include current information regarding the subject
+  |pt-br=Este artigo ou sessão precisa ser <u>atualizado</u>, para incluir informações recentes.
+  }}
+|because={{#switch: {{language}}
+  |#default = &nbsp;because:
+  |pt-br=&nbsp; pois:
+  }}
+|Note={{#switch: {{language}}
+  |#default = Remember to check for any notes left by the tagger at this article's [[{{TALKPAGENAME}}|talk page]].
+  |pt-br = Lembre-se de checar por qualquer nota deixada pelo editor, na [[{{TALKPAGENAME}}|pagina de conversa]] deste artigo.
+  }}
+}}<!--
+
+--></onlyinclude></includeonly>
