@@ -1,0 +1,50 @@
+{{Strings subpage
+| number = 5
+| en = 5
+| pt-br = 5
+}}
+
+*{{{{FULLPAGENAME}}|stub}}
+*{{{{FULLPAGENAME}}|console command}}
+*{{{{FULLPAGENAME}}|console variable}}
+*{{{{FULLPAGENAME}}|game}}
+*{{param|game|hl2}}: {{{{FULLPAGENAME}}|game|game=hl2}}
+*{{{{FULLPAGENAME}}|other}}
+
+<includeonly>
+
+<onlyinclude>{{#switch:{{{1|}}}
+
+|namespace = {{#switch: {{pagelang}}
+	| #default = article or section
+	| pt-br = artigo ou sessão
+	}}
+
+|stub|default = {{#switch: {{pagelang}}
+	| #default = This {{{namespace|article or section}}} is a [[Help:Stubs|stub]]. You can help by expanding it.
+	| pt-br = este {{{namespace|article or section}}} é um [[Help:Stubs|esboço]], você pode ajudar expandido o.
+	}}
+	
+| console command = {{#switch: {{pagelang}}
+	| #default = This {{{namespace|article}}} about a [[Developer console|console command]] is a [[Help:Stubs|stub]]. You can help by expanding it.
+	| pt-br = Este {{{namespace|article}}} sobre um [[Developer console|comando de console]] é um [[Help:Stubs|esboço]], você pode ajudar expandindo o.
+	}}
+
+| console variable = {{#switch: {{pagelang}}
+	| #default = This {{{namespace|article}}} about a [[Developer console|console variable]] is a [[Help:Stubs|stub]]. You can help by expanding it.
+	| pt-br = Este {{{namespace|article}}} sobre uma [[Developer console|variável de console]] é um [[Help:Stubs|esboço]], você pode ajudar expandindo o.
+	}}
+
+| game = {{#switch: {{pagelang}}
+	| #default = This {{{namespace|article}}} about a game{{#if: {{{game|}}}|, {{{{{game}}}|4.1}},|}} is a [[Help:Stubs|stub]]. You can help by expanding it.
+	| pt-br = Este {{{namespace|article}}} sobre um jogo{{#if: {{{game|}}}|, {{{{{game}}}|4.1}},|}} é um [[Help:Stubs|esboço]], você pode ajudar expandido o.
+	}}
+
+| other = {{#switch: {{pagelang}}
+	| #default = This {{{namespace|article}}} about {{a or an|{{{other}}} }} is a [[Help:Stubs|stub]]. You can help by expanding it.
+	| pt-br = Este {{{namespace|article}}} sobre {{um ou uma|{{{other}}} }} é um [[Help:Stubs|esboço]], você pode ajudar expandido o.
+	}}
+
+}}</onlyinclude>
+
+</includeonly>
