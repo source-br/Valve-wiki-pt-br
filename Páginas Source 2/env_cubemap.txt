@@ -18,8 +18,6 @@
 
 {{KV Source 2 Targetname}}
 
-test
-
 {{KV Source 2 Hierarchy}}
 
 {{KV Source 2 Transform}}
