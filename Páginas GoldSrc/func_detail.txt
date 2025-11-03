@@ -1,4 +1,3 @@
-{{wip}}{{translating}}
 {{LanguageBar}}
 {{tabs|func_detail|goldsrc=1|source=1|main=source}}
 '''{{code|func_detail}}''' é uma entidade interna do brush em {{subst:LAuto|VHLT}} e forks e {{subst:LAuto|ericw-tools}}. É um {{subst:LAuto|world brush}} que não afeta {{subst:LAuto|VIS}}.
