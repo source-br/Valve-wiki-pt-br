@@ -1,0 +1,64 @@
+{{wip}}{{translating}}
+{{LanguageBar}}
+{{TabsBar|main=gs|base=func_detail}}
+{{toc-right}}
+{{This is a|brush entity|internal=1|name=func_detail}} Não é uma entidade brush real, mas sim move todos os bruhses contidos para {{ent|worldspawn}} e os marca como {{codelink|CONTENTS_DETAIL}}, fazendo com que eles não afetem {{L|visibility}} ou {{L|chop}}ping brushes sem detalhes. Todo o trabalho brush que não forma a “backbone” (espinha dorsal) do mundo (e que não está vinculado a uma entidade real) deve ser detalhado, com exceção do vidro translúcido (que sofre de {{L|$translucent#Flickering and Reversed Depth|problemas de classificação alfa}} quando não é “estrutural”).
+
+A Valve fornece um mapa de exemplo em {{file|sourcesdk_content\hl2\mapsrc\sdk_func_detail|vmf}}. Você também pode carregar as fontes do mapa HL2 e ocultar os pincéis de detalhes com seu {{L|visgroup}} automático para ver onde a Valve os utilizou.
+
+{{tip|Como alternativa, use uma {{L|console variable|variável de console}} {{cmd|r_drawfuncdetail|0}} para ocultar brushes de detalhes em qualquer mapa enquanto ele estiver em execução.}}
+
+Os World brushes que utilizam materiais {{cmd|%CompileDetail}} serão sempre tratados como se estivessem vinculados ao func_detail.
+
+A separação dos func_details é apenas para conveniência do editor; 5 brushes em um func_detail funcionarão da mesma forma que 5 func_details com um brushes cada.
+
+Brushes {{L|CONTENTS_WATER|água}} e {{L|CONTENTS_SLIME|Slime}} não podem ser detalhados. {{L|VBSP}} remove automaticamente o conteúdo detalhado de {{L|liquid materials|líquidos}}, e modificar o VBSP para remover essa peculiaridade faz com que os líquidos fiquem invisíveis no jogo (embora ainda seja possível nadar neles).
+
+== Efeitos ==
+
+O objetivo de criar uma entidade de pincel de detalhes é evitar a criação de um número desnecessário de {{L|visleaf|visleaves}} para um mero detalhe do mapa, daí o nome da entidade. O VBSP permitirá que as visleaves se sobreponham aos detalhes, minimizando assim as visleaves e o tempo de compilação.
+
+[[File:World-vs-detail.png|border|center]]
+
+Acima estão um world brush (cilindro esquerdo) e um detail brush (cilindro direito). As linhas azuis são limites visleaf. O pincel mundial dividiu o mapa em nove segmentos de formas irregulares, levando a tempos de compilação mais longos e desempenho ligeiramente inferior, enquanto o brush de detalhes não alterou nada.
+
+== Avisos ==
+
+* Os brushes de detalhe não podem ser usados para {{L|seal|selar}} um mapa ou áreas de areaportal.
+* Como os pincéis de detalhes não {{L|chop|cortam}}  os world brushes, a luz pode penetrar por baixo deles se a escala do lightmap da outra superfície for maior do que a largura/altura do detail brushes. Se isso acontecer, corte manualmente o brush subjacente em várias partes (com {{key|Shift|X}}) e aplique a textura por baixo com {{L|nodraw}}.
+** Esse efeito pode fazer com que detail brushes com muito contato com a superfície se tornem ineficientes, pois a superfície abaixo deles também está sendo renderizada! Faces estruturais que estão completamente obscurecidas por func_detail devem ser texturizadas com {{L|nodraw}}.
+** No entanto, os detail brushes “se sobrepõem”. O {{L|VBSP}} Vanilla não suporta níveis de detalhes como visto no {{gldsrc}} {{L|HLBSP}}, portanto, todos os detail brushes se sobrepõem sem distinção.
+:: {{tip|[https://github.com/DeathByNukes/source-sdk-2013 Fork do DeathByNuke] do {{L|VBSP}} tem {{cmd|%CompileChopLow}}, {{cmd|%CompileChopHigh}} e {{cmd|%CompileChopAll}} {{L|material map compile flags|flags de compilação do mapa de materiais}}, que oferecem algum controle sobre o que corta o quê.}}
+* As superfícies em detail brushes muito finos (com cerca de 2 unidades de espessura) são conhecidas por desaparecerem a determinadas distâncias. Como solução alternativa, use {{L|func_brush}} em vez disso.
+* World brushes com materiais {{L|$translucent|translúcidos}} e/ou {{L|$alphatest|transparentes}} aplicados, ou que sejam {{L|displacement}}s, não afetam {{L|VIS}} e não podem selar áreas.
+** Os World brushes com material translúcido ainda cortam leaves. Isso ocorre porque eles usam {{L|BSP tree}} para auxiliar na classificação alfa (como em {{quake2|2}}), ao contrário dos detail brushes, displacements e entidades.
+* Os detail brushes, em alguns casos, mesclam faces com outros detail brushes e, ocasionalmente, com World brushes, o que pode fazer com que criem leaves.
+* Em condições normais, sempre que um detail brushes entra em contato com um world brush, o {{L|VBSP}} irá notar a junção e otimizá-la. Essa conexão é conhecida alternativamente como T-Junction e índice de água (water index), e há um limite para o número de T-Junctions que o VBSP tentará corrigir (65.535). O uso excessivo de detail brushes em contato com a geometria do mundo pode fazer com que o VBSP aborte a compilação com um erro. Usar a opção <CODE>-notjunc</CODE> irá pular essa otimização, mas poderá causar inconsistências visuais.
+:{{note|A água, por razões desconhecidas, faz com que a contagem de T-Junctions dispare. Remover/remodelar corpos de água pode resolver isso.}}
+
+== Bons candidatos ==
+
+[[File:C17plaza-worldbrush.jpg|350px|thumb|rightNão resta muito da [[:Image:City17 terminalsquare.jpg|Praça da Estação Ferroviária de City 17]] depois de removermos os pincéis de detalhes (assim como entidades e adereços). A Valve também deixou passar alguns world brushes...]]
+
+Qualquer brush que não bloqueie significativamente , a visão do jogador deve ser considerada um detalhe. Exemplos específicos incluem:
+
+* Pilares, pedestais e suportes
+* Paredes independentes
+* Passarelas suspensas
+* Degraus (crie um world brush suave em forma de cunha por baixo)
+* Pequenos edifícios
+* Brushes girados
+* Brushes muito pequenos ou finos
+{{cls}}
+
+== Keyvalues ==
+{{KV DXLevelChoice}}
+{{KV Targetname null|hammer only=y}}
+{{KV|Origin|intn=origin|origin|nofgd=1|Compense a geometria por esse valor no BSP compilado. (Usado para instâncias; não deve ser usado diretamente)}}
+:{{confirm|Provavelmente também suporta {{mono|angles}} por um motivo semelhante.}}
+
+{{ACategory|Optimization Brush Entities}}
+
+== Veja Também==
+* {{L|Optimization (level design)|Otimização (level design)}}
+* {{ent|func_detail_illusionary}} - versão não consolidada desta entidade, que pode ser adicionada a compiladores personalizados

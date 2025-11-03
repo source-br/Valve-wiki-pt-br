@@ -1,0 +1,15 @@
+{{wip}}{{translating}}
+{{LanguageBar}}
+{{tabs|func_detail|goldsrc=1|source=1|main=source}}
+'''{{code|func_detail}}''' é uma entidade interna do brush em {{subst:LAuto|VHLT}} e forks e {{subst:LAuto|ericw-tools}}. É um {{subst:LAuto|world brush}} que não afeta {{subst:LAuto|VIS}}.
+
+A implementação difere bastante entre o VHLT e o ericw-tools. Para obter mais informações, consulte as páginas individuais do compilador:
+* {{subst:LAuto|func_detail (VHLT)}}
+* {{subst:LAuto|func_detail (ericw-tools)}}
+
+==Veja 
+* {{ent|func_group|engine=GoldSrc}}
+*{{subst:LAuto|VIS}}
+*{{subst:LAuto|Visibility optimization|Otimização de visibilidade}}
+
+{{subst:LAuto|Category:GoldSrc}}
